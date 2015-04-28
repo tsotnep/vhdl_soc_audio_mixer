@@ -1,0 +1,8 @@
+-batch 
+-create adau1761_audio 
+-ver 1.00.a 
+-dir "/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj" 
+-lang vhdl 
+-bus axi4lite s 
+-reg 2 
+-xps 

@@ -1,0 +1,2 @@
+vhdl work "../user_logic.vhd"
+vhdl work "../adau1761_audio.vhd"

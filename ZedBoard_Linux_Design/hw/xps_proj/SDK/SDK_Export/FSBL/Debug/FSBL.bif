@@ -1,0 +1,6 @@
+the_ROM_image:
+{
+	[bootloader]/home/user/S/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/FSBL/Debug/FSBL.elf
+	/home/user/S/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/xps_proj_hw_platform/system.bit
+	[init]/home/user/S/adau1761/adau1761/u-boot-digilent/u-boot.elf
+}

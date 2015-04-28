@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/SoC_project/Audio_2015_v0.01/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/audio_buffer_v1_00_a/devl/projnav/audio_buffer.xst" -ofn "C:/SoC_project/Audio_2015_v0.01/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/audio_buffer_v1_00_a/devl/projnav/audio_buffer.syr" 

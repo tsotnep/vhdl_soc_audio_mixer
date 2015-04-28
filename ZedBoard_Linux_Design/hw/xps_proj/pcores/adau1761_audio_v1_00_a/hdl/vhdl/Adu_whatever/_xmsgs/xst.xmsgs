@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompiler" num="104" delta="new" >"/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd" Line 58: Cannot find &lt;<arg fmt="%s" index="1">proc_common_pkg</arg>&gt; in library &lt;<arg fmt="%s" index="2">proc_common_v3_00_a</arg>&gt;. Please ensure that the library was compiled, and that a library and a use clause are present in the VHDL file.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="854" delta="new" >"/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd" Line 84: Unit &lt;<arg fmt="%s" index="1">user_logic</arg>&gt; ignored due to previous errors.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="374" delta="new" >"/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd" Line 130: Entity &lt;<arg fmt="%s" index="1">user_logic</arg>&gt; is not yet compiled.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd" Line 135: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd" Line 136: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd" Line 137: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd" Line 138: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd" Line 139: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd" Line 140: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd" Line 141: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd" Line 142: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd" Line 143: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd" Line 144: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd" Line 145: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd" Line 151: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd" Line 152: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd" Line 153: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd" Line 154: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd" Line 155: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+</messages>
+

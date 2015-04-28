@@ -1,0 +1,161 @@
+#!/bin/sh
+
+
+SD_CARD_FILES_DIR=$1
+DEV=$2
+
+TMP_SUBDIR=sd_card_stuff
+LINARO_FS_IMAGE=http://releases.linaro.org/latest/ubuntu/utopic-images/gnome/linaro-utopic-gnome-20150319-701.tar.gz
+LABEL=created_by_sd_card_create
+
+DEV_INITIALIZED=0
+WIPE_FIRST=1
+#NOTE:
+#you can destroy the created partitions on the sd card with
+#dd if=/dev/zero of=<device, e.g. /dev/sdb> bs=512 count=1
+#this overwrites the first 512 bytes of the device, including its partition table
+
+
+if [ -z $2 ];then
+	echo "usage: sd_card_create <sd card files directory (with BOOT.BIN, zImage...> <sd card device, e.g. /dev/sdb>"
+	exit 0;
+fi
+
+if [ "$(id -u)" != "0" ]; then
+	echo this tool must be run as root, run with sudo
+	exit 0;
+fi
+
+echo "update device $DEV, is that the sd card? <Enter> or <Ctrl-C>"
+read
+
+
+umount $DEV 2> /dev/null
+umount $DEV"1" 2> /dev/null
+umount $DEV"2" 2> /dev/null
+
+mkdir -p /tmp/$TMP_SUBDIR
+mkdir -p /tmp/$TMP_SUBDIR/zed_boot
+mkdir -p /tmp/$TMP_SUBDIR/root_fs
+
+#sd cards partitions and file system already initialized by an earlier run?
+if mount $DEV"1" /tmp/$TMP_SUBDIR/zed_boot 2> /dev/null; then
+	if [ -e /tmp/$TMP_SUBDIR/zed_boot/$LABEL ]; then
+		DEV_INITIALIZED=1
+	fi
+	umount $DEV"1" 2> /dev/null
+fi
+
+if [ "$DEV_INITIALIZED" -eq "0" ]; then
+
+	echo device is not initialized, create partitions and copy linaro fs on it?
+	echo Type upper case yes to continue.
+	
+	read CONT
+	
+	if [ ! "$CONT" == "YES" ];then
+		echo "not continuing..."
+		exit 0;
+	fi
+
+
+	echo
+	echo -------------------------------
+	echo initialize $DEV
+	echo -------------------------------
+	echo
+
+	echo
+	echo -------------------------------
+	echo create partitions...
+	echo -------------------------------
+	echo
+
+	echo -e "o\nn\np\n1\n\n+1G\nn\np\n2\n\n\nw" | fdisk $DEV
+
+	echo
+	echo -------------------------------
+	echo create vfat on $DEV"1"
+	echo -------------------------------
+	echo
+
+	sudo mkfs -t vfat -n ZED_BOOT $DEV"1"
+
+	echo
+	echo -------------------------------
+	echo create ext4 on $DEV"2"
+	echo -------------------------------
+	echo
+
+	sudo mkfs -t ext4 -L ROOT_FS $DEV"2"
+
+	mount $DEV"1" /tmp/$TMP_SUBDIR/zed_boot
+	mount $DEV"2" /tmp/$TMP_SUBDIR/root_fs
+
+	echo
+	echo -------------------------------
+	echo get linaro fs...	
+	echo this may take a while...
+	echo -------------------------------
+	echo
+
+	wget -O /tmp/$TMP_SUBDIR/fs.tar.gz $LINARO_FS_IMAGE 
+
+	echo
+	echo -------------------------------
+	echo unpack linaro fs...
+	echo this may take a while...
+	echo -------------------------------
+	echo
+	tar xfzv /tmp/$TMP_SUBDIR/fs.tar.gz -C /tmp/$TMP_SUBDIR/
+	
+	
+	echo
+	echo ---------------------------------------------------
+	echo copy linaro fs to sd card\'s root fs on $DEV"2"...
+	echo this may take a while...
+	echo ---------------------------------------------------
+	echo
+
+	rsync -av -P /tmp/$TMP_SUBDIR/binary/* /tmp/$TMP_SUBDIR/root_fs/
+
+	
+else
+	echo
+	echo ----------------------------------
+	echo $DEV was initialized before...
+	echo ----------------------------------
+	echo
+fi
+
+#delete old files and copy new ones
+
+mount $DEV"1" /tmp/$TMP_SUBDIR/zed_boot 2> /dev/null
+
+if [ "$WIPE_FIRST" -eq "1" ]; then
+	echo
+	echo --------------------------------------------------
+	echo delete files from $DEV"1"...
+	echo --------------------------------------------------
+	echo
+
+	rm -r /tmp/$TMP_SUBDIR/zed_boot/*
+
+fi
+
+#tag as initialized by this script
+touch /tmp/$TMP_SUBDIR/zed_boot/$LABEL
+
+echo
+echo --------------------------------------------------
+echo copy files from $SD_CARD_FILES_DIR to $DEV"1"...
+echo --------------------------------------------------
+echo
+
+cp -v $SD_CARD_FILES_DIR/* /tmp/$TMP_SUBDIR/zed_boot/	
+
+sleep 1
+umount /tmp/$TMP_SUBDIR/zed_boot 2> /dev/null
+umount /tmp/$TMP_SUBDIR/root_fs  2> /dev/null
+sleep 5
+rm -r /tmp/$TMP_SUBDIR/

@@ -1,0 +1,31 @@
+#!/bin/sh
+
+#script guard
+if [ ! "$0" == "./sbin/$(basename $0)" ]; then
+        echo
+        echo Must be invoked as ./sbin/$(basename $0)
+        echo
+        exit 1
+fi
+
+
+
+BOOT_IMG_DIR=boot_image/
+
+
+echo
+echo -------------------------------
+echo generate system.bit
+echo -------------------------------
+echo
+
+
+cd ZedBoard_Linux_Design/hw/xps_proj
+
+make -f system.make bits
+
+cd ../../../
+
+echo
+cp -v ZedBoard_Linux_Design/hw/xps_proj/implementation/system.bit $BOOT_IMG_DIR
+echo

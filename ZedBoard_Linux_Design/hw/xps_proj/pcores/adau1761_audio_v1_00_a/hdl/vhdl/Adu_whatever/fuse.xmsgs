@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompiler" num="104" delta="unknown" >"C:/SoC_project/Audio_demo/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/../adau1761.vhd" Line 16: Cannot find &lt;<arg fmt="%s" index="1">proc_common_pkg</arg>&gt; in library &lt;<arg fmt="%s" index="2">proc_common_v3_00_a</arg>&gt;. Please ensure that the library was compiled, and that a library and a use clause are present in the VHDL file.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="854" delta="unknown" >"C:/SoC_project/Audio_demo/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/../adau1761.vhd" Line 18: Unit &lt;<arg fmt="%s" index="1">adau1761</arg>&gt; ignored due to previous errors.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="374" delta="unknown" >"C:/SoC_project/Audio_demo/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/../adau1761.vhd" Line 44: Entity &lt;<arg fmt="%s" index="1">adau1761</arg>&gt; is not yet compiled.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"C:/SoC_project/Audio_demo/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/../adau1761.vhd" Line 48: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"C:/SoC_project/Audio_demo/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/../adau1761.vhd" Line 49: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"C:/SoC_project/Audio_demo/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/../adau1761.vhd" Line 50: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"C:/SoC_project/Audio_demo/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/../adau1761.vhd" Line 51: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"C:/SoC_project/Audio_demo/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/../adau1761.vhd" Line 52: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"C:/SoC_project/Audio_demo/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/../adau1761.vhd" Line 53: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"C:/SoC_project/Audio_demo/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/../adau1761.vhd" Line 55: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"C:/SoC_project/Audio_demo/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/../adau1761.vhd" Line 56: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"C:/SoC_project/Audio_demo/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/../adau1761.vhd" Line 57: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"C:/SoC_project/Audio_demo/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/../adau1761.vhd" Line 60: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"C:/SoC_project/Audio_demo/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/../adau1761.vhd" Line 61: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"C:/SoC_project/Audio_demo/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/../adau1761.vhd" Line 62: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"C:/SoC_project/Audio_demo/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/../adau1761.vhd" Line 63: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"C:/SoC_project/Audio_demo/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/../adau1761.vhd" Line 64: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"C:/SoC_project/Audio_demo/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/../adau1761.vhd" Line 65: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"C:/SoC_project/Audio_demo/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/../adau1761.vhd" Line 66: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+</messages>
+

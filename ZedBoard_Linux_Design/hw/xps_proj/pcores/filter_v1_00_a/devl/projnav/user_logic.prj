@@ -1,0 +1,3 @@
+vhdl proc_common_v3_00_a "../../../../../../../../../../../Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/proc_common_pkg.vhd"
+vhdl work "../../hdl/vhdl/IIR_Biquad_II.vhd"
+vhdl work "../../hdl/vhdl/user_logic.vhd"

@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "C:\SoC_project\Audio_2015_v0.01\adau1761\adau1761\ZedBoard_Linux_Design\hw\xps_proj\pcores\audio_buffer_v1_00_a\devl\synthesis\audio_buffer_xst.prj"
+-top audio_buffer
+-p virtex6
+-ofn "C:\SoC_project\Audio_2015_v0.01\adau1761\adau1761\ZedBoard_Linux_Design\hw\xps_proj\pcores\audio_buffer_v1_00_a\devl\synthesis\audio_buffer_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib audio_buffer_v1_00_a

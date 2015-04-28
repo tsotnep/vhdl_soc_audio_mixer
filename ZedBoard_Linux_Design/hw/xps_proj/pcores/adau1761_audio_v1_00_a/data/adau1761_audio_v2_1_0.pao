@@ -1,0 +1,18 @@
+##############################################################################
+## Filename:          /home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/data/adau1761_audio_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Tue May 20 11:28:03 2014 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a  all 
+lib axi_lite_ipif_v1_01_a  all 
+lib adau1761_audio_v1_00_a i3c2 vhdl
+lib adau1761_audio_v1_00_a i2c vhdl
+lib adau1761_audio_v1_00_a adau1761_configuraiton_data vhdl
+lib adau1761_audio_v1_00_a ADAU1761_interface vhdl
+lib adau1761_audio_v1_00_a i2s_data_interface vhdl
+lib adau1761_audio_v1_00_a adau1761_izedboard vhdl
+lib adau1761_audio_v1_00_a clocking vhdl
+lib adau1761_audio_v1_00_a adau1761 vhdl
+lib adau1761_audio_v1_00_a user_logic vhdl
+lib adau1761_audio_v1_00_a adau1761_audio vhdl

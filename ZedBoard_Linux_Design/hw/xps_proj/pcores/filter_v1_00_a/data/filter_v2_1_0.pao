@@ -1,0 +1,11 @@
+##############################################################################
+## Filename:          C:/FPGA/ISE/SoC/EDK_Projects/Audio_2015_v0.01/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/filter_v1_00_a/data/filter_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Tue Apr 14 17:57:17 2015 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a  all 
+lib axi_lite_ipif_v1_01_a  all 
+lib filter_v1_00_a user_logic vhdl
+lib filter_v1_00_a filter vhdl
+lib filter_v1_00_a IIR_Biquad_II vhdl

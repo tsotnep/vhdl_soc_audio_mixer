@@ -1,0 +1,91 @@
+12:35:39.450 INFO  - Processing command line option -hwspec /home/user/Desktop/olluteeb/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/system.xml. 
+12:49:10.658 INFO  - Invoking Bootgen:  
+12:49:11.199 INFO  - Bootgen command execution is done. 
+14:02:15.814 INFO  - Invoking Bootgen:  
+14:02:16.349 INFO  - Bootgen command execution is done. 
+14:20:36.996 INFO  - Invoking Bootgen:  
+14:20:37.536 INFO  - Bootgen command execution is done. 
+14:21:55.587 INFO  - Invoking Bootgen:  
+14:21:56.115 INFO  - Bootgen command execution is done. 
+15:03:28.766 INFO  - Saving repository preferences. 
+15:03:28.770 INFO  - Reading in cores from local repositories: 
+		 /home/user/bsp_repo 
+15:03:28.772 INFO  - Updating libgen.options on all BSP projects. 
+15:03:28.773 INFO  - Cleaning BSP projects in the workspace. 
+15:03:59.621 INFO  - 'device-tree' is a board support package for an OS for which applications cannot be developed within SDK. 
+15:03:59.622 INFO  - You can configure and build project 'device-tree_bsp_0' within SDK at will, but have to export it into the appropriate third party environment to develop applications. 
+15:04:00.120 WARN  - Unable to determine location of documentation for OS device-tree. 
+16:17:12.518 INFO  - Processing command line option -hwspec /home/user/Desktop/olluteeb/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/system.xml. 
+16:17:23.157 INFO  - Restoring local repository preferences: 
+		 /home/user/bsp_repo 
+14:41:31.145 INFO  - Project xps_proj_hw_platform's source hardware specification located at /home/user/Desktop/olluteeb/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+14:41:33.547 INFO  - Copied contents of /home/user/Desktop/olluteeb/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/system.xml into /xps_proj_hw_platform/system.xml. 
+14:41:33.606 INFO  - Copied contents of /home/user/Desktop/olluteeb/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/system.bit into /xps_proj_hw_platform/system.bit. 
+14:41:33.775 INFO  - Copied contents of /home/user/Desktop/olluteeb/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/ps7_init.c into /xps_proj_hw_platform/ps7_init.c. 
+14:41:34.472 INFO  - Copied contents of /home/user/Desktop/olluteeb/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/ps7_init.h into /xps_proj_hw_platform/ps7_init.h. 
+14:41:34.477 INFO  - Copied contents of /home/user/Desktop/olluteeb/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/ps7_init.html into /xps_proj_hw_platform/ps7_init.html. 
+14:41:34.478 INFO  - Copied contents of /home/user/Desktop/olluteeb/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/ps7_init.tcl into /xps_proj_hw_platform/ps7_init.tcl. 
+14:41:34.850 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+14:41:56.999 INFO  - Updating hardware inferred compiler options for FSBL. 
+14:41:57.071 INFO  - Clearing existing target manager status. 
+14:41:59.456 INFO  - Copied contents of /home/user/Desktop/olluteeb/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/xps_proj_hw_platform/ps7_init.c into /FSBL/src/ps7_init.c. 
+14:41:59.459 INFO  - Copied contents of /home/user/Desktop/olluteeb/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/xps_proj_hw_platform/ps7_init.h into /FSBL/src/ps7_init.h. 
+14:41:59.472 INFO  - Copied contents of /home/user/Desktop/olluteeb/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/xps_proj_hw_platform/ps7_init.html into /FSBL/src/ps7_init.html. 
+14:41:59.473 INFO  - Copied contents of /home/user/Desktop/olluteeb/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/xps_proj_hw_platform/ps7_init.tcl into /FSBL/src/ps7_init.tcl. 
+14:41:59.479 INFO  - Closing and re-opening the MSS file of ther project FSBL_bsp 
+14:42:00.867 INFO  - Closing and re-opening the MSS file of ther project FSBL_bsp 
+14:42:02.036 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+14:45:10.642 INFO  - Invoking Bootgen:  
+14:45:11.170 INFO  - Bootgen command execution is done. 
+15:48:52.175 INFO  - Processing command line option -hwspec /home/user/Desktop/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/system.xml. 
+15:48:54.072 INFO  - The hardware specification for project 'xps_proj_hw_platform' is different from /home/user/Desktop/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/system.xml. 
+15:48:54.649 INFO  - Copied contents of /home/user/Desktop/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/system.xml into /xps_proj_hw_platform/system.xml. 
+15:48:54.660 INFO  - Copied contents of /home/user/Desktop/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/system.bit into /xps_proj_hw_platform/system.bit. 
+15:48:54.666 INFO  - Copied contents of /home/user/Desktop/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/ps7_init.c into /xps_proj_hw_platform/ps7_init.c. 
+15:48:54.666 INFO  - Copied contents of /home/user/Desktop/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/ps7_init.h into /xps_proj_hw_platform/ps7_init.h. 
+15:48:54.669 INFO  - Copied contents of /home/user/Desktop/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/ps7_init.html into /xps_proj_hw_platform/ps7_init.html. 
+15:48:54.670 INFO  - Copied contents of /home/user/Desktop/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/ps7_init.tcl into /xps_proj_hw_platform/ps7_init.tcl. 
+15:48:55.243 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+15:48:56.103 INFO  - Restoring local repository preferences: 
+		 /home/user/bsp_repo 
+15:48:57.056 INFO  - Updating hardware inferred compiler options for FSBL. 
+15:48:57.060 INFO  - Clearing existing target manager status. 
+15:48:59.313 INFO  - Copied contents of /home/user/Desktop/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/xps_proj_hw_platform/ps7_init.c into /FSBL/src/ps7_init.c. 
+15:48:59.314 INFO  - Copied contents of /home/user/Desktop/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/xps_proj_hw_platform/ps7_init.h into /FSBL/src/ps7_init.h. 
+15:48:59.323 INFO  - Copied contents of /home/user/Desktop/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/xps_proj_hw_platform/ps7_init.html into /FSBL/src/ps7_init.html. 
+15:48:59.326 INFO  - Copied contents of /home/user/Desktop/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/xps_proj_hw_platform/ps7_init.tcl into /FSBL/src/ps7_init.tcl. 
+15:59:28.520 INFO  - Invoking Bootgen:  
+15:59:29.055 INFO  - Bootgen command execution is done. 
+17:35:36.436 INFO  - Processing command line option -hwspec /home/user/S/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/system.xml. 
+17:35:38.536 INFO  - The hardware specification for project 'xps_proj_hw_platform' is different from /home/user/S/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/system.xml. 
+17:35:38.873 INFO  - Copied contents of /home/user/S/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/system.xml into /xps_proj_hw_platform/system.xml. 
+17:35:38.885 INFO  - Copied contents of /home/user/S/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/system.bit into /xps_proj_hw_platform/system.bit. 
+17:35:38.889 INFO  - Copied contents of /home/user/S/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/ps7_init.c into /xps_proj_hw_platform/ps7_init.c. 
+17:35:38.890 INFO  - Copied contents of /home/user/S/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/ps7_init.h into /xps_proj_hw_platform/ps7_init.h. 
+17:35:38.894 INFO  - Copied contents of /home/user/S/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/ps7_init.html into /xps_proj_hw_platform/ps7_init.html. 
+17:35:38.895 INFO  - Copied contents of /home/user/S/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/ps7_init.tcl into /xps_proj_hw_platform/ps7_init.tcl. 
+17:35:39.613 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+17:35:40.569 INFO  - Restoring local repository preferences: 
+		 /home/user/bsp_repo 
+17:35:41.472 INFO  - Updating hardware inferred compiler options for FSBL. 
+17:35:41.491 INFO  - Clearing existing target manager status. 
+17:35:43.724 INFO  - Copied contents of /home/user/S/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/xps_proj_hw_platform/ps7_init.c into /FSBL/src/ps7_init.c. 
+17:35:43.727 INFO  - Copied contents of /home/user/S/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/xps_proj_hw_platform/ps7_init.h into /FSBL/src/ps7_init.h. 
+17:35:43.735 INFO  - Copied contents of /home/user/S/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/xps_proj_hw_platform/ps7_init.html into /FSBL/src/ps7_init.html. 
+17:35:43.738 INFO  - Copied contents of /home/user/S/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/xps_proj_hw_platform/ps7_init.tcl into /FSBL/src/ps7_init.tcl. 
+17:37:55.895 INFO  - Invoking Bootgen:  
+17:37:56.423 INFO  - Bootgen command execution is done. 
+17:39:17.853 INFO  - Specified output file already exists 
+17:39:19.810 INFO  - Invoking Bootgen:  
+17:39:20.345 INFO  - Bootgen command execution is done. 
+17:47:47.696 INFO  - Invoking Bootgen:  
+17:47:48.225 INFO  - Bootgen command execution is done. 
+17:56:26.523 INFO  - Invoking Bootgen:  
+17:56:27.043 INFO  - Bootgen command execution is done. 
+18:12:42.546 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+18:36:38.964 INFO  - Processing command line option -hwspec /home/user/S/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/hw/system.xml. 
+18:39:15.161 INFO  - Invoking Bootgen:  
+18:39:15.693 INFO  - Bootgen command execution is done. 
+20:03:07.867 INFO  - Invoking Bootgen:  
+20:03:08.401 INFO  - Bootgen command execution is done. 

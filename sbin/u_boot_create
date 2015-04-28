@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#script guard
+if [ ! "$0" == "./sbin/$(basename $0)" ]; then
+        echo
+        echo Must be invoked as ./sbin/$(basename $0)
+        echo
+        exit 1
+fi
+
+
+BOOT_IMG_DIR=boot_image/
+
+
+echo
+echo -------------------------------
+echo create u-boot.elf
+echo -------------------------------
+echo
+
+
+if [ ! -d u-boot-digilent ]; then
+        git clone https://github.com/Digilent/u-boot-digilent
+fi
+
+cd u-boot-digilent
+make CROSS_COMPILE=arm-xilinx-linux-gnueabi zynq_zed_config
+make CROSS_COMPILE=arm-xilinx-linux-gnueabi-
+cd ..
+echo
+cp -v u-boot-digilent/u-boot $BOOT_IMG_DIR/u-boot.elf
+echo

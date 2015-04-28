@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/EDK_Projects/Audio_2015_v0.01/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/filter_v1_00_a/hdl/vhdl/IIR_Biquad_II.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/EDK_Projects/Audio_2015_v0.01/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/filter_v1_00_a/hdl/vhdl/filter.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/EDK_Projects/Audio_2015_v0.01/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/filter_v1_00_a/hdl/vhdl/user_logic.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/axi_lite_ipif_v1_01_a/hdl/vhdl/address_decoder.vhd&quot; into library axi_lite_ipif_v1_01_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/axi_lite_ipif_v1_01_a/hdl/vhdl/axi_lite_ipif.vhd&quot; into library axi_lite_ipif_v1_01_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/axi_lite_ipif_v1_01_a/hdl/vhdl/slave_attachment.vhd&quot; into library axi_lite_ipif_v1_01_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/addsub.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/async_fifo_fg.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/basic_sfifo_fg.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/blk_mem_gen_wrapper.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/cntr_incr_decr_addn_f.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/common_types_pkg.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/compare_vectors_f.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/conv_funs_pkg.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/coregen_comp_defs.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/counter.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/counter_bit.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr_ai.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/down_counter.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/dynshreg2_f.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/dynshreg_f.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/dynshreg_i_f.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/eval_timer.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/family.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/family_support.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/inferred_lut4.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/ipif_mirror128.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/ipif_pkg.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/ipif_steer.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/ipif_steer128.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg2.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/mux_onehot.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/mux_onehot_f.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/muxf_struct_f.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/or_bits.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/or_gate.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/or_gate128.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/or_gate_f.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/or_muxcy.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/or_muxcy_f.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/or_with_enable_f.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/pf_adder.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/pf_adder_bit.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/pf_counter.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/pf_counter_bit.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/pf_counter_top.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/pf_dpram_select.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter_top.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/proc_common_pkg.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/pselect.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/pselect_mask.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/soft_reset.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/srl16_fifo.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/srl_fifo.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/srl_fifo2.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/srl_fifo3.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/srl_fifo_f.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu2_f.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu_f.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/sync_fifo_fg.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/valid_be.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/FPGA/ISE/SoC/Lab_Project/Test_Zedboard_syntax/proc_common_v3_00_a/hdl/vhdl/xor_f.vhd&quot; into library proc_common_v3_00_a</arg>
+</msg>
+
+</messages>
+

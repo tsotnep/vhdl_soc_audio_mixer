@@ -1,0 +1,6 @@
+the_ROM_image:
+{
+	[bootloader]/home/user/S/adau1761/adau1761/ZedBoard_Linux_Design/boot_image/FSBL.elf
+	/home/user/S/adau1761/adau1761/ZedBoard_Linux_Design/boot_image/system.bit
+	[init]/home/user/S/adau1761/adau1761/ZedBoard_Linux_Design/boot_image/u-boot.elf
+}

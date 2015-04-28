@@ -1,0 +1,38 @@
+#!/bin/sh
+
+#script guard
+if [ ! "$0" == "./sbin/$(basename $0)" ]; then
+        echo
+        echo Must be invoked as ./sbin/$(basename $0)
+        echo
+        exit 1
+fi
+
+
+echo
+echo -------------------------------
+echo create zImage 
+echo -------------------------------
+echo
+
+
+if [ ! -d linux-digilent ]; then
+	git clone https://github.com/Digilent/linux-digilent
+fi
+cd linux-digilent
+make ARCH=arm CROSS_COMPILE=arm-xilinx-linux-gnueabi- digilent_zed_defconfig
+make ARCH=arm CROSS_COMPILE=arm-xilinx-linux-gnueabi-
+cd ..
+
+cp -v linux-digilent/arch/arm/boot/zImage sd_card_files/
+
+
+echo
+echo -------------------------------
+echo create devicetree.dtb 
+echo -------------------------------
+echo
+
+./linux-digilent/scripts/dtc/dtc -I dts -O dtb -o sd_card_files/devicetree.dtb linux-digilent/arch/arm/boot/dts/digilent-zed.dts
+
+echo

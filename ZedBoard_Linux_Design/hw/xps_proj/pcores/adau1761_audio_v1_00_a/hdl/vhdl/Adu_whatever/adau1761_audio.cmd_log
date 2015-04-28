@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/adau1761_audio.xst" -ofn "/home/user/Desktop/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/Adu_whatever/adau1761_audio.syr" 

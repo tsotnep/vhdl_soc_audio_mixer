@@ -1,0 +1,136 @@
+#!/bin/sh
+
+#script guard
+if [ ! "$0" == "./sbin/$(basename $0)" ]; then
+        echo
+        echo Must be invoked as ./sbin/$(basename $0)
+        echo
+        exit 1
+fi
+
+DEV=$1
+
+LOG=generate.log
+SCRIPTS=./sbin
+BOOT_IMG_DIR=boot_image
+SD_CARD_DIR=sd_card_files
+
+if [ -f $LOG ]; then rm $LOG;fi
+touch $LOG
+
+echo | tee -a $LOG
+echo ------------------------------- | tee -a $LOG
+echo generate all | tee -a $LOG
+echo ------------------------------- | tee -a $LOG
+echo | tee -a $LOG
+
+
+mkdir -p $BOOT_IMG_DIR $SD_CARD_DIR
+
+echo log file at $LOG, you may want to follow via
+echo $ tail -f $LOG
+
+echo
+echo -------------------------------
+echo generate system.bit
+echo -------------------------------
+echo
+if ! $SCRIPTS/system_bit_create >> $LOG 2>&1; then
+	echo generating system.bit failed!
+	echo tail $LOG
+	echo
+	echo $(tail $LOG)
+	exit 1
+fi
+
+
+echo
+echo -------------------------------
+echo create FSBL.elf
+echo -------------------------------
+echo
+if ! $SCRIPTS/FSBL_create >> $LOG 2>&1; then
+	echo creating FSBL.elf failed!
+	echo tail $LOG
+	echo 
+	echo $(tail $LOG)
+	exit 1
+fi
+
+
+echo
+echo -------------------------------
+echo create u-boot.elf
+echo -------------------------------
+echo
+if ! $SCRIPTS/u_boot_create >> $LOG 2>&1; then
+	echo creating u-boot.elf failed!
+	echo tail $LOG
+	echo 
+	echo $(tail $LOG)
+	exit 1
+fi
+
+
+echo
+echo -------------------------------
+echo create BOOT.BIN
+echo -------------------------------
+echo
+if ! $SCRIPTS/BOOT_BIN_create >> $LOG 2>&1; then
+	echo creating BOOT.BIN failed!
+	echo tail $LOG
+	echo 
+	echo $(tail $LOG)
+	exit 1
+fi
+
+
+echo
+echo -------------------------------
+echo create zImage \& devicetree.dtb
+echo -------------------------------
+echo
+if ! $SCRIPTS/zImage_devicetree_create >> $LOG 2>&1; then
+	echo creating BOOT.BIN failed!
+	echo tail $LOG
+	echo 
+	echo $(tail $LOG)
+	exit 1
+fi
+
+echo | tee -a $LOG
+echo All files generated... | tee -a $LOG
+echo | tee -a $LOG
+echo sd_card_files/ | tee -a $LOG
+echo | tee -a $LOG
+ls -lh sd_card_files | tee -a $LOG
+echo | tee -a $LOG
+echo "DONE :)" | tee -a $LOG
+echo | tee -a $LOG
+
+echo | tee -a $LOG
+echo ------------------------------- | tee -a $LOG
+echo create sd card and copy files | tee -a $LOG
+echo ------------------------------- | tee -a $LOG
+echo | tee -a $LOG
+
+if [ -z $DEV ]; then
+	echo detect sd card... | tee -a $LOG
+
+	DEV=$(sudo blkid | grep -B 1 "LABEL=\"ROOT_FS\"" | grep ZED_BOOT | head -1 | sed 's/^\([a-z,\/]*\)[0-9]*: .*/\1/' >> $LOG 2>&1)
+
+	if [ -z $DEV ]; then
+		echo sd card couldn\'t be detected automatically. Please plug in the sd card and run ./sbin/sd_card_create manually | tee -a $LOG
+		echo| tee -a $LOG
+		exit 0
+	else
+		echo sd card on $DEV detected! | tee -a $LOG
+		echo| tee -a $LOG
+	fi
+fi
+
+echo sudo $SCRIPTS/sd_card_create $SD_CARD_DIR $DEV| tee -a $LOG
+echo| tee -a $LOG
+sudo $SCRIPTS/sd_card_create $SD_CARD_DIR $DEV | tee -a $LOG 2>&1
+

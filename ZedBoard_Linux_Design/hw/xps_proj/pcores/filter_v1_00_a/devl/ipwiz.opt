@@ -1,0 +1,8 @@
+-batch 
+-create filter 
+-ver 1.00.a 
+-dir "C:\FPGA\ISE\SoC\EDK_Projects\Audio_2015_v0.01\adau1761\adau1761\ZedBoard_Linux_Design\hw\xps_proj" 
+-lang vhdl 
+-bus axi4lite s 
+-reg 30 
+-xps 

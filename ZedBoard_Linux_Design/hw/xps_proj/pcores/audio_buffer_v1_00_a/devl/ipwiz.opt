@@ -1,0 +1,10 @@
+-batch 
+-create audio_buffer 
+-ver 1.00.a 
+-dir "C:\SoC_project\Audio_2015_v0.01\adau1761\adau1761\ZedBoard_Linux_Design\hw\xps_proj" 
+-lang vhdl 
+-bus axi4lite s 
+-reg 2 
+-xps 
+-ise 
+-driver 

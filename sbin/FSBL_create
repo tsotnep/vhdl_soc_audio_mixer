@@ -1,0 +1,56 @@
+#!/bin/sh
+
+#script guard
+if [ ! "$0" == "./sbin/$(basename $0)" ]; then
+        echo
+        echo Must be invoked as ./sbin/$(basename $0)
+        echo
+        exit 1
+fi
+
+
+BOOT_IMG_DIR=boot_image/
+
+echo
+echo -------------------------------
+echo create FSBL.elf
+echo -------------------------------
+echo
+
+#after tutoriaL:
+#http://www.xilinx.com/support/documentation/sw_manuals/xilinx13_2/SDK_Doc/reference/sdk_u_commandline.htm
+
+export LM_LICENSE_FILE=1700@ekleer
+
+#get $XILINX and $XILINX_EDK environment variables
+source /opt/Xilinx/14.7/ISE_DS/settings32.sh
+
+APP=FSBL
+#BSP=FSBL_bsp
+
+WSPACE=$(readlink -f ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export)
+
+VM="$XILINX/java6/lin/jre/bin"
+ECLIPSE="$XILINX_EDK/eclipse/lin/eclipse/eclipse"
+
+cd ZedBoard_Linux_Design/hw/xps_proj
+
+make -f system.make exporttosdk
+
+cd ../../../
+
+#$ECLIPSE -vm $VM -nosplash -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
+#   -build $BSP \
+#   -data $WSPACE \
+#   -vmargs -Dorg.eclipse.cdt.core.console=org.eclipse.cdt.core.systemConsole
+
+$ECLIPSE -vm $VM -nosplash -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
+   -build $APP \
+   -data $WSPACE \
+   -vmargs -Dorg.eclipse.cdt.core.console=org.eclipse.cdt.core.systemConsole
+
+
+echo
+cp -v ZedBoard_Linux_Design/hw/xps_proj/SDK/SDK_Export/FSBL/Release/FSBL.elf $BOOT_IMG_DIR
+echo
+

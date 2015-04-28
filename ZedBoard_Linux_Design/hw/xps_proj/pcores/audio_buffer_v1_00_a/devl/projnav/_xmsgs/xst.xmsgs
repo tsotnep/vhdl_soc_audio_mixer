@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="Xst" num="2927" delta="new" >&quot;<arg fmt="%s" index="1">\SoC_project\Audio_2015_v0.01\adau1761\adau1761\ZedBoard_Linux_Design\hw\xps_proj\pcores\audio_buffer_v1_00_a\devl\projnav\audio_buffer.prj</arg>&quot; line <arg fmt="%d" index="2">1</arg>: Source file <arg fmt="%s" index="3">../../../../../../../../../../../Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/proc_common_pkg.vhd</arg> does not exist
+</msg>
+
+</messages>
+

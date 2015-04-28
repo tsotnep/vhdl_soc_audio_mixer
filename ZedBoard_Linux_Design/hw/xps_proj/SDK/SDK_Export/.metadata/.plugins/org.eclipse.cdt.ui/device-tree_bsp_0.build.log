@@ -1,0 +1,257 @@
+15:21:10 **** Build of project device-tree_bsp_0 ****
+make -k ARCH=arm CROSS_COMPILE=arm-xilinx-linux-gnueabi- 
+libgen -hw ../xps_proj_hw_platform/system.xml\
+	       -lp /home/user/bsp_repo\
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../xps_proj_hw_platform/system.xml -lp
+/home/user/bsp_repo -pe ps7_cortexa9_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+#--------------------------------------
+# device-tree BSP DRC...
+#--------------------------------------
+Running generate.
+#--------------------------------------
+# device-tree BSP generate...
+#--------------------------------------
+--- device tree generator version: v1.1 ---
+generating xilinx.dts
+Clock Port Summary:
+clock_generator_0.CLKOUT0 connected to clock_generator_0_CLKOUT0:
+    CLK_FREQ_HZ = 12288135
+    CLK_INPORT = 
+    CLK_FACTOR = 
+clock_generator_0.CLKIN connected to processing_system7_0_FCLK_CLK1:
+    CLK_FREQ_HZ = 200000000
+clock_generator_0.CLKOUT1 connected to clock_generator_0_CLKOUT1:
+    CLK_FREQ_HZ = 12288135
+    CLK_INPORT = 
+    CLK_FACTOR = 
+axi_clkgen_0.S_AXI_ACLK connected to processing_system7_0_FCLK_CLK0:
+    CLK_FREQ_HZ = 100000000
+axi_clkgen_0.clk connected to axi_clkgen_0_clk:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+    CLK_INPORT = 
+    CLK_FACTOR = 
+axi_clkgen_0.ref_clk connected to processing_system7_0_FCLK_CLK2:
+    CLK_FREQ_HZ = 200000000
+axi_interconnect_1.INTERCONNECT_ACLK connected to
+processing_system7_0_FCLK_CLK0:
+    CLK_FREQ_HZ = 100000000
+axi_interconnect_1.S_AXI_ACLK connected to axi_interconnect_1_S_ACLK:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+axi_interconnect_1.M_AXI_ACLK connected to axi_interconnect_1_M_ACLK:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+axi_hdmi_tx_16b_0.S_AXI_ACLK connected to processing_system7_0_FCLK_CLK0:
+    CLK_FREQ_HZ = 100000000
+axi_hdmi_tx_16b_0.hdmi_ref_clk connected to axi_clkgen_0_clk:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+axi_hdmi_tx_16b_0.vdma_clk connected to processing_system7_0_FCLK_CLK1:
+    CLK_FREQ_HZ = 166666672
+axi_spdif_tx_0.S_AXI_ACLK connected to processing_system7_0_FCLK_CLK0:
+    CLK_FREQ_HZ = 100000000
+axi_spdif_tx_0.spdif_data_clk connected to clock_generator_0_CLKOUT0:
+    CLK_FREQ_HZ = 12288135
+axi_spdif_tx_0.ACLK connected to processing_system7_0_FCLK_CLK0:
+    CLK_FREQ_HZ = 100000000
+axi_dma_i2s.m_axi_sg_aclk connected to processing_system7_0_FCLK_CLK0:
+    CLK_FREQ_HZ = 100000000
+axi_dma_i2s.m_axi_mm2s_aclk connected to processing_system7_0_FCLK_CLK0:
+    CLK_FREQ_HZ = 100000000
+axi_dma_i2s.m_axi_s2mm_aclk connected to processing_system7_0_FCLK_CLK0:
+    CLK_FREQ_HZ = 100000000
+axi_dma_i2s.s_axi_lite_aclk connected to processing_system7_0_FCLK_CLK0:
+    CLK_FREQ_HZ = 100000000
+axi_interconnect_2.INTERCONNECT_ACLK connected to
+processing_system7_0_FCLK_CLK0:
+    CLK_FREQ_HZ = 100000000
+axi_interconnect_2.S_AXI_ACLK connected to axi_interconnect_2_S_ACLK:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+axi_interconnect_2.M_AXI_ACLK connected to axi_interconnect_2_M_ACLK:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+axi_dma_spdif.m_axi_sg_aclk connected to processing_system7_0_FCLK_CLK0:
+    CLK_FREQ_HZ = 100000000
+axi_dma_spdif.m_axi_mm2s_aclk connected to processing_system7_0_FCLK_CLK0:
+    CLK_FREQ_HZ = 100000000
+axi_dma_spdif.m_axi_s2mm_aclk connected to processing_system7_0_FCLK_CLK0:
+    CLK_FREQ_HZ = 100000000
+axi_dma_spdif.s_axi_lite_aclk connected to processing_system7_0_FCLK_CLK0:
+    CLK_FREQ_HZ = 100000000
+axi_interconnect_3.INTERCONNECT_ACLK connected to
+processing_system7_0_FCLK_CLK1:
+    CLK_FREQ_HZ = 166666672
+axi_interconnect_3.S_AXI_ACLK connected to axi_interconnect_3_S_ACLK:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+axi_interconnect_3.M_AXI_ACLK connected to axi_interconnect_3_M_ACLK:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+axi_vdma_0.s_axi_lite_aclk connected to processing_system7_0_FCLK_CLK0:
+    CLK_FREQ_HZ = 100000000
+axi_vdma_0.m_axi_mm2s_aclk connected to processing_system7_0_FCLK_CLK1:
+    CLK_FREQ_HZ = 166666672
+axi_vdma_0.m_axi_s2mm_aclk connected to processing_system7_0_FCLK_CLK0:
+    CLK_FREQ_HZ = 100000000
+axi_vdma_0.m_axis_mm2s_aclk connected to processing_system7_0_FCLK_CLK1:
+    CLK_FREQ_HZ = 166666672
+axi_iic_hdmi.S_AXI_ACLK connected to processing_system7_0_FCLK_CLK0:
+    CLK_FREQ_HZ = 100000000
+adau1761_audio_0.S_AXI_ACLK connected to processing_system7_0_FCLK_CLK0:
+    CLK_FREQ_HZ = 100000000
+ps7_axi_interconnect_0.M_AXI_GP0_ACLK connected to
+processing_system7_0_FCLK_CLK0:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+ps7_axi_interconnect_0.M_AXI_GP1_ACLK connected to
+ps7_axi_interconnect_0_M_AXI_GP1_ACLK:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+ps7_axi_interconnect_0.S_AXI_HP1_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_HP1_ACLK:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+ps7_axi_interconnect_0.S_AXI_ACP_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_ACP_ACLK:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+ps7_axi_interconnect_0.S_AXI_GP1_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_GP1_ACLK:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+ps7_axi_interconnect_0.S_AXI_GP0_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_GP0_ACLK:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+ps7_axi_interconnect_0.S_AXI_HP3_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_HP3_ACLK:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+ps7_axi_interconnect_0.S_AXI_HP2_ACLK connected to
+processing_system7_0_FCLK_CLK1:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+ps7_axi_interconnect_0.S_AXI_HP0_ACLK connected to
+processing_system7_0_FCLK_CLK0:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+ps7_axi_interconnect_0.S_AXI_ACLK connected to ps7_axi_interconnect_0_S_ACLK:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+ps7_axi_interconnect_0.M_AXI_ACLK connected to ps7_axi_interconnect_0_M_ACLK:
+    CLK_FREQ_HZ = WARNING: no frequency found!
+IP connected to bus: ps7_axi_interconnect_0
+-master M_AXI_DP ps7_axi_interconnect_0 ps7_cortexa9_0
+-master M_AXI_DP ps7_axi_interconnect_0 ps7_cortexa9_1
+-slave S_AXI ps7_axi_interconnect_0 ps7_uart_1
+-slave S_AXI ps7_axi_interconnect_0 ps7_afi_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_afi_1
+-slave S_AXI ps7_axi_interconnect_0 ps7_afi_2
+-slave S_AXI ps7_axi_interconnect_0 ps7_afi_3
+-slave S_AXI ps7_axi_interconnect_0 ps7_sd_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_ttc_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_ethernet_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_usb_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_qspi_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_qspi_linear_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_ddr_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_gpio_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_ddrc_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_dev_cfg_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_xadc_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_coresight_comp_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_ocmc_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_gpv_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_scuc_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_intc_dist_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_globaltimer_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_l2cachec_0
+-slave S_AXI_LITE ps7_axi_interconnect_0 ps7_dma_s
+-slave S_AXI ps7_axi_interconnect_0 ps7_iop_bus_config_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_ram_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_ram_1
+-slave S_AXI ps7_axi_interconnect_0 ps7_scugic_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_scutimer_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_scuwdt_0
+-slave S_AXI ps7_axi_interconnect_0 ps7_slcr_0
+-slave S_AXI_LITE ps7_axi_interconnect_0 ps7_dma_ns
+-slave adau1761_audio_0
+-slave axi_clkgen_0
+-slave axi_dma_i2s
+-slave axi_dma_spdif
+-slave axi_hdmi_tx_16b_0
+-slave axi_iic_hdmi
+-slave axi_spdif_tx_0
+-slave axi_vdma_0
+-slave ps7_afi_0
+IP 198114232 ps7_afi_0 is already appended - skip it
+-slave ps7_afi_1
+IP 198114464 ps7_afi_1 is already appended - skip it
+-slave ps7_afi_2
+IP 198114696 ps7_afi_2 is already appended - skip it
+-slave ps7_afi_3
+IP 198114928 ps7_afi_3 is already appended - skip it
+-slave ps7_coresight_comp_0
+IP 198117944 ps7_coresight_comp_0 is already appended - skip it
+-slave ps7_ddr_0
+IP 198116552 ps7_ddr_0 is already appended - skip it
+-slave ps7_ddrc_0
+IP 198117248 ps7_ddrc_0 is already appended - skip it
+-slave ps7_dev_cfg_0
+IP 198117480 ps7_dev_cfg_0 is already appended - skip it
+-slave ps7_dma_ns
+-slave ps7_dma_s
+IP 198119568 ps7_dma_s is already appended - skip it
+-slave ps7_ethernet_0
+IP 198115624 ps7_ethernet_0 is already appended - skip it
+-slave ps7_globaltimer_0
+IP 198119104 ps7_globaltimer_0 is already appended - skip it
+-slave ps7_gpio_0
+IP 198116784 ps7_gpio_0 is already appended - skip it
+-slave ps7_gpv_0
+IP 198118408 ps7_gpv_0 is already appended - skip it
+-slave ps7_intc_dist_0
+IP 198118872 ps7_intc_dist_0 is already appended - skip it
+-slave ps7_iop_bus_config_0
+IP 198119800 ps7_iop_bus_config_0 is already appended - skip it
+-slave ps7_l2cachec_0
+IP 198119336 ps7_l2cachec_0 is already appended - skip it
+-slave ps7_ocmc_0
+IP 198118176 ps7_ocmc_0 is already appended - skip it
+-slave ps7_qspi_0
+IP 198116088 ps7_qspi_0 is already appended - skip it
+-slave ps7_qspi_linear_0
+IP 198116320 ps7_qspi_linear_0 is already appended - skip it
+-slave ps7_ram_0
+IP 198120032 ps7_ram_0 is already appended - skip it
+-slave ps7_ram_1
+IP 198120264 ps7_ram_1 is already appended - skip it
+-slave ps7_scuc_0
+IP 198118640 ps7_scuc_0 is already appended - skip it
+-slave ps7_scugic_0
+IP 198120496 ps7_scugic_0 is already appended - skip it
+-slave ps7_scutimer_0
+IP 198120728 ps7_scutimer_0 is already appended - skip it
+-slave ps7_scuwdt_0
+IP 198120960 ps7_scuwdt_0 is already appended - skip it
+-slave ps7_sd_0
+IP 198115160 ps7_sd_0 is already appended - skip it
+-slave ps7_slcr_0
+IP 198121192 ps7_slcr_0 is already appended - skip it
+-slave ps7_ttc_0
+IP 198115392 ps7_ttc_0 is already appended - skip it
+-slave ps7_uart_1
+IP 198114000 ps7_uart_1 is already appended - skip it
+-slave ps7_usb_0
+IP 198115856 ps7_usb_0 is already appended - skip it
+-slave ps7_xadc_0
+IP 198117712 ps7_xadc_0 is already appended - skip it
+ps7_afi_0
+ps7_afi_1
+ps7_afi_2
+ps7_afi_3
+adau1761_audio_0
+axi_clkgen_0
+ERROR:EDK - xget_value  name : A NULL handle was provided
+ERROR:EDK - device-tree () - expected integer but got "" 
+ERROR:EDK:3416 - Error(s) while running TCL procedure generate().
+make: *** [ps7_cortexa9_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+
+15:21:13 Build Finished (took 3s.256ms)
+

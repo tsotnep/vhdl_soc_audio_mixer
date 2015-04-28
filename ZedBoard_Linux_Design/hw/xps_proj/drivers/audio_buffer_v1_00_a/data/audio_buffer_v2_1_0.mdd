@@ -1,0 +1,15 @@
+##############################################################################
+## Filename:          C:\SoC_project\Audio_2015_v0.01\adau1761\adau1761\ZedBoard_Linux_Design\hw\xps_proj/drivers/audio_buffer_v1_00_a/data/audio_buffer_v2_1_0.mdd
+## Description:       Microprocessor Driver Definition
+## Date:              Mon Apr 13 19:59:52 2015 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+OPTION psf_version = 2.1.0;
+
+BEGIN DRIVER audio_buffer
+
+  OPTION supported_peripherals = (audio_buffer);
+  OPTION depends = (common_v1_00_a);
+  OPTION copyfiles = all;
+
+END DRIVER

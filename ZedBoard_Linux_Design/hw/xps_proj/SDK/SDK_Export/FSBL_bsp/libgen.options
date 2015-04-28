@@ -1,0 +1,3 @@
+PROCESSOR=ps7_cortexa9_0
+REPOSITORIES=-lp /home/user/bsp_repo
+HWSPEC=../xps_proj_hw_platform/system.xml

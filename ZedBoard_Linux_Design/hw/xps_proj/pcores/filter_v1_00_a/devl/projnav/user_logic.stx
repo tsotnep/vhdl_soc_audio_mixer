@@ -1,0 +1,63 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/FPGA/ISE/SoC/EDK_Projects/Audio_2015_v0.01/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/filter_v1_00_a/devl/projnav/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to C:/FPGA/ISE/SoC/EDK_Projects/Audio_2015_v0.01/adau1761/adau1761/ZedBoard_Linux_Design/hw/xps_proj/pcores/filter_v1_00_a/devl/projnav/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: user_logic.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\FPGA\ISE\SoC\Lab_Project\Test_Zedboard_syntax\proc_common_v3_00_a\hdl\vhdl\proc_common_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <proc_common_pkg>.
+Parsing package body <proc_common_pkg>.
+Parsing VHDL file "C:\FPGA\ISE\SoC\EDK_Projects\Audio_2015_v0.01\adau1761\adau1761\ZedBoard_Linux_Design\hw\xps_proj\pcores\filter_v1_00_a\hdl\vhdl\IIR_Biquad_II.vhd" into library work
+Parsing entity <IIR_Biquad_II>.
+Parsing architecture <arch> of entity <iir_biquad_ii>.
+Parsing VHDL file "C:\FPGA\ISE\SoC\EDK_Projects\Audio_2015_v0.01\adau1761\adau1761\ZedBoard_Linux_Design\hw\xps_proj\pcores\filter_v1_00_a\hdl\vhdl\user_logic.vhd" into library work
+Parsing entity <user_logic>.
+Parsing architecture <IMP> of entity <user_logic>.
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.75 secs
+ 
+--> 
+
+Total memory usage is 219344 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
