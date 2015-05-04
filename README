@@ -27,9 +27,10 @@ To only copy the files from sd_card_files directory to the sd card, run
 
 
 
+----------------------------
+Getting access to repository
+----------------------------
 
-Getting access to repository & git basics
------------------------------------------
 This short tutorial will cover how to sign up on github and clone a project directory via ssh.
 
 
@@ -70,10 +71,54 @@ git config --global user.name <your name>
 Now you are finished. :)
 Modify the code or start with the first build described above.
 
+----------
+Git basics
+----------
 
-<basic git commands follow soon>
+print differences to last commit on this branch (initally it's master)
+$ git status
+
+add file to next commit
+$ git add <file>
+
+commit changes/modified files to local branch
+$ git commit -m "<commit message>"
+
+view all commits for the current branch
+$ git log
+
+push changes to github (central git repository)
+$ git push
+
+pull new changes from github (central git repository)
+$ git pull
+
+view all branches
+$ git branch -a
+
+create new branch and change to it
+$ git checkout -b <branch_name>
+e.g.
+$ git checkout -b filter
+
+...<modify and commit sth.>...
+
+push current local branch to remote branch (creating it if it doesn't exist)
+$ git push origin <branch_name>
+e.g.
+$ git push origin filter
+
+merge master branch with filter branch
+$ git checkout master
+$ git merge filter
+...<do merging>...
+
+delete filter branch locally and remotely
+$ git branch -D filter
+$ git push origin --delete filter
 
 
+-----------------
 Serial connection
 -----------------
 
