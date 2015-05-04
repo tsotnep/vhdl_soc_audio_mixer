@@ -75,7 +75,7 @@ Modify the code or start with the first build described above.
 Git basics
 ----------
 
-print differences to last commit on this branch (initally it's master)
+print (not committed) differences to last commit on this branch (initally it's master)
 $ git status
 
 add file to next commit
@@ -84,17 +84,19 @@ $ git add <file>
 commit changes/modified files to local branch
 $ git commit -m "<commit message>"
 
-view all commits for the current branch
-$ git log
-
 push changes to github (central git repository)
 $ git push
 
 pull new changes from github (central git repository)
 $ git pull
 
+
+view all commits for the current branch
+$ git log
+
 view all branches
 $ git branch -a
+
 
 create new branch and change to it
 $ git checkout -b <branch_name>
@@ -108,7 +110,7 @@ $ git push origin <branch_name>
 e.g.
 $ git push origin filter
 
-merge master branch with filter branch
+change to master branch first and then merge filter branch into master branch
 $ git checkout master
 $ git merge filter
 ...<do merging>...
