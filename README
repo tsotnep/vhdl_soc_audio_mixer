@@ -63,9 +63,9 @@ $ ssh-add sshkey/mykey
 Clone the repository on the command line
 $ git clone git@github.com:SoCdesign/inputboard.git
 
-cd inputboard
-git config --global user.email <your email address>
-git config --global user.name <your name>
+$ cd inputboard
+$ git config --global user.email <your email address>
+$ git config --global user.name <your name>
 
 
 Now you are finished. :)
