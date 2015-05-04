@@ -4,9 +4,11 @@ If you build the project for the first time, plug in your sd card first and dete
 Important! It must be a device specifier (/dev/sd[a-z]), not a partition (e.g. /dev/sdb1)
 
 
+Make sure that you are in the inputboard directory.
 Then you execute 
 
-./sbin/generate_all <device_name>
+$ chmod -R +x ./sbin/
+$ ./sbin/generate_all <device_name>
 
 (e.g. ./sbin/generate_all /dev/sdb)
 
