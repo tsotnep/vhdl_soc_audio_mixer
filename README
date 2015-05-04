@@ -118,6 +118,10 @@ $ git branch -D filter
 $ git push origin --delete filter
 
 
+view repository configuration
+$ cat .git/config
+
+
 -----------------
 Serial connection
 -----------------
