@@ -12,6 +12,9 @@ fi
 source /opt/Xilinx/14.7/ISE_DS/settings32.sh
 export LM_LICENSE_FILE=1700@ekleer
 
+SD_CARD_DIR=sd_card_files
+
+mkdir -p $SD_CARD_DIR
 
 echo
 echo -------------------------------
@@ -28,6 +31,6 @@ make ARCH=arm CROSS_COMPILE=arm-xilinx-linux-gnueabi- digilent_zed_defconfig
 make ARCH=arm CROSS_COMPILE=arm-xilinx-linux-gnueabi-
 cd ..
 
-cp -v linux-digilent/arch/arm/boot/zImage sd_card_files/
+cp -v linux-digilent/arch/arm/boot/zImage $SD_CARD_DIR/
 
 echo

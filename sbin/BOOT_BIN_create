@@ -21,7 +21,7 @@ BOOTLOADER="[bootloader]$(readlink -f $BOOT_IMG_DIR/FSBL.elf)"
 SYSTEM_BIT=$(readlink -f $BOOT_IMG_DIR/system.bit)
 U_BOOT=$(readlink -f $BOOT_IMG_DIR/u-boot.elf)
 
-#echo "the_ROM_image:" >> $BOOT_IMG_DIR/$BIF_FILE
+mkdir -p $SD_CARD_DIR
 
 echo
 echo -------------------------------

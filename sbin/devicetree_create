@@ -12,13 +12,18 @@ fi
 source /opt/Xilinx/14.7/ISE_DS/settings32.sh
 export LM_LICENSE_FILE=1700@ekleer
 
+CONFIG_DIR=conf
+
 echo
 echo -------------------------------
 echo create devicetree.dtb 
 echo -------------------------------
 echo
 
+
+
 if [ -d linux-digilent ]; then
+	cp $CONFIG_DIR/devicetree.dts linux-digilent/arch/arm/boot/dts/digilent-zed.dts 
 	./linux-digilent/scripts/dtc/dtc -I dts -O dtb -o sd_card_files/devicetree.dtb linux-digilent/arch/arm/boot/dts/digilent-zed.dts
 else
 	echo not generating device tree. Kernel directory doesn\'t exist
