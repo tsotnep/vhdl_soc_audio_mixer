@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #script guard
 if [ ! "$0" == "./sbin/$(basename $0)" ]; then
@@ -20,10 +20,9 @@ echo
 #after tutoriaL:
 #http://www.xilinx.com/support/documentation/sw_manuals/xilinx13_2/SDK_Doc/reference/sdk_u_commandline.htm
 
-export LM_LICENSE_FILE=1700@ekleer
-
 #get $XILINX and $XILINX_EDK environment variables
-source /opt/Xilinx/14.7/ISE_DS/settings32.sh
+#source /opt/Xilinx/14.7/ISE_DS/settings32.sh
+#export LM_LICENSE_FILE=1700@ekleer
 
 APP=FSBL
 #BSP=FSBL_bsp

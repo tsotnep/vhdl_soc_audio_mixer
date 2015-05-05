@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 
 SD_CARD_FILES_DIR=$1

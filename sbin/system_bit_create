@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #script guard
 if [ ! "$0" == "./sbin/$(basename $0)" ]; then
