@@ -35,74 +35,119 @@ mkdir -p $BOOT_IMG_DIR $SD_CARD_DIR
 echo log file at $LOG, you may want to follow via
 echo $ tail -f $LOG
 
-echo
-echo -------------------------------
-echo generate system.bit
-echo -------------------------------
-echo
-if ! $SCRIPTS/system_bit_create >> $LOG 2>&1; then
-	echo generating system.bit failed!
-	echo tail $LOG
+if [ -f $SD_CARD_DIR/BOOT.BIN ]; then
 	echo
-	echo $(tail $LOG)
-	exit 1
+	echo skipping system.bit, FSBL.elf, u-boot.elf and BOOT.BIN generation. BOOT.BIN already exists
+	echo
+else
+	
+	echo
+	echo -------------------------------
+	echo generate system.bit
+	echo -------------------------------
+	echo
+	if [ -f $BOOT_IMG_DIR/system.bit ]; then
+		echo skipping system.bit generation. File already exists
+		echo
+	else
+		if ! $SCRIPTS/system_bit_create >> $LOG 2>&1; then
+			echo generating system.bit failed!
+			echo tail $LOG
+			echo
+			echo $(tail $LOG)
+			exit 1
+		fi
+	fi	
+	
+	echo
+	echo -------------------------------
+	echo create FSBL.elf
+	echo -------------------------------
+	echo
+	if [ -f $BOOT_IMG_DIR/FSBL.elf ]; then
+		echo skipping FSBL.elf generation. File already exists
+		echo
+	else
+		if ! $SCRIPTS/FSBL_create >> $LOG 2>&1; then
+			echo creating FSBL.elf failed!
+			echo tail $LOG
+			echo 
+			echo $(tail $LOG)
+			exit 1
+		fi
+	fi	
+	
+	echo
+	echo -------------------------------
+	echo create u-boot.elf
+	echo -------------------------------
+	echo
+	if [ -f $BOOT_IMG_DIR/u-boot.elf ]; then
+		echo skipping u-boot.elf generation. File already exists
+		echo
+	else
+		if ! $SCRIPTS/u_boot_create >> $LOG 2>&1; then
+			echo creating u-boot.elf failed!
+			echo tail $LOG
+			echo 
+			echo $(tail $LOG)
+			exit 1
+		fi
+	fi	
+	
+	echo
+	echo -------------------------------
+	echo create BOOT.BIN
+	echo -------------------------------
+	echo
+	if ! $SCRIPTS/BOOT_BIN_create >> $LOG 2>&1; then
+		echo creating BOOT.BIN failed!
+		echo tail $LOG
+		echo 
+		echo $(tail $LOG)
+		exit 1
+	fi
+
+fi	
+
+echo
+echo -------------------------------
+echo create zImage
+echo -------------------------------
+echo
+if [ -f $SD_CARD_DIR/zImage ]; then
+	echo skipping zImage generation. File already exists
+	echo
+else
+	if ! $SCRIPTS/zImage_create >> $LOG 2>&1; then
+		echo creating zImage failed!
+		echo tail $LOG
+		echo 
+		echo $(tail $LOG)
+		exit 1
+	fi
 fi
 
 
 echo
 echo -------------------------------
-echo create FSBL.elf
+echo create devicetree.dtb
 echo -------------------------------
 echo
-if ! $SCRIPTS/FSBL_create >> $LOG 2>&1; then
-	echo creating FSBL.elf failed!
-	echo tail $LOG
-	echo 
-	echo $(tail $LOG)
-	exit 1
+if [ -f $SD_CARD_DIR/devicetree.dtb ]; then
+	echo skipping devicetree.dtb generation. File already exists
+	echo
+else
+	if ! $SCRIPTS/devicetree_create >> $LOG 2>&1; then
+		echo creating devicetree.dtb failed!
+		echo tail $LOG
+		echo 
+		echo $(tail $LOG)
+		exit 1
+	fi
 fi
 
 
-echo
-echo -------------------------------
-echo create u-boot.elf
-echo -------------------------------
-echo
-if ! $SCRIPTS/u_boot_create >> $LOG 2>&1; then
-	echo creating u-boot.elf failed!
-	echo tail $LOG
-	echo 
-	echo $(tail $LOG)
-	exit 1
-fi
-
-
-echo
-echo -------------------------------
-echo create BOOT.BIN
-echo -------------------------------
-echo
-if ! $SCRIPTS/BOOT_BIN_create >> $LOG 2>&1; then
-	echo creating BOOT.BIN failed!
-	echo tail $LOG
-	echo 
-	echo $(tail $LOG)
-	exit 1
-fi
-
-
-echo
-echo -------------------------------
-echo create zImage \& devicetree.dtb
-echo -------------------------------
-echo
-if ! $SCRIPTS/zImage_devicetree_create >> $LOG 2>&1; then
-	echo creating BOOT.BIN failed!
-	echo tail $LOG
-	echo 
-	echo $(tail $LOG)
-	exit 1
-fi
 
 echo | tee -a $LOG
 echo All files generated... | tee -a $LOG

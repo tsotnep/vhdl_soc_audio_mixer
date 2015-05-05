@@ -30,13 +30,4 @@ cd ..
 
 cp -v linux-digilent/arch/arm/boot/zImage sd_card_files/
 
-
-echo
-echo -------------------------------
-echo create devicetree.dtb 
-echo -------------------------------
-echo
-
-./linux-digilent/scripts/dtc/dtc -I dts -O dtb -o sd_card_files/devicetree.dtb linux-digilent/arch/arm/boot/dts/digilent-zed.dts
-
 echo
