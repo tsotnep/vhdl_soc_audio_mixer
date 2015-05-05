@@ -9,6 +9,9 @@ if [ ! "$0" == "./sbin/$(basename $0)" ]; then
         exit 1
 fi
 
+#get $XILINX and $XILINX_EDK environment variables
+source /opt/Xilinx/14.7/ISE_DS/settings32.sh
+export LM_LICENSE_FILE=1700@ekleer
 
 SD_CARD_DIR=sd_card_files/
 BOOT_IMG_DIR=boot_image/
