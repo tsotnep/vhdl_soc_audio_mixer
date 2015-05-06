@@ -168,7 +168,7 @@ echo | tee -a $LOG
 if [ -z $DEV ]; then
 	echo detect sd card... | tee -a $LOG
 
-	DEV=$(sudo blkid | grep -B 1 "LABEL=\"ROOT_FS\"" | grep ZED_BOOT | head -1 | sed 's/^\([a-z,\/]*\)[0-9]*: .*/\1/' >> $LOG 2>&1)
+	DEV=$(sudo blkid | grep -B 1 "LABEL=\"ROOT_FS\"" | grep ZED_BOOT | head -1 | sed 's/^\([a-z,\/]*\)[0-9]*: .*/\1/' | tee -a $LOG 2>&1)
 
 	if [ -z $DEV ]; then
 		echo sd card couldn\'t be detected automatically. Please plug in the sd card and run ./sbin/sd_card_create manually | tee -a $LOG

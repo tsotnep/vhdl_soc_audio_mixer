@@ -1,0 +1,8 @@
+-batch 
+-create superip 
+-ver 1.00.a 
+-dir "/home/user/Desktop/SoC_git/inputboard/ZedBoard_Linux_Design/hw/xps_proj" 
+-lang vhdl 
+-bus axi4lite s 
+-reg 32 
+-xps 
