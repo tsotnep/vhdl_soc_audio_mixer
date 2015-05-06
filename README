@@ -30,8 +30,21 @@ To only copy the files from sd_card_files directory to the sd card, run
 Modifing VHDL in the superip core
 ---------------------------------
 
-If you changed the VHDL code in the core and added new .vhd files in the process, don't forget to declare them
-in the cores .pao file
+Start the project with
+
+xps ZedBoard_Linux_Design/hw/xps_proj/system.xmp &
+
+
+Make sure the clk parameters in system.mhs are set as follows:
+...
+PARAMETER C_FCLK_CLK0_FREQ = 100000000
+PARAMETER C_FCLK_CLK1_FREQ = 166666672
+PARAMETER C_FCLK_CLK2_FREQ = 200000000
+PARAMETER C_FCLK_CLK3_FREQ = 50000000
+...
+
+
+If you changed the VHDL code in the core and added new .vhd files in the process, don't forget to declare them in the cores .pao file
 ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/data/superip_v2_1_0.pao
 The .pao file will determine in which order the libraries should be compiled.
 This means you have to insert your new module before the library that instantiates it!
@@ -129,6 +142,11 @@ delete filter branch locally and remotely
 $ git branch -D filter
 $ git push origin --delete filter
 
+revert changes to last commit of branch
+$ git checkout -f <branch_name>
+
+compare which files were created modified between commits
+$ git diff --name-status SHA1 SHA2
 
 view repository configuration
 $ cat .git/config
