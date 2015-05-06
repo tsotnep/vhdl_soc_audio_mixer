@@ -26,7 +26,15 @@ To remove all generated files, run
 To only copy the files from sd_card_files directory to the sd card, run
 ./sbin/sd_card_create sd_card_files <device>
 
+---------------------------------
+Modifing VHDL in the superip core
+---------------------------------
 
+If you changed the VHDL code in the core and added new .vhd files in the process, don't forget to declare them
+in the cores .pao file
+ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/data/superip_v2_1_0.pao
+The .pao file will determine in which order the libraries should be compiled.
+This means you have to insert your new module before the library that instantiates it!
 
 
 ----------------------------
