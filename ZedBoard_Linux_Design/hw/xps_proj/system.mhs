@@ -341,38 +341,24 @@ BEGIN adau1761_audio
  PORT AC_SDA = adau1761_audio_0_AC_SDA_pin
  PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
  PORT clk_100 = processing_system7_0_FCLK_CLK0
- PORT clk_48_o = adau1761_audio_0_clk_48
- PORT AUDIO_OUT_R = adau1761_audio_0_AUDIO_OUT_R_0
- PORT AUDIO_OUT_L = adau1761_audio_0_AUDIO_OUT_L_0
- PORT AUDIO_IN_R = adau1761_audio_0_AUDIO_IN_R_0
- PORT AUDIO_IN_L = adau1761_audio_0_AUDIO_IN_L_0
+ PORT clk_48_o = adau1761_audio_0_clk_48_o
+ PORT AUDIO_OUT_L = adau1761_audio_0_AUDIO_OUT_L
+ PORT AUDIO_OUT_R = adau1761_audio_0_AUDIO_OUT_R
+ PORT AUDIO_IN_L = superip_0_Mux2_FilterORMux1_Left_out
+ PORT AUDIO_IN_R = superip_0_Mux2_FilterORMux1_Right_out
 END
 
-# BEGIN audio_buffer
-# PARAMETER INSTANCE = audio_buffer_0
-# PARAMETER HW_VER = 1.00.a
-# PARAMETER C_BASEADDR = 0x75c20000
-# PARAMETER C_HIGHADDR = 0x75c2ffff
-# BUS_INTERFACE S_AXI = axi_interconnect_1
-# PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
-# PORT clk_48_i = adau1761_audio_0_clk_48
-# PORT sample_data_L_in = adau1761_audio_0_AUDIO_OUT_L_0
-# PORT sample_data_R_in = adau1761_audio_0_AUDIO_OUT_R_0
-# END
-BEGIN filter
- PARAMETER INSTANCE = filter_0
+BEGIN superip
+ PARAMETER INSTANCE = superip_0
  PARAMETER HW_VER = 1.00.a
- PARAMETER C_BASEADDR = 0x79400000
- PARAMETER C_HIGHADDR = 0x7940ffff
+ PARAMETER C_BASEADDR = 0x71a00000
+ PARAMETER C_HIGHADDR = 0x71a0ffff
  BUS_INTERFACE S_AXI = axi_interconnect_1
  PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
- PORT AUDIO_OUT_L = adau1761_audio_0_AUDIO_IN_L_0
- PORT AUDIO_OUT_R = adau1761_audio_0_AUDIO_IN_R_0
- PORT AUDIO_IN_L = adau1761_audio_0_AUDIO_OUT_L_0
- PORT AUDIO_IN_R = adau1761_audio_0_AUDIO_OUT_R_0
- PORT CLK_48 = adau1761_audio_0_clk_48
- PORT HP_BTN = SlideSwitch[0]
- PORT BP_BTN = SlideSwitch[1]
- PORT LP_BTN = SlideSwitch[2]
+ PORT CLK_48_in = adau1761_audio_0_clk_48_o
+ PORT Audio_Left_in = adau1761_audio_0_AUDIO_OUT_L
+ PORT Audio_Right_in = adau1761_audio_0_AUDIO_OUT_R
+ PORT Mux2_FilterORMux1_Left_out = superip_0_Mux2_FilterORMux1_Left_out
+ PORT Mux2_FilterORMux1_Right_out = superip_0_Mux2_FilterORMux1_Right_out
 END
 
