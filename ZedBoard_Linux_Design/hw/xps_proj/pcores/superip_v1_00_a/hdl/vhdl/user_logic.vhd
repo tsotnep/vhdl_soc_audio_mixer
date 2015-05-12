@@ -98,6 +98,7 @@ entity user_logic is
   (
     -- ADD USER PORTS BELOW THIS LINE ------------------
     CLK_48_in                   : in  std_logic;
+	 CLK_100M_in                 : in  std_logic;
     Audio_Left_in               : in  std_logic_vector(23 downto 0);
     Audio_Right_in              : in  std_logic_vector(23 downto 0);
     Mux2_FilterORMux1_Left_out  : out std_logic_vector(23 downto 0);
@@ -176,6 +177,13 @@ architecture IMP of user_logic is
   signal slv_read_ack                   : std_logic;
   signal slv_write_ack                  : std_logic;
 
+
+  signal slv_reg28_internal                  : std_logic_vector(C_SLV_DWIDTH-1 downto 0);
+  signal slv_reg29_internal                  : std_logic_vector(C_SLV_DWIDTH-1 downto 0);
+  signal slv_reg30_internal                  : std_logic_vector(C_SLV_DWIDTH-1 downto 0);
+  signal slv_reg31_internal                  : std_logic_vector(C_SLV_DWIDTH-1 downto 0);
+
+
   component superip_internal is
   port(
     -- Outputs
@@ -188,6 +196,7 @@ architecture IMP of user_logic is
  
     -- Inputs
 	 CLK_48_in                   : in  std_logic;
+	 CLK_100M_in					  : in  std_logic;
 	 Audio_Left_in               : in  std_logic_vector(23 downto 0);
 	 Audio_Right_in              : in  std_logic_vector(23 downto 0);
 	 -- REGISTERS
@@ -284,10 +293,10 @@ begin
         slv_reg25 <= (others => '0');
         slv_reg26 <= (others => '0');
         slv_reg27 <= (others => '0');
---        slv_reg28 <= (others => '0');
---        slv_reg29 <= (others => '0');
---        slv_reg30 <= (others => '0');
---        slv_reg31 <= (others => '0');
+        slv_reg28 <= (others => '0');
+        slv_reg29 <= (others => '0');
+        slv_reg30 <= (others => '0');
+        slv_reg31 <= (others => '0');
       else
         case slv_reg_write_sel is
           when "10000000000000000000000000000000" =>
@@ -459,6 +468,8 @@ begin
               end if;
             end loop;
 
+          
+
 --          when "00000000000000000000000000001000" =>
 --            for byte_index in 0 to (C_SLV_DWIDTH/8)-1 loop
 --              if ( Bus2IP_BE(byte_index) = '1' ) then
@@ -487,6 +498,12 @@ begin
 
           when others => null;
         end case;
+
+	slv_reg28 <= slv_reg28_internal;
+	slv_reg29 <= slv_reg29_internal;
+	slv_reg30 <= slv_reg30_internal;
+	slv_reg31 <= slv_reg31_internal;
+
       end if;
     end if;
 
@@ -537,11 +554,12 @@ begin
   SIP : superip_internal port map (
 		Mux2_FilterORMux1_Left_out  =>  Mux2_FilterORMux1_Left_out,
 		Mux2_FilterORMux1_Right_out =>  Mux2_FilterORMux1_Right_out,
-		slv_reg28                   =>  slv_reg28                 ,
-		slv_reg29                   =>  slv_reg29                 ,
-		slv_reg30                   =>  slv_reg30                 ,
-		slv_reg31                   =>  slv_reg31                 ,
+		slv_reg28                   =>  slv_reg28_internal             ,
+		slv_reg29                   =>  slv_reg29_internal             ,
+		slv_reg30                   =>  slv_reg30_internal             ,
+		slv_reg31                   =>  slv_reg31_internal             ,
 		CLK_48_in                   =>  CLK_48_in                 ,
+		CLK_100M_in                 =>  CLK_100M_in               ,
 		Audio_Left_in               =>  Audio_Left_in             ,
 		Audio_Right_in              =>  Audio_Right_in            ,
 		slv_reg0                    =>  slv_reg0                  ,

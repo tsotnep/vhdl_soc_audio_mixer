@@ -356,6 +356,7 @@ BEGIN superip
  BUS_INTERFACE S_AXI = axi_interconnect_1
  PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
  PORT CLK_48_in = adau1761_audio_0_clk_48_o
+ PORT CLK_100M_in = processing_system7_0_FCLK_CLK0
  PORT Audio_Left_in = adau1761_audio_0_AUDIO_OUT_L
  PORT Audio_Right_in = adau1761_audio_0_AUDIO_OUT_R
  PORT Mux2_FilterORMux1_Left_out = superip_0_Mux2_FilterORMux1_Left_out
