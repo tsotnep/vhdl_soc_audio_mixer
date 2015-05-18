@@ -179,10 +179,6 @@ WARNING:EDK:4181 - PORT: Gpo, CONNECTOR: axi_iic_hdmi_Gpo - floating connection
    -
    C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system
    .mhs line 312 
-WARNING:EDK:4181 - PORT: clk_48_o, CONNECTOR: adau1761_audio_0_clk_48_o -
-   floating connection -
-   C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system
-   .mhs line 344 
 
 Performing Clock DRCs...
 
@@ -343,4 +339,4 @@ INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
 
 Rebuilding cache ...
 
-Total run time: 233.00 seconds
+Total run time: 252.00 seconds

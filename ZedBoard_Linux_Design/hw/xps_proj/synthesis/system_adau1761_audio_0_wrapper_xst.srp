@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> 
 TABLE OF CONTENTS
@@ -483,7 +483,6 @@ INFO:HDLCompiler:679 - "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores
 Elaborating entity <user_logic> (architecture <IMP>) with generics from library <adau1761_audio_v1_00_a>.
 
 Elaborating entity <adau1761> (architecture <Behavioral>) from library <adau1761_audio_v1_00_a>.
-WARNING:HDLCompiler:1127 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/adau1761.vhd" Line 89: Assignment to sw_synced ignored, since the identifier is never used
 
 Elaborating entity <clocking> (architecture <xilinx>) from library <adau1761_audio_v1_00_a>.
 
@@ -652,8 +651,9 @@ Synthesizing Unit <adau1761>.
     Related source file is "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/adau1761.vhd".
 WARNING:Xst:647 - Input <sw<7:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 INFO:Xst:3210 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/adau1761.vhd" line 96: Output port <LOCKED> of the instance <i_clocking> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/adau1761.vhd" line 105: Output port <active> of the instance <Inst_adau1761_izedboard> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/adau1761.vhd" line 105: Output port <new_sample> of the instance <Inst_adau1761_izedboard> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/adau1761.vhd" line 104: Output port <active> of the instance <Inst_adau1761_izedboard> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/adau1761.vhd" line 104: Output port <new_sample> of the instance <Inst_adau1761_izedboard> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <clk_48_o> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <adau1761> synthesized.
@@ -1240,12 +1240,12 @@ adau1761_audio_0/USER_LOGIC_I/adau1761_internal/i_clocking/clkout0|    4.864|   
 =========================================================================
 
 
-Total REAL time to Xst completion: 21.00 secs
-Total CPU time to Xst completion: 20.37 secs
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 21.40 secs
  
 --> 
 
-Total memory usage is 495216 kilobytes
+Total memory usage is 495280 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   48 (   0 filtered)

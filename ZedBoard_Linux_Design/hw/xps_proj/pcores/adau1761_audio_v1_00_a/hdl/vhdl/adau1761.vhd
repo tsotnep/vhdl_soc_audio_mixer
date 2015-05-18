@@ -17,7 +17,7 @@ use proc_common_v3_00_a.proc_common_pkg.all;
 
 entity adau1761 is
     Port ( clk_100  : in    STD_LOGIC;
-			  clk_48_o :out 	 STD_LOGIC;
+		  clk_48_o :out 	 STD_LOGIC;
            AC_ADR0  : out   STD_LOGIC;
            AC_ADR1  : out   STD_LOGIC;
            AC_GPIO0 : out   STD_LOGIC;  -- I2S MISO
@@ -79,11 +79,11 @@ architecture Behavioral of adau1761 is
       );
    end component;
    
-   signal clk_48     : std_logic;
+   signal clk_48 : std_logic;
    signal new_sample : std_logic;
 
 --   signal sw_synced : std_logic_vector(7 downto 0);
---   signal active : std_logic_vector(1 downto 0);
+   signal active : std_logic_vector(1 downto 0);
 --   constant hi : natural := 23;
 begin
 --process(clk_48)
@@ -98,9 +98,8 @@ i_clocking : clocking port map (
       CLK_48  => CLK_48,
       RESET   => '0',
       LOCKED  => open
-   );
-	
-	clk_48_o <= clk_48;
+   );	
+
 
 Inst_adau1761_izedboard: adau1761_izedboard PORT MAP(
 		clk_48     => clk_48,

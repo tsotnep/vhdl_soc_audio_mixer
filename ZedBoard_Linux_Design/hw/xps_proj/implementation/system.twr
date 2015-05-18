@@ -97,7 +97,7 @@ Slack:                  -1.790ns (requirement - (data path - clock path skew + u
   Requirement:          0.834ns
   Data Path Delay:      1.979ns (Levels of Logic = 0)(Component delays alone exceeds constraint)
   Clock Path Skew:      -0.210ns (1.524 - 1.734)
-  Source Clock:         adau1761_audio_0/clk_48_o rising at 229.166ns
+  Source Clock:         adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/clk_48 rising at 229.166ns
   Destination Clock:    processing_system7_0_FCLK_CLK0 rising at 230.000ns
   Clock Uncertainty:    0.435ns
 
@@ -126,7 +126,7 @@ Slack:                  -1.750ns (requirement - (data path - clock path skew + u
   Requirement:          0.834ns
   Data Path Delay:      1.939ns (Levels of Logic = 0)(Component delays alone exceeds constraint)
   Clock Path Skew:      -0.210ns (1.524 - 1.734)
-  Source Clock:         adau1761_audio_0/clk_48_o rising at 229.166ns
+  Source Clock:         adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/clk_48 rising at 229.166ns
   Destination Clock:    processing_system7_0_FCLK_CLK0 rising at 230.000ns
   Clock Uncertainty:    0.435ns
 
@@ -155,7 +155,7 @@ Slack:                  -1.737ns (requirement - (data path - clock path skew + u
   Requirement:          0.834ns
   Data Path Delay:      1.940ns (Levels of Logic = 0)(Component delays alone exceeds constraint)
   Clock Path Skew:      -0.196ns (1.526 - 1.722)
-  Source Clock:         adau1761_audio_0/clk_48_o rising at 229.166ns
+  Source Clock:         adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/clk_48 rising at 229.166ns
   Destination Clock:    processing_system7_0_FCLK_CLK0 rising at 230.000ns
   Clock Uncertainty:    0.435ns
 
@@ -221,7 +221,7 @@ Slack:                  -5.451ns (requirement - (data path - clock path skew + u
   Data Path Delay:      5.677ns (Levels of Logic = 8)(Component delays alone exceeds constraint)
   Clock Path Skew:      -0.172ns (1.561 - 1.733)
   Source Clock:         processing_system7_0_FCLK_CLK0 rising at 20.000ns
-  Destination Clock:    adau1761_audio_0/clk_48_o rising at 20.833ns
+  Destination Clock:    adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/clk_48 rising at 20.833ns
   Clock Uncertainty:    0.435ns
 
   Clock Uncertainty:          0.435ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
@@ -274,7 +274,7 @@ Slack:                  -5.444ns (requirement - (data path - clock path skew + u
   Data Path Delay:      5.670ns (Levels of Logic = 8)(Component delays alone exceeds constraint)
   Clock Path Skew:      -0.172ns (1.561 - 1.733)
   Source Clock:         processing_system7_0_FCLK_CLK0 rising at 20.000ns
-  Destination Clock:    adau1761_audio_0/clk_48_o rising at 20.833ns
+  Destination Clock:    adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/clk_48 rising at 20.833ns
   Clock Uncertainty:    0.435ns
 
   Clock Uncertainty:          0.435ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
@@ -327,7 +327,7 @@ Slack:                  -5.442ns (requirement - (data path - clock path skew + u
   Data Path Delay:      5.668ns (Levels of Logic = 8)(Component delays alone exceeds constraint)
   Clock Path Skew:      -0.172ns (1.561 - 1.733)
   Source Clock:         processing_system7_0_FCLK_CLK0 rising at 20.000ns
-  Destination Clock:    adau1761_audio_0/clk_48_o rising at 20.833ns
+  Destination Clock:    adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/clk_48 rising at 20.833ns
   Clock Uncertainty:    0.435ns
 
   Clock Uncertainty:          0.435ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
@@ -431,7 +431,7 @@ Design statistics:
    Minimum period: 157.160ns   (Maximum frequency:   6.363MHz)
 
 
-Analysis completed Mon May 18 09:57:37 2015 
+Analysis completed Mon May 18 10:53:25 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:

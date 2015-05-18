@@ -111,9 +111,6 @@ WARNING:Security:42 - Your software subscription period has lapsed. Your current
 <msg type="warning" file="EDK" num="4181" delta="old" >PORT: <arg fmt="%s" index="1">Gpo</arg>, CONNECTOR: <arg fmt="%s" index="2">axi_iic_hdmi_Gpo</arg> - floating connection - <arg fmt="%s" index="3">C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mhs line 312</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">clk_48_o</arg>, CONNECTOR: <arg fmt="%s" index="2">adau1761_audio_0_clk_48_o</arg> - floating connection - <arg fmt="%s" index="3">C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mhs line 344</arg> 
-</msg>
-
 <msg type="info" file="EDK" num="4130" delta="old" >IPNAME: <arg fmt="%s" index="1">processing_system7</arg>, INSTANCE:<arg fmt="%s" index="2">processing_system7_0</arg> - <arg fmt="%s" index="3">tcl</arg> is overriding <arg fmt="%s" index="4">PARAMETER</arg> <arg fmt="%s" index="5">C_FCLK_CLK3_BUF</arg> value to <arg fmt="%s" index="6">FALSE</arg> - <arg fmt="%s" index="7">C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v4_03_a\data\processing_system7_v2_1_0.mpd line 353</arg> 
 </msg>
 

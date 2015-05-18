@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-MEC9-HP::  Mon May 18 09:52:30 2015
+MEC9-HP::  Mon May 18 10:48:10 2015
 
 par -w -ol high system_map.ncd system.ncd system.pcf 
 
@@ -50,8 +50,8 @@ Router effort level (-rl):    High
 
 INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please consult the Xilinx
    Command Line Tools User Guide for information on generating a TSI report.
-Starting initial Timing Analysis.  REAL time: 1 mins 14 secs 
-Finished initial Timing Analysis.  REAL time: 1 mins 15 secs 
+Starting initial Timing Analysis.  REAL time: 1 mins 16 secs 
+Finished initial Timing Analysis.  REAL time: 1 mins 17 secs 
 
 WARNING:Par:288 - The signal SlideSwitch<5>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal SlideSwitch<6>_IBUF has no load.  PAR will not attempt to route this signal.
@@ -124,27 +124,27 @@ WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_aud
 Starting Router
 
 
-Phase  1  : 101320 unrouted;      REAL time: 1 mins 20 secs 
+Phase  1  : 101320 unrouted;      REAL time: 1 mins 22 secs 
 
-Phase  2  : 71204 unrouted;      REAL time: 1 mins 25 secs 
+Phase  2  : 71204 unrouted;      REAL time: 1 mins 27 secs 
 
-Phase  3  : 23163 unrouted;      REAL time: 1 mins 55 secs 
+Phase  3  : 23163 unrouted;      REAL time: 1 mins 58 secs 
 
-Phase  4  : 23225 unrouted; (Setup:292970, Hold:114281, Component Switching Limit:0)     REAL time: 2 mins 14 secs 
+Phase  4  : 23225 unrouted; (Setup:292970, Hold:114281, Component Switching Limit:0)     REAL time: 2 mins 17 secs 
 
 Updating file: system.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:299723, Hold:95263, Component Switching Limit:0)     REAL time: 2 mins 52 secs 
+Phase  5  : 0 unrouted; (Setup:299723, Hold:95263, Component Switching Limit:0)     REAL time: 2 mins 57 secs 
 
-Phase  6  : 0 unrouted; (Setup:303124, Hold:95236, Component Switching Limit:0)     REAL time: 3 mins 10 secs 
+Phase  6  : 0 unrouted; (Setup:303124, Hold:95236, Component Switching Limit:0)     REAL time: 3 mins 15 secs 
 
-Phase  7  : 0 unrouted; (Setup:303124, Hold:95236, Component Switching Limit:0)     REAL time: 3 mins 10 secs 
+Phase  7  : 0 unrouted; (Setup:303124, Hold:95236, Component Switching Limit:0)     REAL time: 3 mins 15 secs 
 
-Phase  8  : 0 unrouted; (Setup:303124, Hold:95236, Component Switching Limit:0)     REAL time: 3 mins 10 secs 
+Phase  8  : 0 unrouted; (Setup:303124, Hold:95236, Component Switching Limit:0)     REAL time: 3 mins 15 secs 
 
-Phase  9  : 0 unrouted; (Setup:287730, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 22 secs 
-Total REAL time to Router completion: 3 mins 22 secs 
-Total CPU time to Router completion: 3 mins 25 secs 
+Phase  9  : 0 unrouted; (Setup:287730, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 28 secs 
+Total REAL time to Router completion: 3 mins 28 secs 
+Total CPU time to Router completion: 3 mins 28 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -165,8 +165,10 @@ Generating Clock Report
 |processing_system7_0 |              |      |      |            |             |
 |          _FCLK_CLK0 |BUFGCTRL_X0Y31| No   | 3899 |  0.446     |  2.065      |
 +---------------------+--------------+------+------+------------+-------------+
-|adau1761_audio_0/clk |              |      |      |            |             |
-|               _48_o |BUFGCTRL_X0Y28| No   |   83 |  0.221     |  1.880      |
+|adau1761_audio_0/ada |              |      |      |            |             |
+|u1761_audio_0/USER_L |              |      |      |            |             |
+|OGIC_I/adau1761_inte |              |      |      |            |             |
+|         rnal/clk_48 |BUFGCTRL_X0Y28| No   |   83 |  0.221     |  1.880      |
 +---------------------+--------------+------+------+------------+-------------+
 |processing_system7_0 |              |      |      |            |             |
 |          _FCLK_CLK1 |BUFGCTRL_X0Y29| No   |  630 |  0.261     |  1.891      |
@@ -352,8 +354,8 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 33 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 3 mins 34 secs 
-Total CPU time to PAR completion: 3 mins 32 secs 
+Total REAL time to PAR completion: 3 mins 40 secs 
+Total CPU time to PAR completion: 3 mins 36 secs 
 
 Peak Memory Usage:  1229 MB
 

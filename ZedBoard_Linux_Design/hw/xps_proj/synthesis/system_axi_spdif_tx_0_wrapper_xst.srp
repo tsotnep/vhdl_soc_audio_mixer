@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> 
 TABLE OF CONTENTS
@@ -1365,12 +1365,12 @@ spdif_data_clk |    1.012|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 22.00 secs
-Total CPU time to Xst completion: 22.11 secs
+Total REAL time to Xst completion: 23.00 secs
+Total CPU time to Xst completion: 22.73 secs
  
 --> 
 
-Total memory usage is 497136 kilobytes
+Total memory usage is 497328 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   45 (   0 filtered)
