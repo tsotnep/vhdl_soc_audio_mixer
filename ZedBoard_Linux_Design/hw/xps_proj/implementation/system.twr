@@ -1,0 +1,444 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -e 3 -xml system.twx
+system.ncd system.pcf
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,package,speed:     xc7z020,clg484,C,-1 (PRODUCTION 1.08 2013-10-13)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: PATH "TS_axi_vdma_0_cdc_tig_v_path" TIG;
+
+ 1122 paths analyzed, 368 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_axi_vdma_0_cdc_from_2_cdc_to_path" TIG;
+
+ 15 paths analyzed, 15 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_axi_interconnect_3_reset_resync_path" TIG;
+
+ 2 paths analyzed, 2 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_axi_interconnect_2_reset_resync_path" TIG;
+
+ 2 paths analyzed, 2 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_axi_interconnect_1_reset_resync_path" TIG;
+
+ 2 paths analyzed, 2 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clk_fpga_1 = PERIOD TIMEGRP "clk_fpga_1" 166.667 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 40808 paths analyzed, 8720 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.934ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clk_fpga_2 = PERIOD TIMEGRP "clk_fpga_2" 200 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   2.800ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clk_fpga_0 = PERIOD TIMEGRP "clk_fpga_0" 100 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1483617 paths analyzed, 50902 endpoints analyzed, 162 failing endpoints
+ 162 timing errors detected. (162 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  31.462ns.
+--------------------------------------------------------------------------------
+Slack:                  -1.790ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/audio_l_out_12 (FF)
+  Destination:          superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_16 (FF)
+  Requirement:          0.834ns
+  Data Path Delay:      1.979ns (Levels of Logic = 0)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.210ns (1.524 - 1.734)
+  Source Clock:         adau1761_audio_0/clk_48_o rising at 229.166ns
+  Destination Clock:    processing_system7_0_FCLK_CLK0 rising at 230.000ns
+  Clock Uncertainty:    0.435ns
+
+  Clock Uncertainty:          0.435ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.266ns
+    Phase Error (PE):           0.296ns
+
+  Maximum Data Path at Slow Process Corner: adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/audio_l_out_12 to superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_16
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X70Y48.AQ      Tcko                  0.456   adau1761_audio_0_AUDIO_OUT_L<15>
+                                                       adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/audio_l_out_12
+    SLICE_X67Y75.AX      net (fanout=2)        1.456   adau1761_audio_0_AUDIO_OUT_L<12>
+    SLICE_X67Y75.CLK     Tdick                 0.067   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0<19>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_16
+    -------------------------------------------------  ---------------------------
+    Total                                      1.979ns (0.523ns logic, 1.456ns route)
+                                                       (26.4% logic, 73.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -1.750ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/audio_l_out_13 (FF)
+  Destination:          superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_17 (FF)
+  Requirement:          0.834ns
+  Data Path Delay:      1.939ns (Levels of Logic = 0)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.210ns (1.524 - 1.734)
+  Source Clock:         adau1761_audio_0/clk_48_o rising at 229.166ns
+  Destination Clock:    processing_system7_0_FCLK_CLK0 rising at 230.000ns
+  Clock Uncertainty:    0.435ns
+
+  Clock Uncertainty:          0.435ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.266ns
+    Phase Error (PE):           0.296ns
+
+  Maximum Data Path at Slow Process Corner: adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/audio_l_out_13 to superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_17
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X70Y48.BQ      Tcko                  0.456   adau1761_audio_0_AUDIO_OUT_L<15>
+                                                       adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/audio_l_out_13
+    SLICE_X67Y75.BX      net (fanout=2)        1.402   adau1761_audio_0_AUDIO_OUT_L<13>
+    SLICE_X67Y75.CLK     Tdick                 0.081   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0<19>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_17
+    -------------------------------------------------  ---------------------------
+    Total                                      1.939ns (0.537ns logic, 1.402ns route)
+                                                       (27.7% logic, 72.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -1.737ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/audio_l_out_17 (FF)
+  Destination:          superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_21 (FF)
+  Requirement:          0.834ns
+  Data Path Delay:      1.940ns (Levels of Logic = 0)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.196ns (1.526 - 1.722)
+  Source Clock:         adau1761_audio_0/clk_48_o rising at 229.166ns
+  Destination Clock:    processing_system7_0_FCLK_CLK0 rising at 230.000ns
+  Clock Uncertainty:    0.435ns
+
+  Clock Uncertainty:          0.435ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.266ns
+    Phase Error (PE):           0.296ns
+
+  Maximum Data Path at Slow Process Corner: adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/audio_l_out_17 to superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_21
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X80Y50.BQ      Tcko                  0.456   adau1761_audio_0_AUDIO_OUT_L<19>
+                                                       adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/audio_l_out_17
+    SLICE_X66Y76.BX      net (fanout=2)        1.439   adau1761_audio_0_AUDIO_OUT_L<17>
+    SLICE_X66Y76.CLK     Tdick                 0.045   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0<23>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_21
+    -------------------------------------------------  ---------------------------
+    Total                                      1.940ns (0.501ns logic, 1.439ns route)
+                                                       (25.8% logic, 74.2% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_0_clock_generator_0_SIG_MMCM1_CLKOUT0 = 
+PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_MMCM1_CLKOUT0" 
+TS_clk_fpga_1         * 0.061440678 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   2.155ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: 
+TS_axi_clkgen_0_axi_clkgen_0_USER_LOGIC_I_i_clkgen_mmcm_clk_s = PERIOD TIMEGRP  
+       "axi_clkgen_0_axi_clkgen_0_USER_LOGIC_I_i_clkgen_mmcm_clk_s"         
+TS_clk_fpga_2 * 0.742424242 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 43725 paths analyzed, 4728 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.130ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: 
+TS_adau1761_audio_0_adau1761_audio_0_USER_LOGIC_I_adau1761_internal_i_clocking_c
+lkout0         = PERIOD TIMEGRP         
+"adau1761_audio_0_adau1761_audio_0_USER_LOGIC_I_adau1761_internal_i_clocking_clk
+out0"         TS_clk_fpga_0 * 0.48 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 16655 paths analyzed, 747 endpoints analyzed, 48 failing endpoints
+ 48 timing errors detected. (48 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is 157.160ns.
+--------------------------------------------------------------------------------
+Slack:                  -5.451ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/Y_out_1 (FF)
+  Destination:          adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out_31 (FF)
+  Requirement:          0.833ns
+  Data Path Delay:      5.677ns (Levels of Logic = 8)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.172ns (1.561 - 1.733)
+  Source Clock:         processing_system7_0_FCLK_CLK0 rising at 20.000ns
+  Destination Clock:    adau1761_audio_0/clk_48_o rising at 20.833ns
+  Clock Uncertainty:    0.435ns
+
+  Clock Uncertainty:          0.435ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.266ns
+    Phase Error (PE):           0.296ns
+
+  Maximum Data Path at Slow Process Corner: superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/Y_out_1 to adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X76Y40.DQ      Tcko                  0.456   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/Y_out<1>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/Y_out_1
+    SLICE_X76Y40.B3      net (fanout=3)        0.667   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/Y_out<1>
+    SLICE_X76Y40.COUT    Topcyb                0.674   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/Y_out<1>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0075_lut<1>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0075_cy<3>
+    SLICE_X76Y41.CIN     net (fanout=1)        0.000   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0075_cy<3>
+    SLICE_X76Y41.DMUX    Tcind                 0.495   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/Y_out<6>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0075_cy<7>
+    SLICE_X77Y41.D5      net (fanout=3)        0.622   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/n0075<7>
+    SLICE_X77Y41.COUT    Topcyd                0.525   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/Y_out<2>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_11_OUT_lut<7>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_11_OUT_cy<7>
+    SLICE_X77Y42.CIN     net (fanout=1)        0.000   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_11_OUT_cy<7>
+    SLICE_X77Y42.COUT    Tbyp                  0.114   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/Y_out<5>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_11_OUT_cy<11>
+    SLICE_X77Y43.CIN     net (fanout=1)        0.000   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_11_OUT_cy<11>
+    SLICE_X77Y43.DMUX    Tcind                 0.495   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/Y_out<8>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_11_OUT_xor<15>
+    SLICE_X79Y44.A6      net (fanout=1)        0.430   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_11_OUT<15>
+    SLICE_X79Y44.A       Tilo                  0.124   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/Y_out<15>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/Tester_Comp/Mmux_Mux2_FilterORMux1_Right_out162
+    SLICE_X76Y44.C5      net (fanout=1)        0.426   superip_0/superip_0/USER_LOGIC_I/SIP/Tester_Comp/Mmux_Mux2_FilterORMux1_Right_out161
+    SLICE_X76Y44.C       Tilo                  0.124   adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out<31>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/Tester_Comp/Mmux_Mux2_FilterORMux1_Right_out163
+    SLICE_X76Y44.D4      net (fanout=1)        0.433   superip_0_Mux2_FilterORMux1_Right_out<23>
+    SLICE_X76Y44.CLK     Tas                   0.092   adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out<31>
+                                                       adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/Mmux_sr_out[62]_audio_l_in[23]_mux_5_OUT241
+                                                       adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out_31
+    -------------------------------------------------  ---------------------------
+    Total                                      5.677ns (3.099ns logic, 2.578ns route)
+                                                       (54.6% logic, 45.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -5.444ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/Y_out_1 (FF)
+  Destination:          adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out_31 (FF)
+  Requirement:          0.833ns
+  Data Path Delay:      5.670ns (Levels of Logic = 8)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.172ns (1.561 - 1.733)
+  Source Clock:         processing_system7_0_FCLK_CLK0 rising at 20.000ns
+  Destination Clock:    adau1761_audio_0/clk_48_o rising at 20.833ns
+  Clock Uncertainty:    0.435ns
+
+  Clock Uncertainty:          0.435ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.266ns
+    Phase Error (PE):           0.296ns
+
+  Maximum Data Path at Slow Process Corner: superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/Y_out_1 to adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X76Y40.DQ      Tcko                  0.456   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/Y_out<1>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/Y_out_1
+    SLICE_X76Y40.B3      net (fanout=3)        0.667   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/Y_out<1>
+    SLICE_X76Y40.COUT    Topcyb                0.674   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/Y_out<1>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0075_lut<1>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0075_cy<3>
+    SLICE_X76Y41.CIN     net (fanout=1)        0.000   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0075_cy<3>
+    SLICE_X76Y41.COUT    Tbyp                  0.114   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/Y_out<6>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0075_cy<7>
+    SLICE_X76Y42.CIN     net (fanout=1)        0.000   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0075_cy<7>
+    SLICE_X76Y42.DMUX    Tcind                 0.495   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/Y_out<10>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0075_cy<11>
+    SLICE_X77Y42.D5      net (fanout=3)        0.615   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/n0075<11>
+    SLICE_X77Y42.COUT    Topcyd                0.525   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/Y_out<5>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_11_OUT_lut<11>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_11_OUT_cy<11>
+    SLICE_X77Y43.CIN     net (fanout=1)        0.000   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_11_OUT_cy<11>
+    SLICE_X77Y43.DMUX    Tcind                 0.495   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/Y_out<8>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_11_OUT_xor<15>
+    SLICE_X79Y44.A6      net (fanout=1)        0.430   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_11_OUT<15>
+    SLICE_X79Y44.A       Tilo                  0.124   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/Y_out<15>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/Tester_Comp/Mmux_Mux2_FilterORMux1_Right_out162
+    SLICE_X76Y44.C5      net (fanout=1)        0.426   superip_0/superip_0/USER_LOGIC_I/SIP/Tester_Comp/Mmux_Mux2_FilterORMux1_Right_out161
+    SLICE_X76Y44.C       Tilo                  0.124   adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out<31>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/Tester_Comp/Mmux_Mux2_FilterORMux1_Right_out163
+    SLICE_X76Y44.D4      net (fanout=1)        0.433   superip_0_Mux2_FilterORMux1_Right_out<23>
+    SLICE_X76Y44.CLK     Tas                   0.092   adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out<31>
+                                                       adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/Mmux_sr_out[62]_audio_l_in[23]_mux_5_OUT241
+                                                       adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out_31
+    -------------------------------------------------  ---------------------------
+    Total                                      5.670ns (3.099ns logic, 2.571ns route)
+                                                       (54.7% logic, 45.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -5.442ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/Y_out_1 (FF)
+  Destination:          adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out_31 (FF)
+  Requirement:          0.833ns
+  Data Path Delay:      5.668ns (Levels of Logic = 8)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.172ns (1.561 - 1.733)
+  Source Clock:         processing_system7_0_FCLK_CLK0 rising at 20.000ns
+  Destination Clock:    adau1761_audio_0/clk_48_o rising at 20.833ns
+  Clock Uncertainty:    0.435ns
+
+  Clock Uncertainty:          0.435ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.266ns
+    Phase Error (PE):           0.296ns
+
+  Maximum Data Path at Slow Process Corner: superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/Y_out_1 to adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X76Y40.DQ      Tcko                  0.456   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/Y_out<1>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/Y_out_1
+    SLICE_X76Y40.B3      net (fanout=3)        0.667   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/Y_out<1>
+    SLICE_X76Y40.COUT    Topcyb                0.674   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/Y_out<1>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0075_lut<1>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0075_cy<3>
+    SLICE_X76Y41.CIN     net (fanout=1)        0.000   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0075_cy<3>
+    SLICE_X76Y41.BMUX    Tcinb                 0.513   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/Y_out<6>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0075_cy<7>
+    SLICE_X77Y41.B5      net (fanout=3)        0.446   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/n0075<5>
+    SLICE_X77Y41.COUT    Topcyb                0.674   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/Y_out<2>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_11_OUT_lut<5>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_11_OUT_cy<7>
+    SLICE_X77Y42.CIN     net (fanout=1)        0.000   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_11_OUT_cy<7>
+    SLICE_X77Y42.COUT    Tbyp                  0.114   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/Y_out<5>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_11_OUT_cy<11>
+    SLICE_X77Y43.CIN     net (fanout=1)        0.000   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_11_OUT_cy<11>
+    SLICE_X77Y43.DMUX    Tcind                 0.495   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/Y_out<8>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_11_OUT_xor<15>
+    SLICE_X79Y44.A6      net (fanout=1)        0.430   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_11_OUT<15>
+    SLICE_X79Y44.A       Tilo                  0.124   superip_0/superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/Y_out<15>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/Tester_Comp/Mmux_Mux2_FilterORMux1_Right_out162
+    SLICE_X76Y44.C5      net (fanout=1)        0.426   superip_0/superip_0/USER_LOGIC_I/SIP/Tester_Comp/Mmux_Mux2_FilterORMux1_Right_out161
+    SLICE_X76Y44.C       Tilo                  0.124   adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out<31>
+                                                       superip_0/superip_0/USER_LOGIC_I/SIP/Tester_Comp/Mmux_Mux2_FilterORMux1_Right_out163
+    SLICE_X76Y44.D4      net (fanout=1)        0.433   superip_0_Mux2_FilterORMux1_Right_out<23>
+    SLICE_X76Y44.CLK     Tas                   0.092   adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out<31>
+                                                       adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/Mmux_sr_out[62]_audio_l_in[23]_mux_5_OUT241
+                                                       adau1761_audio_0/adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out_31
+    -------------------------------------------------  ---------------------------
+    Total                                      5.668ns (3.266ns logic, 2.402ns route)
+                                                       (57.6% logic, 42.4% route)
+
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_clk_fpga_1
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_clk_fpga_1                  |      6.000ns|      5.934ns|      0.132ns|            0|            0|        40808|            1|
+| TS_clock_generator_0_clock_gen|     97.655ns|      2.155ns|          N/A|            0|            0|            1|            0|
+| erator_0_SIG_MMCM1_CLKOUT0    |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_clk_fpga_2
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_clk_fpga_2                  |      5.000ns|      2.800ns|      4.551ns|            0|            0|            0|        43725|
+| TS_axi_clkgen_0_axi_clkgen_0_U|      6.735ns|      6.130ns|          N/A|            0|            0|        43725|            0|
+| SER_LOGIC_I_i_clkgen_mmcm_clk_|             |             |             |             |             |             |             |
+| s                             |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_clk_fpga_0
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_clk_fpga_0                  |     10.000ns|     31.462ns|     75.437ns|          162|           48|      1483617|        16655|
+| TS_adau1761_audio_0_adau1761_a|     20.833ns|    157.160ns|          N/A|           48|            0|        16655|            0|
+| udio_0_USER_LOGIC_I_adau1761_i|             |             |             |             |             |             |             |
+| nternal_i_clocking_clkout0    |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+2 constraints not met.
+
+
+Data Sheet report:
+-----------------
+No constraints were found to generate data for the Data Sheet Report section.
+Use the Advanced Analysis (-a) option or generate global constraints for each
+clock, its pad to setup and clock to pad paths, and a pad to pad constraint.
+
+Timing summary:
+---------------
+
+Timing errors: 210  Score: 287730  (Setup/Max: 287730, Hold: 0)
+
+Constraints cover 1585949 paths, 0 nets, and 72926 connections
+
+Design statistics:
+   Minimum period: 157.160ns   (Maximum frequency:   6.363MHz)
+
+
+Analysis completed Mon May 18 09:57:37 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 1048 MB
+
+
+

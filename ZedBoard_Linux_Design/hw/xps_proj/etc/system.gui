@@ -33,7 +33,7 @@
       <VARIABLE ID="axi_iic_hdmi" ROW_INDEX="9"/>
       <VARIABLE ID="util_vector_logic_0" ROW_INDEX="13"/>
       <VARIABLE ID="adau1761_audio_0" ROW_INDEX="4"/>
-      <VARIABLE ID="filter_0" ROW_INDEX="15"/>
+      <VARIABLE ID="superip_0" ROW_INDEX="15"/>
     </SEQUENCES>
   </SET>
 
@@ -96,9 +96,7 @@
     </HEADERS>
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="5" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="189,1226,200" VERSION="0"/>
     <STATUS>
-      <SELECTIONS>
-        <VARIABLE ID="axi_dma_spdif"/>
-      </SELECTIONS>
+      <SELECTIONS/>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="FALSE">
       <VARIABLE ID="ExternalPorts" ROW_INDEX="4"/>
@@ -117,7 +115,7 @@
       <VARIABLE ID="axi_iic_hdmi" ROW_INDEX="11"/>
       <VARIABLE ID="util_vector_logic_0" ROW_INDEX="12"/>
       <VARIABLE ID="adau1761_audio_0" ROW_INDEX="0"/>
-      <VARIABLE ID="filter_0" ROW_INDEX="16"/>
+      <VARIABLE ID="superip_0" ROW_INDEX="16"/>
     </SEQUENCES>
   </SET>
 

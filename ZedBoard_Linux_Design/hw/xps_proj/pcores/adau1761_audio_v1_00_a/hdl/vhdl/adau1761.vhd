@@ -82,16 +82,16 @@ architecture Behavioral of adau1761 is
    signal clk_48     : std_logic;
    signal new_sample : std_logic;
 
-   signal sw_synced : std_logic_vector(7 downto 0);
-   signal active : std_logic_vector(1 downto 0);
-   constant hi : natural := 23;
+--   signal sw_synced : std_logic_vector(7 downto 0);
+--   signal active : std_logic_vector(1 downto 0);
+--   constant hi : natural := 23;
 begin
-process(clk_48)
-   begin
-      if rising_edge(clk_48) then
-         sw_synced <= sw;
-      end if;
-   end process;
+--process(clk_48)
+--   begin
+--      if rising_edge(clk_48) then
+--         sw_synced <= sw;
+--      end if;
+--   end process;
                                  
 i_clocking : clocking port map (
       CLK_100 => CLK_100,

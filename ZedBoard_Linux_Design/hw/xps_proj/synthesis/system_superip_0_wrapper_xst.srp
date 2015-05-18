@@ -1,0 +1,1921 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\synthesis\xst_temp_dir\
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_superip_0_wrapper_xst.prj"
+Verilog Include Directory          : {"C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc7z020clg484-1
+Output File Name                   : "../implementation/system_superip_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : system_superip_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family.vhd" into library proc_common_v3_00_a
+Parsing package <family>.
+Parsing package body <family>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family_support.vhd" into library proc_common_v3_00_a
+Parsing package <family_support>.
+Parsing package body <family_support>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/coregen_comp_defs.vhd" into library proc_common_v3_00_a
+Parsing package <coregen_comp_defs>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/common_types_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <Common_Types>.
+Parsing package body <Common_Types>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/proc_common_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <proc_common_pkg>.
+Parsing package body <proc_common_pkg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/conv_funs_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <conv_funs_pkg>.
+Parsing package body <conv_funs_pkg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <ipif_pkg>.
+Parsing package body <ipif_pkg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/async_fifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <async_fifo_fg>.
+Parsing architecture <implementation> of entity <async_fifo_fg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/sync_fifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <sync_fifo_fg>.
+Parsing architecture <implementation> of entity <sync_fifo_fg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/basic_sfifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <basic_sfifo_fg>.
+Parsing architecture <implementation> of entity <basic_sfifo_fg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/blk_mem_gen_wrapper.vhd" into library proc_common_v3_00_a
+Parsing entity <blk_mem_gen_wrapper>.
+Parsing architecture <implementation> of entity <blk_mem_gen_wrapper>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/addsub.vhd" into library proc_common_v3_00_a
+Parsing entity <addsub>.
+Parsing architecture <imp> of entity <addsub>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <counter_bit>.
+Parsing architecture <imp> of entity <counter_bit>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter.vhd" into library proc_common_v3_00_a
+Parsing entity <Counter>.
+Parsing architecture <imp> of entity <counter>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr.vhd" into library proc_common_v3_00_a
+Parsing entity <direct_path_cntr>.
+Parsing architecture <imp> of entity <direct_path_cntr>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr_ai.vhd" into library proc_common_v3_00_a
+Parsing entity <direct_path_cntr_ai>.
+Parsing architecture <imp> of entity <direct_path_cntr_ai>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/down_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <down_counter>.
+Parsing architecture <simulation> of entity <down_counter>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/eval_timer.vhd" into library proc_common_v3_00_a
+Parsing entity <eval_timer>.
+Parsing architecture <imp> of entity <eval_timer>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/inferred_lut4.vhd" into library proc_common_v3_00_a
+Parsing entity <inferred_lut4>.
+Parsing architecture <implementation> of entity <inferred_lut4>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_steer.vhd" into library proc_common_v3_00_a
+Parsing entity <IPIF_Steer>.
+Parsing architecture <IMP> of entity <ipif_steer>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_steer128.vhd" into library proc_common_v3_00_a
+Parsing entity <ipif_steer128>.
+Parsing architecture <IMP> of entity <ipif_steer128>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_mirror128.vhd" into library proc_common_v3_00_a
+Parsing entity <ipif_mirror128>.
+Parsing architecture <IMP> of entity <ipif_mirror128>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" into library proc_common_v3_00_a
+Parsing entity <ld_arith_reg>.
+Parsing architecture <imp> of entity <ld_arith_reg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg2.vhd" into library proc_common_v3_00_a
+Parsing entity <ld_arith_reg2>.
+Parsing architecture <imp> of entity <ld_arith_reg2>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/mux_onehot.vhd" into library proc_common_v3_00_a
+Parsing entity <mux_onehot>.
+Parsing architecture <imp> of entity <mux_onehot>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_bits.vhd" into library proc_common_v3_00_a
+Parsing entity <or_bits>.
+Parsing architecture <implementation> of entity <or_bits>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy.vhd" into library proc_common_v3_00_a
+Parsing entity <or_muxcy>.
+Parsing architecture <implementation> of entity <or_muxcy>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate>.
+Parsing architecture <imp> of entity <or_gate>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate128.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate128>.
+Parsing architecture <imp> of entity <or_gate128>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_adder_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_adder_bit>.
+Parsing architecture <implementation> of entity <pf_adder_bit>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_adder.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_adder>.
+Parsing architecture <implementation> of entity <pf_adder>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter_bit>.
+Parsing architecture <implementation> of entity <pf_counter_bit>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter>.
+Parsing architecture <implementation> of entity <pf_counter>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter_top.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter_top>.
+Parsing architecture <implementation> of entity <pf_counter_top>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_occ_counter>.
+Parsing architecture <implementation> of entity <pf_occ_counter>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter_top.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_occ_counter_top>.
+Parsing architecture <implementation> of entity <pf_occ_counter_top>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_dpram_select.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_dpram_select>.
+Parsing architecture <implementation> of entity <pf_dpram_select>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect>.
+Parsing architecture <imp> of entity <pselect>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_mask.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect_mask>.
+Parsing architecture <imp> of entity <pselect_mask>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl16_fifo.vhd" into library proc_common_v3_00_a
+Parsing entity <srl16_fifo>.
+Parsing architecture <implementation> of entity <srl16_fifo>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo.vhd" into library proc_common_v3_00_a
+Parsing entity <SRL_FIFO>.
+Parsing architecture <IMP> of entity <srl_fifo>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo2.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo2>.
+Parsing architecture <imp> of entity <srl_fifo2>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo3.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo3>.
+Parsing architecture <imp> of entity <srl_fifo3>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_rbu>.
+Parsing architecture <imp> of entity <srl_fifo_rbu>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/valid_be.vhd" into library proc_common_v3_00_a
+Parsing entity <valid_be>.
+Parsing architecture <implementation> of entity <valid_be>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_with_enable_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_with_enable_f>.
+Parsing architecture <implementation> of entity <or_with_enable_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/muxf_struct_f.vhd" into library proc_common_v3_00_a
+Parsing entity <muxf_struct>.
+Parsing architecture <imp> of entity <muxf_struct>.
+Parsing entity <muxf_struct_f>.
+Parsing architecture <imp> of entity <muxf_struct_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/cntr_incr_decr_addn_f.vhd" into library proc_common_v3_00_a
+Parsing entity <cntr_incr_decr_addn_f>.
+Parsing architecture <imp> of entity <cntr_incr_decr_addn_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/dynshreg_f.vhd" into library proc_common_v3_00_a
+Parsing entity <dynshreg_f>.
+Parsing architecture <behavioral> of entity <dynshreg_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/dynshreg_i_f.vhd" into library proc_common_v3_00_a
+Parsing entity <dynshreg_i_f>.
+Parsing architecture <behavioral> of entity <dynshreg_i_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/mux_onehot_f.vhd" into library proc_common_v3_00_a
+Parsing entity <mux_onehot_f>.
+Parsing architecture <imp> of entity <mux_onehot_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu_f.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_rbu_f>.
+Parsing architecture <imp> of entity <srl_fifo_rbu_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_f.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_f>.
+Parsing architecture <imp> of entity <srl_fifo_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/compare_vectors_f.vhd" into library proc_common_v3_00_a
+Parsing entity <compare_vectors_f>.
+Parsing architecture <imp> of entity <compare_vectors_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect_f>.
+Parsing architecture <imp> of entity <pselect_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd" into library proc_common_v3_00_a
+Parsing entity <counter_f>.
+Parsing architecture <imp> of entity <counter_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_muxcy_f>.
+Parsing architecture <implementation> of entity <or_muxcy_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate_f>.
+Parsing architecture <imp> of entity <or_gate_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/soft_reset.vhd" into library proc_common_v3_00_a
+Parsing entity <soft_reset>.
+Parsing architecture <implementation> of entity <soft_reset>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family.vhd" into library proc_common_v3_00_a
+Parsing package <family>.
+Parsing package body <family>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family_support.vhd" into library proc_common_v3_00_a
+Parsing package <family_support>.
+Parsing package body <family_support>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/coregen_comp_defs.vhd" into library proc_common_v3_00_a
+Parsing package <coregen_comp_defs>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/common_types_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <Common_Types>.
+Parsing package body <Common_Types>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/proc_common_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <proc_common_pkg>.
+Parsing package body <proc_common_pkg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/conv_funs_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <conv_funs_pkg>.
+Parsing package body <conv_funs_pkg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <ipif_pkg>.
+Parsing package body <ipif_pkg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/async_fifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <async_fifo_fg>.
+Parsing architecture <implementation> of entity <async_fifo_fg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/sync_fifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <sync_fifo_fg>.
+Parsing architecture <implementation> of entity <sync_fifo_fg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/basic_sfifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <basic_sfifo_fg>.
+Parsing architecture <implementation> of entity <basic_sfifo_fg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/blk_mem_gen_wrapper.vhd" into library proc_common_v3_00_a
+Parsing entity <blk_mem_gen_wrapper>.
+Parsing architecture <implementation> of entity <blk_mem_gen_wrapper>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/addsub.vhd" into library proc_common_v3_00_a
+Parsing entity <addsub>.
+Parsing architecture <imp> of entity <addsub>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <counter_bit>.
+Parsing architecture <imp> of entity <counter_bit>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter.vhd" into library proc_common_v3_00_a
+Parsing entity <Counter>.
+Parsing architecture <imp> of entity <counter>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr.vhd" into library proc_common_v3_00_a
+Parsing entity <direct_path_cntr>.
+Parsing architecture <imp> of entity <direct_path_cntr>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr_ai.vhd" into library proc_common_v3_00_a
+Parsing entity <direct_path_cntr_ai>.
+Parsing architecture <imp> of entity <direct_path_cntr_ai>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/down_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <down_counter>.
+Parsing architecture <simulation> of entity <down_counter>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/eval_timer.vhd" into library proc_common_v3_00_a
+Parsing entity <eval_timer>.
+Parsing architecture <imp> of entity <eval_timer>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/inferred_lut4.vhd" into library proc_common_v3_00_a
+Parsing entity <inferred_lut4>.
+Parsing architecture <implementation> of entity <inferred_lut4>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_steer.vhd" into library proc_common_v3_00_a
+Parsing entity <IPIF_Steer>.
+Parsing architecture <IMP> of entity <ipif_steer>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_steer128.vhd" into library proc_common_v3_00_a
+Parsing entity <ipif_steer128>.
+Parsing architecture <IMP> of entity <ipif_steer128>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_mirror128.vhd" into library proc_common_v3_00_a
+Parsing entity <ipif_mirror128>.
+Parsing architecture <IMP> of entity <ipif_mirror128>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" into library proc_common_v3_00_a
+Parsing entity <ld_arith_reg>.
+Parsing architecture <imp> of entity <ld_arith_reg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg2.vhd" into library proc_common_v3_00_a
+Parsing entity <ld_arith_reg2>.
+Parsing architecture <imp> of entity <ld_arith_reg2>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/mux_onehot.vhd" into library proc_common_v3_00_a
+Parsing entity <mux_onehot>.
+Parsing architecture <imp> of entity <mux_onehot>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_bits.vhd" into library proc_common_v3_00_a
+Parsing entity <or_bits>.
+Parsing architecture <implementation> of entity <or_bits>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy.vhd" into library proc_common_v3_00_a
+Parsing entity <or_muxcy>.
+Parsing architecture <implementation> of entity <or_muxcy>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate>.
+Parsing architecture <imp> of entity <or_gate>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate128.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate128>.
+Parsing architecture <imp> of entity <or_gate128>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_adder_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_adder_bit>.
+Parsing architecture <implementation> of entity <pf_adder_bit>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_adder.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_adder>.
+Parsing architecture <implementation> of entity <pf_adder>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter_bit>.
+Parsing architecture <implementation> of entity <pf_counter_bit>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter>.
+Parsing architecture <implementation> of entity <pf_counter>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter_top.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter_top>.
+Parsing architecture <implementation> of entity <pf_counter_top>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_occ_counter>.
+Parsing architecture <implementation> of entity <pf_occ_counter>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter_top.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_occ_counter_top>.
+Parsing architecture <implementation> of entity <pf_occ_counter_top>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_dpram_select.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_dpram_select>.
+Parsing architecture <implementation> of entity <pf_dpram_select>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect>.
+Parsing architecture <imp> of entity <pselect>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_mask.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect_mask>.
+Parsing architecture <imp> of entity <pselect_mask>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl16_fifo.vhd" into library proc_common_v3_00_a
+Parsing entity <srl16_fifo>.
+Parsing architecture <implementation> of entity <srl16_fifo>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo.vhd" into library proc_common_v3_00_a
+Parsing entity <SRL_FIFO>.
+Parsing architecture <IMP> of entity <srl_fifo>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo2.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo2>.
+Parsing architecture <imp> of entity <srl_fifo2>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo3.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo3>.
+Parsing architecture <imp> of entity <srl_fifo3>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_rbu>.
+Parsing architecture <imp> of entity <srl_fifo_rbu>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/valid_be.vhd" into library proc_common_v3_00_a
+Parsing entity <valid_be>.
+Parsing architecture <implementation> of entity <valid_be>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_with_enable_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_with_enable_f>.
+Parsing architecture <implementation> of entity <or_with_enable_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/muxf_struct_f.vhd" into library proc_common_v3_00_a
+Parsing entity <muxf_struct>.
+Parsing architecture <imp> of entity <muxf_struct>.
+Parsing entity <muxf_struct_f>.
+Parsing architecture <imp> of entity <muxf_struct_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/cntr_incr_decr_addn_f.vhd" into library proc_common_v3_00_a
+Parsing entity <cntr_incr_decr_addn_f>.
+Parsing architecture <imp> of entity <cntr_incr_decr_addn_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/dynshreg_f.vhd" into library proc_common_v3_00_a
+Parsing entity <dynshreg_f>.
+Parsing architecture <behavioral> of entity <dynshreg_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/dynshreg_i_f.vhd" into library proc_common_v3_00_a
+Parsing entity <dynshreg_i_f>.
+Parsing architecture <behavioral> of entity <dynshreg_i_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/mux_onehot_f.vhd" into library proc_common_v3_00_a
+Parsing entity <mux_onehot_f>.
+Parsing architecture <imp> of entity <mux_onehot_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu_f.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_rbu_f>.
+Parsing architecture <imp> of entity <srl_fifo_rbu_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_f.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_f>.
+Parsing architecture <imp> of entity <srl_fifo_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/compare_vectors_f.vhd" into library proc_common_v3_00_a
+Parsing entity <compare_vectors_f>.
+Parsing architecture <imp> of entity <compare_vectors_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect_f>.
+Parsing architecture <imp> of entity <pselect_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd" into library proc_common_v3_00_a
+Parsing entity <counter_f>.
+Parsing architecture <imp> of entity <counter_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_muxcy_f>.
+Parsing architecture <implementation> of entity <or_muxcy_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate_f>.
+Parsing architecture <imp> of entity <or_gate_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/soft_reset.vhd" into library proc_common_v3_00_a
+Parsing entity <soft_reset>.
+Parsing architecture <implementation> of entity <soft_reset>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/address_decoder.vhd" into library axi_lite_ipif_v1_01_a
+Parsing entity <address_decoder>.
+Parsing architecture <IMP> of entity <address_decoder>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/slave_attachment.vhd" into library axi_lite_ipif_v1_01_a
+Parsing entity <slave_attachment>.
+Parsing architecture <imp> of entity <slave_attachment>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/axi_lite_ipif.vhd" into library axi_lite_ipif_v1_01_a
+Parsing entity <axi_lite_ipif>.
+Parsing architecture <imp> of entity <axi_lite_ipif>.
+Parsing VHDL file "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/Tester.vhd" into library superip_v1_00_a
+Parsing entity <Tester>.
+Parsing architecture <Behavioral> of entity <tester>.
+Parsing VHDL file "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/VolCtrl.vhd" into library superip_v1_00_a
+Parsing entity <VolCtrl>.
+Parsing architecture <Behavioral> of entity <volctrl>.
+Parsing VHDL file "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/IIR_Biquad_II_v2.vhd" into library superip_v1_00_a
+Parsing entity <IIR_Biquad_II_v2>.
+Parsing architecture <arch> of entity <iir_biquad_ii_v2>.
+Parsing VHDL file "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/Filter_Top_Level.vhd" into library superip_v1_00_a
+Parsing entity <Filter_Top_Level>.
+Parsing architecture <RTL> of entity <filter_top_level>.
+Parsing VHDL file "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/superip_internal.vhd" into library superip_v1_00_a
+Parsing entity <superip_internal>.
+Parsing architecture <RTL> of entity <superip_internal>.
+Parsing VHDL file "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/user_logic.vhd" into library superip_v1_00_a
+Parsing entity <user_logic>.
+Parsing architecture <IMP> of entity <user_logic>.
+Parsing VHDL file "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/superip.vhd" into library superip_v1_00_a
+Parsing entity <superip>.
+Parsing architecture <IMP> of entity <superip>.
+Parsing VHDL file "C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\hdl\system_superip_0_wrapper.vhd" into library work
+Parsing entity <system_superip_0_wrapper>.
+Parsing architecture <STRUCTURE> of entity <system_superip_0_wrapper>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <system_superip_0_wrapper> (architecture <STRUCTURE>) from library <work>.
+
+Elaborating entity <superip> (architecture <IMP>) with generics from library <superip_v1_00_a>.
+
+Elaborating entity <axi_lite_ipif> (architecture <imp>) with generics from library <axi_lite_ipif_v1_01_a>.
+
+Elaborating entity <slave_attachment> (architecture <imp>) with generics from library <axi_lite_ipif_v1_01_a>.
+
+Elaborating entity <address_decoder> (architecture <IMP>) with generics from library <axi_lite_ipif_v1_01_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+INFO:HDLCompiler:679 - "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/slave_attachment.vhd" Line 417. Case statement is complete. others clause is never selected
+
+Elaborating entity <user_logic> (architecture <IMP>) with generics from library <superip_v1_00_a>.
+
+Elaborating entity <superip_internal> (architecture <RTL>) from library <superip_v1_00_a>.
+
+Elaborating entity <Tester> (architecture <Behavioral>) from library <superip_v1_00_a>.
+
+Elaborating entity <VolCtrl> (architecture <Behavioral>) from library <superip_v1_00_a>.
+
+Elaborating entity <Filter_Top_Level> (architecture <RTL>) from library <superip_v1_00_a>.
+WARNING:HDLCompiler:871 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/Filter_Top_Level.vhd" Line 105: Using initial value ('.','.','.') for val since it is never assigned
+WARNING:HDLCompiler:92 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/Filter_Top_Level.vhd" Line 113: iir_lp_y_out_l should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/Filter_Top_Level.vhd" Line 114: iir_lp_y_out_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/Filter_Top_Level.vhd" Line 116: iir_bp_y_out_l should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/Filter_Top_Level.vhd" Line 117: iir_bp_y_out_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/Filter_Top_Level.vhd" Line 119: iir_lp_y_out_l should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/Filter_Top_Level.vhd" Line 120: iir_lp_y_out_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/Filter_Top_Level.vhd" Line 122: iir_hp_y_out_l should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/Filter_Top_Level.vhd" Line 123: iir_hp_y_out_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/Filter_Top_Level.vhd" Line 125: iir_lp_y_out_l should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/Filter_Top_Level.vhd" Line 126: iir_lp_y_out_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/Filter_Top_Level.vhd" Line 128: iir_hp_y_out_l should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/Filter_Top_Level.vhd" Line 129: iir_hp_y_out_r should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/Filter_Top_Level.vhd" Line 131: iir_lp_y_out_l should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/Filter_Top_Level.vhd" Line 132: iir_lp_y_out_r should be on the sensitivity list of the process
+INFO:HDLCompiler:679 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/Filter_Top_Level.vhd" Line 133. Case statement is complete. others clause is never selected
+
+Elaborating entity <IIR_Biquad_II_v2> (architecture <arch>) from library <superip_v1_00_a>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <system_superip_0_wrapper>.
+    Related source file is "C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\hdl\system_superip_0_wrapper.vhd".
+    Summary:
+	no macro.
+Unit <system_superip_0_wrapper> synthesized.
+
+Synthesizing Unit <superip>.
+    Related source file is "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/superip.vhd".
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+        C_S_AXI_DATA_WIDTH = 32
+        C_S_AXI_ADDR_WIDTH = 32
+        C_S_AXI_MIN_SIZE = "00000000000000000000000111111111"
+        C_USE_WSTRB = 0
+        C_DPHASE_TIMEOUT = 8
+        C_BASEADDR = "01110001101000000000000000000000"
+        C_HIGHADDR = "01110001101000001111111111111111"
+        C_FAMILY = "zynq"
+        C_NUM_REG = 1
+        C_NUM_MEM = 1
+        C_SLV_AWIDTH = 32
+        C_SLV_DWIDTH = 32
+    Set property "MAX_FANOUT = 10000" for signal <S_AXI_ACLK>.
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+    Set property "MAX_FANOUT = 10000" for signal <S_AXI_ARESETN>.
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:647 - Input <CLK_48_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/superip.vhd" line 244: Output port <Bus2IP_Addr> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/superip.vhd" line 244: Output port <Bus2IP_CS> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/superip.vhd" line 244: Output port <Bus2IP_RNW> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <superip> synthesized.
+
+Synthesizing Unit <axi_lite_ipif>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/axi_lite_ipif.vhd".
+        C_S_AXI_DATA_WIDTH = 32
+        C_S_AXI_ADDR_WIDTH = 32
+        C_S_AXI_MIN_SIZE = "00000000000000000000000111111111"
+        C_USE_WSTRB = 0
+        C_DPHASE_TIMEOUT = 8
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000001110001101000000000000000000000","0000000000000000000000000000000001110001101000001111111111111111")
+        C_ARD_NUM_CE_ARRAY = (32)
+        C_FAMILY = "zynq"
+    Summary:
+	no macro.
+Unit <axi_lite_ipif> synthesized.
+
+Synthesizing Unit <slave_attachment>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/slave_attachment.vhd".
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000001110001101000000000000000000000","0000000000000000000000000000000001110001101000001111111111111111")
+        C_ARD_NUM_CE_ARRAY = (32)
+        C_IPIF_ABUS_WIDTH = 32
+        C_IPIF_DBUS_WIDTH = 32
+        C_S_AXI_MIN_SIZE = "00000000000000000000000111111111"
+        C_USE_WSTRB = 0
+        C_DPHASE_TIMEOUT = 8
+        C_FAMILY = "zynq"
+WARNING:Xst:647 - Input <S_AXI_AWADDR<31:9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_WSTRB> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_ARADDR<31:9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/slave_attachment.vhd" line 341: Output port <CS_for_gaps> of the instance <I_DECODER> is unconnected or connected to loadless signal.
+    Found 2-bit register for signal <state>.
+    Found 2-bit register for signal <s_axi_rresp_i>.
+    Found 32-bit register for signal <s_axi_rdata_i>.
+    Found 1-bit register for signal <s_axi_rvalid_i>.
+    Found 2-bit register for signal <s_axi_bresp_i>.
+    Found 1-bit register for signal <s_axi_bvalid_i>.
+    Found 4-bit register for signal <INCLUDE_DPHASE_TIMER.dpto_cnt>.
+    Found 1-bit register for signal <rst>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 4                                              |
+    | Clock              | S_AXI_ACLK (rising_edge)                       |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | sm_idle                                        |
+    | Power Up State     | sm_idle                                        |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit adder for signal <INCLUDE_DPHASE_TIMER.dpto_cnt[3]_GND_14_o_add_31_OUT> created at line 507.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  43 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <slave_attachment> synthesized.
+
+Synthesizing Unit <address_decoder>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/address_decoder.vhd".
+        C_BUS_AWIDTH = 9
+        C_S_AXI_MIN_SIZE = "00000000000000000000000111111111"
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000001110001101000000000000000000000","0000000000000000000000000000000001110001101000001111111111111111")
+        C_ARD_NUM_CE_ARRAY = (32)
+        C_FAMILY = "nofamily"
+WARNING:Xst:647 - Input <Address_In_Erly<0:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Bus_RNW> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <Bus_RNW_reg>.
+    Found 1-bit register for signal <ce_out_i<0>>.
+    Found 1-bit register for signal <ce_out_i<1>>.
+    Found 1-bit register for signal <ce_out_i<2>>.
+    Found 1-bit register for signal <ce_out_i<3>>.
+    Found 1-bit register for signal <ce_out_i<4>>.
+    Found 1-bit register for signal <ce_out_i<5>>.
+    Found 1-bit register for signal <ce_out_i<6>>.
+    Found 1-bit register for signal <ce_out_i<7>>.
+    Found 1-bit register for signal <ce_out_i<8>>.
+    Found 1-bit register for signal <ce_out_i<9>>.
+    Found 1-bit register for signal <ce_out_i<10>>.
+    Found 1-bit register for signal <ce_out_i<11>>.
+    Found 1-bit register for signal <ce_out_i<12>>.
+    Found 1-bit register for signal <ce_out_i<13>>.
+    Found 1-bit register for signal <ce_out_i<14>>.
+    Found 1-bit register for signal <ce_out_i<15>>.
+    Found 1-bit register for signal <ce_out_i<16>>.
+    Found 1-bit register for signal <ce_out_i<17>>.
+    Found 1-bit register for signal <ce_out_i<18>>.
+    Found 1-bit register for signal <ce_out_i<19>>.
+    Found 1-bit register for signal <ce_out_i<20>>.
+    Found 1-bit register for signal <ce_out_i<21>>.
+    Found 1-bit register for signal <ce_out_i<22>>.
+    Found 1-bit register for signal <ce_out_i<23>>.
+    Found 1-bit register for signal <ce_out_i<24>>.
+    Found 1-bit register for signal <ce_out_i<25>>.
+    Found 1-bit register for signal <ce_out_i<26>>.
+    Found 1-bit register for signal <ce_out_i<27>>.
+    Found 1-bit register for signal <ce_out_i<28>>.
+    Found 1-bit register for signal <ce_out_i<29>>.
+    Found 1-bit register for signal <ce_out_i<30>>.
+    Found 1-bit register for signal <ce_out_i<31>>.
+    Found 1-bit register for signal <cs_out_i>.
+    Summary:
+	inferred  34 D-type flip-flop(s).
+Unit <address_decoder> synthesized.
+
+Synthesizing Unit <pselect_f_1>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "00000"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_1> synthesized.
+
+Synthesizing Unit <pselect_f_2>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "00001"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_2> synthesized.
+
+Synthesizing Unit <pselect_f_3>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "00010"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_3> synthesized.
+
+Synthesizing Unit <pselect_f_4>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "00011"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_4> synthesized.
+
+Synthesizing Unit <pselect_f_5>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "00100"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_5> synthesized.
+
+Synthesizing Unit <pselect_f_6>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "00101"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_6> synthesized.
+
+Synthesizing Unit <pselect_f_7>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "00110"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_7> synthesized.
+
+Synthesizing Unit <pselect_f_8>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "00111"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_8> synthesized.
+
+Synthesizing Unit <pselect_f_9>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "01000"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_9> synthesized.
+
+Synthesizing Unit <pselect_f_10>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "01001"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_10> synthesized.
+
+Synthesizing Unit <pselect_f_11>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "01010"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_11> synthesized.
+
+Synthesizing Unit <pselect_f_12>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "01011"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_12> synthesized.
+
+Synthesizing Unit <pselect_f_13>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "01100"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_13> synthesized.
+
+Synthesizing Unit <pselect_f_14>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "01101"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_14> synthesized.
+
+Synthesizing Unit <pselect_f_15>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "01110"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_15> synthesized.
+
+Synthesizing Unit <pselect_f_16>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "01111"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_16> synthesized.
+
+Synthesizing Unit <pselect_f_17>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "10000"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_17> synthesized.
+
+Synthesizing Unit <pselect_f_18>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "10001"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_18> synthesized.
+
+Synthesizing Unit <pselect_f_19>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "10010"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_19> synthesized.
+
+Synthesizing Unit <pselect_f_20>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "10011"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_20> synthesized.
+
+Synthesizing Unit <pselect_f_21>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "10100"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_21> synthesized.
+
+Synthesizing Unit <pselect_f_22>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "10101"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_22> synthesized.
+
+Synthesizing Unit <pselect_f_23>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "10110"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_23> synthesized.
+
+Synthesizing Unit <pselect_f_24>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "10111"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_24> synthesized.
+
+Synthesizing Unit <pselect_f_25>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "11000"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_25> synthesized.
+
+Synthesizing Unit <pselect_f_26>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "11001"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_26> synthesized.
+
+Synthesizing Unit <pselect_f_27>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "11010"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_27> synthesized.
+
+Synthesizing Unit <pselect_f_28>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "11011"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_28> synthesized.
+
+Synthesizing Unit <pselect_f_29>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "11100"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_29> synthesized.
+
+Synthesizing Unit <pselect_f_30>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "11101"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_30> synthesized.
+
+Synthesizing Unit <pselect_f_31>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "11110"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_31> synthesized.
+
+Synthesizing Unit <pselect_f_32>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "11111"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_32> synthesized.
+
+Synthesizing Unit <user_logic>.
+    Related source file is "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/user_logic.vhd".
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+        C_NUM_REG = 32
+        C_SLV_DWIDTH = 32
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+    Found 32-bit register for signal <slv_reg1>.
+    Found 32-bit register for signal <slv_reg2>.
+    Found 32-bit register for signal <slv_reg3>.
+    Found 32-bit register for signal <slv_reg4>.
+    Found 32-bit register for signal <slv_reg5>.
+    Found 32-bit register for signal <slv_reg6>.
+    Found 32-bit register for signal <slv_reg7>.
+    Found 32-bit register for signal <slv_reg8>.
+    Found 32-bit register for signal <slv_reg9>.
+    Found 32-bit register for signal <slv_reg10>.
+    Found 32-bit register for signal <slv_reg11>.
+    Found 32-bit register for signal <slv_reg12>.
+    Found 32-bit register for signal <slv_reg13>.
+    Found 32-bit register for signal <slv_reg14>.
+    Found 32-bit register for signal <slv_reg15>.
+    Found 32-bit register for signal <slv_reg16>.
+    Found 32-bit register for signal <slv_reg17>.
+    Found 32-bit register for signal <slv_reg18>.
+    Found 32-bit register for signal <slv_reg19>.
+    Found 32-bit register for signal <slv_reg20>.
+    Found 32-bit register for signal <slv_reg21>.
+    Found 32-bit register for signal <slv_reg22>.
+    Found 32-bit register for signal <slv_reg23>.
+    Found 32-bit register for signal <slv_reg24>.
+    Found 32-bit register for signal <slv_reg25>.
+    Found 32-bit register for signal <slv_reg26>.
+    Found 32-bit register for signal <slv_reg27>.
+    Found 32-bit register for signal <slv_reg0>.
+    Summary:
+	inferred 896 D-type flip-flop(s).
+	inferred 897 Multiplexer(s).
+Unit <user_logic> synthesized.
+
+Synthesizing Unit <superip_internal>.
+    Related source file is "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/superip_internal.vhd".
+WARNING:Xst:647 - Input <slv_reg15<31:24>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slv_reg16<31:24>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slv_reg17> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slv_reg18> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slv_reg19> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slv_reg20> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slv_reg21> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slv_reg22> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slv_reg23> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slv_reg24> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slv_reg25> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slv_reg26> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slv_reg27<31:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <slv_reg28> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <slv_reg29> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <slv_reg30> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <slv_reg31<31:3>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <superip_internal> synthesized.
+
+Synthesizing Unit <Tester>.
+    Related source file is "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/Tester.vhd".
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <Tester> synthesized.
+
+Synthesizing Unit <VolCtrl>.
+    Related source file is "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/VolCtrl.vhd".
+WARNING:Xst:647 - Input <IN_COEF_L> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <IN_COEF_R> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <OUT_RDY_L> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <OUT_RDY_R> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <VolCtrl> synthesized.
+
+Synthesizing Unit <Filter_Top_Level>.
+    Related source file is "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/Filter_Top_Level.vhd".
+WARNING:Xst:647 - Input <AUDIO_IN_L<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <AUDIO_IN_R<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <SAMPLE_TRIG> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit adder for signal <IIR_LP_Y_Out_L[15]_IIR_HP_Y_Out_L[15]_add_4_OUT> created at line 125.
+    Found 16-bit adder for signal <IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_5_OUT> created at line 126.
+    Found 16-bit adder for signal <IIR_HP_Y_Out_L[15]_IIR_BP_Y_Out_L[15]_add_6_OUT> created at line 128.
+    Found 16-bit adder for signal <IIR_HP_Y_Out_R[15]_IIR_BP_Y_Out_R[15]_add_7_OUT> created at line 129.
+    Found 16-bit adder for signal <n0069> created at line 131.
+    Found 16-bit adder for signal <IIR_LP_Y_Out_L[15]_IIR_HP_Y_Out_L[15]_add_9_OUT> created at line 131.
+    Found 16-bit adder for signal <n0075> created at line 132.
+    Found 16-bit adder for signal <IIR_LP_Y_Out_R[15]_IIR_HP_Y_Out_R[15]_add_11_OUT> created at line 132.
+    Found 16-bit 8-to-1 multiplexer for signal <AUDIO_OUT_TRUNC_L> created at line 108.
+    Found 16-bit 8-to-1 multiplexer for signal <AUDIO_OUT_TRUNC_R> created at line 108.
+    Summary:
+	inferred   8 Adder/Subtractor(s).
+	inferred   2 Multiplexer(s).
+Unit <Filter_Top_Level> synthesized.
+
+Synthesizing Unit <IIR_Biquad_II_v2>.
+    Related source file is "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/superip_v1_00_a/hdl/vhdl/IIR_Biquad_II_v2.vhd".
+    Found 32-bit register for signal <ZFF_X1>.
+    Found 32-bit register for signal <ZFF_X2>.
+    Found 32-bit register for signal <ZFF_Y1>.
+    Found 32-bit register for signal <ZFF_Y2>.
+    Found 32-bit register for signal <ZFF_X0>.
+    Found 3-bit register for signal <q_reg>.
+    Found 1-bit register for signal <state_reg>.
+    Found 32-bit register for signal <pgZFF_X0>.
+    Found 32-bit register for signal <pgZFF_X2>.
+    Found 32-bit register for signal <pgZFF_X1>.
+    Found 32-bit register for signal <pgZFF_Y1>.
+    Found 32-bit register for signal <pgZFF_Y2>.
+    Found 32-bit register for signal <Y_out_double>.
+    Found 16-bit register for signal <Y_out>.
+    Found 3-bit adder for signal <q_reg[2]_GND_53_o_add_11_OUT> created at line 1241.
+    Found 32-bit adder for signal <n0456> created at line 354.
+    Found 32-bit adder for signal <pgZFF_X0[31]_pgZFF_X2[31]_add_42_OUT> created at line 354.
+    Found 32-bit subtractor for signal <pgZFF_X0[31]_pgZFF_Y1[31]_sub_44_OUT<31:0>> created at line 354.
+    Found 32-bit subtractor for signal <pgZFF_X0[31]_pgZFF_Y2[31]_sub_45_OUT<31:0>> created at line 354.
+    Found 32x32-bit multiplier for signal <Coef_b0[31]_ZFF_X0[31]_MuLt_21_OUT> created at line 320.
+    Found 32x32-bit multiplier for signal <Coef_b1[31]_ZFF_X1[31]_MuLt_23_OUT> created at line 321.
+    Found 32x32-bit multiplier for signal <Coef_b2[31]_ZFF_X2[31]_MuLt_25_OUT> created at line 322.
+    Found 32x32-bit multiplier for signal <Coef_a1[31]_ZFF_Y1[31]_MuLt_27_OUT> created at line 325.
+    Found 32x32-bit multiplier for signal <Coef_a2[31]_ZFF_Y2[31]_MuLt_29_OUT> created at line 326.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<61>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<60>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<59>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<58>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<57>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<56>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<55>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<54>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<53>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<52>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<51>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<50>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<49>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<48>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<47>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<46>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<45>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<44>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<43>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<42>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<41>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<40>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<39>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<38>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<37>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<36>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<35>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<34>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<33>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<32>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X0_quad<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<61>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<60>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<59>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<58>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<57>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<56>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<55>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<54>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<53>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<52>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<51>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<50>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<49>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<48>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<47>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<46>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<45>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<44>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<43>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<42>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<41>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<40>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<39>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<38>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<37>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<36>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<35>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<34>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<33>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<32>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X1_quad<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<61>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<60>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<59>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<58>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<57>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<56>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<55>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<54>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<53>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<52>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<51>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<50>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<49>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<48>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<47>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<46>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<45>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<44>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<43>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<42>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<41>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<40>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<39>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<38>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<37>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<36>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<35>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<34>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<33>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<32>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_X2_quad<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<61>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<60>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<59>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<58>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<57>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<56>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<55>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<54>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<53>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<52>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<51>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<50>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<49>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<48>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<47>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<46>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<45>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<44>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<43>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<42>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<41>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<40>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<39>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<38>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<37>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<36>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<35>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<34>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<33>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<32>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y1_quad<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<61>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<60>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<59>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<58>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<57>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<56>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<55>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<54>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<53>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<52>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<51>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<50>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<49>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<48>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<47>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<46>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<45>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<44>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<43>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<42>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<41>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<40>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<39>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<38>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<37>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<36>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<35>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<34>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<33>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<32>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pgZFF_Y2_quad<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 3-bit comparator greater for signal <q_reg[2]_GND_53_o_LessThan_15_o> created at line 288
+    Found 3-bit comparator greater for signal <q_reg[2]_GND_53_o_LessThan_16_o> created at line 292
+    Found 3-bit comparator greater for signal <q_reg[2]_PWR_53_o_LessThan_17_o> created at line 296
+    Found 3-bit comparator greater for signal <q_reg[2]_PWR_53_o_LessThan_18_o> created at line 300
+    Found 3-bit comparator greater for signal <q_reg[2]_PWR_53_o_LessThan_19_o> created at line 304
+    Summary:
+	inferred   5 Multiplier(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred 372 D-type flip-flop(s).
+	inferred 160 Latch(s).
+	inferred   5 Comparator(s).
+	inferred  26 Multiplexer(s).
+Unit <IIR_Biquad_II_v2> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 30
+ 32x32-bit multiplier                                  : 30
+# Adders/Subtractors                                   : 39
+ 16-bit adder                                          : 8
+ 3-bit adder                                           : 6
+ 32-bit adder                                          : 12
+ 32-bit subtractor                                     : 12
+ 4-bit adder                                           : 1
+# Registers                                            : 153
+ 1-bit register                                        : 43
+ 16-bit register                                       : 6
+ 2-bit register                                        : 2
+ 3-bit register                                        : 6
+ 32-bit register                                       : 95
+ 4-bit register                                        : 1
+# Latches                                              : 960
+ 1-bit latch                                           : 960
+# Comparators                                          : 30
+ 3-bit comparator greater                              : 30
+# Multiplexers                                         : 1093
+ 1-bit 2-to-1 multiplexer                              : 1079
+ 16-bit 8-to-1 multiplexer                             : 2
+ 24-bit 2-to-1 multiplexer                             : 4
+ 3-bit 2-to-1 multiplexer                              : 6
+ 32-bit 2-to-1 multiplexer                             : 2
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <IIR_Biquad_II_v2>.
+The following registers are absorbed into counter <q_reg>: 1 register on signal <q_reg>.
+Unit <IIR_Biquad_II_v2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <slave_attachment>.
+The following registers are absorbed into counter <INCLUDE_DPHASE_TIMER.dpto_cnt>: 1 register on signal <INCLUDE_DPHASE_TIMER.dpto_cnt>.
+Unit <slave_attachment> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 30
+ 32x32-bit multiplier                                  : 30
+# Adders/Subtractors                                   : 32
+ 16-bit adder                                          : 8
+ 32-bit adder                                          : 12
+ 32-bit subtractor                                     : 12
+# Counters                                             : 7
+ 3-bit up counter                                      : 6
+ 4-bit up counter                                      : 1
+# Registers                                            : 3183
+ Flip-Flops                                            : 3183
+# Comparators                                          : 30
+ 3-bit comparator greater                              : 30
+# Multiplexers                                         : 1055
+ 1-bit 2-to-1 multiplexer                              : 1047
+ 16-bit 8-to-1 multiplexer                             : 2
+ 24-bit 2-to-1 multiplexer                             : 4
+ 32-bit 2-to-1 multiplexer                             : 2
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <ZFF_X0_11> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X0_10> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X0_9> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X0_8> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X0_7> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X0_6> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X0_5> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X0_4> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X0_3> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X0_2> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X0_1> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X0_0> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X1_11> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X1_10> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X1_9> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X1_8> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X1_7> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X1_6> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X1_5> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X1_4> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X1_3> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X1_2> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X1_1> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X1_0> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X2_11> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X2_10> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X2_9> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X2_8> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X2_7> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X2_6> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X2_5> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X2_4> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X2_3> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X2_2> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X2_1> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ZFF_X2_0> has a constant value of 0 in block <IIR_Biquad_II_v2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <s_axi_rresp_i_0> has a constant value of 0 in block <slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <s_axi_bresp_i_0> has a constant value of 0 in block <slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <ZFF_X0_27> in Unit <IIR_Biquad_II_v2> is equivalent to the following 4 FFs/Latches, which will be removed : <ZFF_X0_28> <ZFF_X0_29> <ZFF_X0_30> <ZFF_X0_31> 
+INFO:Xst:2261 - The FF/Latch <ZFF_X1_27> in Unit <IIR_Biquad_II_v2> is equivalent to the following 4 FFs/Latches, which will be removed : <ZFF_X1_28> <ZFF_X1_29> <ZFF_X1_30> <ZFF_X1_31> 
+INFO:Xst:2261 - The FF/Latch <ZFF_X2_27> in Unit <IIR_Biquad_II_v2> is equivalent to the following 4 FFs/Latches, which will be removed : <ZFF_X2_28> <ZFF_X2_29> <ZFF_X2_30> <ZFF_X2_31> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/FSM_0> on signal <state[1:2]> with user encoding.
+----------------------
+ State    | Encoding
+----------------------
+ sm_idle  | 00
+ sm_read  | 01
+ sm_write | 10
+ sm_resp  | 11
+----------------------
+INFO:Xst:2261 - The FF/Latch <IIR_LP_L/pgZFF_X1_quad_59> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_LP_L/pgZFF_X1_quad_60> <IIR_LP_L/pgZFF_X1_quad_61> 
+INFO:Xst:2261 - The FF/Latch <IIR_BP_L/pgZFF_X0_quad_59> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_BP_L/pgZFF_X0_quad_60> <IIR_BP_L/pgZFF_X0_quad_61> 
+INFO:Xst:2261 - The FF/Latch <IIR_LP_R/pgZFF_X1_quad_59> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_LP_R/pgZFF_X1_quad_60> <IIR_LP_R/pgZFF_X1_quad_61> 
+INFO:Xst:2261 - The FF/Latch <IIR_BP_R/pgZFF_X0_quad_59> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_BP_R/pgZFF_X0_quad_60> <IIR_BP_R/pgZFF_X0_quad_61> 
+INFO:Xst:2261 - The FF/Latch <IIR_LP_L/pgZFF_X2_quad_59> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_LP_L/pgZFF_X2_quad_61> <IIR_LP_L/pgZFF_X2_quad_60> 
+INFO:Xst:2261 - The FF/Latch <IIR_HP_L/pgZFF_X0_quad_59> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_HP_L/pgZFF_X0_quad_60> <IIR_HP_L/pgZFF_X0_quad_61> 
+INFO:Xst:2261 - The FF/Latch <IIR_BP_L/pgZFF_X1_quad_59> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_BP_L/pgZFF_X1_quad_60> <IIR_BP_L/pgZFF_X1_quad_61> 
+INFO:Xst:2261 - The FF/Latch <IIR_LP_R/pgZFF_X2_quad_59> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_LP_R/pgZFF_X2_quad_61> <IIR_LP_R/pgZFF_X2_quad_60> 
+INFO:Xst:2261 - The FF/Latch <IIR_HP_R/pgZFF_X0_quad_59> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_HP_R/pgZFF_X0_quad_60> <IIR_HP_R/pgZFF_X0_quad_61> 
+INFO:Xst:2261 - The FF/Latch <IIR_BP_R/pgZFF_X1_quad_59> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_BP_R/pgZFF_X1_quad_60> <IIR_BP_R/pgZFF_X1_quad_61> 
+INFO:Xst:2261 - The FF/Latch <IIR_HP_L/pgZFF_X1_quad_59> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_HP_L/pgZFF_X1_quad_60> <IIR_HP_L/pgZFF_X1_quad_61> 
+INFO:Xst:2261 - The FF/Latch <IIR_BP_L/pgZFF_X2_quad_59> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_BP_L/pgZFF_X2_quad_61> <IIR_BP_L/pgZFF_X2_quad_60> 
+INFO:Xst:2261 - The FF/Latch <IIR_HP_R/pgZFF_X1_quad_59> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_HP_R/pgZFF_X1_quad_60> <IIR_HP_R/pgZFF_X1_quad_61> 
+INFO:Xst:2261 - The FF/Latch <IIR_BP_R/pgZFF_X2_quad_59> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_BP_R/pgZFF_X2_quad_61> <IIR_BP_R/pgZFF_X2_quad_60> 
+INFO:Xst:2261 - The FF/Latch <IIR_HP_L/pgZFF_X2_quad_59> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_HP_L/pgZFF_X2_quad_61> <IIR_HP_L/pgZFF_X2_quad_60> 
+INFO:Xst:2261 - The FF/Latch <IIR_LP_L/pgZFF_X0_quad_59> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_LP_L/pgZFF_X0_quad_60> <IIR_LP_L/pgZFF_X0_quad_61> 
+INFO:Xst:2261 - The FF/Latch <IIR_HP_R/pgZFF_X2_quad_59> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_HP_R/pgZFF_X2_quad_61> <IIR_HP_R/pgZFF_X2_quad_60> 
+INFO:Xst:2261 - The FF/Latch <IIR_LP_R/pgZFF_X0_quad_59> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_LP_R/pgZFF_X0_quad_60> <IIR_LP_R/pgZFF_X0_quad_61> 
+INFO:Xst:2261 - The FF/Latch <IIR_BP_L/pgZFF_X2_31> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_BP_L/pgZFF_X2_30> <IIR_BP_L/pgZFF_X2_29> 
+INFO:Xst:2261 - The FF/Latch <IIR_HP_L/pgZFF_X2_31> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_HP_L/pgZFF_X2_30> <IIR_HP_L/pgZFF_X2_29> 
+INFO:Xst:2261 - The FF/Latch <IIR_BP_L/pgZFF_X1_31> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_BP_L/pgZFF_X1_30> <IIR_BP_L/pgZFF_X1_29> 
+INFO:Xst:2261 - The FF/Latch <IIR_HP_L/pgZFF_X1_31> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_HP_L/pgZFF_X1_30> <IIR_HP_L/pgZFF_X1_29> 
+INFO:Xst:2261 - The FF/Latch <IIR_BP_L/pgZFF_X0_31> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_BP_L/pgZFF_X0_30> <IIR_BP_L/pgZFF_X0_29> 
+INFO:Xst:2261 - The FF/Latch <IIR_HP_L/pgZFF_X0_31> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_HP_L/pgZFF_X0_30> <IIR_HP_L/pgZFF_X0_29> 
+INFO:Xst:2261 - The FF/Latch <IIR_LP_R/pgZFF_X2_31> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_LP_R/pgZFF_X2_30> <IIR_LP_R/pgZFF_X2_29> 
+INFO:Xst:2261 - The FF/Latch <IIR_LP_R/pgZFF_X1_31> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_LP_R/pgZFF_X1_30> <IIR_LP_R/pgZFF_X1_29> 
+INFO:Xst:2261 - The FF/Latch <IIR_LP_R/pgZFF_X0_31> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_LP_R/pgZFF_X0_30> <IIR_LP_R/pgZFF_X0_29> 
+INFO:Xst:2261 - The FF/Latch <IIR_BP_R/pgZFF_X2_31> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_BP_R/pgZFF_X2_30> <IIR_BP_R/pgZFF_X2_29> 
+INFO:Xst:2261 - The FF/Latch <IIR_HP_R/pgZFF_X2_31> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_HP_R/pgZFF_X2_30> <IIR_HP_R/pgZFF_X2_29> 
+INFO:Xst:2261 - The FF/Latch <IIR_BP_R/pgZFF_X1_31> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_BP_R/pgZFF_X1_30> <IIR_BP_R/pgZFF_X1_29> 
+INFO:Xst:2261 - The FF/Latch <IIR_LP_L/pgZFF_X2_31> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_LP_L/pgZFF_X2_30> <IIR_LP_L/pgZFF_X2_29> 
+INFO:Xst:2261 - The FF/Latch <IIR_HP_R/pgZFF_X1_31> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_HP_R/pgZFF_X1_30> <IIR_HP_R/pgZFF_X1_29> 
+INFO:Xst:2261 - The FF/Latch <IIR_BP_R/pgZFF_X0_31> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_BP_R/pgZFF_X0_30> <IIR_BP_R/pgZFF_X0_29> 
+INFO:Xst:2261 - The FF/Latch <IIR_LP_L/pgZFF_X1_31> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_LP_L/pgZFF_X1_30> <IIR_LP_L/pgZFF_X1_29> 
+INFO:Xst:2261 - The FF/Latch <IIR_HP_R/pgZFF_X0_31> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_HP_R/pgZFF_X0_30> <IIR_HP_R/pgZFF_X0_29> 
+INFO:Xst:2261 - The FF/Latch <IIR_LP_L/pgZFF_X0_31> in Unit <Filter_Top_Level> is equivalent to the following 2 FFs/Latches, which will be removed : <IIR_LP_L/pgZFF_X0_30> <IIR_LP_L/pgZFF_X0_29> 
+
+Optimizing unit <system_superip_0_wrapper> ...
+
+Optimizing unit <user_logic> ...
+
+Optimizing unit <Filter_Top_Level> ...
+
+Optimizing unit <slave_attachment> ...
+
+Optimizing unit <address_decoder> ...
+WARNING:Xst:1293 - FF/Latch <superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_1> has a constant value of 0 in block <system_superip_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rresp_i_1> has a constant value of 0 in block <system_superip_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0> of sequential type is unconnected in block <system_superip_0_wrapper>.
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X0_12> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X0_12> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X0_12> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X0_13> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X0_13> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X0_13> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X0_14> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X0_14> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X0_14> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X0_15> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X0_15> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X0_15> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X0_20> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X0_20> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X0_20> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X0_16> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X0_16> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X0_16> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X0_21> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X0_21> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X0_21> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X0_17> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X0_17> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X0_17> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X0_22> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X0_22> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X0_22> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X0_18> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X0_18> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X0_18> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X0_23> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X0_23> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X0_23> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X0_19> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X0_19> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X0_19> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X0_24> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X0_24> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X0_24> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X0_25> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X0_25> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X0_25> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X0_26> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X0_26> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X0_26> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X0_27> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X0_27> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X0_27> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X1_12> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X1_12> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X1_12> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X1_13> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X1_13> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X1_13> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X1_14> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X1_14> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X1_14> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X1_15> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X1_15> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X1_15> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X1_20> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X1_20> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X1_20> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X1_16> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X1_16> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X1_16> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X1_21> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X1_21> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X1_21> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X1_17> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X1_17> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X1_17> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X1_22> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X1_22> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X1_22> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X1_18> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X1_18> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X1_18> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X1_23> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X1_23> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X1_23> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X1_19> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X1_19> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X1_19> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X1_24> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X1_24> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X1_24> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X1_25> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X1_25> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X1_25> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X1_26> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X1_26> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X1_26> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X1_27> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X1_27> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X1_27> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X2_12> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X2_12> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X2_12> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X2_13> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X2_13> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X2_13> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/state_reg> in Unit <system_superip_0_wrapper> is equivalent to the following FF/Latch, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/state_reg> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X2_14> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X2_14> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X2_14> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X2_15> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X2_15> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X2_15> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X2_20> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X2_20> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X2_20> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X2_16> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X2_16> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X2_16> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X2_21> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X2_21> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X2_21> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X2_17> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X2_17> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X2_17> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X2_22> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X2_22> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X2_22> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X2_18> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X2_18> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X2_18> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X2_23> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X2_23> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X2_23> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X2_19> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X2_19> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X2_19> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X2_24> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X2_24> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X2_24> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X2_25> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X2_25> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X2_25> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X2_26> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X2_26> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X2_26> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X2_27> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X2_27> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X2_27> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_12> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X0_12> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X0_12> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_13> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X0_13> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X0_13> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_14> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X0_14> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X0_14> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_15> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X0_15> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X0_15> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_20> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X0_20> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X0_20> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_16> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X0_16> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X0_16> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_21> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X0_21> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X0_21> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_17> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X0_17> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X0_17> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_22> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X0_22> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X0_22> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_18> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X0_18> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X0_18> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_23> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X0_23> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X0_23> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_19> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X0_19> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X0_19> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_24> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X0_24> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X0_24> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_25> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X0_25> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X0_25> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_26> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X0_26> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X0_26> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X0_27> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X0_27> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X0_27> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X1_12> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X1_12> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X1_12> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X1_13> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X1_13> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X1_13> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X1_14> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X1_14> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X1_14> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X1_15> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X1_15> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X1_15> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X1_20> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X1_20> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X1_20> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X1_16> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X1_16> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X1_16> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X1_21> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X1_21> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X1_21> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X1_17> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X1_17> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X1_17> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X1_22> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X1_22> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X1_22> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/q_reg_0> in Unit <system_superip_0_wrapper> is equivalent to the following FF/Latch, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/q_reg_0> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X1_23> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X1_23> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X1_23> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X1_18> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X1_18> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X1_18> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/q_reg_1> in Unit <system_superip_0_wrapper> is equivalent to the following FF/Latch, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/q_reg_1> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X1_24> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X1_24> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X1_24> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X1_19> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X1_19> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X1_19> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/q_reg_2> in Unit <system_superip_0_wrapper> is equivalent to the following FF/Latch, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/q_reg_2> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X1_25> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X1_25> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X1_25> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X1_26> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X1_26> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X1_26> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/ZFF_X1_27> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/ZFF_X1_27> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/ZFF_X1_27> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X2_12> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X2_12> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X2_12> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X2_13> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X2_13> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X2_13> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X2_14> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X2_14> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X2_14> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X2_15> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X2_15> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X2_15> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X2_20> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X2_20> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X2_20> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X2_16> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X2_16> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X2_16> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X2_21> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X2_21> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X2_21> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X2_17> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X2_17> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X2_17> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X2_22> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X2_22> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X2_22> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X2_18> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X2_18> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X2_18> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X2_23> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X2_23> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X2_23> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X2_19> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X2_19> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X2_19> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X2_24> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X2_24> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X2_24> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X2_25> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X2_25> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X2_25> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X2_26> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X2_26> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X2_26> 
+INFO:Xst:2261 - The FF/Latch <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/ZFF_X2_27> in Unit <system_superip_0_wrapper> is equivalent to the following 2 FFs/Latches, which will be removed : <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/ZFF_X2_27> <superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/ZFF_X2_27> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block system_superip_0_wrapper, actual ratio is 11.
+FlipFlop superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg has been replicated 1 time(s)
+FlipFlop superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10 has been replicated 1 time(s)
+FlipFlop superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_11 has been replicated 1 time(s)
+FlipFlop superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_5 has been replicated 1 time(s)
+FlipFlop superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_6 has been replicated 2 time(s)
+FlipFlop superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_7 has been replicated 1 time(s)
+FlipFlop superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8 has been replicated 1 time(s)
+FlipFlop superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 2691
+ Flip-Flops                                            : 2691
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : system_superip_0_wrapper.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3011
+#      GND                         : 1
+#      INV                         : 7
+#      LUT2                        : 193
+#      LUT3                        : 430
+#      LUT4                        : 433
+#      LUT5                        : 259
+#      LUT6                        : 669
+#      MUXCY                       : 492
+#      MUXF7                       : 14
+#      VCC                         : 1
+#      XORCY                       : 512
+# FlipFlops/Latches                : 3615
+#      FD                          : 3
+#      FDC                         : 5
+#      FDCE                        : 495
+#      FDE                         : 1212
+#      FDR                         : 8
+#      FDRE                        : 968
+#      LD                          : 924
+# Clock Buffers                    : 5
+#      BUFG                        : 5
+# DSPs                             : 120
+#      DSP48E1                     : 120
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7z020clg484-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            3615  out of  106400     3%  
+ Number of Slice LUTs:                 1991  out of  53200     3%  
+    Number used as Logic:              1991  out of  53200     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   4709
+   Number with an unused Flip Flop:    1094  out of   4709    23%  
+   Number with an unused LUT:          2718  out of   4709    57%  
+   Number of fully used LUT-FF pairs:   897  out of   4709    19%  
+   Number of unique control sets:        60
+
+IO Utilization: 
+ Number of IOs:                         245
+ Number of bonded IOBs:                   0  out of    200     0%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                5  out of     32    15%  
+ Number of DSP48E1s:                    120  out of    220    54%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
+Clock Signal                                                                                                                 | Clock buffer(FF name)                                                    | Load  |
+-----------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
+S_AXI_ACLK                                                                                                                   | NONE(superip_0/USER_LOGIC_I/slv_reg27_31)                                | 2811  |
+superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/mul_coefs(superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/Mmux_mul_coefs11:O)| BUFG(*)(superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_R/pgZFF_X0_quad_59)| 308   |
+superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/mul_coefs(superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/Mmux_mul_coefs11:O)| BUFG(*)(superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/pgZFF_X0_quad_59)| 154   |
+superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/mul_coefs(superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/Mmux_mul_coefs11:O)| BUFG(*)(superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/pgZFF_X0_quad_59)| 154   |
+superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/mul_coefs(superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/Mmux_mul_coefs11:O)| BUFG(*)(superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/pgZFF_X0_quad_59)| 154   |
+superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/mul_coefs(superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/Mmux_mul_coefs11:O)| BUFG(*)(superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/pgZFF_X0_quad_59)| 154   |
+-----------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
+(*) These 5 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 4.192ns (Maximum Frequency: 238.542MHz)
+   Minimum input arrival time before clock: 1.454ns
+   Maximum output required time after clock: 3.988ns
+   Maximum combinational path delay: 0.067ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'S_AXI_ACLK'
+  Clock period: 4.192ns (frequency: 238.542MHz)
+  Total number of paths / destination ports: 914414 / 4469
+-------------------------------------------------------------------------
+Delay:               4.192ns (Levels of Logic = 6)
+  Source:            superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_5_1 (FF)
+  Destination:       superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31 (FF)
+  Source Clock:      S_AXI_ACLK rising
+  Destination Clock: S_AXI_ACLK rising
+
+  Data Path: superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_5_1 to superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.282   0.739  superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_5_1 (superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_5_1)
+     LUT5:I0->O           37   0.053   0.567  superip_0/USER_LOGIC_I/Mmux_IP2Bus_Data23131 (superip_0/USER_LOGIC_I/GND_48_o_slv_reg_read_sel[31]_equal_128_o<31>111)
+     LUT6:I5->O            2   0.053   0.419  superip_0/USER_LOGIC_I/GND_48_o_slv_reg_read_sel[31]_equal_117_o<31>12_SW0 (N142)
+     LUT6:I5->O           34   0.053   0.566  superip_0/USER_LOGIC_I/GND_48_o_slv_reg_read_sel[31]_equal_128_o<31>11 (superip_0/USER_LOGIC_I/GND_48_o_slv_reg_read_sel[31]_equal_128_o<31>1)
+     LUT6:I5->O           32   0.053   0.566  superip_0/USER_LOGIC_I/GND_48_o_slv_reg_read_sel[31]_equal_129_o<31>1 (superip_0/USER_LOGIC_I/GND_48_o_slv_reg_read_sel[31]_equal_129_o)
+     LUT6:I5->O            1   0.053   0.725  superip_0/USER_LOGIC_I/Mmux_IP2Bus_Data111 (superip_0/USER_LOGIC_I/Mmux_IP2Bus_Data11)
+     LUT6:I1->O            1   0.053   0.000  superip_0/USER_LOGIC_I/Mmux_IP2Bus_Data122 (superip_0/user_IP2Bus_Data<0>)
+     FDRE:D                    0.011          superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0
+    ----------------------------------------
+    Total                      4.192ns (0.611ns logic, 3.581ns route)
+                                       (14.6% logic, 85.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'S_AXI_ACLK'
+  Total number of paths / destination ports: 4941 / 4171
+-------------------------------------------------------------------------
+Offset:              1.454ns (Levels of Logic = 3)
+  Source:            S_AXI_RREADY (PAD)
+  Destination:       superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1 (FF)
+  Destination Clock: S_AXI_ACLK rising
+
+  Data Path: S_AXI_RREADY to superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT4:I0->O            1   0.053   0.635  superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1 (superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1)
+     LUT6:I2->O            1   0.053   0.413  superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In2 (superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In2)
+     LUT5:I4->O            1   0.053   0.000  superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3 (superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In)
+     FDR:D                     0.011          superip_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+    ----------------------------------------
+    Total                      1.454ns (0.406ns logic, 1.048ns route)
+                                       (27.9% logic, 72.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'S_AXI_ACLK'
+  Total number of paths / destination ports: 11601 / 85
+-------------------------------------------------------------------------
+Offset:              3.988ns (Levels of Logic = 21)
+  Source:            superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/Y_out_0 (FF)
+  Destination:       Mux2_FilterORMux1_Left_out<23> (PAD)
+  Source Clock:      S_AXI_ACLK rising
+
+  Data Path: superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/Y_out_0 to Mux2_FilterORMux1_Left_out<23>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.282   0.499  superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/Y_out_0 (superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/Y_out_0)
+     LUT2:I0->O            1   0.053   0.000  superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_lut<0> (superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_lut<0>)
+     MUXCY:S->O            1   0.291   0.000  superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<0> (superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<0>)
+     MUXCY:CI->O           1   0.015   0.000  superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<1> (superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<1>)
+     MUXCY:CI->O           1   0.015   0.000  superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<2> (superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<3> (superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<3>)
+     MUXCY:CI->O           1   0.015   0.000  superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<4> (superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<4>)
+     MUXCY:CI->O           1   0.015   0.000  superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<5> (superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<5>)
+     MUXCY:CI->O           1   0.015   0.000  superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<6> (superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<6>)
+     MUXCY:CI->O           1   0.015   0.000  superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<7> (superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<7>)
+     MUXCY:CI->O           1   0.015   0.000  superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<8> (superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<8>)
+     MUXCY:CI->O           1   0.015   0.000  superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<9> (superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<9>)
+     MUXCY:CI->O           1   0.015   0.000  superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<10> (superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<10>)
+     MUXCY:CI->O           1   0.015   0.000  superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<11> (superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<11>)
+     MUXCY:CI->O           1   0.015   0.000  superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<12> (superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<12>)
+     MUXCY:CI->O           1   0.015   0.000  superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<13> (superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_cy<13>)
+     XORCY:CI->O           2   0.320   0.491  superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_n0069_xor<14> (superip_0/USER_LOGIC_I/SIP/filter_Comp/n0069<14>)
+     LUT2:I0->O            1   0.053   0.000  superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_L[15]_IIR_HP_Y_Out_L[15]_add_9_OUT_lut<14> (superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_L[15]_IIR_HP_Y_Out_L[15]_add_9_OUT_lut<14>)
+     MUXCY:S->O            0   0.291   0.000  superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_L[15]_IIR_HP_Y_Out_L[15]_add_9_OUT_cy<14> (superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_L[15]_IIR_HP_Y_Out_L[15]_add_9_OUT_cy<14>)
+     XORCY:CI->O           1   0.320   0.602  superip_0/USER_LOGIC_I/SIP/filter_Comp/Madd_IIR_LP_Y_Out_L[15]_IIR_HP_Y_Out_L[15]_add_9_OUT_xor<15> (superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_Y_Out_L[15]_IIR_HP_Y_Out_L[15]_add_9_OUT<15>)
+     LUT6:I3->O            1   0.053   0.485  superip_0/USER_LOGIC_I/SIP/Tester_Comp/Mmux_Mux2_FilterORMux1_Left_out162 (superip_0/USER_LOGIC_I/SIP/Tester_Comp/Mmux_Mux2_FilterORMux1_Left_out161)
+     LUT5:I3->O            0   0.053   0.000  superip_0/USER_LOGIC_I/SIP/Tester_Comp/Mmux_Mux2_FilterORMux1_Left_out163 (Mux2_FilterORMux1_Left_out<23>)
+    ----------------------------------------
+    Total                      3.988ns (1.911ns logic, 2.077ns route)
+                                       (47.9% logic, 52.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 48 / 48
+-------------------------------------------------------------------------
+Delay:               0.067ns (Levels of Logic = 1)
+  Source:            Audio_Left_in<23> (PAD)
+  Destination:       Mux2_FilterORMux1_Left_out<23> (PAD)
+
+  Data Path: Audio_Left_in<23> to Mux2_FilterORMux1_Left_out<23>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT5:I4->O            0   0.053   0.000  superip_0/USER_LOGIC_I/SIP/Tester_Comp/Mmux_Mux2_FilterORMux1_Left_out163 (Mux2_FilterORMux1_Left_out<23>)
+    ----------------------------------------
+    Total                      0.067ns (0.067ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock S_AXI_ACLK
+---------------------------------------------------------+---------+---------+---------+---------+
+                                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------------+---------+---------+---------+---------+
+S_AXI_ACLK                                               |    4.192|         |         |         |
+superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/mul_coefs|         |    0.799|         |         |
+superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/mul_coefs|         |    0.799|         |         |
+superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/mul_coefs|         |    0.799|         |         |
+superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/mul_coefs|         |    0.799|         |         |
+superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/mul_coefs|         |    0.799|         |         |
+---------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_L/mul_coefs
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+S_AXI_ACLK     |         |         |   10.080|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_BP_R/mul_coefs
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+S_AXI_ACLK     |         |         |   10.080|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_L/mul_coefs
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+S_AXI_ACLK     |         |         |   10.080|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_HP_R/mul_coefs
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+S_AXI_ACLK     |         |         |   10.080|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock superip_0/USER_LOGIC_I/SIP/filter_Comp/IIR_LP_L/mul_coefs
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+S_AXI_ACLK     |         |         |   10.080|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 67.00 secs
+Total CPU time to Xst completion: 66.78 secs
+ 
+--> 
+
+Total memory usage is 556912 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  256 (   0 filtered)
+Number of infos    :  144 (   0 filtered)
+

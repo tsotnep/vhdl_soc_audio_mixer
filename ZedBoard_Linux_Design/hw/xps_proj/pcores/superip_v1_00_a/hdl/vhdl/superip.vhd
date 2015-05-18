@@ -305,7 +305,7 @@ begin
     port map
     (
       -- MAP USER PORTS BELOW THIS LINE ------------------
-      CLK_48_in                   => CLK_48_in,
+      CLK_48_in                   => S_AXI_ACLK,--CLK_48_in,
       Audio_Left_in               => Audio_Left_in,
       Audio_Right_in              => Audio_Right_in,
       Mux2_FilterORMux1_Left_out  => Mux2_FilterORMux1_Left_out,

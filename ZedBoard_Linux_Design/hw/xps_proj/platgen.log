@@ -1,0 +1,346 @@
+Release 14.7 - platgen Xilinx EDK 14.7 Build EDK_P.20131013
+ (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: platgen -p xc7z020clg484-1 -lang vhdl -intstyle default -msg
+__xps/ise/xmsgprops.lst system.mhs 
+
+WARNING:EDK - INFO:Security:71 - If a license for part 'xc7z020' is available,
+   it will be possible to use 'XPS_TDP' instead of 'XPS'.
+   WARNING:Security:42 - Your software subscription period has lapsed. Your
+   current version of Xilinx tools will continue to function, but you no longer
+   qualify for Xilinx software updates or new releases.
+
+
+Parse
+C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/system.mh
+s ...
+
+Read MPD definitions ...
+WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: clock_generator_0 -
+   Pre-Production version not verified on hardware for architecture 'zynq' -
+   C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system
+   .mhs line 51 
+WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: clock_generator_0 -
+   Pre-Production version not verified on hardware for architecture 'zynq' -
+   C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system
+   .mhs line 51 
+
+Overriding IP level properties ...
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_S_AXI_HP0_HIGHADDR value to 0x1FFFFFFF -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_03_a\data\processing_system7_v2_1_0.mpd line 300 
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_S_AXI_HP1_HIGHADDR value to 0x1FFFFFFF -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_03_a\data\processing_system7_v2_1_0.mpd line 304 
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_S_AXI_HP2_HIGHADDR value to 0x1FFFFFFF -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_03_a\data\processing_system7_v2_1_0.mpd line 308 
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_S_AXI_HP3_HIGHADDR value to 0x1FFFFFFF -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_03_a\data\processing_system7_v2_1_0.mpd line 312 
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_NUM_F2P_INTR_INPUTS value to 6 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_03_a\data\processing_system7_v2_1_0.mpd line 319 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi_interconnect_1 - tcl is
+   overriding PARAMETER C_BASEFAMILY value to zynq -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_
+   06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi_interconnect_2 - tcl is
+   overriding PARAMETER C_BASEFAMILY value to zynq -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_
+   06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi_interconnect_3 - tcl is
+   overriding PARAMETER C_BASEFAMILY value to zynq -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_
+   06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_vdma, INSTANCE:axi_vdma_0 - tcl is overriding
+   PARAMETER C_INTERCONNECT_M_AXI_MM2S_READ_FIFO_DEPTH value to 512 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_vdma_v5_04_a\dat
+   a\axi_vdma_v2_1_0.mpd line 143 
+
+Computing clock values...
+INFO:EDK:1432 - Frequency for Top-Level Input Clock
+   'processing_system7_0_PS_CLK_pin' is not specified. Clock DRCs will not be
+   performed for IPs connected to that clock port, unless they are connected
+   through the clock generator IP. 
+
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   axi_clkgen_0:clk. Clock DRCs will not be performed on this core and cores
+   connected to it. 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+INFO:EDK - INFO: DDR Base and High address in current configuration is
+   0x00000000 and 0x1FFFFFFF respectively. 
+INFO:EDK - INFO: You can modify the DDR address range accessed by Programmable
+   Logic through the processing_system7 AXI slave interfaces. If MicroBlaze is a
+   master on processing_system7 AXI slave interfaces, please use the top half of
+   the address range (Base Address = 0x10000000; High Address = 0x1FFFFFFF). For
+   all other master, any subset of the DDR address can be used. See Xilinx
+   Answer 47167 for more information. 
+Address Map for Processor processing_system7_0
+  (0x40400000-0x4040ffff) axi_dma_spdif	axi_interconnect_1
+  (0x40420000-0x4042ffff) axi_dma_i2s	axi_interconnect_1
+  (0x41600000-0x4160ffff) axi_iic_hdmi	axi_interconnect_1
+  (0x43000000-0x4300ffff) axi_vdma_0	axi_interconnect_1
+  (0x70e00000-0x70e0ffff) axi_hdmi_tx_16b_0	axi_interconnect_1
+  (0x71a00000-0x71a0ffff) superip_0	axi_interconnect_1
+  (0x72800000-0x7280ffff) adau1761_audio_0	axi_interconnect_1
+  (0x75c00000-0x75c0ffff) axi_spdif_tx_0	axi_interconnect_1
+  (0x79000000-0x7900ffff) axi_clkgen_0	axi_interconnect_1
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: axi_interconnect, INSTANCE: axi_interconnect_1 - 1 master(s) : 9
+slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi_interconnect_2 - 4 master(s) : 1
+slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi_interconnect_3 - 1 master(s) : 1
+slave(s) 
+
+Checking port drivers...
+WARNING:EDK:4180 - PORT: ARESETN, CONNECTOR: axi_dma_spdif_M_AXIS_MM2S_ARESETN -
+   No driver found. Port will be driven to GND -
+   C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\pcores
+   \axi_spdif_tx_v1_00_a\data\axi_spdif_tx_v2_1_0.mpd line 63 
+WARNING:EDK:4181 - PORT: adau1761_audio_0_clk_100_pin, CONNECTOR:
+   net_adau1761_audio_0_clk_100_pin - floating connection -
+   C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system
+   .mhs line 45 
+WARNING:EDK:4181 - PORT: SlideSwitch, CONNECTOR: SlideSwitch - floating
+   connection -
+   C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system
+   .mhs line 47 
+WARNING:EDK:4181 - PORT: CLKOUT1, CONNECTOR: clock_generator_0_CLKOUT1 -
+   floating connection -
+   C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system
+   .mhs line 60 
+WARNING:EDK:4181 - PORT: mm2s_prmry_reset_out_n, CONNECTOR: RESET_OUT_N -
+   floating connection -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_dma_v6_03_a\data
+   \axi_dma_v2_1_0.mpd line 221 
+WARNING:EDK:4181 - PORT: mm2s_cntrl_reset_out_n, CONNECTOR: RESET_OUT_N -
+   floating connection -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_dma_v6_03_a\data
+   \axi_dma_v2_1_0.mpd line 230 
+WARNING:EDK:4181 - PORT: s2mm_prmry_reset_out_n, CONNECTOR: RESET_OUT_N -
+   floating connection -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_dma_v6_03_a\data
+   \axi_dma_v2_1_0.mpd line 253 
+WARNING:EDK:4181 - PORT: s2mm_sts_reset_out_n, CONNECTOR: RESET_OUT_N - floating
+   connection -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_dma_v6_03_a\data
+   \axi_dma_v2_1_0.mpd line 262 
+WARNING:EDK:4181 - PORT: mm2s_prmry_reset_out_n, CONNECTOR: RESET_OUT_N -
+   floating connection -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_dma_v6_03_a\data
+   \axi_dma_v2_1_0.mpd line 221 
+WARNING:EDK:4181 - PORT: mm2s_cntrl_reset_out_n, CONNECTOR: RESET_OUT_N -
+   floating connection -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_dma_v6_03_a\data
+   \axi_dma_v2_1_0.mpd line 230 
+WARNING:EDK:4181 - PORT: s2mm_prmry_reset_out_n, CONNECTOR: RESET_OUT_N -
+   floating connection -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_dma_v6_03_a\data
+   \axi_dma_v2_1_0.mpd line 253 
+WARNING:EDK:4181 - PORT: s2mm_sts_reset_out_n, CONNECTOR: RESET_OUT_N - floating
+   connection -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_dma_v6_03_a\data
+   \axi_dma_v2_1_0.mpd line 262 
+WARNING:EDK:4181 - PORT: m_axis_mm2s_tkeep, CONNECTOR:
+   axi_dma_spdif_M_AXIS_MM2S_TKEEP - floating connection -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_dma_v6_03_a\data
+   \axi_dma_v2_1_0.mpd line 223 
+WARNING:EDK:4181 - PORT: m_axis_mm2s_tuser, CONNECTOR:
+   axi_dma_spdif_M_AXIS_MM2S_TUSER - floating connection -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_dma_v6_03_a\data
+   \axi_dma_v2_1_0.mpd line 227 
+WARNING:EDK:4181 - PORT: m_axis_mm2s_tid, CONNECTOR:
+   axi_dma_spdif_M_AXIS_MM2S_TID - floating connection -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_dma_v6_03_a\data
+   \axi_dma_v2_1_0.mpd line 228 
+WARNING:EDK:4181 - PORT: m_axis_mm2s_tdest, CONNECTOR:
+   axi_dma_spdif_M_AXIS_MM2S_TDEST - floating connection -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_dma_v6_03_a\data
+   \axi_dma_v2_1_0.mpd line 229 
+WARNING:EDK:4181 - PORT: m_axis_mm2s_tuser, CONNECTOR:
+   axi_vdma_0_M_AXIS_MM2S_TUSER - floating connection -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_vdma_v5_04_a\dat
+   a\axi_vdma_v2_1_0.mpd line 212 
+WARNING:EDK:4181 - PORT: Gpo, CONNECTOR: axi_iic_hdmi_Gpo - floating connection
+   -
+   C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system
+   .mhs line 312 
+WARNING:EDK:4181 - PORT: clk_48_o, CONNECTOR: adau1761_audio_0_clk_48_o -
+   floating connection -
+   C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system
+   .mhs line 344 
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_FCLK_CLK3_BUF value to FALSE -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_03_a\data\processing_system7_v2_1_0.mpd line 353 
+
+INFO: Setting C_RANGE_CHECK = ON for axi_interconnect axi_interconnect_1.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi_interconnect_1 - tcl is
+   overriding PARAMETER C_RANGE_CHECK value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_
+   06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+
+INFO: Setting C_RANGE_CHECK = OFF for axi_interconnect axi_interconnect_2; no
+DECERR checking will be performed.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi_interconnect_2 - tcl is
+   overriding PARAMETER C_RANGE_CHECK value to 0 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_
+   06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+
+INFO: Setting C_RANGE_CHECK = OFF for axi_interconnect axi_interconnect_3; no
+DECERR checking will be performed.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi_interconnect_3 - tcl is
+   overriding PARAMETER C_RANGE_CHECK value to 0 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_
+   06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+
+Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
+INFO: No asynchronous clock conversions in axi_interconnect axi_interconnect_1.
+INFO: No asynchronous clock conversions in axi_interconnect axi_interconnect_2.
+INFO: No asynchronous clock conversions in axi_interconnect axi_interconnect_3.
+
+Modify defaults ...
+
+Creating stub ...
+
+Processing licensed instances ...
+Completion time: 0.00 seconds
+
+Creating hardware output directories ...
+
+Managing hardware (BBD-specified) netlist files ...
+
+Managing cache ...
+IPNAME:proc_sys_reset INSTANCE:reset_0 -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 64 - Copying cache implementation netlist
+IPNAME:processing_system7 INSTANCE:processing_system7_0 -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 70 - Copying cache implementation netlist
+IPNAME:axi_clkgen INSTANCE:axi_clkgen_0 -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 173 - Copying cache implementation netlist
+IPNAME:axi_interconnect INSTANCE:axi_interconnect_1 -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 184 - Copying cache implementation netlist
+IPNAME:axi_hdmi_tx_16b INSTANCE:axi_hdmi_tx_16b_0 -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 192 - Copying cache implementation netlist
+IPNAME:axi_spdif_tx INSTANCE:axi_spdif_tx_0 -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 213 - Copying cache implementation netlist
+IPNAME:axi_dma INSTANCE:axi_dma_i2s -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 226 - Copying cache implementation netlist
+IPNAME:axi_interconnect INSTANCE:axi_interconnect_2 -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 244 - Copying cache implementation netlist
+IPNAME:axi_dma INSTANCE:axi_dma_spdif -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 252 - Copying cache implementation netlist
+IPNAME:axi_interconnect INSTANCE:axi_interconnect_3 -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 271 - Copying cache implementation netlist
+IPNAME:axi_vdma INSTANCE:axi_vdma_0 -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 279 - Copying cache implementation netlist
+IPNAME:axi_iic INSTANCE:axi_iic_hdmi -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 305 - Copying cache implementation netlist
+IPNAME:util_vector_logic INSTANCE:util_vector_logic_0 -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 318 - Copying cache implementation netlist
+IPNAME:adau1761_audio INSTANCE:adau1761_audio_0 -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 327 - Copying cache implementation netlist
+IPNAME:superip INSTANCE:superip_0 -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 351 - Copying cache implementation netlist
+
+Elaborating instances ...
+IPNAME:clock_generator INSTANCE:clock_generator_0 -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 51 - elaborating IP
+ClkGen elaborate status: PASSED
+----------------------------------------
+----------------------------------------
+
+Writing HDL for elaborated instances ...
+
+Inserting wrapper level ...
+Completion time: 1.00 seconds
+
+Constructing platform-level connectivity ...
+Completion time: 1.00 seconds
+
+Writing (top-level) BMM ...
+
+Writing (top-level and wrappers) HDL ...
+
+Generating synthesis project file ...
+
+Running XST synthesis ...
+
+INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
+   IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
+   synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
+INSTANCE:clock_generator_0 -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 51 - Running XST synthesis
+INSTANCE:axi_clkgen_0 -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 173 - Running XST synthesis
+INSTANCE:axi_hdmi_tx_16b_0 -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 192 - Running XST synthesis
+INSTANCE:axi_spdif_tx_0 -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 213 - Running XST synthesis
+INSTANCE:adau1761_audio_0 -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 327 - Running XST synthesis
+INSTANCE:superip_0 -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 351 - Running XST synthesis
+
+Running NGCBUILD ...
+IPNAME:system_clock_generator_0_wrapper INSTANCE:clock_generator_0 -
+C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\system.mh
+s line 51 - Running NGCBUILD
+INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
+   If any constraint needs to be overridden, this should be done by modifying
+   the data/system.ucf file.
+
+Rebuilding cache ...
+
+Total run time: 233.00 seconds
