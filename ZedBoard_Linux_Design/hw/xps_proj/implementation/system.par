@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-MEC9-HP::  Mon May 18 10:48:10 2015
+MEC9-HP::  Tue May 19 16:48:20 2015
 
 par -w -ol high system_map.ncd system.ncd system.pcf 
 
@@ -21,7 +21,7 @@ Device speed data version:  "PRODUCTION 1.08 2013-10-13".
 
 Device Utilization Summary:
 
-   Number of BUFGs                          13 out of 32     40%
+   Number of BUFGs                          12 out of 32     37%
    Number of DSP48E1s                      120 out of 220    54%
    Number of ILOGICE2s                       2 out of 200     1%
    Number of External IOB33s                94 out of 200    47%
@@ -30,19 +30,19 @@ Device Utilization Summary:
    Number of External IOPADs               130 out of 130   100%
       Number of LOCed IOPADs               127 out of 130    97%
 
-   Number of MMCME2_ADVs                     3 out of 4      75%
+   Number of MMCME2_ADVs                     2 out of 4      50%
    Number of OLOGICE2s                      74 out of 200    37%
    Number of PS7s                            1 out of 1     100%
    Number of RAMB18E1s                       1 out of 280     1%
    Number of RAMB36E1s                       8 out of 140     5%
-   Number of Slices                       6287 out of 13300  47%
-   Number of Slice Registers             15303 out of 106400 13%
-      Number used as Flip Flops          14379
+   Number of Slices                       6279 out of 13300  47%
+   Number of Slice Registers             15383 out of 106400 13%
+      Number used as Flip Flops          14459
       Number used as Latches               924
       Number used as LatchThrus              0
 
-   Number of Slice LUTS                  11948 out of 53200  22%
-   Number of Slice LUT-Flip Flop pairs   18106 out of 53200  34%
+   Number of Slice LUTS                  12013 out of 53200  22%
+   Number of Slice LUT-Flip Flop pairs   18117 out of 53200  34%
 
 
 Overall effort level (-ol):   High 
@@ -50,8 +50,8 @@ Router effort level (-rl):    High
 
 INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please consult the Xilinx
    Command Line Tools User Guide for information on generating a TSI report.
-Starting initial Timing Analysis.  REAL time: 1 mins 16 secs 
-Finished initial Timing Analysis.  REAL time: 1 mins 17 secs 
+Starting initial Timing Analysis.  REAL time: 57 secs 
+Finished initial Timing Analysis.  REAL time: 58 secs 
 
 WARNING:Par:288 - The signal SlideSwitch<5>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal SlideSwitch<6>_IBUF has no load.  PAR will not attempt to route this signal.
@@ -62,89 +62,89 @@ WARNING:Par:288 - The signal SlideSwitch<2>_IBUF has no load.  PAR will not atte
 WARNING:Par:288 - The signal SlideSwitch<3>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal SlideSwitch<4>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   axi_dma_i2s/axi_dma_i2s/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/S6.I_SYNC_FIFOG
-   EN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1_O has
-   no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
    axi_interconnect_3/axi_interconnect_3/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRIT
-   E.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mra
-   m_RAM_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+   E.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM
+   _RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
    axi_interconnect_2/axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRIT
    E.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM
    _RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
    axi_interconnect_3/axi_interconnect_3/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRIT
-   E.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM
-   _RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo18_RAMD_O has no load.  PAR will not attempt to route
-   this signal.
+   E.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mra
+   m_RAM_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   axi_interconnect_2/axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRIT
+   E.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mra
+   m_RAM_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo17_RAMD_O has no load.  PAR will not attempt to route
    this signal.
-WARNING:Par:288 - The signal
-   axi_interconnect_2/axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRIT
-   E.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mra
-   m_RAM_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo15_RAMD_O has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo16_RAMD_O has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo8_RAMD_O has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo7_RAMD_O has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo19_RAMD_O has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo5_RAMD_O has no load.  PAR will not attempt to route
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo18_RAMD_O has no load.  PAR will not attempt to route
    this signal.
 WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo6_RAMD_O has no load.  PAR will not attempt to route
    this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo8_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo5_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
 WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo20_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo19_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo7_RAMD_O has no load.  PAR will not attempt to route
    this signal.
 WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo3_RAMD_O has no load.  PAR will not attempt to route
    this signal.
 WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo4_RAMD_O has no load.  PAR will not attempt to route
    this signal.
-WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo12_RAMD_O has no load.  PAR will not attempt to route
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo15_RAMD_O has no load.  PAR will not attempt to route
    this signal.
-WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo11_RAMD_O has no load.  PAR will not attempt to route
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo16_RAMD_O has no load.  PAR will not attempt to route
    this signal.
 WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo14_RAMD_O has no load.  PAR will not attempt to route
    this signal.
-WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo1_RAMD_O has no load.  PAR will not attempt to route
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo11_RAMD_O has no load.  PAR will not attempt to route
    this signal.
 WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo2_RAMD_O has no load.  PAR will not attempt to route
    this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo1_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo12_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
 WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo9_RAMD_O has no load.  PAR will not attempt to route
    this signal.
-WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo13_RAMD_O has no load.  PAR will not attempt to route
-   this signal.
 WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo10_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal
+   axi_dma_i2s/axi_dma_i2s/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/S6.I_SYNC_FIFOG
+   EN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1_O has
+   no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo13_RAMD_O has no load.  PAR will not attempt to route
    this signal.
 Starting Router
 
 
-Phase  1  : 101320 unrouted;      REAL time: 1 mins 22 secs 
+Phase  1  : 101202 unrouted;      REAL time: 1 mins 1 secs 
 
-Phase  2  : 71204 unrouted;      REAL time: 1 mins 27 secs 
+Phase  2  : 71174 unrouted;      REAL time: 1 mins 5 secs 
 
-Phase  3  : 23163 unrouted;      REAL time: 1 mins 58 secs 
+Phase  3  : 23101 unrouted;      REAL time: 1 mins 33 secs 
 
-Phase  4  : 23225 unrouted; (Setup:292970, Hold:114281, Component Switching Limit:0)     REAL time: 2 mins 17 secs 
+Phase  4  : 23092 unrouted; (Setup:0, Hold:124208, Component Switching Limit:0)     REAL time: 1 mins 43 secs 
 
 Updating file: system.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:299723, Hold:95263, Component Switching Limit:0)     REAL time: 2 mins 57 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:105208, Component Switching Limit:0)     REAL time: 2 mins 15 secs 
 
-Phase  6  : 0 unrouted; (Setup:303124, Hold:95236, Component Switching Limit:0)     REAL time: 3 mins 15 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:105208, Component Switching Limit:0)     REAL time: 2 mins 15 secs 
 
-Phase  7  : 0 unrouted; (Setup:303124, Hold:95236, Component Switching Limit:0)     REAL time: 3 mins 15 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:105208, Component Switching Limit:0)     REAL time: 2 mins 15 secs 
 
-Phase  8  : 0 unrouted; (Setup:303124, Hold:95236, Component Switching Limit:0)     REAL time: 3 mins 15 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:105208, Component Switching Limit:0)     REAL time: 2 mins 15 secs 
 
-Phase  9  : 0 unrouted; (Setup:287730, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 28 secs 
-Total REAL time to Router completion: 3 mins 28 secs 
-Total CPU time to Router completion: 3 mins 28 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 25 secs 
+Total REAL time to Router completion: 2 mins 26 secs 
+Total CPU time to Router completion: 2 mins 31 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -163,45 +163,43 @@ Generating Clock Report
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
 |processing_system7_0 |              |      |      |            |             |
-|          _FCLK_CLK0 |BUFGCTRL_X0Y31| No   | 3899 |  0.446     |  2.065      |
+|          _FCLK_CLK0 |BUFGCTRL_X0Y31| No   | 3876 |  0.449     |  2.068      |
 +---------------------+--------------+------+------+------------+-------------+
-|adau1761_audio_0/ada |              |      |      |            |             |
-|u1761_audio_0/USER_L |              |      |      |            |             |
-|OGIC_I/adau1761_inte |              |      |      |            |             |
-|         rnal/clk_48 |BUFGCTRL_X0Y28| No   |   83 |  0.221     |  1.880      |
-+---------------------+--------------+------+------+------------+-------------+
-|processing_system7_0 |              |      |      |            |             |
-|          _FCLK_CLK1 |BUFGCTRL_X0Y29| No   |  630 |  0.261     |  1.891      |
-+---------------------+--------------+------+------+------------+-------------+
-|superip_0/superip_0/ |              |      |      |            |             |
-|USER_LOGIC_I/SIP/fil |              |      |      |            |             |
-|ter_Comp/IIR_BP_L/mu |              |      |      |            |             |
-|        l_coefs_BUFG | BUFGCTRL_X0Y6| No   |   40 |  0.276     |  1.906      |
-+---------------------+--------------+------+------+------------+-------------+
-|    axi_clkgen_0_clk | BUFGCTRL_X0Y1| No   |  360 |  0.269     |  1.902      |
-+---------------------+--------------+------+------+------------+-------------+
-|superip_0/superip_0/ |              |      |      |            |             |
-|USER_LOGIC_I/SIP/fil |              |      |      |            |             |
-|ter_Comp/IIR_LP_L/mu |              |      |      |            |             |
-|        l_coefs_BUFG | BUFGCTRL_X0Y4| No   |   80 |  0.292     |  1.916      |
+|    axi_clkgen_0_clk | BUFGCTRL_X0Y1| No   |  359 |  0.269     |  1.902      |
 +---------------------+--------------+------+------+------------+-------------+
 |superip_0/superip_0/ |              |      |      |            |             |
 |USER_LOGIC_I/SIP/fil |              |      |      |            |             |
 |ter_Comp/IIR_BP_R/mu |              |      |      |            |             |
-|        l_coefs_BUFG | BUFGCTRL_X0Y5| No   |   40 |  0.142     |  1.790      |
+|        l_coefs_BUFG |BUFGCTRL_X0Y27| No   |   40 |  0.163     |  1.803      |
++---------------------+--------------+------+------+------------+-------------+
+|adau1761_audio_0_clk |              |      |      |            |             |
+|               _48_o | BUFGCTRL_X0Y3| No   |   83 |  0.195     |  1.843      |
++---------------------+--------------+------+------+------------+-------------+
+|processing_system7_0 |              |      |      |            |             |
+|          _FCLK_CLK1 |BUFGCTRL_X0Y29| No   |  622 |  0.342     |  1.980      |
++---------------------+--------------+------+------+------------+-------------+
+|superip_0/superip_0/ |              |      |      |            |             |
+|USER_LOGIC_I/SIP/fil |              |      |      |            |             |
+|ter_Comp/IIR_LP_L/mu |              |      |      |            |             |
+|        l_coefs_BUFG | BUFGCTRL_X0Y4| No   |   80 |  0.346     |  1.979      |
++---------------------+--------------+------+------+------------+-------------+
+|superip_0/superip_0/ |              |      |      |            |             |
+|USER_LOGIC_I/SIP/fil |              |      |      |            |             |
+|ter_Comp/IIR_BP_L/mu |              |      |      |            |             |
+|        l_coefs_BUFG |BUFGCTRL_X0Y26| No   |   40 |  0.107     |  1.756      |
 +---------------------+--------------+------+------+------------+-------------+
 |superip_0/superip_0/ |              |      |      |            |             |
 |USER_LOGIC_I/SIP/fil |              |      |      |            |             |
 |ter_Comp/IIR_HP_R/mu |              |      |      |            |             |
-|        l_coefs_BUFG | BUFGCTRL_X0Y3| No   |   40 |  0.178     |  1.899      |
+|        l_coefs_BUFG | BUFGCTRL_X0Y2| No   |   40 |  0.194     |  1.981      |
 +---------------------+--------------+------+------+------------+-------------+
 |superip_0/superip_0/ |              |      |      |            |             |
 |USER_LOGIC_I/SIP/fil |              |      |      |            |             |
 |ter_Comp/IIR_HP_L/mu |              |      |      |            |             |
-|        l_coefs_BUFG |BUFGCTRL_X0Y26| No   |   40 |  0.146     |  1.786      |
+|        l_coefs_BUFG | BUFGCTRL_X0Y5| No   |   40 |  0.235     |  1.961      |
 +---------------------+--------------+------+------+------------+-------------+
 |clock_generator_0_CL |              |      |      |            |             |
-|               KOUT0 | BUFGCTRL_X0Y2| No   |    2 |  0.020     |  1.887      |
+|               KOUT0 |BUFGCTRL_X0Y28| No   |    2 |  0.173     |  1.890      |
 +---------------------+--------------+------+------+------------+-------------+
 |axi_clkgen_0/axi_clk |              |      |      |            |             |
 |gen_0/USER_LOGIC_I/i |              |      |      |            |             |
@@ -210,12 +208,6 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |processing_system7_0 |              |      |      |            |             |
 |          _FCLK_CLK2 |BUFGCTRL_X0Y30| No   |    1 |  0.000     |  1.762      |
-+---------------------+--------------+------+------+------------+-------------+
-|adau1761_audio_0/ada |              |      |      |            |             |
-|u1761_audio_0/USER_L |              |      |      |            |             |
-|OGIC_I/adau1761_inte |              |      |      |            |             |
-|rnal/i_clocking/clkf |              |      |      |            |             |
-|            bout_buf |BUFGCTRL_X0Y27| No   |    1 |  0.000     |  1.980      |
 +---------------------+--------------+------+------+------------+-------------+
 |clock_generator_0/cl |              |      |      |            |             |
 |ock_generator_0/SIG_ |              |      |      |            |             |
@@ -230,23 +222,7 @@ the minimum and maximum path delays which includes logic delays.
 * The fanout is the number of component pins not the individual BEL loads,
 for example SLICE loads not FF loads.
 
-Timing Score: 287730 (Setup: 287730, Hold: 0, Component Switching Limit: 0)
-
-WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in your design.
-
-   Review the timing report using Timing Analyzer (In ISE select "Post-Place &
-   Route Static Timing Report"). Go to the failing constraint(s) and evaluate the failing paths for each constraint.
-
-   Try the Design Goal and Strategies for Timing Performance(In ISE select Project -> Design Goals & Strategies) to ensure the best options
-   are set in the tools for timing closure.
-
-   Use the Xilinx "SmartXplorer" script to try special combinations of
-   options known to produce very good results.
-
-   Visit the Xilinx technical support web at http://support.xilinx.com and go to
-   either "Troubleshoot->Tech Tips->Timing & Constraints" or "
-   TechXclusives->Timing Closure" for tips and suggestions for meeting timing
-   in your design.
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
 
 Number of Timing Constraints that were not applied: 1
 
@@ -257,21 +233,14 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-* TS_adau1761_audio_0_adau1761_audio_0_USER | SETUP       |    -5.451ns|   157.160ns|      48|      178330
-  _LOGIC_I_adau1761_internal_i_clocking_clk | HOLD        |     0.060ns|            |       0|           0
-  out0         = PERIOD TIMEGRP         "ad |             |            |            |        |            
-  au1761_audio_0_adau1761_audio_0_USER_LOGI |             |            |            |        |            
-  C_I_adau1761_internal_i_clocking_clkout0" |             |            |            |        |            
-           TS_clk_fpga_0 * 0.48 HIGH 50%    |             |            |            |        |            
+  TS_clk_fpga_1 = PERIOD TIMEGRP "clk_fpga_ | SETUP       |     0.108ns|     5.891ns|       0|           0
+  1" 166.667 MHz HIGH 50%                   | HOLD        |     0.004ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-* TS_clk_fpga_0 = PERIOD TIMEGRP "clk_fpga_ | SETUP       |    -1.790ns|    31.462ns|     162|      109400
+  TS_clk_fpga_0 = PERIOD TIMEGRP "clk_fpga_ | SETUP       |     0.148ns|     9.852ns|       0|           0
   0" 100 MHz HIGH 50%                       | HOLD        |     0.001ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  TS_clk_fpga_1 = PERIOD TIMEGRP "clk_fpga_ | SETUP       |     0.065ns|     5.934ns|       0|           0
-  1" 166.667 MHz HIGH 50%                   | HOLD        |     0.001ns|            |       0|           0
-----------------------------------------------------------------------------------------------------------
-  TS_axi_clkgen_0_axi_clkgen_0_USER_LOGIC_I | SETUP       |     0.604ns|     6.130ns|       0|           0
-  _i_clkgen_mmcm_clk_s = PERIOD TIMEGRP     | HOLD        |     0.130ns|            |       0|           0
+  TS_axi_clkgen_0_axi_clkgen_0_USER_LOGIC_I | SETUP       |     0.325ns|     6.409ns|       0|           0
+  _i_clkgen_mmcm_clk_s = PERIOD TIMEGRP     | HOLD        |     0.074ns|            |       0|           0
        "axi_clkgen_0_axi_clkgen_0_USER_LOGI |             |            |            |        |            
   C_I_i_clkgen_mmcm_clk_s"         TS_clk_f |             |            |            |        |            
   pga_2 * 0.742424242 HIGH 50%              |             |            |            |        |            
@@ -279,21 +248,21 @@ Asterisk (*) preceding a constraint indicates it was not met.
   TS_clk_fpga_2 = PERIOD TIMEGRP "clk_fpga_ | MINLOWPULSE |     2.200ns|     2.800ns|       0|           0
   2" 200 MHz HIGH 50%                       |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_clock_generator_0_clock_generator_0_SI | SETUP       |    95.670ns|     1.984ns|       0|           0
-  G_MMCM1_CLKOUT0 = PERIOD TIMEGRP          | HOLD        |     0.464ns|            |       0|           0
+  TS_clock_generator_0_clock_generator_0_SI | SETUP       |    95.506ns|     2.148ns|       0|           0
+  G_MMCM1_CLKOUT0 = PERIOD TIMEGRP          | HOLD        |     0.457ns|            |       0|           0
   "clock_generator_0_clock_generator_0_SIG_ | MINPERIOD   |    95.499ns|     2.155ns|       0|           0
   MMCM1_CLKOUT0" TS_clk_fpga_1         * 0. |             |            |            |        |            
   061440678 HIGH 50%                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_axi_vdma_0_cdc_tig_v_path" TIG   | SETUP       |         N/A|     8.988ns|     N/A|           0
+  PATH "TS_axi_vdma_0_cdc_tig_v_path" TIG   | SETUP       |         N/A|     7.899ns|     N/A|           0
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_axi_vdma_0_cdc_from_2_cdc_to_pat | SETUP       |         N/A|     2.713ns|     N/A|           0
+  PATH "TS_axi_vdma_0_cdc_from_2_cdc_to_pat | SETUP       |         N/A|     2.231ns|     N/A|           0
   h" TIG                                    |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_axi_interconnect_3_reset_resync_ | SETUP       |         N/A|     1.097ns|     N/A|           0
+  PATH "TS_axi_interconnect_3_reset_resync_ | SETUP       |         N/A|     1.055ns|     N/A|           0
   path" TIG                                 |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_axi_interconnect_2_reset_resync_ | SETUP       |         N/A|     1.177ns|     N/A|           0
+  PATH "TS_axi_interconnect_2_reset_resync_ | SETUP       |         N/A|     1.097ns|     N/A|           0
   path" TIG                                 |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   PATH "TS_axi_interconnect_1_reset_resync_ | SETUP       |         N/A|     1.118ns|     N/A|           0
@@ -311,7 +280,7 @@ Derived Constraints for TS_clk_fpga_1
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_clk_fpga_1                  |      6.000ns|      5.934ns|      0.132ns|            0|            0|        40808|            1|
+|TS_clk_fpga_1                  |      6.000ns|      5.891ns|      0.132ns|            0|            0|        40808|            1|
 | TS_clock_generator_0_clock_gen|     97.655ns|      2.155ns|          N/A|            0|            0|            1|            0|
 | erator_0_SIG_MMCM1_CLKOUT0    |             |             |             |             |             |             |             |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
@@ -322,25 +291,13 @@ Derived Constraints for TS_clk_fpga_2
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_clk_fpga_2                  |      5.000ns|      2.800ns|      4.551ns|            0|            0|            0|        43725|
-| TS_axi_clkgen_0_axi_clkgen_0_U|      6.735ns|      6.130ns|          N/A|            0|            0|        43725|            0|
+|TS_clk_fpga_2                  |      5.000ns|      2.800ns|      4.758ns|            0|            0|            0|        43725|
+| TS_axi_clkgen_0_axi_clkgen_0_U|      6.735ns|      6.409ns|          N/A|            0|            0|        43725|            0|
 | SER_LOGIC_I_i_clkgen_mmcm_clk_|             |             |             |             |             |             |             |
 | s                             |             |             |             |             |             |             |             |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
-Derived Constraints for TS_clk_fpga_0
-+-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
-|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
-|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
-+-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_clk_fpga_0                  |     10.000ns|     31.462ns|     75.437ns|          162|           48|      1483617|        16655|
-| TS_adau1761_audio_0_adau1761_a|     20.833ns|    157.160ns|          N/A|           48|            0|        16655|            0|
-| udio_0_USER_LOGIC_I_adau1761_i|             |             |             |             |             |             |             |
-| nternal_i_clocking_clkout0    |             |             |             |             |             |             |             |
-+-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-
-2 constraints not met.
+All constraints were met.
 INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
    constraint is not analyzed due to the following: No paths covered by this 
    constraint; Other constraints intersect with this constraint; or This 
@@ -354,17 +311,17 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 33 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 3 mins 40 secs 
-Total CPU time to PAR completion: 3 mins 36 secs 
+Total REAL time to PAR completion: 2 mins 36 secs 
+Total CPU time to PAR completion: 2 mins 38 secs 
 
-Peak Memory Usage:  1229 MB
+Peak Memory Usage:  1190 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
-Timing: Completed - 210 errors found.
+Timing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 36
+Number of warning messages: 35
 Number of info messages: 1
 
 Writing design to file system.ncd

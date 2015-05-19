@@ -17,7 +17,7 @@ use proc_common_v3_00_a.proc_common_pkg.all;
 
 entity adau1761 is
     Port ( clk_100  : in    STD_LOGIC;
-		  clk_48_o :out 	 STD_LOGIC;
+			  clk_48_o :out 	 STD_LOGIC;
            AC_ADR0  : out   STD_LOGIC;
            AC_ADR1  : out   STD_LOGIC;
            AC_GPIO0 : out   STD_LOGIC;  -- I2S MISO
@@ -40,6 +40,8 @@ entity adau1761 is
            sw       : in    STD_LOGIC_VECTOR(7 downto 0)
            );
 end adau1761;
+
+
 
 architecture Behavioral of adau1761 is
 
@@ -70,36 +72,53 @@ architecture Behavioral of adau1761 is
 		);
 	END COMPONENT;
 
-   component clocking
-   port(
-      CLK_100           : in     std_logic;
-      CLK_48            : out    std_logic;
-      RESET             : in     std_logic;
-      LOCKED            : out    std_logic
-      );
-   end component;
+--   component clocking
+--   port(
+--      CLK_100           : in     std_logic;
+--      CLK_48            : out    std_logic;
+--      RESET             : in     std_logic;
+--      LOCKED            : out    std_logic
+--      );
+--   end component;
+
+component ClkDividerN
+	generic(divFactor : positive);
+	port(reset	: in  std_logic;
+		  clkIn	: in  std_logic;
+		  clkOut	: out std_logic);
+end component;
    
-   signal clk_48 : std_logic;
+   signal clk_48     : std_logic;
    signal new_sample : std_logic;
 
---   signal sw_synced : std_logic_vector(7 downto 0);
+   signal sw_synced : std_logic_vector(7 downto 0);
    signal active : std_logic_vector(1 downto 0);
---   constant hi : natural := 23;
+   constant hi : natural := 23;
+	signal rst: std_logic;
+	
 begin
---process(clk_48)
---   begin
---      if rising_edge(clk_48) then
---         sw_synced <= sw;
---      end if;
---   end process;
-                                 
-i_clocking : clocking port map (
-      CLK_100 => CLK_100,
-      CLK_48  => CLK_48,
-      RESET   => '0',
-      LOCKED  => open
-   );	
+process(clk_48)
+   begin
+      if rising_edge(clk_48) then
+         sw_synced <= sw;
+      end if;
+   end process;
+	
+my_clocking: ClkDividerN
+	generic map (divFactor => 2083)
+	port map(reset	=> '0',
+		  clkIn	=> clk_100,
+		  clkOut	=> CLK_48);
 
+--rst <= '0';                               
+--i_clocking : clocking port map (
+--      CLK_100 => CLK_100,
+--      CLK_48  => CLK_48,
+--      RESET   => '0',
+--      LOCKED  => open
+--   );
+	
+	clk_48_o <= clk_48;
 
 Inst_adau1761_izedboard: adau1761_izedboard PORT MAP(
 		clk_48     => clk_48,

@@ -16,3 +16,4 @@ lib adau1761_audio_v1_00_a clocking vhdl
 lib adau1761_audio_v1_00_a adau1761 vhdl
 lib adau1761_audio_v1_00_a user_logic vhdl
 lib adau1761_audio_v1_00_a adau1761_audio vhdl
+lib adau1761_audio_v1_00_a ClkDividerN vhdl

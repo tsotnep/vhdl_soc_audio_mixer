@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Mon May 18 10:51:49 2015
+Tue May 19 16:50:56 2015
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -29,7 +29,7 @@ Pinout by Pin Number:
 |A7        |processing_system7_0_MIO<18>        |IOPAD    |PS_MIO18_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
 |A8        |processing_system7_0_MIO<20>        |IOPAD    |PS_MIO20_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
 |A9        |processing_system7_0_MIO<36>        |IOPAD    |PS_MIO36_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
-|A10       |                                    |         |VCCO_MIO1_501          |         |                 |              |          |         |           |         |na****   |          |           |                |
+|A10       |                                    |         |VCCO_MIO1_501          |         |                 |              |          |         |           |         |any******|          |           |                |
 |A11       |processing_system7_0_MIO<30>        |IOPAD    |PS_MIO30_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
 |A12       |processing_system7_0_MIO<28>        |IOPAD    |PS_MIO28_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
 |A13       |processing_system7_0_MIO<26>        |IOPAD    |PS_MIO26_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
@@ -88,7 +88,7 @@ Pinout by Pin Number:
 |AB22      |                                    |IOB33S   |IO_L7N_T1_33           |UNUSED   |                 |33            |          |         |           |         |         |          |           |                |
 |B1        |processing_system7_0_DDR_DM<0>      |IOPAD    |PS_DDR_DM0_502         |         |SSTL15_T_DCI     |              |          |         |           |         |         |LOCATED   |NO         |                |
 |B2        |processing_system7_0_DDR_DQ<2>      |IOPAD    |PS_DDR_DQ2_502         |         |SSTL15_T_DCI     |              |          |         |           |         |         |LOCATED   |NO         |                |
-|B3        |                                    |         |VCCO_MIO0_500          |         |                 |              |          |         |           |         |na****   |          |           |                |
+|B3        |                                    |         |VCCO_MIO0_500          |         |                 |              |          |         |           |         |any******|          |           |                |
 |B4        |processing_system7_0_MIO<11>        |IOPAD    |PS_MIO11_500           |         |LVCMOS33         |              |          |         |           |         |         |LOCATED   |NO         |                |
 |B5        |processing_system7_0_PS_PORB_pin    |IOPAD    |PS_POR_B_500           |         |LVCMOS18*        |              |          |         |           |         |         |          |NO         |                |
 |B6        |processing_system7_0_MIO<14>        |IOPAD    |PS_MIO14_500           |         |LVCMOS33         |              |          |         |           |         |         |LOCATED   |NO         |                |
@@ -98,7 +98,7 @@ Pinout by Pin Number:
 |B10       |processing_system7_0_MIO<47>        |IOPAD    |PS_MIO47_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
 |B11       |processing_system7_0_MIO<43>        |IOPAD    |PS_MIO43_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
 |B12       |processing_system7_0_MIO<34>        |IOPAD    |PS_MIO34_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
-|B13       |                                    |         |VCCO_MIO1_501          |         |                 |              |          |         |           |         |na****   |          |           |                |
+|B13       |                                    |         |VCCO_MIO1_501          |         |                 |              |          |         |           |         |any******|          |           |                |
 |B14       |processing_system7_0_MIO<37>        |IOPAD    |PS_MIO37_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
 |B15       |                                    |IOB33S   |IO_L7N_T1_AD2N_35      |UNUSED   |                 |35            |          |         |           |         |         |          |           |                |
 |B16       |                                    |IOB33M   |IO_L8P_T1_AD10P_35     |UNUSED   |                 |35            |          |         |           |         |         |          |           |                |
@@ -113,7 +113,7 @@ Pinout by Pin Number:
 |C3        |processing_system7_0_DDR_DQ<1>      |IOPAD    |PS_DDR_DQ1_502         |         |SSTL15_T_DCI     |              |          |         |           |         |         |LOCATED   |NO         |                |
 |C4        |processing_system7_0_MIO<9>         |IOPAD    |PS_MIO9_500            |         |LVCMOS33         |              |          |         |           |         |         |LOCATED   |NO         |                |
 |C5        |processing_system7_0_MIO<12>        |IOPAD    |PS_MIO12_500           |         |LVCMOS33         |              |          |         |           |         |         |LOCATED   |NO         |                |
-|C6        |                                    |         |VCCO_MIO0_500          |         |                 |              |          |         |           |         |na****   |          |           |                |
+|C6        |                                    |         |VCCO_MIO0_500          |         |                 |              |          |         |           |         |any******|          |           |                |
 |C7        |processing_system7_0_MIO<32>        |IOPAD    |PS_MIO32_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
 |C8        |processing_system7_0_MIO<41>        |IOPAD    |PS_MIO41_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
 |C9        |processing_system7_0_PS_SRSTB_pin   |IOPAD    |PS_SRST_B_501          |         |LVCMOS18*        |              |          |         |           |         |         |          |NO         |                |
@@ -138,7 +138,7 @@ Pinout by Pin Number:
 |D6        |processing_system7_0_MIO<16>        |IOPAD    |PS_MIO16_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
 |D7        |processing_system7_0_MIO<27>        |IOPAD    |PS_MIO27_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
 |D8        |processing_system7_0_MIO<42>        |IOPAD    |PS_MIO42_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
-|D9        |                                    |         |VCCO_MIO1_501          |         |                 |              |          |         |           |         |na****   |          |           |                |
+|D9        |                                    |         |VCCO_MIO1_501          |         |                 |              |          |         |           |         |any******|          |           |                |
 |D10       |processing_system7_0_MIO<52>        |IOPAD    |PS_MIO52_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
 |D11       |processing_system7_0_MIO<48>        |IOPAD    |PS_MIO48_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
 |D12       |processing_system7_0_MIO<46>        |IOPAD    |PS_MIO46_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
@@ -153,7 +153,7 @@ Pinout by Pin Number:
 |D21       |                                    |IOB33S   |IO_L17N_T2_AD5N_35     |UNUSED   |                 |35            |          |         |           |         |         |          |           |                |
 |D22       |                                    |IOB33M   |IO_L16P_T2_35          |UNUSED   |                 |35            |          |         |           |         |         |          |           |                |
 |E1        |processing_system7_0_DDR_DQ<5>      |IOPAD    |PS_DDR_DQ5_502         |         |SSTL15_T_DCI     |              |          |         |           |         |         |LOCATED   |NO         |                |
-|E2        |                                    |         |VCCO_DDR_502           |         |                 |              |          |         |           |         |na****   |          |           |                |
+|E2        |                                    |         |VCCO_DDR_502           |         |                 |              |          |         |           |         |any******|          |           |                |
 |E3        |processing_system7_0_DDR_DQ<4>      |IOPAD    |PS_DDR_DQ4_502         |         |SSTL15_T_DCI     |              |          |         |           |         |         |LOCATED   |NO         |                |
 |E4        |processing_system7_0_MIO<4>         |IOPAD    |PS_MIO4_500            |         |LVCMOS33         |              |          |         |           |         |         |LOCATED   |NO         |                |
 |E5        |processing_system7_0_MIO<8>         |IOPAD    |PS_MIO8_500            |         |LVCMOS33         |              |          |         |           |         |         |LOCATED   |NO         |                |
@@ -163,7 +163,7 @@ Pinout by Pin Number:
 |E9        |processing_system7_0_MIO<17>        |IOPAD    |PS_MIO17_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
 |E10       |processing_system7_0_MIO<19>        |IOPAD    |PS_MIO19_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
 |E11       |processing_system7_0_MIO<23>        |IOPAD    |PS_MIO23_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
-|E12       |                                    |         |VCCO_MIO1_501          |         |                 |              |          |         |           |         |na****   |          |           |                |
+|E12       |                                    |         |VCCO_MIO1_501          |         |                 |              |          |         |           |         |any******|          |           |                |
 |E13       |processing_system7_0_MIO<44>        |IOPAD    |PS_MIO44_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
 |E14       |processing_system7_0_MIO<40>        |IOPAD    |PS_MIO40_501           |         |LVCMOS18*        |              |          |         |           |         |         |LOCATED   |NO         |                |
 |E15       |                                    |IOB33M   |IO_L3P_T0_DQS_AD1P_35  |UNUSED   |                 |35            |          |         |           |         |         |          |           |                |
@@ -178,7 +178,7 @@ Pinout by Pin Number:
 |F2        |processing_system7_0_DDR_DQ<6>      |IOPAD    |PS_DDR_DQ6_502         |         |SSTL15_T_DCI     |              |          |         |           |         |         |LOCATED   |NO         |                |
 |F3        |processing_system7_0_DDR_DRSTB      |IOPAD    |PS_DDR_DRST_B_502      |         |SSTL15           |              |          |         |           |         |         |LOCATED   |NO         |                |
 |F4        |processing_system7_0_DDR_Addr<13>   |IOPAD    |PS_DDR_A13_502         |         |SSTL15           |              |          |         |           |         |         |LOCATED   |NO         |                |
-|F5        |                                    |         |VCCO_DDR_502           |         |                 |              |          |         |           |         |na****   |          |           |                |
+|F5        |                                    |         |VCCO_DDR_502           |         |                 |              |          |         |           |         |any******|          |           |                |
 |F6        |processing_system7_0_MIO<3>         |IOPAD    |PS_MIO3_500            |         |LVCMOS33         |              |          |         |           |         |         |LOCATED   |NO         |                |
 |F7        |processing_system7_0_PS_CLK_pin     |IOPAD    |PS_CLK_500             |         |LVCMOS18*        |              |          |         |           |         |         |          |NO         |                |
 |F8        |                                    |         |PS_MIO_VREF_501        |         |                 |              |          |         |           |         |         |          |           |                |
@@ -218,7 +218,7 @@ Pinout by Pin Number:
 |G20       |                                    |IOB33M   |IO_L22P_T3_AD7P_35     |UNUSED   |                 |35            |          |         |           |         |         |          |           |                |
 |G21       |                                    |IOB33S   |IO_L22N_T3_AD7N_35     |UNUSED   |                 |35            |          |         |           |         |         |          |           |                |
 |G22       |SlideSwitch<1>                      |IOB33    |IO_L24N_T3_AD15N_35    |INPUT    |LVCMOS33         |35            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
-|H1        |                                    |         |VCCO_DDR_502           |         |                 |              |          |         |           |         |na****   |          |           |                |
+|H1        |                                    |         |VCCO_DDR_502           |         |                 |              |          |         |           |         |any******|          |           |                |
 |H2        |processing_system7_0_DDR_DQS<1>     |IOPAD    |PS_DDR_DQS_P1_502      |         |DIFF_SSTL15_T_DCI|              |          |         |           |         |         |LOCATED   |NO         |                |
 |H3        |processing_system7_0_DDR_DM<1>      |IOPAD    |PS_DDR_DM1_502         |         |SSTL15_T_DCI     |              |          |         |           |         |         |LOCATED   |NO         |                |
 |H4        |processing_system7_0_DDR_Addr<12>   |IOPAD    |PS_DDR_A12_502         |         |SSTL15           |              |          |         |           |         |         |LOCATED   |NO         |                |
@@ -243,7 +243,7 @@ Pinout by Pin Number:
 |J1        |processing_system7_0_DDR_DQ<14>     |IOPAD    |PS_DDR_DQ14_502        |         |SSTL15_T_DCI     |              |          |         |           |         |         |LOCATED   |NO         |                |
 |J2        |processing_system7_0_DDR_DQS_n<1>   |IOPAD    |PS_DDR_DQS_N1_502      |         |DIFF_SSTL15_T_DCI|              |          |         |           |         |         |LOCATED   |NO         |                |
 |J3        |processing_system7_0_DDR_Addr<10>   |IOPAD    |PS_DDR_A10_502         |         |SSTL15           |              |          |         |           |         |         |LOCATED   |NO         |                |
-|J4        |                                    |         |VCCO_DDR_502           |         |                 |              |          |         |           |         |na****   |          |           |                |
+|J4        |                                    |         |VCCO_DDR_502           |         |                 |              |          |         |           |         |any******|          |           |                |
 |J5        |processing_system7_0_DDR_Addr<8>    |IOPAD    |PS_DDR_A8_502          |         |SSTL15           |              |          |         |           |         |         |LOCATED   |NO         |                |
 |J6        |processing_system7_0_DDR_Addr<7>    |IOPAD    |PS_DDR_A7_502          |         |SSTL15           |              |          |         |           |         |         |LOCATED   |NO         |                |
 |J7        |processing_system7_0_DDR_Addr<6>    |IOPAD    |PS_DDR_A6_502          |         |SSTL15           |              |          |         |           |         |         |LOCATED   |NO         |                |
@@ -268,7 +268,7 @@ Pinout by Pin Number:
 |K4        |processing_system7_0_DDR_Addr<2>    |IOPAD    |PS_DDR_A2_502          |         |SSTL15           |              |          |         |           |         |         |LOCATED   |NO         |                |
 |K5        |processing_system7_0_DDR_Addr<5>    |IOPAD    |PS_DDR_A5_502          |         |SSTL15           |              |          |         |           |         |         |LOCATED   |NO         |                |
 |K6        |processing_system7_0_DDR_Addr<4>    |IOPAD    |PS_DDR_A4_502          |         |SSTL15           |              |          |         |           |         |         |LOCATED   |NO         |                |
-|K7        |                                    |         |VCCO_DDR_502           |         |                 |              |          |         |           |         |na****   |          |           |                |
+|K7        |                                    |         |VCCO_DDR_502           |         |                 |              |          |         |           |         |any******|          |           |                |
 |K8        |                                    |         |GND                    |         |                 |              |          |         |           |         |         |          |           |                |
 |K9        |                                    |         |VCCPAUX                |         |                 |              |          |         |           |         |         |          |           |                |
 |K10       |                                    |         |GND                    |         |                 |              |          |         |           |         |         |          |           |                |
@@ -308,7 +308,7 @@ Pinout by Pin Number:
 |L22       |                                    |IOB33S   |IO_L10N_T1_34          |UNUSED   |                 |34            |          |         |           |         |         |          |           |                |
 |M1        |processing_system7_0_DDR_DQ<16>     |IOPAD    |PS_DDR_DQ16_502        |         |SSTL15_T_DCI     |              |          |         |           |         |         |LOCATED   |NO         |                |
 |M2        |processing_system7_0_DDR_DQ<22>     |IOPAD    |PS_DDR_DQ22_502        |         |SSTL15_T_DCI     |              |          |         |           |         |         |LOCATED   |NO         |                |
-|M3        |                                    |         |VCCO_DDR_502           |         |                 |              |          |         |           |         |na****   |          |           |                |
+|M3        |                                    |         |VCCO_DDR_502           |         |                 |              |          |         |           |         |any******|          |           |                |
 |M4        |processing_system7_0_DDR_Addr<0>    |IOPAD    |PS_DDR_A0_502          |         |SSTL15           |              |          |         |           |         |         |LOCATED   |NO         |                |
 |M5        |processing_system7_0_DDR_Addr<1>    |IOPAD    |PS_DDR_A1_502          |         |SSTL15           |              |          |         |           |         |         |LOCATED   |NO         |                |
 |M6        |processing_system7_0_DDR_BankAddr<2>|IOPAD    |PS_DDR_BA2_502         |         |SSTL15           |              |          |         |           |         |         |LOCATED   |NO         |                |
@@ -333,7 +333,7 @@ Pinout by Pin Number:
 |N3        |processing_system7_0_DDR_DQ<18>     |IOPAD    |PS_DDR_DQ18_502        |         |SSTL15_T_DCI     |              |          |         |           |         |         |LOCATED   |NO         |                |
 |N4        |processing_system7_0_DDR_Clk        |IOPAD    |PS_DDR_CKP_502         |         |DIFF_SSTL15      |              |          |         |           |         |         |LOCATED   |NO         |                |
 |N5        |processing_system7_0_DDR_Clk_n      |IOPAD    |PS_DDR_CKN_502         |         |DIFF_SSTL15      |              |          |         |           |         |         |LOCATED   |NO         |                |
-|N6        |                                    |         |VCCO_DDR_502           |         |                 |              |          |         |           |         |na****   |          |           |                |
+|N6        |                                    |         |VCCO_DDR_502           |         |                 |              |          |         |           |         |any******|          |           |                |
 |N7        |processing_system7_0_DDR_VRP        |IOPAD    |PS_DDR_VRP_502         |         |SSTL15_T_DCI     |              |          |         |           |         |         |LOCATED   |NO         |                |
 |N8        |                                    |         |VCCPINT                |         |                 |              |          |         |           |         |         |          |           |                |
 |N9        |                                    |         |GND                    |         |                 |              |          |         |           |         |         |          |           |                |
@@ -373,7 +373,7 @@ Pinout by Pin Number:
 |P21       |                                    |IOB33S   |IO_L18N_T2_34          |UNUSED   |                 |34            |          |         |           |         |         |          |           |                |
 |P22       |                                    |IOB33S   |IO_L16N_T2_34          |UNUSED   |                 |34            |          |         |           |         |         |          |           |                |
 |R1        |processing_system7_0_DDR_DQ<23>     |IOPAD    |PS_DDR_DQ23_502        |         |SSTL15_T_DCI     |              |          |         |           |         |         |LOCATED   |NO         |                |
-|R2        |                                    |         |VCCO_DDR_502           |         |                 |              |          |         |           |         |na****   |          |           |                |
+|R2        |                                    |         |VCCO_DDR_502           |         |                 |              |          |         |           |         |any******|          |           |                |
 |R3        |processing_system7_0_DDR_DQ<20>     |IOPAD    |PS_DDR_DQ20_502        |         |SSTL15_T_DCI     |              |          |         |           |         |         |LOCATED   |NO         |                |
 |R4        |processing_system7_0_DDR_WEB_pin    |IOPAD    |PS_DDR_WE_B_502        |         |SSTL15           |              |          |         |           |         |         |LOCATED   |NO         |                |
 |R5        |processing_system7_0_DDR_RAS_n      |IOPAD    |PS_DDR_RAS_B_502       |         |SSTL15           |              |          |         |           |         |         |LOCATED   |NO         |                |
@@ -438,7 +438,7 @@ Pinout by Pin Number:
 |U20       |                                    |IOB33M   |IO_L5P_T0_33           |UNUSED   |                 |33            |          |         |           |         |         |          |           |                |
 |U21       |processing_system7_0_GPIO<10>       |IOB33    |IO_L1N_T0_33           |BIDIR    |LVCMOS33         |33            |12        |SLOW     |           |NONE     |         |LOCATED   |NO         |NONE            |
 |U22       |processing_system7_0_GPIO<9>        |IOB33    |IO_L2N_T0_33           |BIDIR    |LVCMOS33         |33            |12        |SLOW     |           |NONE     |         |LOCATED   |NO         |NONE            |
-|V1        |                                    |         |VCCO_DDR_502           |         |                 |              |          |         |           |         |na****   |          |           |                |
+|V1        |                                    |         |VCCO_DDR_502           |         |                 |              |          |         |           |         |any******|          |           |                |
 |V2        |processing_system7_0_DDR_DQS<3>     |IOPAD    |PS_DDR_DQS_P3_502      |         |DIFF_SSTL15_T_DCI|              |          |         |           |         |         |LOCATED   |NO         |                |
 |V3        |processing_system7_0_DDR_CKE        |IOPAD    |PS_DDR_CKE_502         |         |SSTL15           |              |          |         |           |         |         |LOCATED   |NO         |                |
 |V4        |processing_system7_0_GPIO<47>       |IOB33    |IO_L21N_T3_DQS_13      |BIDIR    |LVCMOS33         |13            |12        |SLOW     |           |NONE     |         |LOCATED   |NO         |NONE            |
@@ -509,8 +509,6 @@ Pinout by Pin Number:
 * Default value.
 ** This default Pullup/Pulldown value can be overridden in Bitgen. 
 All RSVD_0 pins must be tied to GROUND.
-**** VCCO of GTL or GTLP should not be lower than the termination voltage 
-      or the voltage seen at the I/O pad. 
 ****** Special VCCO requirements may apply. Please consult the device 
        family datasheet for specific guideline on VCCO requirements. 
 

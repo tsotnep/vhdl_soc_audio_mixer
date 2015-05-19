@@ -31,6 +31,8 @@ architecture Behavioral of i2s_data_interface is
    signal sr_out        : std_logic_vector(63 downto 0)  := (others => '0');
    signal i2s_lr_last   : std_logic := '0';
    signal i2s_d_in_last : std_logic := '0';
+   signal sr_audio_l_in, sr_audio_r_in :   STD_LOGIC_VECTOR (23 downto 0);
+     
 begin
    
 process(clk)
@@ -38,7 +40,9 @@ process(clk)
       -- Process to predict when the falling edge of i2s_bclk should be
       if rising_edge(clk) then 
           new_sample <= '0';
-
+			
+		sr_audio_l_in <=  audio_l_in;
+		sr_audio_r_in <=  audio_r_in;
          ------------------------------
          -- is there a rising edge two cycles ago? If so the data bit is 
          -- validand we can capture a bit
@@ -59,7 +63,7 @@ process(clk)
             if i2s_lr = '1' and i2s_lr_last = '0' then
                audio_l_out <= sr_in(sr_in'high    downto sr_in'high-23);
                audio_r_out <= sr_in(sr_in'high-32 downto sr_in'high-23-32);
-               sr_out      <= audio_l_in & x"00" & audio_r_in & x"00";
+               sr_out      <= sr_audio_l_in & x"00" & sr_audio_r_in & x"00";--audio_l_in & x"00" & audio_r_in & x"00";
                new_sample <= '1';
             else
                sr_out <= sr_out(sr_out'high-1 downto 0) & '0';

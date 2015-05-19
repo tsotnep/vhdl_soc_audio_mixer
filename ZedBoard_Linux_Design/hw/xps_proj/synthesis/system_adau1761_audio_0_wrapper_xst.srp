@@ -3,8 +3,8 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\synthesis\xst_temp_dir\
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> 
 TABLE OF CONTENTS
@@ -457,6 +457,9 @@ Parsing architecture <IMP> of entity <user_logic>.
 Parsing VHDL file "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/adau1761_audio.vhd" into library adau1761_audio_v1_00_a
 Parsing entity <adau1761_audio>.
 Parsing architecture <IMP> of entity <adau1761_audio>.
+Parsing VHDL file "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/ClkDividerN.vhd" into library adau1761_audio_v1_00_a
+Parsing entity <ClkDividerN>.
+Parsing architecture <Behavioral> of entity <clkdividern>.
 Parsing VHDL file "C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\hdl\system_adau1761_audio_0_wrapper.vhd" into library work
 Parsing entity <system_adau1761_audio_0_wrapper>.
 Parsing architecture <STRUCTURE> of entity <system_adau1761_audio_0_wrapper>.
@@ -483,8 +486,9 @@ INFO:HDLCompiler:679 - "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores
 Elaborating entity <user_logic> (architecture <IMP>) with generics from library <adau1761_audio_v1_00_a>.
 
 Elaborating entity <adau1761> (architecture <Behavioral>) from library <adau1761_audio_v1_00_a>.
+WARNING:HDLCompiler:1127 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/adau1761.vhd" Line 100: Assignment to sw_synced ignored, since the identifier is never used
 
-Elaborating entity <clocking> (architecture <xilinx>) from library <adau1761_audio_v1_00_a>.
+Elaborating entity <ClkDividerN> (architecture <Behavioral>) with generics from library <adau1761_audio_v1_00_a>.
 
 Elaborating entity <adau1761_izedboard> (architecture <Behavioral>) from library <adau1761_audio_v1_00_a>.
 
@@ -650,19 +654,22 @@ Unit <user_logic> synthesized.
 Synthesizing Unit <adau1761>.
     Related source file is "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/adau1761.vhd".
 WARNING:Xst:647 - Input <sw<7:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/adau1761.vhd" line 96: Output port <LOCKED> of the instance <i_clocking> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/adau1761.vhd" line 104: Output port <active> of the instance <Inst_adau1761_izedboard> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/adau1761.vhd" line 104: Output port <new_sample> of the instance <Inst_adau1761_izedboard> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <clk_48_o> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+INFO:Xst:3210 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/adau1761.vhd" line 123: Output port <active> of the instance <Inst_adau1761_izedboard> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/adau1761.vhd" line 123: Output port <new_sample> of the instance <Inst_adau1761_izedboard> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <adau1761> synthesized.
 
-Synthesizing Unit <clocking>.
-    Related source file is "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/clocking.vhd".
+Synthesizing Unit <ClkDividerN>.
+    Related source file is "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/ClkDividerN.vhd".
+        divFactor = 2083
+    Found 31-bit register for signal <s_divCounter>.
+    Found 1-bit register for signal <clkOut>.
+    Found 31-bit adder for signal <s_divCounter[30]_GND_20_o_add_2_OUT> created at line 30.
     Summary:
-	no macro.
-Unit <clocking> synthesized.
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+Unit <ClkDividerN> synthesized.
 
 Synthesizing Unit <adau1761_izedboard>.
     Related source file is "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/adau1761_izedboard.vhd".
@@ -686,7 +693,7 @@ Unit <i2c> synthesized.
 Synthesizing Unit <adau1761_configuraiton_data>.
     Related source file is "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/adau1761_configuraiton_data.vhd".
     Found 9-bit register for signal <data>.
-    Found 1024x9-bit Read Only RAM for signal <address[9]_GND_55_o_wide_mux_0_OUT>
+    Found 1024x9-bit Read Only RAM for signal <address[9]_GND_24_o_wide_mux_0_OUT>
     Summary:
 	inferred   1 RAM(s).
 	inferred   9 D-type flip-flop(s).
@@ -722,10 +729,10 @@ Synthesizing Unit <i3c2>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 10-bit adder for signal <pcnext[9]_GND_56_o_add_56_OUT> created at line 1241.
-    Found 4-bit subtractor for signal <GND_56_o_GND_56_o_sub_42_OUT<3:0>> created at line 1308.
-    Found 8-bit subtractor for signal <GND_56_o_GND_56_o_sub_58_OUT<7:0>> created at line 1308.
-    Found 16-bit subtractor for signal <GND_56_o_GND_56_o_sub_66_OUT<15:0>> created at line 1308.
+    Found 10-bit adder for signal <pcnext[9]_GND_25_o_add_56_OUT> created at line 1241.
+    Found 4-bit subtractor for signal <GND_25_o_GND_25_o_sub_42_OUT<3:0>> created at line 1308.
+    Found 8-bit subtractor for signal <GND_25_o_GND_25_o_sub_58_OUT<7:0>> created at line 1308.
+    Found 16-bit subtractor for signal <GND_25_o_GND_25_o_sub_66_OUT<15:0>> created at line 1308.
     Found 1-bit 16-to-1 multiplexer for signal <inst_data[3]_inputs[15]_Mux_77_o> created at line 259.
     Summary:
 	inferred   4 Adder/Subtractor(s).
@@ -743,6 +750,8 @@ Unit <ADAU1761_interface> synthesized.
 
 Synthesizing Unit <i2s_data_interface>.
     Related source file is "C:/FPGA/ISE/SoC/Ovie_Repo/inputboard/ZedBoard_Linux_Design/hw/xps_proj/pcores/adau1761_audio_v1_00_a/hdl/vhdl/i2s_data_interface.vhd".
+    Found 24-bit register for signal <sr_audio_l_in>.
+    Found 24-bit register for signal <sr_audio_r_in>.
     Found 127-bit register for signal <sr_in>.
     Found 1-bit register for signal <i2s_d_out>.
     Found 24-bit register for signal <audio_l_out>.
@@ -753,7 +762,7 @@ Synthesizing Unit <i2s_data_interface>.
     Found 1-bit register for signal <i2s_d_in_last>.
     Found 1-bit register for signal <new_sample>.
     Summary:
-	inferred 253 D-type flip-flop(s).
+	inferred 301 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
 Unit <i2s_data_interface> synthesized.
 
@@ -763,19 +772,21 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  1024x9-bit single-port Read Only RAM                  : 1
-# Adders/Subtractors                                   : 5
+# Adders/Subtractors                                   : 6
  10-bit adder                                          : 1
  16-bit subtractor                                     : 1
+ 31-bit adder                                          : 1
  4-bit adder                                           : 1
  4-bit subtractor                                      : 1
  8-bit subtractor                                      : 1
-# Registers                                            : 39
- 1-bit register                                        : 19
+# Registers                                            : 43
+ 1-bit register                                        : 20
  10-bit register                                       : 2
  127-bit register                                      : 1
  16-bit register                                       : 2
  2-bit register                                        : 2
- 24-bit register                                       : 2
+ 24-bit register                                       : 4
+ 31-bit register                                       : 1
  32-bit register                                       : 3
  4-bit register                                        : 2
  5-bit register                                        : 1
@@ -804,8 +815,12 @@ Macro Statistics
 =========================================================================
 
 
+Synthesizing (advanced) Unit <ClkDividerN>.
+The following registers are absorbed into counter <s_divCounter>: 1 register on signal <s_divCounter>.
+Unit <ClkDividerN> synthesized (advanced).
+
 Synthesizing (advanced) Unit <i2c>.
-INFO:Xst:3226 - The RAM <Inst_adau1761_configuraiton_data/Mram_address[9]_GND_55_o_wide_mux_0_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <Inst_adau1761_configuraiton_data/data>
+INFO:Xst:3226 - The RAM <Inst_adau1761_configuraiton_data/Mram_address[9]_GND_24_o_wide_mux_0_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <Inst_adau1761_configuraiton_data/data>
     -----------------------------------------------------------------------
     | ram_type           | Block                               |          |
     -----------------------------------------------------------------------
@@ -851,10 +866,11 @@ Macro Statistics
  16-bit subtractor                                     : 1
  4-bit subtractor                                      : 1
  8-bit subtractor                                      : 1
-# Counters                                             : 1
+# Counters                                             : 2
+ 31-bit up counter                                     : 1
  4-bit up counter                                      : 1
-# Registers                                            : 415
- Flip-Flops                                            : 415
+# Registers                                            : 464
+ Flip-Flops                                            : 464
 # Multiplexers                                         : 172
  1-bit 16-to-1 multiplexer                             : 1
  1-bit 2-to-1 multiplexer                              : 117
@@ -943,8 +959,8 @@ Unit <system_adau1761_audio_0_wrapper> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 318
- Flip-Flops                                            : 318
+# Registers                                            : 398
+ Flip-Flops                                            : 398
 # Shift Registers                                      : 4
  2-bit shift register                                  : 1
  6-bit shift register                                  : 1
@@ -972,33 +988,31 @@ Top Level Output File Name         : system_adau1761_audio_0_wrapper.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 367
+# BELS                             : 467
 #      GND                         : 1
-#      INV                         : 18
-#      LUT1                        : 1
-#      LUT2                        : 12
+#      INV                         : 19
+#      LUT1                        : 31
+#      LUT2                        : 13
 #      LUT3                        : 31
 #      LUT4                        : 74
 #      LUT5                        : 84
-#      LUT6                        : 108
-#      MUXCY                       : 15
+#      LUT6                        : 115
+#      MUXCY                       : 45
 #      MUXF7                       : 6
 #      VCC                         : 1
-#      XORCY                       : 16
-# FlipFlops/Latches                : 322
-#      FD                          : 60
+#      XORCY                       : 47
+# FlipFlops/Latches                : 402
+#      FD                          : 108
 #      FDE                         : 156
-#      FDR                         : 8
+#      FDR                         : 40
 #      FDRE                        : 98
 # RAMS                             : 1
 #      RAMB18E1                    : 1
 # Shift Registers                  : 6
 #      SRLC16E                     : 3
 #      SRLC32E                     : 3
-# Clock Buffers                    : 2
-#      BUFG                        : 2
-# Others                           : 1
-#      MMCME2_ADV                  : 1
+# Clock Buffers                    : 1
+#      BUFG                        : 1
 
 Device utilization summary:
 ---------------------------
@@ -1007,18 +1021,18 @@ Selected Device : 7z020clg484-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             322  out of  106400     0%  
- Number of Slice LUTs:                  334  out of  53200     0%  
-    Number used as Logic:               328  out of  53200     0%  
+ Number of Slice Registers:             402  out of  106400     0%  
+ Number of Slice LUTs:                  373  out of  53200     0%  
+    Number used as Logic:               367  out of  53200     0%  
     Number used as Memory:                6  out of  17400     0%  
        Number used as SRL:                6
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    491
-   Number with an unused Flip Flop:     169  out of    491    34%  
-   Number with an unused LUT:           157  out of    491    31%  
-   Number of fully used LUT-FF pairs:   165  out of    491    33%  
-   Number of unique control sets:        12
+ Number of LUT Flip Flop pairs used:    578
+   Number with an unused Flip Flop:     176  out of    578    30%  
+   Number with an unused LUT:           205  out of    578    35%  
+   Number of fully used LUT-FF pairs:   197  out of    578    34%  
+   Number of unique control sets:        13
 
 IO Utilization: 
  Number of IOs:                         257
@@ -1027,7 +1041,7 @@ IO Utilization:
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                1  out of    140     0%  
     Number using Block RAM only:          1
- Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
 
 ---------------------------
 Partition Resource Summary:
@@ -1047,12 +1061,13 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-------------------------------------------------------------------+------------------------------------------------+-------+
-Clock Signal                                                      | Clock buffer(FF name)                          | Load  |
-------------------------------------------------------------------+------------------------------------------------+-------+
-adau1761_audio_0/USER_LOGIC_I/adau1761_internal/i_clocking/clkout0| BUFG                                           | 221   |
-S_AXI_ACLK                                                        | NONE(adau1761_audio_0/USER_LOGIC_I/slv_reg1_31)| 108   |
-------------------------------------------------------------------+------------------------------------------------+-------+
+------------------------------------------------------------------+----------------------------------------------------------------------------------+-------+
+Clock Signal                                                      | Clock buffer(FF name)                                                            | Load  |
+------------------------------------------------------------------+----------------------------------------------------------------------------------+-------+
+clk_100                                                           | NONE(adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/s_divCounter_30)| 32    |
+adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/clkOut| BUFG                                                                             | 269   |
+S_AXI_ACLK                                                        | NONE(adau1761_audio_0/USER_LOGIC_I/slv_reg1_31)                                  | 108   |
+------------------------------------------------------------------+----------------------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -1060,7 +1075,7 @@ Asynchronous Control Signals Information:
 -----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 Control Signal                     | Buffer(FF name)                                                                                                                                                | Load  |
 -----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-AC_SDA_O(XST_GND:G)                | NONE(adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c_Inst_adau1761_configuraiton_data/Mram_address[9]_GND_55_o_wide_mux_0_OUT)| 2     |
+AC_SDA_O(XST_GND:G)                | NONE(adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c_Inst_adau1761_configuraiton_data/Mram_address[9]_GND_24_o_wide_mux_0_OUT)| 2     |
 -----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 
 Timing Summary:
@@ -1070,32 +1085,56 @@ Speed Grade: -1
    Minimum period: 4.864ns (Maximum Frequency: 205.592MHz)
    Minimum input arrival time before clock: 1.065ns
    Maximum output required time after clock: 1.125ns
-   Maximum combinational path delay: 0.000ns
+   Maximum combinational path delay: No path found
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'adau1761_audio_0/USER_LOGIC_I/adau1761_internal/i_clocking/clkout0'
-  Clock period: 4.864ns (frequency: 205.592MHz)
-  Total number of paths / destination ports: 5191 / 385
+Timing constraint: Default period analysis for Clock 'clk_100'
+  Clock period: 3.207ns (frequency: 311.863MHz)
+  Total number of paths / destination ports: 1520 / 64
 -------------------------------------------------------------------------
-Delay:               4.864ns (Levels of Logic = 4)
-  Source:            adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c_Inst_adau1761_configuraiton_data/Mram_address[9]_GND_55_o_wide_mux_0_OUT (RAM)
-  Destination:       adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/skip (FF)
-  Source Clock:      adau1761_audio_0/USER_LOGIC_I/adau1761_internal/i_clocking/clkout0 rising
-  Destination Clock: adau1761_audio_0/USER_LOGIC_I/adau1761_internal/i_clocking/clkout0 rising
+Delay:               3.207ns (Levels of Logic = 3)
+  Source:            adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/s_divCounter_12 (FF)
+  Destination:       adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/s_divCounter_30 (FF)
+  Source Clock:      clk_100 rising
+  Destination Clock: clk_100 rising
 
-  Data Path: adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c_Inst_adau1761_configuraiton_data/Mram_address[9]_GND_55_o_wide_mux_0_OUT to adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/skip
+  Data Path: adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/s_divCounter_12 to adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/s_divCounter_30
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB18E1:CLKARDCLK->DOADO1   14   2.454   0.720  adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c_Inst_adau1761_configuraiton_data/Mram_address[9]_GND_55_o_wide_mux_0_OUT (adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c/inst_data<1>)
+     FDR:C->Q              2   0.282   0.745  adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/s_divCounter_12 (adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/s_divCounter_12)
+     LUT6:I0->O            1   0.053   0.725  adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/GND_20_o_s_divCounter[30]_equal_1_o<30>14 (adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/GND_20_o_s_divCounter[30]_equal_1_o<30>14)
+     LUT6:I1->O            2   0.053   0.419  adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/GND_20_o_s_divCounter[30]_equal_1_o<30>15 (adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/GND_20_o_s_divCounter[30]_equal_1_o<30>1)
+     LUT6:I5->O           32   0.053   0.552  adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/GND_20_o_s_divCounter[30]_equal_1_o<30>2 (adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/GND_20_o_s_divCounter[30]_equal_1_o)
+     FDR:R                     0.325          adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/s_divCounter_0
+    ----------------------------------------
+    Total                      3.207ns (0.766ns logic, 2.441ns route)
+                                       (23.9% logic, 76.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/clkOut'
+  Clock period: 4.864ns (frequency: 205.592MHz)
+  Total number of paths / destination ports: 5239 / 385
+-------------------------------------------------------------------------
+Delay:               4.864ns (Levels of Logic = 4)
+  Source:            adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c_Inst_adau1761_configuraiton_data/Mram_address[9]_GND_24_o_wide_mux_0_OUT (RAM)
+  Destination:       adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/skip (FF)
+  Source Clock:      adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/clkOut rising
+  Destination Clock: adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/clkOut rising
+
+  Data Path: adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c_Inst_adau1761_configuraiton_data/Mram_address[9]_GND_24_o_wide_mux_0_OUT to adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/skip
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB18E1:CLKARDCLK->DOADO1   14   2.454   0.720  adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c_Inst_adau1761_configuraiton_data/Mram_address[9]_GND_24_o_wide_mux_0_OUT (adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c/inst_data<1>)
      LUT4:I0->O            2   0.053   0.419  adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/Mmux_opcode<0>21_SW0 (N40)
      LUT6:I5->O            1   0.053   0.635  adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/Mmux_opcode<0>21 (adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/opcode<1>)
-     LUT6:I2->O            1   0.053   0.413  adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/Mmux_state[3]_PWR_25_o_Mux_121_o12 (adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/Mmux_state[3]_PWR_25_o_Mux_121_o12)
-     LUT5:I4->O            1   0.053   0.000  adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/Mmux_state[3]_PWR_25_o_Mux_121_o13 (adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/state[3]_PWR_25_o_Mux_121_o)
+     LUT6:I2->O            1   0.053   0.413  adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/Mmux_state[3]_PWR_24_o_Mux_121_o12 (adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/Mmux_state[3]_PWR_24_o_Mux_121_o12)
+     LUT5:I4->O            1   0.053   0.000  adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/Mmux_state[3]_PWR_24_o_Mux_121_o13 (adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/state[3]_PWR_24_o_Mux_121_o)
      FD:D                      0.011          adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/skip
     ----------------------------------------
     Total                      4.864ns (2.677ns logic, 2.187ns route)
@@ -1145,32 +1184,32 @@ Offset:              1.065ns (Levels of Logic = 2)
                                        (30.0% logic, 70.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'adau1761_audio_0/USER_LOGIC_I/adau1761_internal/i_clocking/clkout0'
-  Total number of paths / destination ports: 156 / 108
+Timing constraint: Default OFFSET IN BEFORE for Clock 'adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/clkOut'
+  Total number of paths / destination ports: 156 / 156
 -------------------------------------------------------------------------
 Offset:              0.822ns (Levels of Logic = 1)
   Source:            AC_GPIO3 (PAD)
-  Destination:       adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/audio_r_out_23 (FF)
-  Destination Clock: adau1761_audio_0/USER_LOGIC_I/adau1761_internal/i_clocking/clkout0 rising
+  Destination:       adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/audio_l_out_23 (FF)
+  Destination Clock: adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/clkOut rising
 
-  Data Path: AC_GPIO3 to adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/audio_r_out_23
+  Data Path: AC_GPIO3 to adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/audio_l_out_23
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT4:I3->O           48   0.053   0.555  adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/_n0047_inv1 (adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/_n0047_inv)
-     FDE:CE                    0.200          adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/audio_l_out_0
+     LUT4:I3->O           48   0.053   0.555  adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/_n0051_inv1 (adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/_n0051_inv)
+     FDE:CE                    0.200          adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/audio_r_out_0
     ----------------------------------------
     Total                      0.822ns (0.267ns logic, 0.555ns route)
                                        (32.5% logic, 67.5% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'adau1761_audio_0/USER_LOGIC_I/adau1761_internal/i_clocking/clkout0'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/clkOut'
   Total number of paths / destination ports: 52 / 52
 -------------------------------------------------------------------------
 Offset:              0.282ns (Levels of Logic = 0)
   Source:            adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/audio_l_out_23 (FF)
   Destination:       AUDIO_OUT_L<23> (PAD)
-  Source Clock:      adau1761_audio_0/USER_LOGIC_I/adau1761_internal/i_clocking/clkout0 rising
+  Source Clock:      adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/clkOut rising
 
   Data Path: adau1761_audio_0/USER_LOGIC_I/adau1761_internal/Inst_adau1761_izedboard/Inst_i2s_data_interface/audio_l_out_23 to AUDIO_OUT_L<23>
                                 Gate     Net
@@ -1201,22 +1240,6 @@ Offset:              1.125ns (Levels of Logic = 1)
                                        (29.8% logic, 70.2% route)
 
 =========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Delay:               0.000ns (Levels of Logic = 0)
-  Source:            clk_100 (PAD)
-  Destination:       adau1761_audio_0/USER_LOGIC_I/adau1761_internal/i_clocking/mmcm_adv_inst:CLKIN1 (PAD)
-
-  Data Path: clk_100 to adau1761_audio_0/USER_LOGIC_I/adau1761_internal/i_clocking/mmcm_adv_inst:CLKIN1
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-    MMCME2_ADV:CLKIN1          0.000          adau1761_audio_0/USER_LOGIC_I/adau1761_internal/i_clocking/mmcm_adv_inst
-    ----------------------------------------
-    Total                      0.000ns (0.000ns logic, 0.000ns route)
-
-=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
@@ -1229,25 +1252,33 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 S_AXI_ACLK     |    2.502|         |         |         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock adau1761_audio_0/USER_LOGIC_I/adau1761_internal/i_clocking/clkout0
+Clock to Setup on destination clock adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/clkOut
 ------------------------------------------------------------------+---------+---------+---------+---------+
                                                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------------------------------------------+---------+---------+---------+---------+
-adau1761_audio_0/USER_LOGIC_I/adau1761_internal/i_clocking/clkout0|    4.864|         |         |         |
+adau1761_audio_0/USER_LOGIC_I/adau1761_internal/my_clocking/clkOut|    4.864|         |         |         |
 ------------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_100
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_100        |    3.207|         |         |         |
+---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 22.00 secs
-Total CPU time to Xst completion: 21.40 secs
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 16.68 secs
  
 --> 
 
-Total memory usage is 495280 kilobytes
+Total memory usage is 494960 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   48 (   0 filtered)
-Number of infos    :   15 (   0 filtered)
+Number of infos    :   14 (   0 filtered)
 

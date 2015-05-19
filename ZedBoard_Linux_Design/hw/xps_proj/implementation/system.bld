@@ -462,17 +462,6 @@ WARNING:ConstraintSystem:194 - The TNM 'axi_interconnect_1_reset_resync', does
    not directly or indirectly drive any flip-flops, latches and/or RAMs and is
    not actively used by any referencing constraint.
 
-INFO:ConstraintSystem:178 - TNM 'clk_fpga_0', used in period specification
-   'TS_clk_fpga_0', was traced into MMCME2_ADV instance
-   adau1761_audio_0/USER_LOGIC_I/adau1761_internal/i_clocking/mmcm_adv_inst. The
-   following new TNM groups and period specifications were generated at the
-   MMCME2_ADV output(s): 
-   CLKOUT0: <TIMESPEC
-   TS_adau1761_audio_0_adau1761_audio_0_USER_LOGIC_I_adau1761_internal_i_clockin
-   g_clkout0 = PERIOD
-   "adau1761_audio_0_adau1761_audio_0_USER_LOGIC_I_adau1761_internal_i_clocking_
-   clkout0" TS_clk...>
-
 INFO:ConstraintSystem:178 - TNM 'clk_fpga_1', used in period specification
    'TS_clk_fpga_1', was traced into MMCME2_ADV instance
    clock_generator_0/MMCM1_INST/MMCM_ADV_inst. The following new TNM groups and
@@ -652,10 +641,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings: 188
 
-Total memory usage is 467580 kilobytes
+Total memory usage is 469436 kilobytes
 
 Writing NGD file "system.ngd" ...
-Total REAL time to NGDBUILD completion: 2 min  2 sec
-Total CPU time to NGDBUILD completion:  2 min  0 sec
+Total REAL time to NGDBUILD completion: 1 min  36 sec
+Total CPU time to NGDBUILD completion:  1 min  35 sec
 
 Writing NGDBUILD log file "system.bld"...

@@ -151,6 +151,7 @@ pcores/adau1761_audio_v1_00_a/hdl/vhdl/clocking.vhd \
 pcores/adau1761_audio_v1_00_a/hdl/vhdl/adau1761.vhd \
 pcores/adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd \
 pcores/adau1761_audio_v1_00_a/hdl/vhdl/adau1761_audio.vhd \
+pcores/adau1761_audio_v1_00_a/hdl/vhdl/ClkDividerN.vhd \
 pcores/superip_v1_00_a/hdl/vhdl/Tester.vhd \
 pcores/superip_v1_00_a/hdl/vhdl/VolCtrl.vhd \
 pcores/superip_v1_00_a/hdl/vhdl/IIR_Biquad_II_v2.vhd \

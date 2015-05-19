@@ -1993,6 +1993,9 @@ architecture STRUCTURE of system is
   signal adau1761_audio_0_AC_SDA_pin_I : std_logic;
   signal adau1761_audio_0_AC_SDA_pin_O : std_logic;
   signal adau1761_audio_0_AC_SDA_pin_T : std_logic;
+  signal adau1761_audio_0_AUDIO_OUT_L : std_logic_vector(23 downto 0);
+  signal adau1761_audio_0_AUDIO_OUT_R : std_logic_vector(23 downto 0);
+  signal adau1761_audio_0_clk_48_o : std_logic;
   signal axi_clkgen_0_clk : std_logic;
   signal axi_dma_0_mm2s_introut : std_logic;
   signal axi_dma_0_s2mm_introut : std_logic;
@@ -2216,7 +2219,6 @@ architecture STRUCTURE of system is
   signal net_gnd9 : std_logic_vector(8 downto 0);
   signal net_gnd12 : std_logic_vector(11 downto 0);
   signal net_gnd16 : std_logic_vector(15 downto 0);
-  signal net_gnd24 : std_logic_vector(23 downto 0);
   signal net_gnd32 : std_logic_vector(31 downto 0);
   signal net_gnd64 : std_logic_vector(63 downto 0);
   signal net_gnd108 : std_logic_vector(107 downto 0);
@@ -2237,6 +2239,8 @@ architecture STRUCTURE of system is
   signal processing_system7_0_PS_CLK : std_logic;
   signal processing_system7_0_PS_PORB : std_logic;
   signal processing_system7_0_PS_SRSTB : std_logic;
+  signal superip_0_Mux2_FilterORMux1_Left_out : std_logic_vector(23 downto 0);
+  signal superip_0_Mux2_FilterORMux1_Right_out : std_logic_vector(23 downto 0);
   signal util_vector_logic_0_Res : std_logic_vector(0 to 0);
 
   attribute BOX_TYPE : STRING;
@@ -2331,7 +2335,6 @@ begin
   net_gnd12(11 downto 0) <= B"000000000000";
   net_gnd16(15 downto 0) <= B"0000000000000000";
   net_gnd2(1 downto 0) <= B"00";
-  net_gnd24(23 downto 0) <= B"000000000000000000000000";
   net_gnd3(2 downto 0) <= B"000";
   net_gnd32(31 downto 0) <= B"00000000000000000000000000000000";
   net_gnd4(3 downto 0) <= B"0000";
@@ -4178,7 +4181,7 @@ begin
   adau1761_audio_0 : system_adau1761_audio_0_wrapper
     port map (
       clk_100 => processing_system7_0_FCLK_CLK0(0),
-      clk_48_o => open,
+      clk_48_o => adau1761_audio_0_clk_48_o,
       AC_GPIO1 => net_adau1761_audio_0_AC_GPIO1_pin,
       AC_GPIO2 => net_adau1761_audio_0_AC_GPIO2_pin,
       AC_GPIO3 => net_adau1761_audio_0_AC_GPIO3_pin,
@@ -4190,10 +4193,10 @@ begin
       AC_GPIO0 => adau1761_audio_0_AC_GPIO0,
       AC_MCLK => adau1761_audio_0_AC_MCLK,
       AC_SCK => adau1761_audio_0_AC_SCK,
-      AUDIO_OUT_L => open,
-      AUDIO_OUT_R => open,
-      AUDIO_IN_L => net_gnd24,
-      AUDIO_IN_R => net_gnd24,
+      AUDIO_OUT_L => adau1761_audio_0_AUDIO_OUT_L,
+      AUDIO_OUT_R => adau1761_audio_0_AUDIO_OUT_R,
+      AUDIO_IN_L => superip_0_Mux2_FilterORMux1_Left_out,
+      AUDIO_IN_R => superip_0_Mux2_FilterORMux1_Right_out,
       S_AXI_ACLK => pgassign2(8),
       S_AXI_ARESETN => axi_interconnect_1_M_ARESETN(7),
       S_AXI_AWADDR => axi_interconnect_1_M_AWADDR(255 downto 224),
@@ -4217,11 +4220,11 @@ begin
 
   superip_0 : system_superip_0_wrapper
     port map (
-      CLK_48_in => processing_system7_0_FCLK_CLK0(0),
-      Audio_Left_in => net_gnd24,
-      Audio_Right_in => net_gnd24,
-      Mux2_FilterORMux1_Left_out => open,
-      Mux2_FilterORMux1_Right_out => open,
+      CLK_48_in => adau1761_audio_0_clk_48_o,
+      Audio_Left_in => adau1761_audio_0_AUDIO_OUT_L,
+      Audio_Right_in => adau1761_audio_0_AUDIO_OUT_R,
+      Mux2_FilterORMux1_Left_out => superip_0_Mux2_FilterORMux1_Left_out,
+      Mux2_FilterORMux1_Right_out => superip_0_Mux2_FilterORMux1_Right_out,
       S_AXI_ACLK => pgassign2(8),
       S_AXI_ARESETN => axi_interconnect_1_M_ARESETN(8),
       S_AXI_AWADDR => axi_interconnect_1_M_AWADDR(287 downto 256),

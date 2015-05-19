@@ -486,17 +486,6 @@ WARNING:ConstraintSystem:194 - The TNM 'axi_interconnect_1_reset_resync', does
    not directly or indirectly drive any flip-flops, latches and/or RAMs and is
    not actively used by any referencing constraint.
 
-INFO:ConstraintSystem:178 - TNM 'clk_fpga_0', used in period specification
-   'TS_clk_fpga_0', was traced into MMCME2_ADV instance
-   adau1761_audio_0/USER_LOGIC_I/adau1761_internal/i_clocking/mmcm_adv_inst. The
-   following new TNM groups and period specifications were generated at the
-   MMCME2_ADV output(s): 
-   CLKOUT0: <TIMESPEC
-   TS_adau1761_audio_0_adau1761_audio_0_USER_LOGIC_I_adau1761_internal_i_clockin
-   g_clkout0 = PERIOD
-   "adau1761_audio_0_adau1761_audio_0_USER_LOGIC_I_adau1761_internal_i_clocking_
-   clkout0" TS_clk...>
-
 INFO:ConstraintSystem:178 - TNM 'clk_fpga_1', used in period specification
    'TS_clk_fpga_1', was traced into MMCME2_ADV instance
    clock_generator_0/MMCM1_INST/MMCM_ADV_inst. The following new TNM groups and
@@ -677,8 +666,8 @@ NGDBUILD Design Results Summary:
   Number of warnings: 188
 
 Writing NGD file "system.ngd" ...
-Total REAL time to NGDBUILD completion: 2 min  2 sec
-Total CPU time to NGDBUILD completion:  2 min  0 sec
+Total REAL time to NGDBUILD completion: 1 min  36 sec
+Total CPU time to NGDBUILD completion:  1 min  35 sec
 
 Writing NGDBUILD log file "system.bld"...
 
@@ -690,3 +679,581 @@ NGDBUILD done.
 # Starting program map
 # map -o system_map.ncd -w -pr b -ol high -timing -detail system.ngd system.pcf 
 #----------------------------------------------#
+Release 14.7 - Map P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/data/Xdh_PrimTypeLib.xda> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/data/Xdh_PrimTypeLib.xda>
+Using target part "7z020clg484-1".
+WARNING:LIT:701 - PAD symbol "processing_system7_0_PS_SRSTB_pin" has an
+   undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "processing_system7_0_PS_SRSTB_pin" is not
+   constrained (LOC) to a specific location.
+WARNING:LIT:701 - PAD symbol "processing_system7_0_PS_CLK_pin" has an undefined
+   IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "processing_system7_0_PS_CLK_pin" is not
+   constrained (LOC) to a specific location.
+WARNING:LIT:701 - PAD symbol "processing_system7_0_PS_PORB_pin" has an undefined
+   IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "processing_system7_0_PS_PORB_pin" is not
+   constrained (LOC) to a specific location.
+Mapping design into LUTs...
+Writing file system_map.ngm...
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 1 mins 50 secs 
+Total CPU  time at the beginning of Placer: 1 mins 45 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:14724016) REAL time: 1 mins 59 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:14724016) REAL time: 2 mins 1 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:14724016) REAL time: 2 mins 1 secs 
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+(Checksum:3f64cb2) REAL time: 2 mins 21 secs 
+
+Phase 5.30  Global Clock Region Assignment
+Phase 5.30  Global Clock Region Assignment (Checksum:3f64cb2) REAL time: 2 mins 21 secs 
+
+Phase 6.3  Local Placement Optimization
+Phase 6.3  Local Placement Optimization (Checksum:3f64cb2) REAL time: 2 mins 21 secs 
+
+Phase 7.5  Local Placement Optimization
+Phase 7.5  Local Placement Optimization (Checksum:3f64cb2) REAL time: 2 mins 22 secs 
+
+Phase 8.8  Global Placement
+............................
+...................................................................................................................................
+.................................................................................................................................
+..........................................................................................................................................
+Phase 8.8  Global Placement (Checksum:6a9a0bf) REAL time: 6 mins 
+
+Phase 9.5  Local Placement Optimization
+Phase 9.5  Local Placement Optimization (Checksum:6a9a0bf) REAL time: 6 mins 2 secs 
+
+Phase 10.18  Placement Optimization
+Phase 10.18  Placement Optimization (Checksum:c713119d) REAL time: 6 mins 42 secs 
+
+Phase 11.5  Local Placement Optimization
+Phase 11.5  Local Placement Optimization (Checksum:c713119d) REAL time: 6 mins 43 secs 
+
+Phase 12.34  Placement Validation
+Phase 12.34  Placement Validation (Checksum:c713119d) REAL time: 6 mins 43 secs 
+
+Total REAL time to Placer completion: 6 mins 45 secs 
+Total CPU  time to Placer completion: 6 mins 34 secs 
+Running post-placement packing...
+Writing output files...
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   39
+Slice Logic Utilization:
+  Number of Slice Registers:                15,383 out of 106,400   14%
+    Number used as Flip Flops:              14,227
+    Number used as Latches:                    924
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:              232
+  Number of Slice LUTs:                     12,013 out of  53,200   22%
+    Number used as logic:                   10,589 out of  53,200   19%
+      Number using O6 output only:           7,420
+      Number using O5 output only:             170
+      Number using O5 and O6:                2,999
+      Number used as ROM:                        0
+    Number used as Memory:                     832 out of  17,400    4%
+      Number used as Dual Port RAM:            116
+        Number using O6 output only:            92
+        Number using O5 output only:             5
+        Number using O5 and O6:                 19
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:           716
+        Number using O6 output only:           710
+        Number using O5 output only:             1
+        Number using O5 and O6:                  5
+    Number used exclusively as route-thrus:    592
+      Number with same-slice register load:    376
+      Number with same-slice carry load:       213
+      Number with other load:                    3
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 6,279 out of  13,300   47%
+  Number of LUT Flip Flop pairs used:       18,557
+    Number with an unused Flip Flop:         4,438 out of  18,557   23%
+    Number with an unused LUT:               6,544 out of  18,557   35%
+    Number of fully used LUT-FF pairs:       7,575 out of  18,557   40%
+    Number of unique control sets:             680
+    Number of slice register sites lost
+      to control set restrictions:           2,553 out of 106,400    2%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        94 out of     200   47%
+    Number of LOCed IOBs:                       94 out of      94  100%
+  Number of bonded IOPAD:                      130 out of     130  100%
+    IOB Flip Flops:                             24
+
+Specific Feature Utilization:
+  Number of RAMB36E1/FIFO36E1s:                  8 out of     140    5%
+    Number using RAMB36E1 only:                  8
+    Number using FIFO36E1 only:                  0
+  Number of RAMB18E1/FIFO18E1s:                  1 out of     280    1%
+    Number using RAMB18E1 only:                  1
+    Number using FIFO18E1 only:                  0
+  Number of BUFG/BUFGCTRLs:                     12 out of      32   37%
+    Number used as BUFGs:                       12
+    Number used as BUFGCTRLs:                    0
+  Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     200    0%
+  Number of ILOGICE2/ILOGICE3/ISERDESE2s:        2 out of     200    1%
+    Number used as ILOGICE2s:                    2
+  Number used as  ILOGICE3s:                     0
+    Number used as ISERDESE2s:                   0
+  Number of ODELAYE2/ODELAYE2_FINEDELAYs:        0
+  Number of OLOGICE2/OLOGICE3/OSERDESE2s:       74 out of     200   37%
+    Number used as OLOGICE2s:                   74
+    Number used as OLOGICE3s:                    0
+    Number used as OSERDESE2s:                   0
+  Number of PHASER_IN/PHASER_IN_PHYs:            0 out of      16    0%
+  Number of PHASER_OUT/PHASER_OUT_PHYs:          0 out of      16    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHCEs:                             0 out of      72    0%
+  Number of BUFRs:                               0 out of      16    0%
+  Number of CAPTUREs:                            0 out of       1    0%
+  Number of DNA_PORTs:                           0 out of       1    0%
+  Number of DSP48E1s:                          120 out of     220   54%
+  Number of EFUSE_USRs:                          0 out of       1    0%
+  Number of FRAME_ECCs:                          0 out of       1    0%
+  Number of ICAPs:                               0 out of       2    0%
+  Number of IDELAYCTRLs:                         0 out of       4    0%
+  Number of IN_FIFOs:                            0 out of      16    0%
+  Number of MMCME2_ADVs:                         2 out of       4   50%
+  Number of OUT_FIFOs:                           0 out of      16    0%
+  Number of PHASER_REFs:                         0 out of       4    0%
+  Number of PHY_CONTROLs:                        0 out of       4    0%
+  Number of PLLE2_ADVs:                          0 out of       4    0%
+  Number of PS7s:                                1 out of       1  100%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of XADCs:                               0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                2.98
+
+Peak Memory Usage:  1300 MB
+Total REAL time to MAP completion:  7 mins 4 secs 
+Total CPU time to MAP completion:   6 mins 53 secs 
+
+Mapping completed.
+See MAP report file "system_map.mrp" for details.
+
+
+
+#----------------------------------------------#
+# Starting program par
+# par -w -ol high system_map.ncd system.ncd system.pcf 
+#----------------------------------------------#
+Release 14.7 - par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file <C:/Xilinx/14.7/ISE_DS/EDK/data/parBmgr.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/data/parBmgr.acd>
+
+
+
+Constraints file: system.pcf.
+Loading device for application Rf_Device from file '7z020.nph' in environment
+C:\Xilinx\14.7\ISE_DS\ISE\;C:\Xilinx\14.7\ISE_DS\EDK.
+   "system" is an NCD, version 3.2, device xc7z020, package clg484, speed -1
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.08 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+   Number of BUFGs                          12 out of 32     37%
+   Number of DSP48E1s                      120 out of 220    54%
+   Number of ILOGICE2s                       2 out of 200     1%
+   Number of External IOB33s                94 out of 200    47%
+      Number of LOCed IOB33s                94 out of 94    100%
+
+   Number of External IOPADs               130 out of 130   100%
+      Number of LOCed IOPADs               127 out of 130    97%
+
+   Number of MMCME2_ADVs                     2 out of 4      50%
+   Number of OLOGICE2s                      74 out of 200    37%
+   Number of PS7s                            1 out of 1     100%
+   Number of RAMB18E1s                       1 out of 280     1%
+   Number of RAMB36E1s                       8 out of 140     5%
+   Number of Slices                       6279 out of 13300  47%
+   Number of Slice Registers             15383 out of 106400 13%
+      Number used as Flip Flops          14459
+      Number used as Latches               924
+      Number used as LatchThrus              0
+
+   Number of Slice LUTS                  12013 out of 53200  22%
+   Number of Slice LUT-Flip Flop pairs   18117 out of 53200  34%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please consult the Xilinx
+   Command Line Tools User Guide for information on generating a TSI report.
+Starting initial Timing Analysis.  REAL time: 57 secs 
+Finished initial Timing Analysis.  REAL time: 58 secs 
+
+WARNING:Par:288 - The signal SlideSwitch<5>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal SlideSwitch<6>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal SlideSwitch<7>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal SlideSwitch<0>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal SlideSwitch<1>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal SlideSwitch<2>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal SlideSwitch<3>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal SlideSwitch<4>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   axi_interconnect_3/axi_interconnect_3/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRIT
+   E.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM
+   _RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   axi_interconnect_2/axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRIT
+   E.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM
+   _RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   axi_interconnect_3/axi_interconnect_3/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRIT
+   E.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mra
+   m_RAM_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   axi_interconnect_2/axi_interconnect_2/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRIT
+   E.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mra
+   m_RAM_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo17_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo18_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo6_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo8_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo5_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo20_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo19_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo7_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo3_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo4_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo15_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo16_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo14_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo11_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo2_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo1_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo12_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo9_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo10_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+WARNING:Par:288 - The signal
+   axi_dma_i2s/axi_dma_i2s/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/S6.I_SYNC_FIFOG
+   EN_FIFO/V6_S6_AND_LATER.I_SYNC_FIFO_BRAM/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1_O has
+   no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal axi_spdif_tx_0/axi_spdif_tx_0/USER_LOGIC_I/Mram_audio_fifo13_RAMD_O has no load.  PAR will not attempt to route
+   this signal.
+Starting Router
+
+
+Phase  1  : 101202 unrouted;      REAL time: 1 mins 1 secs 
+
+Phase  2  : 71174 unrouted;      REAL time: 1 mins 5 secs 
+
+Phase  3  : 23101 unrouted;      REAL time: 1 mins 33 secs 
+
+Phase  4  : 23092 unrouted; (Setup:0, Hold:124208, Component Switching Limit:0)     REAL time: 1 mins 43 secs 
+
+Updating file: system.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:105208, Component Switching Limit:0)     REAL time: 2 mins 15 secs 
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:105208, Component Switching Limit:0)     REAL time: 2 mins 15 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:105208, Component Switching Limit:0)     REAL time: 2 mins 15 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:105208, Component Switching Limit:0)     REAL time: 2 mins 15 secs 
+
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 25 secs 
+Total REAL time to Router completion: 2 mins 26 secs 
+Total CPU time to Router completion: 2 mins 31 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|processing_system7_0 |              |      |      |            |             |
+|          _FCLK_CLK0 |BUFGCTRL_X0Y31| No   | 3876 |  0.449     |  2.068      |
++---------------------+--------------+------+------+------------+-------------+
+|    axi_clkgen_0_clk | BUFGCTRL_X0Y1| No   |  359 |  0.269     |  1.902      |
++---------------------+--------------+------+------+------------+-------------+
+|superip_0/superip_0/ |              |      |      |            |             |
+|USER_LOGIC_I/SIP/fil |              |      |      |            |             |
+|ter_Comp/IIR_BP_R/mu |              |      |      |            |             |
+|        l_coefs_BUFG |BUFGCTRL_X0Y27| No   |   40 |  0.163     |  1.803      |
++---------------------+--------------+------+------+------------+-------------+
+|adau1761_audio_0_clk |              |      |      |            |             |
+|               _48_o | BUFGCTRL_X0Y3| No   |   83 |  0.195     |  1.843      |
++---------------------+--------------+------+------+------------+-------------+
+|processing_system7_0 |              |      |      |            |             |
+|          _FCLK_CLK1 |BUFGCTRL_X0Y29| No   |  622 |  0.342     |  1.980      |
++---------------------+--------------+------+------+------------+-------------+
+|superip_0/superip_0/ |              |      |      |            |             |
+|USER_LOGIC_I/SIP/fil |              |      |      |            |             |
+|ter_Comp/IIR_LP_L/mu |              |      |      |            |             |
+|        l_coefs_BUFG | BUFGCTRL_X0Y4| No   |   80 |  0.346     |  1.979      |
++---------------------+--------------+------+------+------------+-------------+
+|superip_0/superip_0/ |              |      |      |            |             |
+|USER_LOGIC_I/SIP/fil |              |      |      |            |             |
+|ter_Comp/IIR_BP_L/mu |              |      |      |            |             |
+|        l_coefs_BUFG |BUFGCTRL_X0Y26| No   |   40 |  0.107     |  1.756      |
++---------------------+--------------+------+------+------------+-------------+
+|superip_0/superip_0/ |              |      |      |            |             |
+|USER_LOGIC_I/SIP/fil |              |      |      |            |             |
+|ter_Comp/IIR_HP_R/mu |              |      |      |            |             |
+|        l_coefs_BUFG | BUFGCTRL_X0Y2| No   |   40 |  0.194     |  1.981      |
++---------------------+--------------+------+------+------------+-------------+
+|superip_0/superip_0/ |              |      |      |            |             |
+|USER_LOGIC_I/SIP/fil |              |      |      |            |             |
+|ter_Comp/IIR_HP_L/mu |              |      |      |            |             |
+|        l_coefs_BUFG | BUFGCTRL_X0Y5| No   |   40 |  0.235     |  1.961      |
++---------------------+--------------+------+------+------------+-------------+
+|clock_generator_0_CL |              |      |      |            |             |
+|               KOUT0 |BUFGCTRL_X0Y28| No   |    2 |  0.173     |  1.890      |
++---------------------+--------------+------+------+------------+-------------+
+|axi_clkgen_0/axi_clk |              |      |      |            |             |
+|gen_0/USER_LOGIC_I/i |              |      |      |            |             |
+|_clkgen/buf_fb_clk_s |              |      |      |            |             |
+|                     | BUFGCTRL_X0Y0| No   |    1 |  0.000     |  1.759      |
++---------------------+--------------+------+------+------------+-------------+
+|processing_system7_0 |              |      |      |            |             |
+|          _FCLK_CLK2 |BUFGCTRL_X0Y30| No   |    1 |  0.000     |  1.762      |
++---------------------+--------------+------+------+------------+-------------+
+|clock_generator_0/cl |              |      |      |            |             |
+|ock_generator_0/SIG_ |              |      |      |            |             |
+|      MMCM1_CLKFBOUT |         Local|      |    1 |  0.000     |  0.014      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Number of Timing Constraints that were not applied: 1
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  TS_clk_fpga_1 = PERIOD TIMEGRP "clk_fpga_ | SETUP       |     0.108ns|     5.891ns|       0|           0
+  1" 166.667 MHz HIGH 50%                   | HOLD        |     0.004ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_clk_fpga_0 = PERIOD TIMEGRP "clk_fpga_ | SETUP       |     0.148ns|     9.852ns|       0|           0
+  0" 100 MHz HIGH 50%                       | HOLD        |     0.001ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_axi_clkgen_0_axi_clkgen_0_USER_LOGIC_I | SETUP       |     0.325ns|     6.409ns|       0|           0
+  _i_clkgen_mmcm_clk_s = PERIOD TIMEGRP     | HOLD        |     0.074ns|            |       0|           0
+       "axi_clkgen_0_axi_clkgen_0_USER_LOGI |             |            |            |        |            
+  C_I_i_clkgen_mmcm_clk_s"         TS_clk_f |             |            |            |        |            
+  pga_2 * 0.742424242 HIGH 50%              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clk_fpga_2 = PERIOD TIMEGRP "clk_fpga_ | MINLOWPULSE |     2.200ns|     2.800ns|       0|           0
+  2" 200 MHz HIGH 50%                       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clock_generator_0_clock_generator_0_SI | SETUP       |    95.506ns|     2.148ns|       0|           0
+  G_MMCM1_CLKOUT0 = PERIOD TIMEGRP          | HOLD        |     0.457ns|            |       0|           0
+  "clock_generator_0_clock_generator_0_SIG_ | MINPERIOD   |    95.499ns|     2.155ns|       0|           0
+  MMCM1_CLKOUT0" TS_clk_fpga_1         * 0. |             |            |            |        |            
+  061440678 HIGH 50%                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_axi_vdma_0_cdc_tig_v_path" TIG   | SETUP       |         N/A|     7.899ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_axi_vdma_0_cdc_from_2_cdc_to_pat | SETUP       |         N/A|     2.231ns|     N/A|           0
+  h" TIG                                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_axi_interconnect_3_reset_resync_ | SETUP       |         N/A|     1.055ns|     N/A|           0
+  path" TIG                                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_axi_interconnect_2_reset_resync_ | SETUP       |         N/A|     1.097ns|     N/A|           0
+  path" TIG                                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_axi_interconnect_1_reset_resync_ | SETUP       |         N/A|     1.118ns|     N/A|           0
+  path" TIG                                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Review Timing Report for more details on the following derived constraints.
+To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
+or "Run Timing Analysis" from Timing Analyzer (timingan).
+Derived Constraints for TS_clk_fpga_1
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_clk_fpga_1                  |      6.000ns|      5.891ns|      0.132ns|            0|            0|        40808|            1|
+| TS_clock_generator_0_clock_gen|     97.655ns|      2.155ns|          N/A|            0|            0|            1|            0|
+| erator_0_SIG_MMCM1_CLKOUT0    |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_clk_fpga_2
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_clk_fpga_2                  |      5.000ns|      2.800ns|      4.758ns|            0|            0|            0|        43725|
+| TS_axi_clkgen_0_axi_clkgen_0_U|      6.735ns|      6.409ns|          N/A|            0|            0|        43725|            0|
+| SER_LOGIC_I_i_clkgen_mmcm_clk_|             |             |             |             |             |             |             |
+| s                             |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 33 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 2 mins 36 secs 
+Total CPU time to PAR completion: 2 mins 38 secs 
+
+Peak Memory Usage:  1190 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 35
+Number of info messages: 1
+
+Writing design to file system.ncd
+
+
+
+PAR done!
+
+
+
+#----------------------------------------------#
+# Starting program post_par_trce
+# trce -e 3 -xml system.twx system.ncd system.pcf 
+#----------------------------------------------#
+Release 14.7 - Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+
+PMSPEC -- Overriding Xilinx file <C:/Xilinx/14.7/ISE_DS/EDK/zynq/data/zynq.acd>
+with local file <C:/Xilinx/14.7/ISE_DS/ISE/zynq/data/zynq.acd>
+Loading device for application Rf_Device from file '7z020.nph' in environment
+C:\Xilinx\14.7\ISE_DS\ISE\;C:\Xilinx\14.7\ISE_DS\EDK.
+   "system" is an NCD, version 3.2, device xc7z020, package clg484, speed -1
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more
+   information, see the TSI report.  Please consult the Xilinx Command Line
+   Tools User Guide for information on generating a TSI report.
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -e 3 -xml system.twx
+system.ncd system.pcf
+
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,speed:             xc7z020,-1 (PRODUCTION 1.08 2013-10-13)
+Report level:             error report
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths option. All paths that are not constrained will be reported in
+   the unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on a 50 Ohm transmission line loading model.  For the details of
+   this model, and for more information on accounting for different loading conditions, please see the device datasheet.
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0 (Setup/Max: 0, Hold: 0)
+
+Constraints cover 1570782 paths, 0 nets, and 70557 connections
+
+Design statistics:
+   Minimum period:   9.852ns (Maximum frequency: 101.502MHz)
+
+
+Analysis completed Tue May 19 16:52:21 2015
+--------------------------------------------------------------------------------
+
+Generating Report ...
+
+Number of warnings: 0
+Number of info messages: 4
+Total time: 1 mins 11 secs 
+
+

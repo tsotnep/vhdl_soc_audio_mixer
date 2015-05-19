@@ -191,10 +191,11 @@ begin
    (O => clkfbout_buf,
     I => clkfbout);
 
+CLK_48 <= clkout0;
 
-  clkout1_buf : BUFG
-  port map
-   (O   => CLK_48,
-    I   => clkout0);
+--  clkout1_buf : BUFG
+--  port map
+--   (O   => CLK_48,
+--    I   => clkout0);
 
 end xilinx;

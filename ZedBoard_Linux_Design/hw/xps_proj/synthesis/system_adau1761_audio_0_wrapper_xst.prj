@@ -129,4 +129,5 @@ vhdl adau1761_audio_v1_00_a C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_
 vhdl adau1761_audio_v1_00_a C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\pcores\adau1761_audio_v1_00_a/hdl/vhdl/adau1761.vhd
 vhdl adau1761_audio_v1_00_a C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\pcores\adau1761_audio_v1_00_a/hdl/vhdl/user_logic.vhd
 vhdl adau1761_audio_v1_00_a C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\pcores\adau1761_audio_v1_00_a/hdl/vhdl/adau1761_audio.vhd
+vhdl adau1761_audio_v1_00_a C:\FPGA\ISE\SoC\Ovie_Repo\inputboard\ZedBoard_Linux_Design\hw\xps_proj\pcores\adau1761_audio_v1_00_a/hdl/vhdl/ClkDividerN.vhd
 vhdl work ../hdl/system_adau1761_audio_0_wrapper.vhd

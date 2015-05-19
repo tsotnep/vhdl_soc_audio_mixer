@@ -188,10 +188,6 @@
 <msg type="warning" file="ConstraintSystem" num="194" delta="old" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">axi_interconnect_1_reset_resync</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMs and is not actively used by any referencing constraint.
  </msg>
 
-<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">clk_fpga_0</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_clk_fpga_0</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCME2_ADV</arg> instance <arg fmt="%s" index="5">adau1761_audio_0/USER_LOGIC_I/adau1761_internal/i_clocking/mmcm_adv_inst</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCME2_ADV</arg> output(s): 
-<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_adau1761_audio_0_adau1761_audio_0_USER_LOGIC_I_adau1761_internal_i_clocking_clkout0 = PERIOD &quot;adau1761_audio_0_adau1761_audio_0_USER_LOGIC_I_adau1761_internal_i_clocking_clkout0&quot; TS_clk...&gt;</arg>
-</msg>
-
 <msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">clk_fpga_1</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_clk_fpga_1</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCME2_ADV</arg> instance <arg fmt="%s" index="5">clock_generator_0/MMCM1_INST/MMCM_ADV_inst</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCME2_ADV</arg> output(s): 
 <arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_MMCM1_CLKOUT0 = PERIOD &quot;clock_generator_0_clock_generator_0_SIG_MMCM1_CLKOUT0&quot; TS_clk_fpga_1 * 0.061440678 HIGH 50%&gt;</arg>
 </msg>
