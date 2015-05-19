@@ -64,42 +64,43 @@ architecture RTL of superip_internal is
 	ALIAS Mux1_Mux2_Select_in : std_logic_vector is slv_reg27(6 downto 5);
 
 	-- Internals
-	signal Pregain_Left_out              : std_logic_vector(23 downto 0);
-	signal Pregain_Right_out             : std_logic_vector(23 downto 0);
-	signal Mux1_PregainORAudio_Left_out  : std_logic_vector(23 downto 0);
-	signal Mux1_PregainORAudio_Right_out : std_logic_vector(23 downto 0);
+	--signal Pregain_Left_out              : std_logic_vector(23 downto 0);
+	--signal Pregain_Right_out             : std_logic_vector(23 downto 0);
+	--signal Mux1_PregainORAudio_Left_out  : std_logic_vector(23 downto 0);
+	--signal Mux1_PregainORAudio_Right_out : std_logic_vector(23 downto 0);
 	signal Filter_Left_out               : std_logic_vector(23 downto 0);
 	signal Filter_Right_out              : std_logic_vector(23 downto 0);
 begin
-	Tester_Comp : entity work.Tester
-		port map(
-			Audio_Left_in                 => Audio_Left_in,
-			Audio_Right_in                => Audio_Right_in,
-			Pregain_Left_out_in           => Pregain_Left_out,
-			Pregain_Right_out_in          => Pregain_Right_out,
-			Mux1_PregainORAudio_Left_out  => Mux1_PregainORAudio_Left_out,
-			Mux1_PregainORAudio_Right_out => Mux1_PregainORAudio_Right_out,
-			Filter_Left_out               => Filter_Left_out,
-			Filter_Right_out              => Filter_Right_out,
-			Mux2_FilterORMux1_Left_out    => Mux2_FilterORMux1_Left_out,
-			Mux2_FilterORMux1_Right_out   => Mux2_FilterORMux1_Right_out,
-			Mux1_Mux2_Select_in           => Mux1_Mux2_Select_in
-		);
-
-	VolCtrl_inst : entity work.VolCtrl
-		port map(
-			OUT_MULT_L => Pregain_Left_out,
-			OUT_MULT_R => Pregain_Right_out,
-			OUT_RDY_L  => Gain_ready_L_out,
-			OUT_RDY_R  => Gain_ready_R_out,
-			IN_SIG_L   => Audio_Left_in,
-			IN_SIG_R   => Audio_Right_in,
-			IN_COEF_L  => slv_reg15(23 downto 0),
-			IN_COEF_R  => slv_reg16(23 downto 0),
-			RESET      => Reset_in,
-			CLK_48     => CLK_48_in,
-			CLK_100M   => CLK_100M_in
-		);
+	
+--	Tester_Comp : entity work.Tester
+--		port map(
+--			Audio_Left_in                 => Audio_Left_in,
+--			Audio_Right_in                => Audio_Right_in,
+--			Pregain_Left_out_in           => Pregain_Left_out,
+--			Pregain_Right_out_in          => Pregain_Right_out,
+--			Mux1_PregainORAudio_Left_out  => Mux1_PregainORAudio_Left_out,
+--			Mux1_PregainORAudio_Right_out => Mux1_PregainORAudio_Right_out,
+--			Filter_Left_out               => Filter_Left_out,
+--			Filter_Right_out              => Filter_Right_out,
+--			Mux2_FilterORMux1_Left_out    => Mux2_FilterORMux1_Left_out,
+--			Mux2_FilterORMux1_Right_out   => Mux2_FilterORMux1_Right_out,
+--			Mux1_Mux2_Select_in           => Mux1_Mux2_Select_in
+--		);
+--
+--	VolCtrl_inst : entity work.VolCtrl
+--		port map(
+--			OUT_MULT_L => Pregain_Left_out,
+--			OUT_MULT_R => Pregain_Right_out,
+--			OUT_RDY_L  => Gain_ready_L_out,
+--			OUT_RDY_R  => Gain_ready_R_out,
+--			IN_SIG_L   => Audio_Left_in,
+--			IN_SIG_R   => Audio_Right_in,
+--			IN_COEF_L  => slv_reg15(23 downto 0),
+--			IN_COEF_R  => slv_reg16(23 downto 0),
+--			RESET      => Reset_in,
+--			CLK_48     => CLK_48_in,
+--			CLK_100M   => CLK_100M_in
+--		);
 
 	filter_Comp : entity work.Filter_Top_Level
 		port map(
@@ -125,11 +126,17 @@ begin
 			HP_SW      => HP_SW,
 			BP_SW      => BP_SW,
 			LP_SW      => LP_SW,
-			AUDIO_IN_L  => Mux1_PregainORAudio_Left_out,
-			AUDIO_IN_R  => Mux1_PregainORAudio_Right_out,
+			--AUDIO_IN_L  => Mux1_PregainORAudio_Left_out,
+			--AUDIO_IN_R  => Mux1_PregainORAudio_Right_out,
+			AUDIO_IN_L  => Audio_Left_in,
+			AUDIO_IN_R  => Audio_Right_in,
 			AUDIO_OUT_L => Filter_Left_out,
 			AUDIO_OUT_R => Filter_Right_out,
 			FILTER_DONE => Filter_ready_out
 		);
+		
+
+		Mux2_FilterORMux1_Left_out  <= Filter_Left_out;
+		Mux2_FilterORMux1_Right_out <= Filter_Right_out;
 
 end architecture RTL;
