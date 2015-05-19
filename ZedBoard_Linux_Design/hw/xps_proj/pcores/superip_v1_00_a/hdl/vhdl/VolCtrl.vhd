@@ -12,7 +12,8 @@ entity VolCtrl is
 		IN_COEF_L  : in  std_logic_vector(23 downto 0);
 		IN_COEF_R  : in  std_logic_vector(23 downto 0);
 		RESET      : in  STD_LOGIC;
-		CLK        : in  STD_LOGIC
+		CLK_48     : in  STD_LOGIC;
+		CLK_100M   : in  STD_LOGIC
 	);
 
 end VolCtrl;

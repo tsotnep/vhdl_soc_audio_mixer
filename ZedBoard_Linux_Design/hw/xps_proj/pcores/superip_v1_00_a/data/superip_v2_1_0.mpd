@@ -38,6 +38,7 @@ PARAMETER C_S_AXI_PROTOCOL = AXI4LITE, TYPE = NON_HDL, ASSIGNMENT = CONSTANT, DT
 ## Ports
 
 PORT CLK_48_in = "", DIR = I
+PORT CLK_100M_in = "", DIR = I
 PORT Audio_Left_in = "", DIR = I, VEC = [23:0]
 PORT Audio_Right_in = "", DIR = I, VEC = [23:0]
 PORT Mux2_FilterORMux1_Left_out = "", DIR = O, VEC = [23:0]

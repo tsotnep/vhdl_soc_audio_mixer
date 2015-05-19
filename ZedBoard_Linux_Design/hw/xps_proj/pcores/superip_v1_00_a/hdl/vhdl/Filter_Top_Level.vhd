@@ -47,6 +47,7 @@ entity Filter_Top_Level is
            slv_reg13 : in  STD_LOGIC_VECTOR (31 downto 0);
            slv_reg14 : in  STD_LOGIC_VECTOR (31 downto 0);
            CLK_48							: in std_logic;
+			  CLK_100M						: in std_logic;
            RST								: in std_logic;
            SAMPLE_TRIG						: in std_logic;
            HP_SW							: in std_logic;
@@ -76,6 +77,7 @@ Component IIR_Biquad_II_v2 is
 				Coef_a1 : std_logic_vector(31 downto 0);
 				Coef_a2 : std_logic_vector(31 downto 0);
 				clk : in  STD_LOGIC;
+				clk_100M : in std_logic;
 				rst : in  STD_LOGIC;
 				sample_trig : in  STD_LOGIC;
 				X_in : in  STD_LOGIC_VECTOR (15 downto 0);
@@ -147,6 +149,7 @@ begin
 				Coef_a2 => slv_reg4,
 				
 				clk => CLK_48,
+				clk_100M => CLK_100M,
 				rst => rst,
 				sample_trig => '1',--Sample_IIR,
 				X_in => AUDIO_IN_R(23 downto 8),
@@ -164,6 +167,7 @@ begin
 				Coef_a2 => slv_reg4,
 				
 				clk => CLK_48,
+				clk_100M => CLK_100M,
 				rst => rst,
 				sample_trig => '1',--Sample_IIR,
 				X_in => AUDIO_IN_L(23 downto 8),--X_in_truncated_L,
@@ -180,6 +184,7 @@ begin
 			Coef_a2 => slv_reg9,
 			
 			clk => CLK_48,
+			clk_100M => CLK_100M,
 			rst => rst,
 			sample_trig => '1',--Sample_IIR,
 			X_in => AUDIO_IN_R(23 downto 8),--X_in_truncated_R,
@@ -196,6 +201,7 @@ begin
 				Coef_a2 => slv_reg9,
 				
 				clk => CLK_48,
+				clk_100M => CLK_100M,
 				rst => rst,
 				sample_trig => '1',--Sample_IIR,
 				X_in => AUDIO_IN_L(23 downto 8),--X_in_truncated_L,
@@ -212,6 +218,7 @@ IIR_HP_R: IIR_Biquad_II_v2
 				Coef_a2 => slv_reg14,
 				
 				clk => CLK_48,
+				clk_100M => CLK_100M,
 				rst => rst,
 				sample_trig => '1',--Sample_IIR,
 				X_in => AUDIO_IN_R(23 downto 8),--X_in_truncated_R,
@@ -228,6 +235,7 @@ IIR_HP_R: IIR_Biquad_II_v2
 				Coef_a2 => slv_reg14,
 				
 				clk => CLK_48,
+				clk_100M => CLK_100M,
 				rst => rst,
 				sample_trig => '1',--Sample_IIR,
 				X_in => AUDIO_IN_L(23 downto 8),--X_in_truncated_L,

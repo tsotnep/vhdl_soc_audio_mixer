@@ -36,6 +36,7 @@ entity IIR_Biquad_II_v2 is
 				Coef_a1 : std_logic_vector(31 downto 0);
 				Coef_a2 : std_logic_vector(31 downto 0);
 				clk : in  STD_LOGIC;
+				clk_100M : in  STD_LOGIC;
 				rst : in  STD_LOGIC;
 				sample_trig : in  STD_LOGIC;
 				X_in : in  STD_LOGIC_VECTOR (15 downto 0);
@@ -220,7 +221,7 @@ architecture arch of IIR_Biquad_II_v2 is
 begin
 
 	-- process to shift samples
-	process(clk, rst, Y_out_double, sample_trig)
+	process(clk_100M, rst, Y_out_double, sample_trig)
 	begin
 		if(rst = '1') then
 			ZFF_X0 <= (others => '0'); 
@@ -229,27 +230,31 @@ begin
 			ZFF_Y1 <= (others => '0'); 
 			ZFF_Y2 <= (others => '0');
 
-		elsif(rising_edge(clk)) then
-			if(sample_trig = '1' AND state_reg = idle) then
-				ZFF_X0 <= X_in(15) & X_in(15) & X_in(15) & X_in(15) & X_in & B"0000_0000_0000"; -- X_in(17) & X_in(17) & X_in & B"0000_0000_0000";
-				ZFF_X1 <= ZFF_X0;
-				ZFF_X2 <= ZFF_X1;
-				ZFF_Y1 <= Y_out_double;								
-				ZFF_Y2 <= ZFF_Y1;
-			end if;	
+		elsif(rising_edge(clk_100M)) then
+			if clk = '1' then
+				if(sample_trig = '1' AND state_reg = idle) then
+					ZFF_X0 <= X_in(15) & X_in(15) & X_in(15) & X_in(15) & X_in & B"0000_0000_0000"; -- X_in(17) & X_in(17) & X_in & B"0000_0000_0000";
+					ZFF_X1 <= ZFF_X0;
+					ZFF_X2 <= ZFF_X1;
+					ZFF_Y1 <= Y_out_double;								
+					ZFF_Y2 <= ZFF_Y1;
+				end if;	
+			end if;
 		end if;
 	end process;
 	
 	
 	-- STATE UPDATE AND TIMING
-	process(clk, rst) 
+	process(clk_100M, rst) 
    begin
 		if(rst = '1') then
 			state_reg <= idle;                                    
 			q_reg <= (others => '0');                               -- reset counter
-		elsif (rising_edge(clk))  then
-			state_reg <= state_next;                                -- update the state
-			q_reg <= q_next;
+		elsif (rising_edge(clk_100M))  then
+			if clk = '1' then
+				state_reg <= state_next;                                -- update the state
+				q_reg <= q_next;
+			end if;
 		end if;
 	end process;
 	
@@ -330,15 +335,17 @@ begin
 	
 
 	-- truncate the output to summation block
-	process(clk, trunc_prods, pgZFF_X0_quad, pgZFF_X1_quad, pgZFF_X2_quad, pgZFF_Y1_quad, pgZFF_Y2_quad)
+	process(clk_100M, trunc_prods, pgZFF_X0_quad, pgZFF_X1_quad, pgZFF_X2_quad, pgZFF_Y1_quad, pgZFF_Y2_quad)
 	begin
-		if rising_edge(clk) then
-			if (trunc_prods = '1') then	
-				pgZFF_X0 <= pgZFF_X0_quad(61 downto 30);	
-				pgZFF_X2 <= pgZFF_X2_quad(61 downto 30);
-				pgZFF_X1 <= pgZFF_X1_quad(61 downto 30);
-				pgZFF_Y1 <= pgZFF_Y1_quad(61 downto 30);
-				pgZFF_Y2 <= pgZFF_Y2_quad(61 downto 30);
+		if rising_edge(clk_100M) then
+			if clk = '1' then
+				if (trunc_prods = '1') then	
+					pgZFF_X0 <= pgZFF_X0_quad(61 downto 30);	
+					pgZFF_X2 <= pgZFF_X2_quad(61 downto 30);
+					pgZFF_X1 <= pgZFF_X1_quad(61 downto 30);
+					pgZFF_Y1 <= pgZFF_Y1_quad(61 downto 30);
+					pgZFF_Y2 <= pgZFF_Y2_quad(61 downto 30);
+				end if;
 			end if;
 		end if;
 	end process;
@@ -347,11 +354,13 @@ begin
 
 	-- sum all post gain feedback and feedfoward paths
 	-- Y[z] = X[z]*bo + X[z]*b1*Z^-1 + X[z]*b2*Z^-2 - Y[z]*a1*z^-1 + Y[z]*a2*z^-2
-	process(clk, sum_stg_a)
+	process(clk_100M, sum_stg_a)
 	begin
-		if(rising_edge(clk)) then
-			if(sum_stg_a = '1') then
-				Y_out_double <= std_logic_vector(signed(pgZFF_X0) + signed(pgZFF_X1) + signed(pgZFF_X2) - signed(pgZFF_Y1) - signed(pgZFF_Y2));
+		if(rising_edge(clk_100M)) then
+			if clk = '1' then
+				if(sum_stg_a = '1') then
+					Y_out_double <= std_logic_vector(signed(pgZFF_X0) + signed(pgZFF_X1) + signed(pgZFF_X2) - signed(pgZFF_Y1) - signed(pgZFF_Y2));
+				end if;
 			end if;
 		end if;
 	end process;
@@ -359,11 +368,13 @@ begin
 
  
 	-- output truncation block
-	process(clk, trunc_out)
+	process(clk_100M, trunc_out)
 	begin
-		if rising_edge(clk) then
-			if (trunc_out = '1') then
-				Y_out <= Y_out_double( 30 downto 15);
+		if rising_edge(clk_100M) then
+			if clk = '1' then
+				if (trunc_out = '1') then
+					Y_out <= Y_out_double( 30 downto 15);
+				end if;
 			end if;
 		end if;
 	end process;

@@ -138,6 +138,7 @@ entity superip is
   (
     -- ADD USER PORTS BELOW THIS LINE ------------------
     CLK_48_in                   : in  std_logic;
+	 CLK_100M_in                 : in  std_logic;
     Audio_Left_in               : in  std_logic_vector(23 downto 0);
     Audio_Right_in              : in  std_logic_vector(23 downto 0);
     Mux2_FilterORMux1_Left_out  : out std_logic_vector(23 downto 0);
@@ -306,6 +307,7 @@ begin
     (
       -- MAP USER PORTS BELOW THIS LINE ------------------
       CLK_48_in                   => CLK_48_in,
+		CLK_100M_in                 => CLK_100M_in,
       Audio_Left_in               => Audio_Left_in,
       Audio_Right_in              => Audio_Right_in,
       Mux2_FilterORMux1_Left_out  => Mux2_FilterORMux1_Left_out,

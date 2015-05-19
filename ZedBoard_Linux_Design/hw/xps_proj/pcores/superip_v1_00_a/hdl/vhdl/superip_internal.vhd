@@ -14,6 +14,7 @@ entity superip_internal is
 
 		-- Inputs
 		CLK_48_in                   : in  std_logic;
+		CLK_100M_in						 : in  std_logic;
 		Audio_Left_in               : in  std_logic_vector(23 downto 0);
 		Audio_Right_in              : in  std_logic_vector(23 downto 0);
 		-- REGISTERS
@@ -96,7 +97,8 @@ begin
 			IN_COEF_L  => slv_reg15(23 downto 0),
 			IN_COEF_R  => slv_reg16(23 downto 0),
 			RESET      => Reset_in,
-			CLK        => CLK_48_in
+			CLK_48     => CLK_48_in,
+			CLK_100M   => CLK_100M_in
 		);
 
 	filter_Comp : entity work.Filter_Top_Level
@@ -117,6 +119,7 @@ begin
 			slv_reg13   => slv_reg13,
 			slv_reg14   => slv_reg14,
 			CLK_48      => CLK_48_in,
+			CLK_100M    => CLK_100M_in,
 			RST         => Reset_in,
 			SAMPLE_TRIG => SAMPLE_TRIG,
 			HP_SW      => HP_SW,
