@@ -5,7 +5,7 @@ SD_CARD_FILES_DIR=$1
 DEV=$2
 
 TMP_SUBDIR=sd_card_stuff
-LINARO_FS_IMAGE=http://releases.linaro.org/latest/ubuntu/utopic-images/gnome/linaro-utopic-gnome-20150319-701.tar.gz
+LINARO_FS_IMAGE=http://releases.linaro.org/latest/ubuntu/utopic-images/gnome/linaro-utopic-gnome-20150421-702.tar.gz
 LABEL=created_by_sd_card_create
 
 DEV_INITIALIZED=0

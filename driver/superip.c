@@ -24,23 +24,37 @@ unsigned long remap_size;	/* Device Memory Size */
 static ssize_t proc_superip_write(struct file *file, const char __user * buf,
 				size_t count, loff_t * ppos)
 {
-	char superip_phrase[16];
+	char superip_str_reg[5];
+	char superip_str_value[16];
+	
 	u32 superip_reg;
 	u32 superip_value;
 
-	if (count < 11) {
-		if (copy_from_user(superip_phrase, buf, count))
+	if (count < 14) {
+		if (copy_from_user(superip_str_value, buf, count))
 			return -EFAULT;
 
-		superip_phrase[count] = '\0';
+		superip_str_value[count] = '\0';
 	}
 
-	superip_phrase[2] = '\0';
-	superip_reg = simple_strtoul(superip_phrase, NULL, 0);
-	superip_value = simple_strtoul(&superip_phrase[3], NULL, 0);
+	superip_str_reg[0] = '0';
+	superip_str_reg[1] = 'x';
+	superip_str_reg[2] = superip_str_value[0]; 
+	superip_str_reg[3] = superip_str_value[1]; 
+	superip_str_reg[4] = '\0';
+	
+	superip_reg = simple_strtoul(superip_str_reg, NULL, 0);
+
+	superip_str_value[0] = '0';
+	superip_str_value[1] = 'x';
+		
+	superip_value = simple_strtoul(superip_str_value, NULL, 0);
+
+	//superip_value = simple_strtoul(superip_phrase, NULL, 0);
 
 	wmb();
 	iowrite32(superip_value, base_addr + superip_reg);
+	//iowrite32(superip_value, base_addr);
 	return count;
 }
 
@@ -58,7 +72,7 @@ static int proc_superip_show(struct seq_file *p, void *v)
 	for(i = 0; i < 32; i++)
 	{
 		superip_value = ioread32(base_addr + i);
-		seq_printf(p, "0x%x", superip_value);
+		seq_printf(p, "R 0x%08x V 0x%08x\n", (u32) (base_addr + i), (u32) superip_value);
 	}
 	return 0;
 }

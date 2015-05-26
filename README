@@ -151,6 +151,12 @@ $ git diff --name-status SHA1 SHA2
 view repository configuration
 $ cat .git/config
 
+unstage (from staged files for next commit with "git add ..")
+$ git reset HEAD <file>
+
+revert last local commit
+$ git reset --soft HEAD~1
+
 
 -----------------
 Serial connection

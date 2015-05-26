@@ -550,5 +550,11 @@
 			spi-sclk-gpio = <&ps7_gpio_0 59 0>;
 			spi-sdin-gpio = <&ps7_gpio_0 60 0>;
 		};
+
+		superip {
+			compatible = "dglnt,superip-1.00.a";
+			reg = <0x71a00000 0x10000>;
+		};
+
 	};
 };

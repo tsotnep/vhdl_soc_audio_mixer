@@ -1,4 +1,4 @@
-obj-m := myled.o
+obj-m := superip.o
 
 all:
 	make -C ../linux-digilent/ M=$(PWD) modules

@@ -27,6 +27,10 @@ make -f system.make clean
 cd ../../../
 
 
+echo cleaning driver directory
+cd driver
+make ARCH=arm CROSS_COMPILE=arm-xilinx-linux-gnueabi- clean
+cd ..
 
 DIRS="u-boot-digilent linux-digilent boot_image sd_card_files"
 
@@ -38,6 +42,7 @@ for d in $DIRS; do
 		rm -rf $d
 	fi
 done
+
 
 echo clean logs
 echo

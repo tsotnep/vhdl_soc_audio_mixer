@@ -147,6 +147,24 @@ else
 	fi
 fi
 
+echo
+echo -------------------------------
+echo create superip.ko 
+echo -------------------------------
+echo
+if [ -f $SD_CARD_DIR/superip.ko ]; then
+	echo skipping superip.ko compilation. File already exists
+	echo
+else
+	if ! $SCRIPTS/driver_create >> $LOG 2>&1; then
+		echo creating superip.ko failed!
+		echo tail $LOG
+		echo 
+		echo $(tail $LOG)
+		exit 1
+	fi
+fi
+
 
 
 echo | tee -a $LOG
