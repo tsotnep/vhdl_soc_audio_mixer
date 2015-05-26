@@ -93,12 +93,19 @@ process(clk_48)
       end if;
    end process;
                                  
-i_clocking : clocking port map (
-      CLK_100 => CLK_100,
-      CLK_48  => CLK_48,
-      RESET   => '0',
-      LOCKED  => open
-   );
+--i_clocking : clocking port map (
+--      CLK_100 => CLK_100,
+--      CLK_48  => CLK_48,
+--      RESET   => '0',
+--      LOCKED  => open
+--   );
+	
+clk_divider_2083: entity WORK.ClkDividerN(Behavioral)
+		generic map(divFactor => 2)
+		port map(reset  => '0',
+				 clkIn  => CLK_100,
+				 clkOut => CLK_48);
+	
 	
 	clk_48_o <= clk_48;
 

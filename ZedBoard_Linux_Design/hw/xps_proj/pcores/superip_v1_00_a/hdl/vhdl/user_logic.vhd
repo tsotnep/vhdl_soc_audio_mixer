@@ -183,7 +183,6 @@ architecture IMP of user_logic is
   signal slv_reg30_internal                  : std_logic_vector(C_SLV_DWIDTH-1 downto 0);
   signal slv_reg31_internal                  : std_logic_vector(C_SLV_DWIDTH-1 downto 0);
 
-
   component superip_internal is
   port(
     -- Outputs
@@ -503,6 +502,7 @@ begin
 	slv_reg29 <= slv_reg29_internal;
 	slv_reg30 <= slv_reg30_internal;
 	slv_reg31 <= slv_reg31_internal;
+	
 
       end if;
     end if;

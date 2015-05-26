@@ -13,6 +13,7 @@ lib adau1761_audio_v1_00_a ADAU1761_interface vhdl
 lib adau1761_audio_v1_00_a i2s_data_interface vhdl
 lib adau1761_audio_v1_00_a adau1761_izedboard vhdl
 lib adau1761_audio_v1_00_a clocking vhdl
+lib adau1761_audio_v1_00_a ClkDividerN vhdl
 lib adau1761_audio_v1_00_a adau1761 vhdl
 lib adau1761_audio_v1_00_a user_logic vhdl
 lib adau1761_audio_v1_00_a adau1761_audio vhdl
