@@ -8,7 +8,8 @@ lib proc_common_v3_00_a  all
 lib axi_lite_ipif_v1_01_a  all 
 lib superip_v1_00_a Tester vhdl
 lib superip_v1_00_a VolCtrl vhdl
-lib superip_v1_00_a IIR_Biquad_II_v2 vhdl
+lib superip_v1_00_a Multiplier vhdl
+lib superip_v1_00_a IIR_Biquad_II_v3 vhdl
 lib superip_v1_00_a Filter_Top_Level vhdl
 lib superip_v1_00_a superip_internal vhdl
 lib superip_v1_00_a user_logic vhdl

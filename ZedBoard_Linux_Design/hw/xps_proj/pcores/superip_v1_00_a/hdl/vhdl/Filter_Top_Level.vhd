@@ -46,8 +46,8 @@ entity Filter_Top_Level is
            slv_reg12 : in  STD_LOGIC_VECTOR (31 downto 0);
            slv_reg13 : in  STD_LOGIC_VECTOR (31 downto 0);
            slv_reg14 : in  STD_LOGIC_VECTOR (31 downto 0);
-           CLK_48							: in std_logic;
-			  CLK_100M						: in std_logic;
+           CLK							: in std_logic;
+			  --CLK_100M						: in std_logic;
            RST								: in std_logic;
            SAMPLE_TRIG						: in std_logic;
            HP_SW							: in std_logic;
@@ -69,7 +69,7 @@ end Filter_Top_Level;
 
 architecture RTL of Filter_Top_Level is
 
-Component IIR_Biquad_II_v2 is
+Component IIR_Biquad_II_v3 is
 		Port ( 
 				Coef_b0 : std_logic_vector(31 downto 0);
 				Coef_b1 : std_logic_vector(31 downto 0);
@@ -77,17 +77,16 @@ Component IIR_Biquad_II_v2 is
 				Coef_a1 : std_logic_vector(31 downto 0);
 				Coef_a2 : std_logic_vector(31 downto 0);
 				clk : in  STD_LOGIC;
-				clk_100M : in std_logic;
 				rst : in  STD_LOGIC;
 				sample_trig : in  STD_LOGIC;
-				X_in : in  STD_LOGIC_VECTOR (15 downto 0);
+				X_in : in  STD_LOGIC_VECTOR (23 downto 0);
 				filter_done : out STD_LOGIC;
-				Y_out : out  STD_LOGIC_VECTOR (15 downto 0)
+				Y_out : out  STD_LOGIC_VECTOR (23 downto 0)
 				);
 end Component;
 
 signal IIR_LP_Done_R, IIR_LP_Done_L, IIR_BP_Done_R, IIR_BP_Done_L, IIR_HP_Done_R, IIR_HP_Done_L: std_logic;
-signal AUDIO_OUT_TRUNC_L, AUDIO_OUT_TRUNC_R, IIR_LP_Y_Out_R, IIR_LP_Y_Out_L, IIR_BP_Y_Out_R, IIR_BP_Y_Out_L, IIR_HP_Y_Out_R, IIR_HP_Y_Out_L: std_logic_vector(15 downto 0);
+signal AUDIO_OUT_TRUNC_L, AUDIO_OUT_TRUNC_R, IIR_LP_Y_Out_R, IIR_LP_Y_Out_L, IIR_BP_Y_Out_R, IIR_BP_Y_Out_L, IIR_HP_Y_Out_R, IIR_HP_Y_Out_L: std_logic_vector(23 downto 0);
 
 begin
 
@@ -97,8 +96,8 @@ begin
   FILTER_DONE <= IIR_LP_Done_R and IIR_LP_Done_L and IIR_BP_Done_R and IIR_BP_Done_L and IIR_HP_Done_R and IIR_HP_Done_L;
 	
   -----Pad the Audio output with 8 zeros to make it up to 24 bit,
-	AUDIO_OUT_L <= AUDIO_OUT_TRUNC_L & X"00";
-	AUDIO_OUT_R <=  AUDIO_OUT_TRUNC_R & X"00";
+	AUDIO_OUT_L <= AUDIO_OUT_TRUNC_L;-- & X"00";
+	AUDIO_OUT_R <=  AUDIO_OUT_TRUNC_R;-- & X"00";
 	
 	
 	
@@ -139,8 +138,7 @@ begin
 			end case;
   end process;
   
-  IIR_LP_R: IIR_Biquad_II_v2
-		
+IIR_LP_R: IIR_Biquad_II_v3
 		Port map (
 				Coef_b0 => slv_reg0, 
 				Coef_b1 => slv_reg1,
@@ -148,17 +146,15 @@ begin
 				Coef_a1 => slv_reg3,
 				Coef_a2 => slv_reg4,
 				
-				clk => CLK_48,
-				clk_100M => CLK_100M,
+				clk => CLK,
 				rst => rst,
 				sample_trig => '1',--Sample_IIR,
-				X_in => AUDIO_IN_R(23 downto 8),
+				X_in => AUDIO_IN_R(23 downto 0),
 				filter_done => IIR_LP_Done_R,
 				Y_out => IIR_LP_Y_Out_R
 		 );
 				
-	IIR_LP_L: IIR_Biquad_II_v2
-				
+IIR_LP_L: IIR_Biquad_II_v3				
 		Port map (
 				Coef_b0 => slv_reg0, 
 				Coef_b1 => slv_reg1,
@@ -166,16 +162,15 @@ begin
 				Coef_a1 => slv_reg3,
 				Coef_a2 => slv_reg4,
 				
-				clk => CLK_48,
-				clk_100M => CLK_100M,
+				clk => CLK,
 				rst => rst,
 				sample_trig => '1',--Sample_IIR,
-				X_in => AUDIO_IN_L(23 downto 8),--X_in_truncated_L,
+				X_in => AUDIO_IN_L(23 downto 0),--X_in_truncated_L,
 				filter_done => IIR_LP_Done_L,
 				Y_out => IIR_LP_Y_Out_L
 				);
 		
-	IIR_BP_R: IIR_Biquad_II_v2 --(20 - 20000)
+IIR_BP_R: IIR_Biquad_II_v3 --(20 - 20000)
 		Port map (
 			Coef_b0 => slv_reg5, 
 			Coef_b1 => slv_reg6,
@@ -183,16 +178,15 @@ begin
 			Coef_a1 => slv_reg8,
 			Coef_a2 => slv_reg9,
 			
-			clk => CLK_48,
-			clk_100M => CLK_100M,
+			clk => CLK,
 			rst => rst,
 			sample_trig => '1',--Sample_IIR,
-			X_in => AUDIO_IN_R(23 downto 8),--X_in_truncated_R,
+			X_in => AUDIO_IN_R(23 downto 0),--X_in_truncated_R,
 			filter_done => IIR_BP_Done_R,
 			Y_out => IIR_BP_Y_Out_R
 		 );
 				
-	IIR_BP_L: IIR_Biquad_II_v2--(20 - 20000)
+IIR_BP_L: IIR_Biquad_II_v3--(20 - 20000)
 			Port map ( 
 				Coef_b0 => slv_reg5, 
 				Coef_b1 => slv_reg6,
@@ -200,16 +194,15 @@ begin
 				Coef_a1 => slv_reg8,
 				Coef_a2 => slv_reg9,
 				
-				clk => CLK_48,
-				clk_100M => CLK_100M,
+				clk => CLK,
 				rst => rst,
 				sample_trig => '1',--Sample_IIR,
-				X_in => AUDIO_IN_L(23 downto 8),--X_in_truncated_L,
+				X_in => AUDIO_IN_L(23 downto 0),--X_in_truncated_L,
 				filter_done => IIR_BP_Done_L,
 				Y_out => IIR_BP_Y_Out_L
 				);
 
-IIR_HP_R: IIR_Biquad_II_v2
+IIR_HP_R: IIR_Biquad_II_v3
 		Port map (
 				Coef_b0 => slv_reg10, 
 				Coef_b1 => slv_reg11,
@@ -217,16 +210,15 @@ IIR_HP_R: IIR_Biquad_II_v2
 				Coef_a1 => slv_reg13,
 				Coef_a2 => slv_reg14,
 				
-				clk => CLK_48,
-				clk_100M => CLK_100M,
+				clk => CLK,
 				rst => rst,
 				sample_trig => '1',--Sample_IIR,
-				X_in => AUDIO_IN_R(23 downto 8),--X_in_truncated_R,
+				X_in => AUDIO_IN_R(23 downto 0),--X_in_truncated_R,
 				filter_done => IIR_HP_Done_R,
 				Y_out => IIR_HP_Y_Out_R
 		 );
 				
-	IIR_HP_L: IIR_Biquad_II_v2
+IIR_HP_L: IIR_Biquad_II_v3
 		Port map (
 				Coef_b0 => slv_reg10, 
 				Coef_b1 => slv_reg11,
@@ -234,11 +226,10 @@ IIR_HP_R: IIR_Biquad_II_v2
 				Coef_a1 => slv_reg13,
 				Coef_a2 => slv_reg14,
 				
-				clk => CLK_48,
-				clk_100M => CLK_100M,
+				clk => CLK,
 				rst => rst,
 				sample_trig => '1',--Sample_IIR,
-				X_in => AUDIO_IN_L(23 downto 8),--X_in_truncated_L,
+				X_in => AUDIO_IN_L(23 downto 0),--X_in_truncated_L,
 				filter_done => IIR_HP_Done_L,
 				Y_out => IIR_HP_Y_Out_L
 				);
