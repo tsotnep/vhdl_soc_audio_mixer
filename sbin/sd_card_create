@@ -4,6 +4,8 @@
 SD_CARD_FILES_DIR=$1
 DEV=$2
 
+LINARO_DIR=sd_card_linaro
+
 TMP_SUBDIR=sd_card_stuff
 LINARO_FS_IMAGE=http://releases.linaro.org/latest/ubuntu/utopic-images/gnome/linaro-utopic-gnome-20150421-702.tar.gz
 LABEL=created_by_sd_card_create
@@ -131,6 +133,7 @@ fi
 #delete old files and copy new ones
 
 mount $DEV"1" /tmp/$TMP_SUBDIR/zed_boot 2> /dev/null
+mount $DEV"2" /tmp/$TMP_SUBDIR/root_fs 2> /dev/null
 
 if [ "$WIPE_FIRST" -eq "1" ]; then
 	echo
@@ -154,8 +157,22 @@ echo
 
 cp -v $SD_CARD_FILES_DIR/* /tmp/$TMP_SUBDIR/zed_boot/	
 
+echo
+echo --------------------------------------------------
+echo copy files from $LINARO_DIR to $DEV"2"...
+echo --------------------------------------------------
+echo
+
+cp -av $LINARO_DIR/* /tmp/$TMP_SUBDIR/root_fs/
+
+echo
+echo files copied... unmounting
+
 sleep 1
 umount /tmp/$TMP_SUBDIR/zed_boot 2> /dev/null
 umount /tmp/$TMP_SUBDIR/root_fs  2> /dev/null
 sleep 5
 rm -r /tmp/$TMP_SUBDIR/
+
+echo unmounting done ... remove sd card if you wish
+
