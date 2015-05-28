@@ -121,6 +121,10 @@ if [ "$DEV_INITIALIZED" -eq "0" ]; then
 
 	rsync -av -P /tmp/$TMP_SUBDIR/binary/* /tmp/$TMP_SUBDIR/root_fs/
 
+	umount $DEV"1"
+	umount $DEV"2"
+
+	sleep 1
 	
 else
 	echo
