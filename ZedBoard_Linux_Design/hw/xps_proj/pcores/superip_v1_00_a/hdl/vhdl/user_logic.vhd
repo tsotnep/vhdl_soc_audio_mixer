@@ -53,6 +53,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
 
 library proc_common_v3_00_a;
 use proc_common_v3_00_a.proc_common_pkg.all;

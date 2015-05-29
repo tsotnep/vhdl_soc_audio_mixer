@@ -14,7 +14,7 @@ entity superip_internal is
 
 		-- Inputs
 		CLK_48_in                   : in  std_logic;
-		CLK_100M_in						 : in  std_logic;
+		CLK_100M_in                 : in  std_logic;
 		Audio_Left_in               : in  std_logic_vector(23 downto 0);
 		Audio_Right_in              : in  std_logic_vector(23 downto 0);
 		-- REGISTERS
@@ -51,92 +51,116 @@ end entity superip_internal;
 
 architecture RTL of superip_internal is
 	-- Outputs Register31
-	ALIAS Gain_ready_L_out : STD_LOGIC is slv_reg31(0);
-	ALIAS Gain_ready_R_out : STD_LOGIC is slv_reg31(1);
+	ALIAS OUT_RDY_L        : STD_LOGIC is slv_reg31(0);
+	ALIAS VolCtrl_RDY_R    : STD_LOGIC is slv_reg31(1);
 	ALIAS Filter_ready_out : STD_LOGIC is slv_reg31(2);
 
 	-- Inputs Register27
 	ALIAS Reset_in            : STD_LOGIC is slv_reg27(0);
 	ALIAS SAMPLE_TRIG         : STD_LOGIC is slv_reg27(1);
-	ALIAS HP_SW              : STD_LOGIC is slv_reg27(2);
-	ALIAS BP_SW              : STD_LOGIC is slv_reg27(3);
-	ALIAS LP_SW              : STD_LOGIC is slv_reg27(4);
-	ALIAS Mux1_Mux2_Select_in : std_logic_vector is slv_reg27(6 downto 5);
+	ALIAS HP_SW               : STD_LOGIC is slv_reg27(2);
+	ALIAS BP_SW               : STD_LOGIC is slv_reg27(3);
+	ALIAS LP_SW               : STD_LOGIC is slv_reg27(4);
+	ALIAS Mux1_Mux2_Select_in : std_logic_vector is slv_reg27(6 downto 5); 
+					--5th -> Mux1:= Volctrl or rawAudio; 	0 for Volctrl pass
+					--6th -> Mux2:= Filter or Mux1; 	0 for Filter pass
+
+	ALIAS sample_trigger_en   : STD_LOGIC is slv_reg27(7); 
+					--if this signal is '1' filter waits for sample triggers
+					--otherwise, its constantly calculating
 
 	-- Internals
-	--signal Pregain_Left_out              : std_logic_vector(23 downto 0);
-	--signal Pregain_Right_out             : std_logic_vector(23 downto 0);
-	--signal Mux1_PregainORAudio_Left_out  : std_logic_vector(23 downto 0);
-	--signal Mux1_PregainORAudio_Right_out : std_logic_vector(23 downto 0);
+	signal Mux1_VolCtrlORAudio_Left_out  : std_logic_vector(23 downto 0);
+	signal Mux1_VolCtrlORAudio_Right_out : std_logic_vector(23 downto 0);
 	signal Filter_Left_out               : std_logic_vector(23 downto 0);
 	signal Filter_Right_out              : std_logic_vector(23 downto 0);
+	signal OUT_VOLCTRL_L                 : signed(23 downto 0);
+	signal OUT_VOLCTRL_R                 : signed(23 downto 0);
+--	signal Volctrl_Left_out              : std_logic_vector(23 downto 0);
+--	signal Volctrl_Right_out             : std_logic_vector(23 downto 0);
+--	signal slv_reg15_s                   : signed(31 downto 0);
+--	signal slv_reg16_s                   : signed(31 downto 0);
+--	signal Audio_Left_in_s               : signed(23 downto 0);
+--	signal Audio_Right_in_s              : signed(23 downto 0);
+
 begin
-	
---	Tester_Comp : entity work.Tester
---		port map(
---			Audio_Left_in                 => Audio_Left_in,
---			Audio_Right_in                => Audio_Right_in,
---			Pregain_Left_out_in           => Pregain_Left_out,
---			Pregain_Right_out_in          => Pregain_Right_out,
---			Mux1_PregainORAudio_Left_out  => Mux1_PregainORAudio_Left_out,
---			Mux1_PregainORAudio_Right_out => Mux1_PregainORAudio_Right_out,
---			Filter_Left_out               => Filter_Left_out,
---			Filter_Right_out              => Filter_Right_out,
---			Mux2_FilterORMux1_Left_out    => Mux2_FilterORMux1_Left_out,
---			Mux2_FilterORMux1_Right_out   => Mux2_FilterORMux1_Right_out,
---			Mux1_Mux2_Select_in           => Mux1_Mux2_Select_in
---		);
---
---	VolCtrl_inst : entity work.VolCtrl
---		port map(
---			OUT_MULT_L => Pregain_Left_out,
---			OUT_MULT_R => Pregain_Right_out,
---			OUT_RDY_L  => Gain_ready_L_out,
---			OUT_RDY_R  => Gain_ready_R_out,
---			IN_SIG_L   => Audio_Left_in,
---			IN_SIG_R   => Audio_Right_in,
---			IN_COEF_L  => slv_reg15(23 downto 0),
---			IN_COEF_R  => slv_reg16(23 downto 0),
---			RESET      => Reset_in,
---			CLK_48     => CLK_48_in,
---			CLK_100M   => CLK_100M_in
---		);
+	--------------------------START VolCtrl--------------
+	--input
+	--	slv_reg15_s       <= signed(slv_reg15);
+	--	slv_reg16_s       <= signed(slv_reg16);
+	--	Audio_Left_in_s   <= signed(Audio_Left_in);
+	--	Audio_Right_in_s  <= signed(Audio_Right_in);
+	--------------------------END VolCtrl----------------
+
+	--	Mux2_FilterORMux1_Left_out  <= Filter_Left_out;
+	--	Mux2_FilterORMux1_Right_out <= Filter_Right_out;
+
+	--	Mux1_VolCtrlORAudio_Left_out  <= std_logic_vector(OUT_VOLCTRL_L);
+	--	Mux1_VolCtrlORAudio_Right_out <= std_logic_vector(OUT_VOLCTRL_R);
+
+	Tester_Comp : entity work.Tester
+		port map(
+			Audio_Left_in                 => Audio_Left_in,
+			Audio_Right_in                => Audio_Right_in,
+			VolCtrl_Left_out_in           => std_logic_vector(OUT_VOLCTRL_L),
+			VolCtrl_Right_out_in          => std_logic_vector(OUT_VOLCTRL_R),
+			Mux1_VolCtrlORAudio_Left_out  => Mux1_VolCtrlORAudio_Left_out,
+			Mux1_VolCtrlORAudio_Right_out => Mux1_VolCtrlORAudio_Right_out,
+			Filter_Left_out_in            => Filter_Left_out,
+			Filter_Right_out_in           => Filter_Right_out,
+			Mux2_FilterORMux1_Left_out    => Mux2_FilterORMux1_Left_out,
+			Mux2_FilterORMux1_Right_out   => Mux2_FilterORMux1_Right_out,
+			Mux1_Mux2_Select_in           => Mux1_Mux2_Select_in
+		);
+
+	VolCtrl_inst : entity work.VolCtrl
+		generic map(
+			INTBIT_WIDTH  => 24,
+			FRACBIT_WIDTH => 8
+		)
+		port map(
+			OUT_VOLCTRL_L => OUT_VOLCTRL_L,
+			OUT_VOLCTRL_R => OUT_VOLCTRL_R,
+			OUT_RDY_L     => OUT_RDY_L,
+			OUT_RDY_R     => VolCtrl_RDY_R,
+			IN_SIG_L      => signed(Audio_Left_in),
+			IN_SIG_R      => signed(Audio_Right_in),
+			IN_COEF_L     => signed(slv_reg15),
+			IN_COEF_R     => signed(slv_reg16),
+			RESET         => Reset_in,
+			CLK_48        => CLK_48_in,
+			CLK_100M      => CLK_100M_in
+		);
 
 	filter_Comp : entity work.Filter_Top_Level
 		port map(
-			slv_reg0    => slv_reg0,
-			slv_reg1    => slv_reg1,
-			slv_reg2    => slv_reg2,
-			slv_reg3    => slv_reg3,
-			slv_reg4    => slv_reg4,
-			slv_reg5    => slv_reg5,
-			slv_reg6    => slv_reg6,
-			slv_reg7    => slv_reg7,
-			slv_reg8    => slv_reg8,
-			slv_reg9    => slv_reg9,
-			slv_reg10   => slv_reg10,
-			slv_reg11   => slv_reg11,
-			slv_reg12   => slv_reg12,
-			slv_reg13   => slv_reg13,
-			slv_reg14   => slv_reg14,
-			CLK      => CLK_48_in,
---			CLK_100M    => CLK_100M_in,
-			RST         => Reset_in,
-			SAMPLE_TRIG => SAMPLE_TRIG,
-			HP_SW      => HP_SW,
-			BP_SW      => BP_SW,
-			LP_SW      => LP_SW,
-			--AUDIO_IN_L  => Mux1_PregainORAudio_Left_out,
-			--AUDIO_IN_R  => Mux1_PregainORAudio_Right_out,
-			AUDIO_IN_L  => Audio_Left_in,
-			AUDIO_IN_R  => Audio_Right_in,
-			AUDIO_OUT_L => Filter_Left_out,
-			AUDIO_OUT_R => Filter_Right_out,
-			FILTER_DONE => Filter_ready_out
+			slv_reg0          => slv_reg0,
+			slv_reg1          => slv_reg1,
+			slv_reg2          => slv_reg2,
+			slv_reg3          => slv_reg3,
+			slv_reg4          => slv_reg4,
+			slv_reg5          => slv_reg5,
+			slv_reg6          => slv_reg6,
+			slv_reg7          => slv_reg7,
+			slv_reg8          => slv_reg8,
+			slv_reg9          => slv_reg9,
+			slv_reg10         => slv_reg10,
+			slv_reg11         => slv_reg11,
+			slv_reg12         => slv_reg12,
+			slv_reg13         => slv_reg13,
+			slv_reg14         => slv_reg14,
+			CLK_48            => CLK_48_in,
+			RST               => Reset_in,
+			SAMPLE_TRIG       => SAMPLE_TRIG,
+			sample_trigger_en => sample_trigger_en,
+			HP_SW             => HP_SW,
+			BP_SW             => BP_SW,
+			LP_SW             => LP_SW,
+			AUDIO_IN_L        => Mux1_VolCtrlORAudio_Left_out,
+			AUDIO_IN_R        => Mux1_VolCtrlORAudio_Right_out,
+			AUDIO_OUT_L       => Filter_Left_out,
+			AUDIO_OUT_R       => Filter_Right_out,
+			FILTER_DONE       => Filter_ready_out
 		);
-		
-
-		Mux2_FilterORMux1_Left_out  <= Filter_Left_out;
-		Mux2_FilterORMux1_Right_out <= Filter_Right_out;
 
 end architecture RTL;
