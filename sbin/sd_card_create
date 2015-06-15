@@ -73,7 +73,7 @@ if [ "$DEV_INITIALIZED" -eq "0" ]; then
 	echo -------------------------------
 	echo
 
-	echo -e "o\nn\np\n1\n\n+1G\nn\np\n2\n\n\nw" | fdisk $DEV
+	echo -e "o\nn\np\n1\n\n+100M\nn\np\n2\n\n\nw" | fdisk $DEV
 	partprobe -s
 
 	echo
