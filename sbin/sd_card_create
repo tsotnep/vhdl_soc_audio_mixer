@@ -7,7 +7,7 @@ DEV=$2
 LINARO_DIR=sd_card_linaro
 
 TMP_SUBDIR=sd_card_stuff
-LINARO_FS_IMAGE=http://releases.linaro.org/latest/ubuntu/utopic-images/gnome/linaro-utopic-gnome-20150421-702.tar.gz
+LINARO_FS_IMAGE=http://releases.linaro.org/15.04/ubuntu/utopic-images/gnome/linaro-utopic-gnome-20150421-702.tar.gz
 LABEL=created_by_sd_card_create
 
 DEV_INITIALIZED=0
@@ -73,7 +73,7 @@ if [ "$DEV_INITIALIZED" -eq "0" ]; then
 	echo -------------------------------
 	echo
 
-	echo -e "o\nn\np\n1\n\n+1G\nn\np\n2\n\n\nw" | fdisk $DEV
+	echo -e "o\nn\np\n1\n\n+100M\nn\np\n2\n\n\nw" | fdisk $DEV
 	partprobe -s
 
 	echo
