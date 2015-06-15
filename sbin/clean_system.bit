@@ -1,0 +1,27 @@
+#!/bin/bash
+
+
+#script guard
+if [ ! "$0" == "./sbin/$(basename $0)" ]; then
+        echo
+        echo Must be invoked as ./sbin/$(basename $0)
+        echo
+        exit 1
+fi
+
+LOG=generate.log
+
+echo
+echo -------------------------------
+echo clean system.bit
+echo -------------------------------
+echo
+
+echo clean files boot_image/system.bit and sd_card_files/BOOT.BIN
+echo
+
+DIRS="boot_image sd_card_files"
+
+rm -rf boot_image/system.bit
+rm -rf sd_card_files/BOOT.BIN
+ 
