@@ -41,6 +41,8 @@ PORT CLK_48_in = "", DIR = I
 PORT CLK_100M_in = "", DIR = I
 PORT Audio_Left_in = "", DIR = I, VEC = [23:0]
 PORT Audio_Right_in = "", DIR = I, VEC = [23:0]
+PORT SAMPLE_TRIG = "", DIR = I
+
 PORT Mux2_FilterORMux1_Left_out = "", DIR = O, VEC = [23:0]
 PORT Mux2_FilterORMux1_Right_out = "", DIR = O, VEC = [23:0]
 

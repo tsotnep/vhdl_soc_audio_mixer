@@ -7,16 +7,21 @@ entity superip_internal is
 		-- Outputs
 		Mux2_FilterORMux1_Left_out  : out std_logic_vector(23 downto 0);
 		Mux2_FilterORMux1_Right_out : out std_logic_vector(23 downto 0);
+		slv_reg26                   : out  STD_LOGIC_VECTOR(31 downto 0);
 		slv_reg28                   : out STD_LOGIC_VECTOR(31 downto 0);
 		slv_reg29                   : out STD_LOGIC_VECTOR(31 downto 0);
-		slv_reg30                   : out STD_LOGIC_VECTOR(31 downto 0);
-		slv_reg31                   : out STD_LOGIC_VECTOR(31 downto 0);
+		slv_reg30                   : in STD_LOGIC_VECTOR(31 downto 0);
+		slv_reg31                   : in STD_LOGIC_VECTOR(31 downto 0);
 
 		-- Inputs
 		CLK_48_in                   : in  std_logic;
 		CLK_100M_in                 : in  std_logic;
 		Audio_Left_in               : in  std_logic_vector(23 downto 0);
 		Audio_Right_in              : in  std_logic_vector(23 downto 0);
+		SAMPLE_TRIG		: in  std_logic;
+						--if this signal is '1' filter waits for sample triggers
+					--otherwise, its constantly calculating
+
 		-- REGISTERS
 		slv_reg0                    : in  STD_LOGIC_VECTOR(31 downto 0);
 		slv_reg1                    : in  STD_LOGIC_VECTOR(31 downto 0);
@@ -44,32 +49,37 @@ entity superip_internal is
 		slv_reg23                   : in  STD_LOGIC_VECTOR(31 downto 0);
 		slv_reg24                   : in  STD_LOGIC_VECTOR(31 downto 0);
 		slv_reg25                   : in  STD_LOGIC_VECTOR(31 downto 0);
-		slv_reg26                   : in  STD_LOGIC_VECTOR(31 downto 0);
+		
 		slv_reg27                   : in  STD_LOGIC_VECTOR(31 downto 0)
 	);
 end entity superip_internal;
 
 architecture RTL of superip_internal is
 	-- Outputs Register31
-	ALIAS OUT_RDY_L        : STD_LOGIC is slv_reg31(0);
-	ALIAS VolCtrl_RDY_R    : STD_LOGIC is slv_reg31(1);
-	ALIAS Filter_ready_out : STD_LOGIC is slv_reg31(2);
+	ALIAS OUT_RDY_L        : STD_LOGIC is slv_reg26(0);
+	ALIAS VolCtrl_RDY_R    : STD_LOGIC is slv_reg26(4);
+	ALIAS Filter_ready_out : STD_LOGIC is slv_reg26(8);
 
 	-- Inputs Register27
-	ALIAS Reset_in            : STD_LOGIC is slv_reg27(0);
-	ALIAS SAMPLE_TRIG         : STD_LOGIC is slv_reg27(1);
-	ALIAS HP_SW               : STD_LOGIC is slv_reg27(2);
-	ALIAS BP_SW               : STD_LOGIC is slv_reg27(3);
-	ALIAS LP_SW               : STD_LOGIC is slv_reg27(4);
+	ALIAS HP_SW               : STD_LOGIC is slv_reg27(0);
+	ALIAS BP_SW               : STD_LOGIC is slv_reg27(4);
+	ALIAS LP_SW               : STD_LOGIC is slv_reg27(8);
+	ALIAS Reset_Filter        : STD_LOGIC is slv_reg27(12); 
+
+	ALIAS Reset_in            : STD_LOGIC is slv_reg25(0);
+
+	ALIAS sample_trigger_en   : STD_LOGIC is slv_reg27(0);
+	alias bus_frames_en	  : std_logic is slv_reg27(31);
+
 	ALIAS Mux1_Mux2_Select_in : std_logic_vector is slv_reg27(6 downto 5); 
 					--5th -> Mux1:= Volctrl or rawAudio; 	0 for Volctrl pass
 					--6th -> Mux2:= Filter or Mux1; 	0 for Filter pass
 
-	ALIAS sample_trigger_en   : STD_LOGIC is slv_reg27(7); 
-					--if this signal is '1' filter waits for sample triggers
-					--otherwise, its constantly calculating
-
+	
+	
 	-- Internals
+	signal Left_out  					 		 : std_logic_vector(23 downto 0);
+	signal Right_out 							 : std_logic_vector(23 downto 0);
 	signal Mux1_VolCtrlORAudio_Left_out  : std_logic_vector(23 downto 0);
 	signal Mux1_VolCtrlORAudio_Right_out : std_logic_vector(23 downto 0);
 	signal Filter_Left_out               : std_logic_vector(23 downto 0);
@@ -98,6 +108,20 @@ begin
 	--	Mux1_VolCtrlORAudio_Left_out  <= std_logic_vector(OUT_VOLCTRL_L);
 	--	Mux1_VolCtrlORAudio_Right_out <= std_logic_vector(OUT_VOLCTRL_R);
 
+	process(bus_frames_en)
+	begin
+		if bus_frames_en = '1' then
+			Mux2_FilterORMux1_Left_out 	<= Left_out;
+			Mux2_FilterORMux1_Right_out 	<= Right_out;
+		else
+			Mux2_FilterORMux1_Left_out 	<= slv_reg30(31 downto 8);
+			Mux2_FilterORMux1_Right_out 	<= slv_reg31(31 downto 8);
+		end if;
+	end process;
+	
+	slv_reg28							<= Left_out & x"00";
+	slv_reg29							<= Right_out & x"00";
+
 	Tester_Comp : entity work.Tester
 		port map(
 			Audio_Left_in                 => Audio_Left_in,
@@ -108,11 +132,14 @@ begin
 			Mux1_VolCtrlORAudio_Right_out => Mux1_VolCtrlORAudio_Right_out,
 			Filter_Left_out_in            => Filter_Left_out,
 			Filter_Right_out_in           => Filter_Right_out,
-			Mux2_FilterORMux1_Left_out    => Mux2_FilterORMux1_Left_out,
-			Mux2_FilterORMux1_Right_out   => Mux2_FilterORMux1_Right_out,
+			Mux2_FilterORMux1_Left_out    => Left_out,
+			Mux2_FilterORMux1_Right_out   => Right_out,
 			Mux1_Mux2_Select_in           => Mux1_Mux2_Select_in
 		);
 
+
+		
+		
 	VolCtrl_inst : entity work.VolCtrl
 		generic map(
 			INTBIT_WIDTH  => 24,
@@ -150,7 +177,7 @@ begin
 			slv_reg13         => slv_reg13,
 			slv_reg14         => slv_reg14,
 			CLK_48            => CLK_48_in,
-			RST               => Reset_in,
+			RST               => Reset_Filter,
 			SAMPLE_TRIG       => SAMPLE_TRIG,
 			sample_trigger_en => sample_trigger_en,
 			HP_SW             => HP_SW,

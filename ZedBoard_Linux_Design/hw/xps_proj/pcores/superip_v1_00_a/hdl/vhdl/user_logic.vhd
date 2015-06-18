@@ -102,6 +102,8 @@ entity user_logic is
 	 CLK_100M_in                 : in  std_logic;
     Audio_Left_in               : in  std_logic_vector(23 downto 0);
     Audio_Right_in              : in  std_logic_vector(23 downto 0);
+	 SAMPLE_TRIG					  : in  std_logic;
+	 
     Mux2_FilterORMux1_Left_out  : out std_logic_vector(23 downto 0);
     Mux2_FilterORMux1_Right_out : out std_logic_vector(23 downto 0);
     -- ADD USER PORTS ABOVE THIS LINE ------------------
@@ -178,7 +180,7 @@ architecture IMP of user_logic is
   signal slv_read_ack                   : std_logic;
   signal slv_write_ack                  : std_logic;
 
-
+  signal slv_reg26_internal			: std_logic_vector(C_SLV_DWIDTH-1 downto 0);
   signal slv_reg28_internal                  : std_logic_vector(C_SLV_DWIDTH-1 downto 0);
   signal slv_reg29_internal                  : std_logic_vector(C_SLV_DWIDTH-1 downto 0);
   signal slv_reg30_internal                  : std_logic_vector(C_SLV_DWIDTH-1 downto 0);
@@ -189,6 +191,7 @@ architecture IMP of user_logic is
     -- Outputs
 	 Mux2_FilterORMux1_Left_out  : out std_logic_vector(23 downto 0);
 	 Mux2_FilterORMux1_Right_out : out std_logic_vector(23 downto 0);
+	 slv_reg26                   : out  STD_LOGIC_VECTOR(31 downto 0);
 	 slv_reg28                   : out STD_LOGIC_VECTOR(31 downto 0);
 	 slv_reg29                   : out STD_LOGIC_VECTOR(31 downto 0);
 	 slv_reg30                   : out STD_LOGIC_VECTOR(31 downto 0);
@@ -199,6 +202,7 @@ architecture IMP of user_logic is
 	 CLK_100M_in					  : in  std_logic;
 	 Audio_Left_in               : in  std_logic_vector(23 downto 0);
 	 Audio_Right_in              : in  std_logic_vector(23 downto 0);
+	 SAMPLE_TRIG			  : in  std_logic;
 	 -- REGISTERS
 	 slv_reg0                    : in  STD_LOGIC_VECTOR(31 downto 0);
 	 slv_reg1                    : in  STD_LOGIC_VECTOR(31 downto 0);
@@ -226,7 +230,6 @@ architecture IMP of user_logic is
 	 slv_reg23                   : in  STD_LOGIC_VECTOR(31 downto 0);
 	 slv_reg24                   : in  STD_LOGIC_VECTOR(31 downto 0);
 	 slv_reg25                   : in  STD_LOGIC_VECTOR(31 downto 0);
-	 slv_reg26                   : in  STD_LOGIC_VECTOR(31 downto 0);
 	 slv_reg27                   : in  STD_LOGIC_VECTOR(31 downto 0)
 	);
    end component;
@@ -455,12 +458,12 @@ begin
                 slv_reg25(byte_index*8+7 downto byte_index*8) <= Bus2IP_Data(byte_index*8+7 downto byte_index*8);
               end if;
             end loop;
-          when "00000000000000000000000000100000" =>
-            for byte_index in 0 to (C_SLV_DWIDTH/8)-1 loop
-              if ( Bus2IP_BE(byte_index) = '1' ) then
-                slv_reg26(byte_index*8+7 downto byte_index*8) <= Bus2IP_Data(byte_index*8+7 downto byte_index*8);
-              end if;
-            end loop;
+--          when "00000000000000000000000000100000" =>
+--           for byte_index in 0 to (C_SLV_DWIDTH/8)-1 loop
+--              if ( Bus2IP_BE(byte_index) = '1' ) then
+--                slv_reg26(byte_index*8+7 downto byte_index*8) <= Bus2IP_Data(byte_index*8+7 downto byte_index*8);
+--              end if;
+--            end loop;
           when "00000000000000000000000000010000" =>
             for byte_index in 0 to (C_SLV_DWIDTH/8)-1 loop
               if ( Bus2IP_BE(byte_index) = '1' ) then
@@ -499,6 +502,7 @@ begin
           when others => null;
         end case;
 
+	slv_reg26 <= slv_reg26_internal;
 	slv_reg28 <= slv_reg28_internal;
 	slv_reg29 <= slv_reg29_internal;
 	slv_reg30 <= slv_reg30_internal;
@@ -555,6 +559,7 @@ begin
   SIP : superip_internal port map (
 		Mux2_FilterORMux1_Left_out  =>  Mux2_FilterORMux1_Left_out,
 		Mux2_FilterORMux1_Right_out =>  Mux2_FilterORMux1_Right_out,
+		slv_reg26                   =>  slv_reg26_internal             ,
 		slv_reg28                   =>  slv_reg28_internal             ,
 		slv_reg29                   =>  slv_reg29_internal             ,
 		slv_reg30                   =>  slv_reg30_internal             ,
@@ -563,6 +568,7 @@ begin
 		CLK_100M_in                 =>  CLK_100M_in               ,
 		Audio_Left_in               =>  Audio_Left_in             ,
 		Audio_Right_in              =>  Audio_Right_in            ,
+		SAMPLE_TRIG				 =>  SAMPLE_TRIG,
 		slv_reg0                    =>  slv_reg0                  ,
 		slv_reg1                    =>  slv_reg1                  ,
 		slv_reg2                    =>  slv_reg2                  ,
@@ -589,7 +595,7 @@ begin
 		slv_reg23                   =>  slv_reg23                 ,
 		slv_reg24                   =>  slv_reg24                 ,
 		slv_reg25                   =>  slv_reg25                 ,
-		slv_reg26                   =>  slv_reg26                 ,
+		
 		slv_reg27                   =>  slv_reg27
 		);
 

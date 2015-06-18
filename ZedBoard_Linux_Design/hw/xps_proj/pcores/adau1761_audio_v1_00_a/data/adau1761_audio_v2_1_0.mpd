@@ -55,6 +55,8 @@ PORT AC_GPIO0 = "", DIR = O
 PORT AC_MCLK = "", DIR = O
 PORT AC_SCK = "", DIR = O
 
+PORT new_sample = "", DIR = O
+
 PORT AUDIO_OUT_L = "", DIR = O,VEC = [23:0]
 PORT AUDIO_OUT_R = "", DIR = O,VEC = [23:0]
 PORT AUDIO_IN_L = "", DIR = I,VEC = [23:0]

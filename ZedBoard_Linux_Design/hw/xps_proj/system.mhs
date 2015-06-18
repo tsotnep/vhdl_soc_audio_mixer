@@ -346,6 +346,7 @@ BEGIN adau1761_audio
  PORT AUDIO_OUT_R = adau1761_audio_0_AUDIO_OUT_R
  PORT AUDIO_IN_L = superip_0_Mux2_FilterORMux1_Left_out
  PORT AUDIO_IN_R = superip_0_Mux2_FilterORMux1_Right_out
+ PORT new_sample = adau1761_audio_0_new_sample
 END
 
 BEGIN superip
@@ -361,5 +362,6 @@ BEGIN superip
  PORT Audio_Right_in = adau1761_audio_0_AUDIO_OUT_R
  PORT Mux2_FilterORMux1_Left_out = superip_0_Mux2_FilterORMux1_Left_out
  PORT Mux2_FilterORMux1_Right_out = superip_0_Mux2_FilterORMux1_Right_out
+ PORT SAMPLE_TRIG = adau1761_audio_0_new_sample
 END
 

@@ -164,6 +164,7 @@ entity adau1761_audio is
 	 AC_GPIO0 : OUT std_logic;
 	 AC_MCLK : OUT std_logic;
 	 AC_SCK : OUT std_logic;
+	 new_sample : out std_logic;
     -- ADD USER PORTS ABOVE THIS LINE ------------------
 
     -- DO NOT EDIT BELOW THIS LINE ---------------------
@@ -339,6 +340,7 @@ begin
 		AC_GPIO3 => AC_GPIO3,
 		AC_MCLK => AC_MCLK,
 		AC_SCK => AC_SCK,
+		new_sample => new_sample,
 		AC_SDA_I => AC_SDA_I,      
 		AC_SDA_O => AC_SDA_O,      
 		AC_SDA_T => AC_SDA_T,
