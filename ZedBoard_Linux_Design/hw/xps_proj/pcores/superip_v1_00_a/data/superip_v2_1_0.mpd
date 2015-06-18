@@ -43,8 +43,8 @@ PORT Audio_Left_in = "", DIR = I, VEC = [23:0]
 PORT Audio_Right_in = "", DIR = I, VEC = [23:0]
 PORT SAMPLE_TRIG = "", DIR = I
 
-PORT Mux2_FilterORMux1_Left_out = "", DIR = O, VEC = [23:0]
-PORT Mux2_FilterORMux1_Right_out = "", DIR = O, VEC = [23:0]
+PORT Mux3_BalanceORMux2_Left_out = "", DIR = O, VEC = [23:0]
+PORT Mux3_BalanceORMux2_Right_out = "", DIR = O, VEC = [23:0]
 
 PORT S_AXI_ACLK = "", DIR = I, SIGIS = CLK, BUS = S_AXI
 PORT S_AXI_ARESETN = ARESETN, DIR = I, SIGIS = RST, BUS = S_AXI

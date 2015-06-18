@@ -138,11 +138,12 @@ entity superip is
   (
     -- ADD USER PORTS BELOW THIS LINE ------------------
     CLK_48_in                   : in  std_logic;
-	 CLK_100M_in                 : in  std_logic; -- get rid of this
+	CLK_100M_in                 : in  std_logic; -- get rid of this
     Audio_Left_in               : in  std_logic_vector(23 downto 0);
     Audio_Right_in              : in  std_logic_vector(23 downto 0);
-    Mux2_FilterORMux1_Left_out   : out std_logic_vector(23 downto 0);
-    Mux2_FilterORMux1_Right_out : out std_logic_vector(23 downto 0);
+    Mux3_BalanceORMux2_Left_out   : out std_logic_vector(23 downto 0);
+    Mux3_BalanceORMux2_Right_out : out std_logic_vector(23 downto 0);
+	SAMPLE_TRIG                 : in  std_logic;
     -- ADD USER PORTS ABOVE THIS LINE ------------------
 
     -- DO NOT EDIT BELOW THIS LINE ---------------------
@@ -310,8 +311,9 @@ begin
 		CLK_100M_in                 => CLK_100M_in,
       Audio_Left_in               => Audio_Left_in,
       Audio_Right_in              => Audio_Right_in,
-      Mux2_FilterORMux1_Left_out  => Mux2_FilterORMux1_Left_out,
-      Mux2_FilterORMux1_Right_out => Mux2_FilterORMux1_Right_out,
+      Mux3_BalanceORMux2_Left_out  => Mux3_BalanceORMux2_Left_out,
+      Mux3_BalanceORMux2_Right_out => Mux3_BalanceORMux2_Right_out,
+	SAMPLE_TRIG => SAMPLE_TRIG,
       -- MAP USER PORTS ABOVE THIS LINE ------------------
 
       Bus2IP_Clk                     => ipif_Bus2IP_Clk,

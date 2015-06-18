@@ -88,11 +88,11 @@ architecture RTL of Filter_Top_Level is
 	signal AUDIO_OUT_TRUNC_L, AUDIO_OUT_TRUNC_R, IIR_LP_Y_Out_R, IIR_LP_Y_Out_L, IIR_BP_Y_Out_R, IIR_BP_Y_Out_L, IIR_HP_Y_Out_R, IIR_HP_Y_Out_L : std_logic_vector(23 downto 0);
 
 	signal sample_trigger_safe : STD_LOGIC := '0';
-	signal val : std_logic_vector(2 downto 0);
+	signal val                 : std_logic_vector(2 downto 0);
 begin
 	sample_trigger_safe <= SAMPLE_TRIG or (not sample_trigger_en);
-	val <= HP_SW & BP_SW & LP_SW;
-	
+	val                 <= HP_SW & BP_SW & LP_SW;
+
 	--USER logic implementation added here
 
 	---- connect all the "filter done" with an AND gate to the user_logic top level entity.
@@ -103,38 +103,42 @@ begin
 
 
 	---this process controls each individual filter and the final output of the filter. 
-	process (IIR_BP_Y_Out_L, IIR_BP_Y_Out_R, IIR_HP_Y_Out_L, IIR_HP_Y_Out_R, IIR_LP_Y_Out_L, IIR_LP_Y_Out_R, val)
+MUX_filters: process(IIR_BP_Y_Out_L, IIR_BP_Y_Out_R, IIR_HP_Y_Out_L, IIR_HP_Y_Out_R, IIR_LP_Y_Out_L, IIR_LP_Y_Out_R, val, RST)
 	begin
-		case VAL is
-			when "000" =>
-				AUDIO_OUT_TRUNC_L <= (others => '0'); --IIR_LP_Y_Out_L + IIR_BP_Y_Out_L + IIR_HP_Y_Out_L;
-				AUDIO_OUT_TRUNC_R <= (others => '0'); --IIR_LP_Y_Out_R + IIR_BP_Y_Out_R + IIR_HP_Y_Out_R;
-			when "001" =>
-				AUDIO_OUT_TRUNC_L <= IIR_LP_Y_Out_L;
-				AUDIO_OUT_TRUNC_R <= IIR_LP_Y_Out_R;
-			when "010" =>
-				AUDIO_OUT_TRUNC_L <= IIR_BP_Y_Out_L;
-				AUDIO_OUT_TRUNC_R <= IIR_BP_Y_Out_R;
-			when "011" =>
-				AUDIO_OUT_TRUNC_L <= IIR_LP_Y_Out_L + IIR_BP_Y_Out_L;
-				AUDIO_OUT_TRUNC_R <= IIR_LP_Y_Out_R + IIR_BP_Y_Out_R;
-			when "100" =>
-				AUDIO_OUT_TRUNC_L <= IIR_HP_Y_Out_L;
-				AUDIO_OUT_TRUNC_R <= IIR_HP_Y_Out_R;
-			when "101" =>
-				AUDIO_OUT_TRUNC_L <= IIR_LP_Y_Out_L + IIR_HP_Y_Out_L;
-				AUDIO_OUT_TRUNC_R <= IIR_LP_Y_Out_R + IIR_HP_Y_Out_R;
-			when "110" =>
-				AUDIO_OUT_TRUNC_L <= IIR_HP_Y_Out_L + IIR_BP_Y_Out_L;
-				AUDIO_OUT_TRUNC_R <= IIR_HP_Y_Out_R + IIR_BP_Y_Out_R;
-			when "111" =>
-				AUDIO_OUT_TRUNC_L <= IIR_LP_Y_Out_L + IIR_BP_Y_Out_L + IIR_HP_Y_Out_L;
-				AUDIO_OUT_TRUNC_R <= IIR_LP_Y_Out_R + IIR_BP_Y_Out_R + IIR_HP_Y_Out_R;
-			when others =>
-				AUDIO_OUT_TRUNC_L <= (others => '0'); --IIR_LP_Y_Out_L + IIR_BP_Y_Out_L + IIR_HP_Y_Out_L;
-				AUDIO_OUT_TRUNC_R <= (others => '0'); --IIR_LP_Y_Out_R + IIR_BP_Y_Out_R + IIR_HP_Y_Out_R;
-
-		end case;
+		if rst = '1' then
+			AUDIO_OUT_TRUNC_L <= (others => '0'); --IIR_LP_Y_Out_L + IIR_BP_Y_Out_L + IIR_HP_Y_Out_L;
+			AUDIO_OUT_TRUNC_R <= (others => '0'); --IIR_LP_Y_Out_R + IIR_BP_Y_Out_R + IIR_HP_Y_Out_R;
+		else
+			case VAL is
+				when "000" =>
+					AUDIO_OUT_TRUNC_L <= (others => '0'); --IIR_LP_Y_Out_L + IIR_BP_Y_Out_L + IIR_HP_Y_Out_L;
+					AUDIO_OUT_TRUNC_R <= (others => '0'); --IIR_LP_Y_Out_R + IIR_BP_Y_Out_R + IIR_HP_Y_Out_R;
+				when "001" =>
+					AUDIO_OUT_TRUNC_L <= IIR_LP_Y_Out_L;
+					AUDIO_OUT_TRUNC_R <= IIR_LP_Y_Out_R;
+				when "010" =>
+					AUDIO_OUT_TRUNC_L <= IIR_BP_Y_Out_L;
+					AUDIO_OUT_TRUNC_R <= IIR_BP_Y_Out_R;
+				when "011" =>
+					AUDIO_OUT_TRUNC_L <= IIR_LP_Y_Out_L + IIR_BP_Y_Out_L;
+					AUDIO_OUT_TRUNC_R <= IIR_LP_Y_Out_R + IIR_BP_Y_Out_R;
+				when "100" =>
+					AUDIO_OUT_TRUNC_L <= IIR_HP_Y_Out_L;
+					AUDIO_OUT_TRUNC_R <= IIR_HP_Y_Out_R;
+				when "101" =>
+					AUDIO_OUT_TRUNC_L <= IIR_LP_Y_Out_L + IIR_HP_Y_Out_L;
+					AUDIO_OUT_TRUNC_R <= IIR_LP_Y_Out_R + IIR_HP_Y_Out_R;
+				when "110" =>
+					AUDIO_OUT_TRUNC_L <= IIR_HP_Y_Out_L + IIR_BP_Y_Out_L;
+					AUDIO_OUT_TRUNC_R <= IIR_HP_Y_Out_R + IIR_BP_Y_Out_R;
+				when "111" =>
+					AUDIO_OUT_TRUNC_L <= IIR_LP_Y_Out_L + IIR_BP_Y_Out_L + IIR_HP_Y_Out_L;
+					AUDIO_OUT_TRUNC_R <= IIR_LP_Y_Out_R + IIR_BP_Y_Out_R + IIR_HP_Y_Out_R;
+				when others =>
+					AUDIO_OUT_TRUNC_L <= (others => '0'); --IIR_LP_Y_Out_L + IIR_BP_Y_Out_L + IIR_HP_Y_Out_L;
+					AUDIO_OUT_TRUNC_R <= (others => '0'); --IIR_LP_Y_Out_R + IIR_BP_Y_Out_R + IIR_HP_Y_Out_R;
+			end case;
+		end if;
 	end process;
 
 	IIR_LP_R : IIR_Biquad_II_v3
@@ -146,7 +150,7 @@ begin
 			Coef_a2     => slv_reg4,
 			clk         => CLK_48,
 			rst         => rst,
-			sample_trig => sample_trigger_safe,         --Sample_IIR,
+			sample_trig => sample_trigger_safe, --Sample_IIR,
 			X_in        => AUDIO_IN_R(23 downto 0),
 			filter_done => IIR_LP_Done_R,
 			Y_out       => IIR_LP_Y_Out_R
@@ -161,7 +165,7 @@ begin
 			Coef_a2     => slv_reg4,
 			clk         => CLK_48,
 			rst         => rst,
-			sample_trig => sample_trigger_safe,         --Sample_IIR,
+			sample_trig => sample_trigger_safe, --Sample_IIR,
 			X_in        => AUDIO_IN_L(23 downto 0), --X_in_truncated_L,
 			filter_done => IIR_LP_Done_L,
 			Y_out       => IIR_LP_Y_Out_L
@@ -176,7 +180,7 @@ begin
 			Coef_a2     => slv_reg9,
 			clk         => CLK_48,
 			rst         => rst,
-			sample_trig => sample_trigger_safe,         --Sample_IIR,
+			sample_trig => sample_trigger_safe, --Sample_IIR,
 			X_in        => AUDIO_IN_R(23 downto 0), --X_in_truncated_R,
 			filter_done => IIR_BP_Done_R,
 			Y_out       => IIR_BP_Y_Out_R
@@ -191,7 +195,7 @@ begin
 			Coef_a2     => slv_reg9,
 			clk         => CLK_48,
 			rst         => rst,
-			sample_trig => sample_trigger_safe,         --Sample_IIR,
+			sample_trig => sample_trigger_safe, --Sample_IIR,
 			X_in        => AUDIO_IN_L(23 downto 0), --X_in_truncated_L,
 			filter_done => IIR_BP_Done_L,
 			Y_out       => IIR_BP_Y_Out_L
@@ -206,7 +210,7 @@ begin
 			Coef_a2     => slv_reg14,
 			clk         => CLK_48,
 			rst         => rst,
-			sample_trig => sample_trigger_safe,         --Sample_IIR,
+			sample_trig => sample_trigger_safe, --Sample_IIR,
 			X_in        => AUDIO_IN_R(23 downto 0), --X_in_truncated_R,
 			filter_done => IIR_HP_Done_R,
 			Y_out       => IIR_HP_Y_Out_R
@@ -221,7 +225,7 @@ begin
 			Coef_a2     => slv_reg14,
 			clk         => CLK_48,
 			rst         => rst,
-			sample_trig => sample_trigger_safe,         --Sample_IIR,
+			sample_trig => sample_trigger_safe, --Sample_IIR,
 			X_in        => AUDIO_IN_L(23 downto 0), --X_in_truncated_L,
 			filter_done => IIR_HP_Done_L,
 			Y_out       => IIR_HP_Y_Out_L

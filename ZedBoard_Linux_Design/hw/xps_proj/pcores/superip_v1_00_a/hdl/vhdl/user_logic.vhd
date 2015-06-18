@@ -101,8 +101,8 @@ entity user_logic is
 		Audio_Left_in               : in  std_logic_vector(23 downto 0);
 		Audio_Right_in              : in  std_logic_vector(23 downto 0);
 		SAMPLE_TRIG                 : in  std_logic;
-		Mux2_FilterORMux1_Left_out  : out std_logic_vector(23 downto 0);
-		Mux2_FilterORMux1_Right_out : out std_logic_vector(23 downto 0);
+		Mux3_BalanceORMux2_Left_out  : out std_logic_vector(23 downto 0);
+		Mux3_BalanceORMux2_Right_out : out std_logic_vector(23 downto 0);
 		-- ADD USER PORTS ABOVE THIS LINE ------------------
 
 		-- DO NOT EDIT BELOW THIS LINE ---------------------
@@ -186,8 +186,8 @@ architecture IMP of user_logic is
 	component superip_internal is
 		port(
 			-- Outputs
-			Mux2_FilterORMux1_Left_out  : out std_logic_vector(23 downto 0);
-			Mux2_FilterORMux1_Right_out : out std_logic_vector(23 downto 0);
+			Mux3_BalanceORMux2_Left_out  : out std_logic_vector(23 downto 0);
+			Mux3_BalanceORMux2_Right_out : out std_logic_vector(23 downto 0);
 			slv_reg26                   : out STD_LOGIC_VECTOR(31 downto 0);
 			slv_reg28                   : out STD_LOGIC_VECTOR(31 downto 0);
 			slv_reg29                   : out STD_LOGIC_VECTOR(31 downto 0);
@@ -552,8 +552,9 @@ begin
 	end process SLAVE_REG_READ_PROC;
 
 	SIP : superip_internal port map(
-			Mux2_FilterORMux1_Left_out  => Mux2_FilterORMux1_Left_out,
-			Mux2_FilterORMux1_Right_out => Mux2_FilterORMux1_Right_out,
+			Mux3_BalanceORMux2_Left_out  => Mux3_BalanceORMux2_Left_out,
+			Mux3_BalanceORMux2_Right_out => Mux3_BalanceORMux2_Right_out,
+			slv_reg26                   => slv_reg26_internal,
 			slv_reg28                   => slv_reg28_internal,
 			slv_reg29                   => slv_reg29_internal,
 			slv_reg30                   => slv_reg30_internal,
@@ -589,7 +590,6 @@ begin
 			slv_reg23                   => slv_reg23,
 			slv_reg24                   => slv_reg24,
 			slv_reg25                   => slv_reg25,
-			slv_reg26                   => slv_reg26,
 			slv_reg27                   => slv_reg27
 		);
 

@@ -5,9 +5,9 @@ entity Tester is
 	port(
 		Audio_Left_in                 : in  std_logic_vector(23 downto 0);
 		Audio_Right_in                : in  std_logic_vector(23 downto 0);
+		
 		VolCtrl_Left_out_in           : in  std_logic_vector(23 downto 0);
 		VolCtrl_Right_out_in          : in  std_logic_vector(23 downto 0);
-
 		Mux1_VolCtrlORAudio_Left_out  : out std_logic_vector(23 downto 0);
 		Mux1_VolCtrlORAudio_Right_out : out std_logic_vector(23 downto 0);
 
@@ -26,37 +26,37 @@ entity Tester is
 end Tester;
 
 architecture Behavioral of Tester is
-	signal Mux1_PregainORAudio_Left_out_T  : std_logic_vector(23 downto 0);
-	signal Mux1_PregainORAudio_Right_out_T : std_logic_vector(23 downto 0);
+	signal Mux1_VolCtrlORAudio_Left_out_T  : std_logic_vector(23 downto 0);
+	signal Mux1_VolCtrlORAudio_Right_out_T : std_logic_vector(23 downto 0);
 
 	signal Mux2_FilterORMux1_Left_out_T  : std_logic_vector(23 downto 0);
 	signal Mux2_FilterORMux1_Right_out_T : std_logic_vector(23 downto 0);
 
 begin
-	Mux1_VolCtrlORAudio_Left_out  <= Mux1_PregainORAudio_Left_out_T;
-	Mux1_VolCtrlORAudio_Right_out <= Mux1_PregainORAudio_Right_out_T;
+	Mux1_VolCtrlORAudio_Left_out  <= Mux1_VolCtrlORAudio_Left_out_T;
+	Mux1_VolCtrlORAudio_Right_out <= Mux1_VolCtrlORAudio_Right_out_T;
 	Mux2_FilterORMux1_Left_out    <= Mux2_FilterORMux1_Left_out_T;
 	Mux2_FilterORMux1_Right_out   <= Mux2_FilterORMux1_Right_out_T;
 
 	MUX1 : process(Audio_Left_in, Audio_Right_in, Mux_Select_in(0), VolCtrl_Left_out_in, VolCtrl_Right_out_in)
 	begin
 		if Mux_Select_in(0) = '0' then
-			Mux1_PregainORAudio_Left_out_T  <= VolCtrl_Left_out_in;
-			Mux1_PregainORAudio_Right_out_T <= VolCtrl_Right_out_in;
+			Mux1_VolCtrlORAudio_Left_out_T  <= VolCtrl_Left_out_in;
+			Mux1_VolCtrlORAudio_Right_out_T <= VolCtrl_Right_out_in;
 		else
-			Mux1_PregainORAudio_Left_out_T  <= Audio_Left_in;
-			Mux1_PregainORAudio_Right_out_T <= Audio_Right_in;
+			Mux1_VolCtrlORAudio_Left_out_T  <= Audio_Left_in;
+			Mux1_VolCtrlORAudio_Right_out_T <= Audio_Right_in;
 		end if;
 	end process;
 
-	MUX2 : process(Filter_Left_out_in, Filter_Right_out_in, Mux_Select_in(1), Mux1_PregainORAudio_Left_out_T, Mux1_PregainORAudio_Right_out_T)
+	MUX2 : process(Filter_Left_out_in, Filter_Right_out_in, Mux_Select_in(1), Mux1_VolCtrlORAudio_Left_out_T, Mux1_VolCtrlORAudio_Right_out_T)
 	begin
 		if Mux_Select_in(1) = '0' then
 			Mux2_FilterORMux1_Left_out_T  <= Filter_Left_out_in;
 			Mux2_FilterORMux1_Right_out_T <= Filter_Right_out_in;
 		else
-			Mux2_FilterORMux1_Left_out_T  <= Mux1_PregainORAudio_Left_out_T;
-			Mux2_FilterORMux1_Right_out_T <= Mux1_PregainORAudio_Right_out_T;
+			Mux2_FilterORMux1_Left_out_T  <= Mux1_VolCtrlORAudio_Left_out_T;
+			Mux2_FilterORMux1_Right_out_T <= Mux1_VolCtrlORAudio_Right_out_T;
 		end if;
 	end process;
 
@@ -71,4 +71,3 @@ begin
 		end if;
 	end process;
 end Behavioral;
-
