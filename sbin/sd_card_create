@@ -160,7 +160,7 @@ echo copy files from $SD_CARD_FILES_DIR to $DEV"1"...
 echo --------------------------------------------------
 echo
 
-cp -v $SD_CARD_FILES_DIR/* /tmp/$TMP_SUBDIR/zed_boot/	
+cp -rv $SD_CARD_FILES_DIR/* /tmp/$TMP_SUBDIR/zed_boot/	
 
 echo
 echo --------------------------------------------------
