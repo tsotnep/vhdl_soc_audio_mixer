@@ -54,28 +54,32 @@ architecture RTL of superip_internal is
 	ALIAS OUT_RDY_L        : STD_LOGIC is slv_reg31(0);
 	ALIAS VolCtrl_RDY_R    : STD_LOGIC is slv_reg31(1);
 	ALIAS Filter_ready_out : STD_LOGIC is slv_reg31(2);
-
+	ALIAS READY_BAL        : STD_LOGIC is slv_reg31(3);
 	-- Inputs Register27
-	ALIAS Reset_in            : STD_LOGIC is slv_reg27(0);
-	ALIAS SAMPLE_TRIG         : STD_LOGIC is slv_reg27(1);
-	ALIAS HP_SW               : STD_LOGIC is slv_reg27(2);
-	ALIAS BP_SW               : STD_LOGIC is slv_reg27(3);
-	ALIAS LP_SW               : STD_LOGIC is slv_reg27(4);
-	ALIAS Mux1_Mux2_Select_in : std_logic_vector is slv_reg27(6 downto 5); 
-					--5th -> Mux1:= Volctrl or rawAudio; 	0 for Volctrl pass
-					--6th -> Mux2:= Filter or Mux1; 	0 for Filter pass
+	ALIAS Reset_in         : STD_LOGIC is slv_reg27(0);
+	ALIAS SAMPLE_TRIG      : STD_LOGIC is slv_reg27(1);
+	ALIAS HP_SW            : STD_LOGIC is slv_reg27(2);
+	ALIAS BP_SW            : STD_LOGIC is slv_reg27(3);
+	ALIAS LP_SW            : STD_LOGIC is slv_reg27(4);
+	ALIAS Mux_Select_in    : std_logic_vector is slv_reg27(7 downto 5);
+	--5th -> Mux1:= Volctrl or rawAudio; 	0 for Volctrl pass
+	--6th -> Mux2:= Filter or Mux1; 	0 for Filter pass
 
-	ALIAS sample_trigger_en   : STD_LOGIC is slv_reg27(7); 
-					--if this signal is '1' filter waits for sample triggers
-					--otherwise, its constantly calculating
+	ALIAS sample_trigger_en : STD_LOGIC is slv_reg27(7);
+	--if this signal is '1' filter waits for sample triggers
+	--otherwise, its constantly calculating
 
 	-- Internals
 	signal Mux1_VolCtrlORAudio_Left_out  : std_logic_vector(23 downto 0);
 	signal Mux1_VolCtrlORAudio_Right_out : std_logic_vector(23 downto 0);
+	signal Mux2_FilterORMux1_Left : std_logic_vector(23 downto 0);
+	signal Mux2_FilterORMux1_Right : std_logic_vector(23 downto 0);
 	signal Filter_Left_out               : std_logic_vector(23 downto 0);
 	signal Filter_Right_out              : std_logic_vector(23 downto 0);
 	signal OUT_VOLCTRL_L                 : signed(23 downto 0);
 	signal OUT_VOLCTRL_R                 : signed(23 downto 0);
+	signal CH_L_OUT                      : signed(23 downto 0);
+	signal CH_R_OUT                      : signed(23 downto 0);
 --	signal Volctrl_Left_out              : std_logic_vector(23 downto 0);
 --	signal Volctrl_Right_out             : std_logic_vector(23 downto 0);
 --	signal slv_reg15_s                   : signed(31 downto 0);
@@ -84,21 +88,7 @@ architecture RTL of superip_internal is
 --	signal Audio_Right_in_s              : signed(23 downto 0);
 
 begin
-	--------------------------START VolCtrl--------------
-	--input
-	--	slv_reg15_s       <= signed(slv_reg15);
-	--	slv_reg16_s       <= signed(slv_reg16);
-	--	Audio_Left_in_s   <= signed(Audio_Left_in);
-	--	Audio_Right_in_s  <= signed(Audio_Right_in);
-	--------------------------END VolCtrl----------------
-
-	--	Mux2_FilterORMux1_Left_out  <= Filter_Left_out;
-	--	Mux2_FilterORMux1_Right_out <= Filter_Right_out;
-
-	--	Mux1_VolCtrlORAudio_Left_out  <= std_logic_vector(OUT_VOLCTRL_L);
-	--	Mux1_VolCtrlORAudio_Right_out <= std_logic_vector(OUT_VOLCTRL_R);
-
-	Tester_Comp : entity work.Tester
+	Tester_inst : entity work.Tester
 		port map(
 			Audio_Left_in                 => Audio_Left_in,
 			Audio_Right_in                => Audio_Right_in,
@@ -108,9 +98,13 @@ begin
 			Mux1_VolCtrlORAudio_Right_out => Mux1_VolCtrlORAudio_Right_out,
 			Filter_Left_out_in            => Filter_Left_out,
 			Filter_Right_out_in           => Filter_Right_out,
-			Mux2_FilterORMux1_Left_out    => Mux2_FilterORMux1_Left_out,
-			Mux2_FilterORMux1_Right_out   => Mux2_FilterORMux1_Right_out,
-			Mux1_Mux2_Select_in           => Mux1_Mux2_Select_in
+		Mux2_FilterORMux1_Left_out    => Mux2_FilterORMux1_Left, --Mux2_FilterORMux1_Left_out
+		Mux2_FilterORMux1_Right_out   => Mux2_FilterORMux1_Right,--Mux2_FilterORMux1_Right_out
+			Balance_Left_out_in           => std_logic_vector(CH_L_OUT),
+			Balance_Right_out_in          => std_logic_vector(CH_R_OUT),
+	Mux3_BalanceORMux2_Left_out   => Mux2_FilterORMux1_Left_out, --Mux3_BalanceORMux2_Left_out
+	Mux3_BalanceORMux2_Right_out  => Mux2_FilterORMux1_Right_out,--Mux3_BalanceORMux2_Right_out
+			Mux_Select_in                 => Mux_Select_in
 		);
 
 	VolCtrl_inst : entity work.VolCtrl
@@ -161,6 +155,24 @@ begin
 			AUDIO_OUT_L       => Filter_Left_out,
 			AUDIO_OUT_R       => Filter_Right_out,
 			FILTER_DONE       => Filter_ready_out
+		);
+
+	Balance_inst : entity work.Balance
+		generic map(
+			INTBIT_WIDTH      => 24,
+			FRACBIT_WIDTH     => 8,
+			N                 => 32,
+			Attenuation_Const => 11
+		)
+		port map(
+			CLK_BAL   => CLK_48_in,
+			RESET_BAL => Reset_in,
+			POINTER   => to_integer(signed(slv_reg17)),
+			CH_L_IN   => signed(Mux2_FilterORMux1_Left),
+			CH_R_IN   => signed(Mux2_FilterORMux1_Right),
+			CH_L_OUT  => CH_L_OUT,
+			CH_R_OUT  => CH_R_OUT,
+			READY_BAL => READY_BAL
 		);
 
 end architecture RTL;

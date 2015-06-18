@@ -187,8 +187,8 @@ architecture IMP of user_logic is
   component superip_internal is
   port(
     -- Outputs
-	 Mux2_FilterORMux1_Left_out  : out std_logic_vector(23 downto 0);
-	 Mux2_FilterORMux1_Right_out : out std_logic_vector(23 downto 0);
+	Mux2_FilterORMux1_Left_out  : out std_logic_vector(23 downto 0);
+	Mux2_FilterORMux1_Right_out : out std_logic_vector(23 downto 0);
 	 slv_reg28                   : out STD_LOGIC_VECTOR(31 downto 0);
 	 slv_reg29                   : out STD_LOGIC_VECTOR(31 downto 0);
 	 slv_reg30                   : out STD_LOGIC_VECTOR(31 downto 0);
