@@ -14,8 +14,17 @@
 # Generate the SSH keys if non-existent
 test -f /etc/ssh/ssh_host_dsa_key || dpkg-reconfigure openssh-server
 
+/etc/init.d/network-manager stop
+
+ifconfig eth0 down 
+ifconfig eth0 hw ether 00:0a:35:00:00:01
+ifconfig eth0 192.168.100.2
+ifconfig eth0 up
+
 mount /dev/mmcblk0p1 /mnt
 insmod /mnt/superip.ko
+
+
 
 sleep 1
 
@@ -36,7 +45,15 @@ echo 0D00000000 > /proc/superip
 echo 0E0AFB0CCC > /proc/superip
 
 #enable all filters
-echo 1B0000000E > /proc/superip
+echo 1b8000000e > /proc/superip
+
+#enable pregain
+echo 0f00000100 > /proc/superip
+echo 1000000100 > /proc/superip
+
+
+echo 20ffffffff > /proc/superip
+
 
 
 
