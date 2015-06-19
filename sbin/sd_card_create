@@ -4,6 +4,7 @@
 SD_CARD_FILES_DIR=$1
 DEV=$2
 
+BOOT_DIR=sd_card_boot
 LINARO_DIR=sd_card_linaro
 
 TMP_SUBDIR=sd_card_stuff
@@ -147,7 +148,7 @@ if [ "$WIPE_FIRST" -eq "1" ]; then
 	echo --------------------------------------------------
 	echo
 
-	rm -r /tmp/$TMP_SUBDIR/zed_boot/*
+	rm -rfv /tmp/$TMP_SUBDIR/zed_boot/*
 
 fi
 
@@ -161,6 +162,15 @@ echo --------------------------------------------------
 echo
 
 cp -rv $SD_CARD_FILES_DIR/* /tmp/$TMP_SUBDIR/zed_boot/	
+
+echo
+echo --------------------------------------------------
+echo copy files from $BOOT_DIR to $DEV"1"...
+echo --------------------------------------------------
+echo
+
+cp -rv $BOOT_DIR/* /tmp/$TMP_SUBDIR/zed_boot/
+
 
 echo
 echo --------------------------------------------------
