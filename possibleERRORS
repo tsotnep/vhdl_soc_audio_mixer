@@ -1,0 +1,18 @@
+============================================
+--if this error occurs, you might changed names on I/O ports, so if so, you should change them in \\*IPname*.mpd\\ AND in \\system.mhs\\ files as well, OR
+--generate bitsream from XPS, not with scripts
+--error:
+Running XST synthesis
+ERROR:HDLCompiler:1156 - "/home/user/inputboard/ZedBoard_Linux_Design/hw/xps_proj/hdl/system_superip_0_wrapper.vhd" Line 67: Formal port <Mux2_FilterORMux1_Left_out> does not exist in entity <superip>.  Please compare the definition of block <superip> to its component declaration and its instantion to detect the mismatch.
+ERROR:HDLCompiler:1156 - "/home/user/inputboard/ZedBoard_Linux_Design/hw/xps_proj/hdl/system_superip_0_wrapper.vhd" Line 68: Formal port <Mux2_FilterORMux1_Right_out> does not exist in entity <superip>.  Please compare the definition of block <superip> to its component declaration and its instantion to detect the mismatch.
+ERROR:EDK - Aborting XST flow execution!
+INFO:EDK - Refer to
+============================================
+
+
+============================================
+--if you get timing errors
+--check if your clock generator is correct, also check if stuff is operating on same frequency
+--also, maybe outputs are not assigned a value
+============================================
+

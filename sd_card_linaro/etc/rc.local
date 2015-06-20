@@ -19,10 +19,6 @@ insmod /mnt/superip.ko
 
 sleep 1
 
-#it will enable Read Write for webserver
-chown www-data /proc/superip
-
-
 #set filter coefficients
 echo 0000002CB6 > /proc/superip
 echo 010000596C > /proc/superip
@@ -44,16 +40,20 @@ echo 0E0AFB0CCC > /proc/superip
 echo 0F00000150 > /proc/superip
 echo 1000000150 > /proc/superip
 
-#set balance unit to balance audio: Left_50 - Right_50
+#set balance unit to balance audio: Left-Right -> 50-50
 echo 1100000011 > /proc/superip 
 
-#disable components: Balance-Filter-Pregain" and just bypass raw input to output
-#echo 1900000111 > /proc/superip
+#Enable components: "Balance-Filter-Pregain", if you want to disable all of them send: 1900000111
+echo 1900000000 > /proc/superip
 
-#enable all filters: LP-BP-HP
-#echo 1B00000111 > /proc/superip
+#Enable HighPass-BandPass-LowPass in filter, if you want to disable all of them send: 1B00000111
+echo 1B00000000 > /proc/superip
 
-#enable:  bus_frames_en(31) - Balance(26) - Filter(25) - Pregain(24) - sample_trigger_en(20) - reset_in(16) - reset_filter(12) - LP(8) - BP(4) - HP(0)
-echo 1B00000111 > /proc/superip
+#this will give "Read Write Right" to webserver, so webserver will have Permission to write into registers
+chown www-data:www-data /proc/superip
+
+#this will install web server stuff, apache2 and etc.
+#/mnt/web/install.sh
+
 
 exit 0

@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<title>Control Panel</title>
+<script src="js/jquery-1.10.2.js"></script>	
+<script src="js/jquery-ui-1.10.4.custom.min.js"></script>	
+<script src="js/jquery.knob.js"></script>	
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="css/start/jquery-ui-1.10.4.custom.min.css">
+<script type="text/javascript">
+ $(function() {
+    // setup L master volume
+
+    $( "#master_L" ).slider({
+	value: 20,
+	orientation: "horizontal",
+	range: "min",
+	animate: true,
+	stop: function(event, ui) {
+		if($("#lock").prop('checked')) {
+				$("#master_R").slider("value", $("#master_L").slider("value"));
+			}
+	},
+	change: function(event, ui) {
+		$.get("test2.py/cmd?left=" + $("#master_L").slider("value"));
+		$("#masterdebug_L").val($("#master_L").slider("value"))
+	}
+
+    });
+
+    $( "#master_R" ).slider({
+	value: 20,
+	orientation: "horizontal",
+	range: "min",
+	animate: true,
+	stop: function(event, ui) {
+		if($("#lock").prop('checked')) {
+				$("#master_L").slider("value", $("#master_R").slider("value"));
+			}
+	},
+	change: function(event, ui) {
+		$.get("test2.py/cmd?right=" + $("#master_R").slider("value"));
+		$("#masterdebug_R").val($("#master_R").slider("value"))
+	}
+    });
+
+	// setup balance
+    $( "#balance" ).slider({
+	value: 16,
+	min: 0,
+	max: 32,
+	orientation: "horizontal",
+	range: "min",
+	animate: true,
+	change: function(event, ui) {
+		$.get("test2.py/cmd?bal=" + $("#balance").slider("value"));
+		$("#balancedebug").val($("#balance").slider("value"));
+	}
+    });
+	
+    // setup graphic EQ
+    $( "#eq1" ).slider({
+	value: 500,
+	min: 0,
+	max: 5000,
+	step: 50,
+	orientation: "vertical",
+	range: "min",
+	animate: true,
+	change: function(event, ui) {
+		$.get("test.py/cmd?low=" + $("#eq1").slider("value"));
+		$("#eqdebug_L").val($("#eq1").slider("value"))
+	}
+    });
+    $( "#eq2" ).slider({
+	values: [1000,3000],
+	min: 0,
+	max: 5000,
+	step: 50,
+	orientation: "vertical",
+	range: true,
+	animate: true,
+	change: function(event, ui) {
+		$.get("test.py/cmd?band=" + $("#eq2").slider("values", 0) + "=" + $("#eq2").slider("values", 1));
+		$("#eqdebug_M").val($("#eq2").slider("values", 0) + "-" + $("#eq2").slider("values", 1))
+	}
+    });
+    $( "#eq3" ).slider({
+	value: 4000,
+	min: 0,
+	max: 5000,
+	step: 50,
+	orientation: "vertical",
+	range: "max",
+	animate: true,
+	change: function(event, ui) {
+		$.get("test.py/cmd?high=" + $("#eq3").slider("value"));
+		$("#eqdebug_H").val($("#eq3").slider("value"))
+	}
+    });
+
+
+	// setup gain
+	$( "#gain" ).slider({
+	value: 1,
+	min: 0.1,
+	max: 5,
+	step: 0.1,
+	orientation: "vertical",
+	range: "min",
+	animate: true,
+	change: function(event, ui) {
+		$.get("cgi-bin/getcmd.py?sudo amixer -D default set Master " + $("#gain").slider("value") + "%");
+		$("#eqdebug_G").val($("#gain").slider("value"))
+	}
+    });
+
+	// setup testslider
+    $( "#testslider" ).slider({
+	value: 1,
+	min: 1,
+	max: 3,
+	step: 1,
+	orientation: "horizontal",
+	range: "min",
+	animate: true,
+	change: function(event, ui) {
+		$.get("cgi-bin/getcmdtest.py?" + $("#testslider").slider("value"));
+		$("#testsliderdebug").val(ui.value)
+	}
+    });
+
+
+    $( "button" )
+      .button({
+        icons: {
+          primary: "ui-icon-transferthick-e-w"
+        },
+        text: false
+      }).click(function( event ) {
+        event.preventDefault();
+        $a = "0";
+        $b = "0";
+        $c = "0";
+        $d = "0";
+        $e = "0";
+        $f = "0";
+        if($("#low_lock").prop('checked')) {
+				$a = "1";
+			};
+		if($("#band_lock").prop('checked')) {
+				$b = "1";
+			};
+		if($("#high_lock").prop('checked')) {
+				$c = "1";
+			};
+		if($("#balance_lock").prop('checked')) {
+				$d = "1";
+			};
+		if($("#filter_lock").prop('checked')) {
+				$e = "1";
+			};
+		if($("#pregain_lock").prop('checked')) {
+				$f = "1";
+			};
+		$.get("test3.py/cmd?" + $a + "=" + $b + "=" + $c + "=" + $d + "=" + $e + "=" + $f);
+		$("#balancedebug").val($a);
+        $("#masterdebug_L").val($b);
+        $("#masterdebug_R").val($c);
+      });
+
+
+
+  });
+</script>
+</head>
+<body>
+<div id="wrapper">
+		<!-- Channel selection -->
+		<p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding:4px;">
+		  <span class="ui-icon ui-icon-bullet" style="float:left; margin:-2px 5px 0 0;"></span>
+		  Channel selection
+		</p>
+
+		<div id="but_ton">
+			<button>Send all</button>
+		</div>
+
+		<span id="lock_wrapper" style="float: right; margin:10px 50px 0 0">
+			<input id="high_lock" type="checkbox" checked/>
+			<span style="">High</span>
+		</span>
+
+		<span id="lock_wrapper" style="float: right">
+			<input id="band_lock" type="checkbox" checked/>
+			<span style="">Band</span>
+		</span>
+
+		<span id="lock_wrapper" style="float: right">
+			<input id="low_lock" type="checkbox" checked/>
+			<span style="">Low</span>
+		</span>
+
+		<div class="clear"></div>
+
+		<span id="lock_wrapper" style="float: right">
+			<input id="pregain_lock" type="checkbox" checked/>
+			<span style="">Enable Pregain</span>
+		</span>
+
+		<span id="lock_wrapper" style="float: right">
+			<input id="filter_lock" type="checkbox" checked/>
+			<span style="">Enable Filter</span>
+		</span>
+
+		<span id="lock_wrapper" style="float: right">
+			<input id="balance_lock" type="checkbox" checked/>
+			<span style="">Enable Balance</span>
+		</span>
+
+		<div id="channel_knob">
+			<input class="cs_knob" value="1" data-skin="tron" > 
+		</div>
+
+		<!-- Master volume -->
+		<p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding:4px;">
+		  <span class="ui-icon ui-icon-volume-on" style="float:left; margin:-2px 5px 0 0;"></span>
+		  Master volume
+		</p>
+		<span>test</span>
+		<p>test</p>
+		<div id="lock_wrapper">
+			<input id="lock" type="checkbox" checked/>
+			<span style="">Lock</span>
+		</div>
+		<div id="masters">
+		<p>Left</p>
+		<div id="master_L" class="hslider"></div>
+		<p>Right</p>
+		<div id="master_R" class="hslider"></div>
+		</div>
+
+		<!-- Balance -->
+		<p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding:4px;">
+		  <span class="ui-icon ui-icon-arrow-2-e-w" style="float:left; margin:-2px 5px 0 0;"></span>
+		  Balance
+		</p>
+		
+		<div id="balance_wrapper">
+			<div id="lb_label">L</div>
+			<div id="balance" class="hslider"></div>
+			<div id="rb_label">R</div>
+			<div class="clear"></div>
+		</div>
+		
+		<!-- Equalizer -->
+		<p class="ui-state-default ui-corner-all" style="padding:4px">
+		  <span class="ui-icon ui-icon-signal" style="float:left; margin:-2px 5px 0 0;"></span>
+		  Equalizer
+		</p>
+
+		<div id="eq">
+			<span id="eq1"></span>
+			<span id="eq2"></span>
+			<span id="eq3"></span>
+		</div>
+
+		<div id="gainn">
+			<span id="gain"></span>
+			<div class="clear"></div>
+		</div>
+		 
+		<div id="eq_labels">
+			<span>Low</span>
+			<span>Mid</span>
+			<span>High</span>
+		</div>
+		<div id="gain_labels">
+			<span>Gain</span>
+		</div>
+	<div class="clear"></div>
+		<p class="ui-state-default ui-corner-all" style="padding:4px">
+		  <span class="ui-icon ui-icon-alert" style="float:left; margin:-2px 5px 0 0;"></span>
+		  Test slider
+		</p>
+		<p style="padding:4px"></p>
+		<div id="testslider" class="hslider"></div>
+		<span style="padding:40px">100 Hz</span>
+		<span style="padding:115px">1 kHz</span>
+		<span style="padding:35px">10 kHz</span>
+		<p style="padding:4px"></p>
+		<div class="clear"></div>
+	<div>
+	  <p class="ui-state-default ui-corner-all" style="padding:4px">
+	  	  <span class="ui-icon ui-icon-info" style="float:left; margin:-2px 5px 0 0;"></span>
+		  Debug
+	  </p>
+	  <p>
+  	  <label for="debug">Channel:</label>
+      <input type="text" id="debug" readonly style="border:0; color:#f6931f; font-weight:bold;">
+	  </p>
+	  <p>
+  	  <label for="balancedebug">Balance:</label>
+      <input type="text" id="balancedebug" readonly style="border:0; color:#f6931f; font-weight:bold;">
+	  </p>
+	  <p>
+  	  <label for="masterdebug_L">Master_L:</label>
+      <input type="text" id="masterdebug_L" readonly style="border:0; color:#f6931f; font-weight:bold;">
+	  </p>
+	  <p>
+  	  <label for="masterdebug_R">Master_R:</label>
+      <input type="text" id="masterdebug_R" readonly style="border:0; color:#f6931f; font-weight:bold;">
+	  </p>
+	  <p>
+  	  <label for="eqdebug_L">Low:</label>
+      <input type="text" id="eqdebug_L" readonly style="border:0; color:#f6931f; font-weight:bold;">
+	  </p>
+	  <p>
+  	  <label for="eqdebug_M">Mid:</label>
+      <input type="text" id="eqdebug_M" readonly style="border:0; color:#f6931f; font-weight:bold;">
+	  </p>
+	  <p>
+  	  <label for="eqdebug_H">High:</label>
+      <input type="text" id="eqdebug_H" readonly style="border:0; color:#f6931f; font-weight:bold;">
+	  </p>
+	  <p>
+  	  <label for="eqdebug_G">Gain:</label>
+      <input type="text" id="eqdebug_G" readonly style="border:0; color:#f6931f; font-weight:bold;">
+	  </p>
+	  <p>
+  	  <label for="testsliderdebug">Test slider:</label>
+      <input type="text" id="testsliderdebug" readonly style="border:0; color:#f6931f; font-weight:bold;">
+	  </p>
+	</div>
+</div>
+<script>
+$(".cs_knob").knob({
+min : 1, 
+max : 4, 
+step : 1,
+angleOffset : -90, 
+angleArc : 180, 
+stopper : true, 
+readOnly : false, 
+cursor : 20,  
+lineCap : 'butt', 
+thickness : '0.22', 
+width : 100, 
+displayInput : true, 
+displayPrevious : true, 
+fgColor : '#0078ae', 
+inputColor : '#0078ae', 
+font : 'Arial', 
+fontWeight : 'bold', 
+bgColor : '#EEEEEE', 
+draw : function () {
+if(this.$.data('skin') == 'tron') {
+var a = this.angle(this.cv)  // Angle
+, sa = this.startAngle          // Previous start angle
+, sat = this.startAngle         // Start angle
+, ea                            // Previous end angle
+, eat = sat + a                 // End angle
+, r = 1;
+this.g.lineWidth = this.lineWidth;
+this.o.cursor
+&& (sat = eat - 0.3)
+&& (eat = eat + 0.3);
+if (this.o.displayPrevious) {
+ea = this.startAngle + this.angle(this.v);
+this.o.cursor
+&& (sa = ea - 0.3)
+&& (ea = ea + 0.3);
+this.g.beginPath();
+this.g.strokeStyle = this.pColor;
+this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sa, ea, false);
+this.g.stroke();
+}
+this.g.beginPath();
+this.g.strokeStyle = r ? this.o.fgColor : this.fgColor ;
+this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sat, eat, false);
+this.g.stroke();
+this.g.lineWidth = 2;
+this.g.beginPath();
+this.g.strokeStyle = this.o.fgColor;
+this.g.arc( this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
+this.g.stroke();
+return false;
+}},
+change : function(v) {
+	$("#debug").val(v);
+}
+});
+</script>
+</body>
+</html>

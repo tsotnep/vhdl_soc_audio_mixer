@@ -109,29 +109,29 @@ MUX_filters: process(IIR_BP_Y_Out_L, IIR_BP_Y_Out_R, IIR_HP_Y_Out_L, IIR_HP_Y_Ou
 			AUDIO_OUT_TRUNC_L <= (others => '0'); --IIR_LP_Y_Out_L + IIR_BP_Y_Out_L + IIR_HP_Y_Out_L;
 			AUDIO_OUT_TRUNC_R <= (others => '0'); --IIR_LP_Y_Out_R + IIR_BP_Y_Out_R + IIR_HP_Y_Out_R;
 		else
-			case VAL is
-				when "000" =>
+			case VAL is -- i reversed case decodings, so instead of 111 now its 000, and etc. so now, 0 means enable, 1 means disable
+				when "111" =>
 					AUDIO_OUT_TRUNC_L <= (others => '0'); --IIR_LP_Y_Out_L + IIR_BP_Y_Out_L + IIR_HP_Y_Out_L;
 					AUDIO_OUT_TRUNC_R <= (others => '0'); --IIR_LP_Y_Out_R + IIR_BP_Y_Out_R + IIR_HP_Y_Out_R;
-				when "001" =>
+				when "110" =>
 					AUDIO_OUT_TRUNC_L <= IIR_LP_Y_Out_L;
 					AUDIO_OUT_TRUNC_R <= IIR_LP_Y_Out_R;
-				when "010" =>
+				when "101" =>
 					AUDIO_OUT_TRUNC_L <= IIR_BP_Y_Out_L;
 					AUDIO_OUT_TRUNC_R <= IIR_BP_Y_Out_R;
-				when "011" =>
+				when "100" =>
 					AUDIO_OUT_TRUNC_L <= IIR_LP_Y_Out_L + IIR_BP_Y_Out_L;
 					AUDIO_OUT_TRUNC_R <= IIR_LP_Y_Out_R + IIR_BP_Y_Out_R;
-				when "100" =>
+				when "011" =>
 					AUDIO_OUT_TRUNC_L <= IIR_HP_Y_Out_L;
 					AUDIO_OUT_TRUNC_R <= IIR_HP_Y_Out_R;
-				when "101" =>
+				when "010" =>
 					AUDIO_OUT_TRUNC_L <= IIR_LP_Y_Out_L + IIR_HP_Y_Out_L;
 					AUDIO_OUT_TRUNC_R <= IIR_LP_Y_Out_R + IIR_HP_Y_Out_R;
-				when "110" =>
+				when "001" =>
 					AUDIO_OUT_TRUNC_L <= IIR_HP_Y_Out_L + IIR_BP_Y_Out_L;
 					AUDIO_OUT_TRUNC_R <= IIR_HP_Y_Out_R + IIR_BP_Y_Out_R;
-				when "111" =>
+				when "000" =>
 					AUDIO_OUT_TRUNC_L <= IIR_LP_Y_Out_L + IIR_BP_Y_Out_L + IIR_HP_Y_Out_L;
 					AUDIO_OUT_TRUNC_R <= IIR_LP_Y_Out_R + IIR_BP_Y_Out_R + IIR_HP_Y_Out_R;
 				when others =>
