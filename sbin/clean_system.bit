@@ -24,4 +24,10 @@ DIRS="boot_image sd_card_files"
 
 rm -rf boot_image/system.bit
 rm -rf sd_card_files/BOOT.BIN
+
+cd ZedBoard_Linux_Design/hw/xps_proj
+
+make -f system.make clean
+
+cd ../../../
  

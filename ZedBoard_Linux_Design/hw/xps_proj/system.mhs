@@ -344,8 +344,8 @@ BEGIN adau1761_audio
  PORT clk_48_o = adau1761_audio_0_clk_48_o
  PORT AUDIO_OUT_L = adau1761_audio_0_AUDIO_OUT_L
  PORT AUDIO_OUT_R = adau1761_audio_0_AUDIO_OUT_R
- PORT AUDIO_IN_L = superip_0_Mux2_FilterORMux1_Left_out
- PORT AUDIO_IN_R = superip_0_Mux2_FilterORMux1_Right_out
+ PORT AUDIO_IN_L = superip_0_Mux3_BalanceORMux2_Left_out
+ PORT AUDIO_IN_R = superip_0_Mux3_BalanceORMux2_Right_out
  PORT new_sample = adau1761_audio_0_new_sample
 END
 
@@ -360,8 +360,8 @@ BEGIN superip
  PORT CLK_100M_in = processing_system7_0_FCLK_CLK0
  PORT Audio_Left_in = adau1761_audio_0_AUDIO_OUT_L
  PORT Audio_Right_in = adau1761_audio_0_AUDIO_OUT_R
- PORT Mux2_FilterORMux1_Left_out = superip_0_Mux2_FilterORMux1_Left_out
- PORT Mux2_FilterORMux1_Right_out = superip_0_Mux2_FilterORMux1_Right_out
+ PORT Mux3_BalanceORMux2_Left_out = superip_0_Mux3_BalanceORMux2_Left_out
+ PORT Mux3_BalanceORMux2_Right_out = superip_0_Mux3_BalanceORMux2_Right_out
  PORT SAMPLE_TRIG = adau1761_audio_0_new_sample
 END
 
