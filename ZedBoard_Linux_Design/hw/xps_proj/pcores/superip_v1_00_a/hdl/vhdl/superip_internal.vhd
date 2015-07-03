@@ -97,7 +97,7 @@ begin
 
 	Mux_Frames_or_internal : process(Mux3_BalanceORMux2_Left, Mux3_BalanceORMux2_Right, slv_reg27(31), slv_reg30(23 downto 0), slv_reg31(23 downto 0))
 	begin
-		if bus_frames_en = '0' then     --tsotne: I changed this, it was 0 before
+		if bus_frames_en = '0' then
 			Mux3_BalanceORMux2_Left_out  <= Mux3_BalanceORMux2_Left;
 			Mux3_BalanceORMux2_Right_out <= Mux3_BalanceORMux2_Right;
 		else

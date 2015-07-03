@@ -180,8 +180,8 @@ architecture IMP of user_logic is
 	signal slv_reg26_internal : std_logic_vector(C_SLV_DWIDTH - 1 downto 0);
 	signal slv_reg28_internal : std_logic_vector(C_SLV_DWIDTH - 1 downto 0);
 	signal slv_reg29_internal : std_logic_vector(C_SLV_DWIDTH - 1 downto 0);
-	signal slv_reg30_internal : std_logic_vector(C_SLV_DWIDTH - 1 downto 0);
-	signal slv_reg31_internal : std_logic_vector(C_SLV_DWIDTH - 1 downto 0);
+	--signal slv_reg30_internal : std_logic_vector(C_SLV_DWIDTH - 1 downto 0);
+	--signal slv_reg31_internal : std_logic_vector(C_SLV_DWIDTH - 1 downto 0);
 
 	component superip_internal is
 		port(
@@ -482,18 +482,18 @@ begin
 					--                slv_reg29(byte_index*8+7 downto byte_index*8) <= Bus2IP_Data(byte_index*8+7 downto byte_index*8);
 					--              end if;
 					--            end loop;
-					--          when "00000000000000000000000000000010" =>
-					--            for byte_index in 0 to (C_SLV_DWIDTH/8)-1 loop
-					--              if ( Bus2IP_BE(byte_index) = '1' ) then
-					--                slv_reg30(byte_index*8+7 downto byte_index*8) <= Bus2IP_Data(byte_index*8+7 downto byte_index*8);
-					--              end if;
-					--            end loop;
-					--          when "00000000000000000000000000000001" =>
-					--            for byte_index in 0 to (C_SLV_DWIDTH/8)-1 loop
-					--              if ( Bus2IP_BE(byte_index) = '1' ) then
-					--                slv_reg31(byte_index*8+7 downto byte_index*8) <= Bus2IP_Data(byte_index*8+7 downto byte_index*8);
-					--              end if;
-					--            end loop;
+					          when "00000000000000000000000000000010" =>
+					            for byte_index in 0 to (C_SLV_DWIDTH/8)-1 loop
+					              if ( Bus2IP_BE(byte_index) = '1' ) then
+					                slv_reg30(byte_index*8+7 downto byte_index*8) <= Bus2IP_Data(byte_index*8+7 downto byte_index*8);
+					              end if;
+					            end loop;
+					          when "00000000000000000000000000000001" =>
+					            for byte_index in 0 to (C_SLV_DWIDTH/8)-1 loop
+					              if ( Bus2IP_BE(byte_index) = '1' ) then
+					                slv_reg31(byte_index*8+7 downto byte_index*8) <= Bus2IP_Data(byte_index*8+7 downto byte_index*8);
+					              end if;
+					            end loop;
 
 
 					when others => null;
@@ -501,8 +501,8 @@ begin
 				slv_reg26 <= slv_reg26_internal;
 				slv_reg28 <= slv_reg28_internal;
 				slv_reg29 <= slv_reg29_internal;
-				slv_reg30 <= slv_reg30_internal;
-				slv_reg31 <= slv_reg31_internal;
+				--slv_reg30 <= slv_reg30_internal;
+				--slv_reg31 <= slv_reg31_internal;
 
 			end if;
 		end if;
@@ -557,8 +557,8 @@ begin
 			slv_reg26                   => slv_reg26_internal,
 			slv_reg28                   => slv_reg28_internal,
 			slv_reg29                   => slv_reg29_internal,
-			slv_reg30                   => slv_reg30_internal,
-			slv_reg31                   => slv_reg31_internal,
+			slv_reg30                   => slv_reg30,
+			slv_reg31                   => slv_reg31,
 			CLK_48_in                   => CLK_48_in,
 			CLK_100M_in                 => CLK_100M_in,
 			Audio_Left_in               => Audio_Left_in,
