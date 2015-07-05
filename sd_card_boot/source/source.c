@@ -3,7 +3,9 @@
 #include <signal.h>
 #include <time.h>
 
-#define MESSLEN 48000 * 17
+//#define FRAMESPERSEC 48000
+#define FRAMESPERSEC 24000
+#define MESSLEN FRAMESPERSEC * 17
 
 FILE *logfile;
 char buffer[MESSLEN + 1];

@@ -15,9 +15,11 @@
 #define FRAMEINREG 28
 #define FRAMEOUTREG 30
 
+//#define FRAMESPERSEC 48000
+#define FRAMESPERSEC 24000
 
-#define FRAMEBUFLEN 48000 * 2
-#define FRAMEBUFSIZE 48000 * sizeof(u32) * 2
+#define FRAMEBUFLEN FRAMESPERSEC * 2
+#define FRAMEBUFSIZE FRAMESPERSEC * sizeof(u32) * 2
 
 unsigned int buf_sw, buf_free, buf_count;
 spinlock_t buf_free_lock;
